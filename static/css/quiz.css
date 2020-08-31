@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* CSS Document */
+.quiz-section.container{
+	margin-bottom: -70px;
+}
+.quiz-section {
+
+}
+
+.quiz-content{
+ background: #B0E0E6;
+}
+.review {
+    background-color: #FFE4B5;
+    border: 25px #69BFF2;
+
+}
