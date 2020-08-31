@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DBNavigator.Project.DataEditorManager">
+    <record-view-column-sorting-type value="BY_INDEX" />
+    <value-preview-text-wrapping value="false" />
+    <value-preview-pinned value="false" />
+  </component>
+  <component name="DBNavigator.Project.DataExportManager">
+    <export-instructions>
+      <create-header value="true" />
+      <quote-values-containing-separator value="true" />
+      <quote-all-values value="false" />
+      <value-separator value="" />
+      <file-name value="" />
+      <file-location value="" />
+      <scope value="GLOBAL" />
+      <destination value="FILE" />
+      <format value="EXCEL" />
+      <charset value="UTF-8" />
+    </export-instructions>
+  </component>
+  <component name="DBNavigator.Project.DatabaseBrowserManager">
+    <autoscroll-to-editor value="false" />
+    <autoscroll-from-editor value="true" />
+    <show-object-properties value="true" />
+    <loaded-nodes>
+      <connection connection-id="d1fec4f6-a920-4c48-8970-f6e034768ea2">
+        <schema name="5120db" object-types="table, column" />
+      </connection>
+    </loaded-nodes>
+  </component>
+  <component name="DBNavigator.Project.DatabaseConsoleManager">
+    <connection id="d1fec4f6-a920-4c48-8970-f6e034768ea2">
+      <console name="Connection" type="STANDARD" schema="" session="Main" />
+      <console name="Connection 1" type="STANDARD" schema="5120db" session="Main"><![CDATA[INSERT INTO Quiz_question(id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES 
+(1, 'Pneumonia is infection of the lungs caused by', 'A. Bacteria or Viruses', 'B. Fungi', 'C. Either of the above', 'C.', 
+'You are incorrect. Pneumonia is an infection of the lungs. It may be caused by bacteria, viruses, fungi, or parasites', 
+'You are incorrect. Pneumonia is an infection of the lungs. It may be caused by bacteria, viruses, fungi, or parasites', 
+'You are correct. Pneumonia is an infection of the lungs. It may be caused by bacteria, viruses, fungi, or parasites', 
+'Wash your hands regularly with warm water and soap and avoid touching face as much as possible. Drink plenty of water and eat lots of fruits and vegetables to boost your immune system.');
+
+INSERT INTO Quiz_question(id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES 
+(2, 'Nosocomial pneumonia is pneumonia that is acquired from', 'A. The community', 'B. Hospital environment', 'C. Within the place of residence', 'B.', 
+'You are incorrect. Community-acquired pneumonia (CAP) is lung infection that develops in people outside a hospital. Prevent CAP by having a yearly flu shot', 
+'You are correct. Nosocomial pneumonia is acquired from the hospital. Nosocomial pneumonia is usually more serious than community-acquired pneumonia due to the pre-existing illness of the patient and the resistant forms of the hospital germs.', 
+'You are incorrect. Nosocomial pneumonia is acquired from the hospital. Nosocomial pneumonia is usually more serious than community-acquired pneumonia due to the pre-existing illness of the patient and the resistant forms of the hospital germs.', 
+'Clean hands and provide oral care if you have been to hospital.');
+
+INSERT INTO Quiz_question(id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES  
+(3, 'Pneumonia that develops following passage of food particles, drink etc. into the lungs is called', 'A. Community-acquired pneumonia', 'B. Aspiration pneumonia', 'C. Atypical pneumonia', 'B.', 
+'Community-acquired pneumonia (CAP) is lung infection that develops in people outside a hospital. Prevent CAP by having a yearly flu shot.', 
+'Aspiration pneumonia is a condition that arises from the passage of food particles, vomit, drink etc. into the respiratory tract.', 
+'Atypical pneumonia is an infection of the respiratory system and often called walking pneumonia.', 
+'Quit smoking and eat a healthful diet to strengthen the immune system. Cover your mouth during a cough or sneeze if you have the infection.'); 
+
+INSERT INTO Quiz_question(id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES  
+(4, 'Which of these causes atypical pneumonia?', 'A. Pneumococcus', 'B. Mycoplasma', 'C. Influenza virus', 'B.', 
+'You are incorrect. Pneumococcal disease is an infection caused by the bacterial streptococcus pneumonia or pneumococcus.', 
+'You are correct. Atypical pneumonia is caused by bacteria like mycoplasma, legionella and Chlamoydophila pneumonia.', 
+'You are incorrect. Atypical pneumonia is caused by bacteria like mycoplasma, legionella and Chlamoydophila pneumonia.', 
+'Avoid close contact with anyone who has pneumonia, while hand-washing regularly cuts down the risk of spreading the bacterial that cause the disease.'); 
+
+INSERT INTO Quiz_question(id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES  
+(5, 'Bacterial pneumonia can result in lung abscess.', 'A. True', 'B. False', 'C. Not sure', 'A.', 
+'You are correct. Bacterial pneumonia can result in complications like lung abscess, spread of infection to the blood, and accumulation of fluid outside the lungs called pleural effusion.', 
+'You are incorrect. Bacterial pneumonia can result in complications like lung abscess, spread of infection to the blood, and accumulation of fluid outside the lungs called pleural effusion.', 
+'You are incorrect. Bacterial pneumonia can result in complications like lung abscess, spread of infection to the blood, and accumulation of fluid outside the lungs called pleural effusion.', 
+'Once you have bacterial pneumonia, get the right treatment such as IV fluids and medications.');
+
+INSERT INTO Quiz_question(id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES  
+(6, 'The flu vaccine has to be administered:', 'A. Every year', 'B. Every 5 years', 'C. Every 10 years', 'A.', 
+'You are correct. The flu vaccine has to be administered every year to prevent pneumonia caused by influenza virus.', 
+'You are incorrect. The flu vaccine has to be administered every year to prevent pneumonia caused by influenza virus.', 
+'You are incorrect. The flu vaccine has to be administered every year to prevent pneumonia caused by influenza virus.', 
+'More pneumococcal immunisation service can go to: https://www.health.gov.au/health-topics/immunisation/immunisation-services/pneumococcal-immunisation-service-0'); 
+
+INSERT INTO Quiz_question(id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES  
+(7, 'What is pneumonia?', 'A. A lung infection.', 'B. A severe chest cold.', 'C. Advanced bronchitis.', 'A.', 
+'You are correct. Pneumonia is a type of lung infection caused by bacteria, viruses, or fungi. It can also be caused by inhalation of certain chemicals that irritate the lung tissue. Pneumonia may affect one or both lungs.', 
+'You are incorrect. Pneumonia is a type of lung infection caused by bacteria, viruses, or fungi. It can also be caused by inhalation of certain chemicals that irritate the lung tissue. Pneumonia may affect one or both lungs.', 
+'You are incorrect. Bronchitis is an inflammation of the lining of your bronchial tubes, which carry air to and from your lungs.', 
+'Avoid crowds during cold and flu season. Avoiding large crowds and people you know are sick will help prevent infection.'); 
+
+INSERT INTO Quiz_question(id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES 
+(8, 'Can bacterial pneumonia develop after a cold or the flu?', 'A. Yes', 'B. No', 'C. Not sure', 'A.', 
+'You are correct. Bacterial pneumonia can develop on its own, or after a person has had a cold or the flu. Respiratory diseases or viral infections can put people at greater risk for getting bacterial pneumonia.', 
+'You are incorrect. Bacterial pneumonia can develop on its own, or after a person has had a cold or the flu. Respiratory diseases or viral infections can put people at greater risk for getting bacterial pneumonia.', 
+'You are incorrect. Bacterial pneumonia can develop on its own, or after a person has had a cold or the flu. Respiratory diseases or viral infections can put people at greater risk for getting bacterial pneumonia.', 
+'Eating lots of vegetables and fruits to strength the immune system.'); 
+
+INSERT INTO Quiz_question(id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES 
+(9, 'What is walking pneumonia?', 'A. Walking pneumonia is a mild case of pneumonia.', 'B. Walking pneumonia has no symptoms.', 'C. Walking pneumonia is an upper respiratory infection.', 'A.', 
+'You are correct. The definition of "walking pneumonia" simply refers to a mild case of pneumonia, where a person is not seriously ill and does not require bed rest or hospitalisation. Symptoms are mild, and it most commonly affects school-aged children and young adults under the age of 40.', 
+'You are incorrect. The definition of "walking pneumonia" simply refers to a mild case of pneumonia, where a person is not seriously ill and does not require bed rest or hospitalisation. Symptoms are mild, and it most commonly affects school-aged children and young adults under the age of 40.', 
+'You are incorrect. The definition of "walking pneumonia" simply refers to a mild case of pneumonia, where a person is not seriously ill and does not require bed rest or hospitalisation. Symptoms are mild, and it most commonly affects school-aged children and young adults under the age of 40.', 
+'Exercising, eating a well-balanced diet and getting enough sleep can help you lower the chances of getting walking pneumonia.'); 
+
+INSERT INTO Quiz_question(id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES  
+(10, 'Pneumonia can be a life-threatening infection.', 'A. Yes', 'B. No', 'C. Not sure', 'A.', 
+'You are correct. While many cases of pneumonia can be mild such as with walking pneumonia, left untreated some cases of pneumonia can be serious and even life-threatening.', 
+'You are incorrect. While many cases of pneumonia can be mild such as with walking pneumonia, left untreated some cases of pneumonia can be serious and even life-threatening.', 
+'You are incorrect. While many cases of pneumonia can be mild such as with walking pneumonia, left untreated some cases of pneumonia can be serious and even life-threatening.', 
+'If you have risk factors for severe pneumonia and you develop a cough that will not go away, shortness of breath, chest pain, fever, or you feel worse after recovering from a cold or the flu, see your doctor.'); 
+
+INSERT INTO Quiz_question(id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES 
+(11, 'What are symptoms of pneumonia?', 'A. Jaundice and peeling skin', 'B. Rash, painful joints, and itching skin.', 'C. Cough, fever, and chills are symptoms of pneumonia.', 'C.', 
+'You are incorrect. Common symptoms of pneumonia include: Cough, Fever and chills, Shortness of breath, Chest pain when you cough or inhale deeply, Headache, Sweating and clammy skin, Loss of appetite. Symptoms of pneumonia may be mild to severe, and can vary depending on your age and health, and what type of pneumonia you have.', 
+'You are incorrect. Common symptoms of pneumonia include: Cough, Fever and chills, Shortness of breath, Chest pain when you cough or inhale deeply, Headache, Sweating and clammy skin, Loss of appetite. Symptoms of pneumonia may be mild to severe, and can vary depending on your age and health, and what type of pneumonia you have.', 
+'You are correct. Common symptoms of pneumonia include: Cough, Fever and chills, Shortness of breath, Chest pain when you cough or inhale deeply, Headache, Sweating and clammy skin, Loss of appetite. Symptoms of pneumonia may be mild to severe, and can vary depending on your age and health, and what type of pneumonia you have.',
+'Symptoms of pneumonia may be mild to severe, and can vary depending on your age and health, and what type of pneumonia you have.’, ‘Once you have these symptoms, please contact your GP as soon as possible.'); 
+
+INSERT INTO Quiz_question(id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES  
+(12, 'Is pneumonia contagious?', 'A. Yes', 'B. No', 'C. Not sure', 'A.', 
+'You are correct. Technically, pneumonia refers to inflammation of the lungs which in itself is not contagious. However, causes of pneumonia such as bacteria or viruses can be contagious. The period in which a person is contagious can range from one or two days to up to two weeks.', 
+'You are incorrect. Technically, pneumonia refers to inflammation of the lungs which in itself is not contagious. However, causes of pneumonia such as bacteria or viruses can be contagious. The period in which a person is contagious can range from one or two days to up to two weeks.', 
+'You are incorrect. Technically, pneumonia refers to inflammation of the lungs which in itself is not contagious. However, causes of pneumonia such as bacteria or viruses can be contagious. The period in which a person is contagious can range from one or two days to up to two weeks.', 
+'To avoid contagion, if you become ill with a cold or cough, not matter how mild, stay home until you have recovered.'); 
+
+INSERT INTO Quiz_question(id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES  
+(13, 'Is there a vaccine against pneumonia?', 'A. Yes', 'B. No', 'C. Not sure', 'A.', 
+'You are correct. There are currently vaccines to prevent two types of pneumonia. These vaccines will not prevent all cases of pneumonia, but they can reduce the risk of severe and life-threatening complications.', 
+'You are incorrect. There are currently vaccines to prevent two types of pneumonia. These vaccines will not prevent all cases of pneumonia, but they can reduce the risk of severe and life-threatening complications.', 
+'You are incorrect. There are currently vaccines to prevent two types of pneumonia. These vaccines will not prevent all cases of pneumonia, but they can reduce the risk of severe and life-threatening complications.', 
+'More pneumococcal immunisation service can go to: https://www.health.gov.au/health-topics/immunisation/immunisation-services/pneumococcal-immunisation-service-0');]]></console>
+    </connection>
+  </component>
+  <component name="DBNavigator.Project.DatabaseFileManager">
+    <open-files />
+  </component>
+  <component name="DBNavigator.Project.DatabaseSessionManager">
+    <connection id="d1fec4f6-a920-4c48-8970-f6e034768ea2" />
+  </component>
+  <component name="DBNavigator.Project.EditorStateManager">
+    <last-used-providers />
+  </component>
+  <component name="DBNavigator.Project.MethodExecutionManager">
+    <method-browser />
+    <execution-history>
+      <group-entries value="true" />
+      <execution-inputs />
+    </execution-history>
+    <argument-values-cache />
+  </component>
+  <component name="DBNavigator.Project.ObjectDependencyManager">
+    <last-used-dependency-type value="INCOMING" />
+  </component>
+  <component name="DBNavigator.Project.ObjectQuickFilterManager">
+    <last-used-operator value="EQUAL" />
+    <filters />
+  </component>
+  <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
+    <recently-used-interfaces>
+      <mapping database-type="MYSQL" interface-id="DEFAULT" />
+    </recently-used-interfaces>
+  </component>
+  <component name="DBNavigator.Project.Settings">
+    <connections>
+      <connection id="d1fec4f6-a920-4c48-8970-f6e034768ea2" active="true">
+        <database>
+          <name value="Connection" />
+          <description value="" />
+          <database-type value="MYSQL" />
+          <config-type value="BASIC" />
+          <database-version value="8.0" />
+          <driver-source value="BUILTIN" />
+          <driver-library value="" />
+          <driver value="" />
+          <url-type value="DATABASE" />
+          <host value="localhost" />
+          <port value="3306" />
+          <database value="5120db" />
+          <type value="USER_PASSWORD" />
+          <user value="root" />
+          <deprecated-pwd value="cXdlcjEyMzU2Nw==" />
+        </database>
+        <properties>
+          <auto-commit value="false" />
+          <properties>
+            <property key="serverTimezone" value="UTC" />
+          </properties>
+        </properties>
+        <ssh-settings>
+          <active value="false" />
+          <proxy-host value="" />
+          <proxy-port value="22" />
+          <proxy-user value="" />
+          <deprecated-proxy-pwd value="" />
+          <auth-type value="PASSWORD" />
+          <key-file value="" />
+          <key-passphrase value="" />
+        </ssh-settings>
+        <ssl-settings>
+          <active value="false" />
+          <certificate-authority-file value="" />
+          <client-certificate-file value="" />
+          <client-key-file value="" />
+        </ssl-settings>
+        <details>
+          <charset value="UTF-8" />
+          <session-management value="true" />
+          <ddl-file-binding value="true" />
+          <database-logging value="false" />
+          <connect-automatically value="true" />
+          <restore-workspace value="true" />
+          <restore-workspace-deep value="true" />
+          <environment-type value="default" />
+          <idle-time-to-disconnect value="30" />
+          <idle-time-to-disconnect-pool value="5" />
+          <credential-expiry-time value="10" />
+          <max-connection-pool-size value="7" />
+          <alternative-statement-delimiter value="" />
+        </details>
+        <object-filters hide-empty-schemas="false" hide-pseudo-columns="false">
+          <object-type-filter use-master-settings="true">
+            <object-type name="SCHEMA" enabled="true" />
+            <object-type name="USER" enabled="true" />
+            <object-type name="ROLE" enabled="true" />
+            <object-type name="PRIVILEGE" enabled="true" />
+            <object-type name="CHARSET" enabled="true" />
+            <object-type name="TABLE" enabled="true" />
+            <object-type name="VIEW" enabled="true" />
+            <object-type name="MATERIALIZED_VIEW" enabled="true" />
+            <object-type name="NESTED_TABLE" enabled="true" />
+            <object-type name="COLUMN" enabled="true" />
+            <object-type name="INDEX" enabled="true" />
+            <object-type name="CONSTRAINT" enabled="true" />
+            <object-type name="DATASET_TRIGGER" enabled="true" />
+            <object-type name="DATABASE_TRIGGER" enabled="true" />
+            <object-type name="SYNONYM" enabled="true" />
+            <object-type name="SEQUENCE" enabled="true" />
+            <object-type name="PROCEDURE" enabled="true" />
+            <object-type name="FUNCTION" enabled="true" />
+            <object-type name="PACKAGE" enabled="true" />
+            <object-type name="TYPE" enabled="true" />
+            <object-type name="TYPE_ATTRIBUTE" enabled="true" />
+            <object-type name="ARGUMENT" enabled="true" />
+            <object-type name="DIMENSION" enabled="true" />
+            <object-type name="CLUSTER" enabled="true" />
+            <object-type name="DBLINK" enabled="true" />
+          </object-type-filter>
+          <object-name-filters />
+        </object-filters>
+      </connection>
+    </connections>
+    <browser-settings>
+      <general>
+        <display-mode value="TABBED" />
+        <navigation-history-size value="100" />
+        <show-object-details value="false" />
+      </general>
+      <filters>
+        <object-type-filter>
+          <object-type name="SCHEMA" enabled="true" />
+          <object-type name="USER" enabled="true" />
+          <object-type name="ROLE" enabled="true" />
+          <object-type name="PRIVILEGE" enabled="true" />
+          <object-type name="CHARSET" enabled="true" />
+          <object-type name="TABLE" enabled="true" />
+          <object-type name="VIEW" enabled="true" />
+          <object-type name="MATERIALIZED_VIEW" enabled="true" />
+          <object-type name="NESTED_TABLE" enabled="true" />
+          <object-type name="COLUMN" enabled="true" />
+          <object-type name="INDEX" enabled="true" />
+          <object-type name="CONSTRAINT" enabled="true" />
+          <object-type name="DATASET_TRIGGER" enabled="true" />
+          <object-type name="DATABASE_TRIGGER" enabled="true" />
+          <object-type name="SYNONYM" enabled="true" />
+          <object-type name="SEQUENCE" enabled="true" />
+          <object-type name="PROCEDURE" enabled="true" />
+          <object-type name="FUNCTION" enabled="true" />
+          <object-type name="PACKAGE" enabled="true" />
+          <object-type name="TYPE" enabled="true" />
+          <object-type name="TYPE_ATTRIBUTE" enabled="true" />
+          <object-type name="ARGUMENT" enabled="true" />
+          <object-type name="DIMENSION" enabled="true" />
+          <object-type name="CLUSTER" enabled="true" />
+          <object-type name="DBLINK" enabled="true" />
+        </object-type-filter>
+      </filters>
+      <sorting>
+        <object-type name="COLUMN" sorting-type="NAME" />
+        <object-type name="FUNCTION" sorting-type="NAME" />
+        <object-type name="PROCEDURE" sorting-type="NAME" />
+        <object-type name="ARGUMENT" sorting-type="POSITION" />
+      </sorting>
+      <default-editors>
+        <object-type name="VIEW" editor-type="SELECTION" />
+        <object-type name="PACKAGE" editor-type="SELECTION" />
+        <object-type name="TYPE" editor-type="SELECTION" />
+      </default-editors>
+    </browser-settings>
+    <navigation-settings>
+      <lookup-filters>
+        <lookup-objects>
+          <object-type name="SCHEMA" enabled="true" />
+          <object-type name="USER" enabled="false" />
+          <object-type name="ROLE" enabled="false" />
+          <object-type name="PRIVILEGE" enabled="false" />
+          <object-type name="CHARSET" enabled="false" />
+          <object-type name="TABLE" enabled="true" />
+          <object-type name="VIEW" enabled="true" />
+          <object-type name="MATERIALIZED VIEW" enabled="true" />
+          <object-type name="NESTED TABLE" enabled="false" />
+          <object-type name="COLUMN" enabled="false" />
+          <object-type name="INDEX" enabled="true" />
+          <object-type name="CONSTRAINT" enabled="true" />
+          <object-type name="DATASET TRIGGER" enabled="true" />
+          <object-type name="DATABASE TRIGGER" enabled="true" />
+          <object-type name="SYNONYM" enabled="false" />
+          <object-type name="SEQUENCE" enabled="true" />
+          <object-type name="PROCEDURE" enabled="true" />
+          <object-type name="FUNCTION" enabled="true" />
+          <object-type name="PACKAGE" enabled="true" />
+          <object-type name="TYPE" enabled="true" />
+          <object-type name="TYPE ATTRIBUTE" enabled="false" />
+          <object-type name="ARGUMENT" enabled="false" />
+          <object-type name="DIMENSION" enabled="false" />
+          <object-type name="CLUSTER" enabled="false" />
+          <object-type name="DBLINK" enabled="true" />
+        </lookup-objects>
+        <force-database-load value="false" />
+        <prompt-connection-selection value="true" />
+        <prompt-schema-selection value="true" />
+      </lookup-filters>
+    </navigation-settings>
+    <dataset-grid-settings>
+      <general>
+        <enable-zooming value="true" />
+        <enable-column-tooltip value="true" />
+      </general>
+      <sorting>
+        <nulls-first value="true" />
+        <max-sorting-columns value="4" />
+      </sorting>
+      <tracking-columns>
+        <columnNames value="" />
+        <visible value="true" />
+        <editable value="false" />
+      </tracking-columns>
+    </dataset-grid-settings>
+    <dataset-editor-settings>
+      <text-editor-popup>
+        <active value="false" />
+        <active-if-empty value="false" />
+        <data-length-threshold value="100" />
+        <popup-delay value="1000" />
+      </text-editor-popup>
+      <values-actions-popup>
+        <show-popup-button value="true" />
+        <element-count-threshold value="1000" />
+        <data-length-threshold value="250" />
+      </values-actions-popup>
+      <general>
+        <fetch-block-size value="100" />
+        <fetch-timeout value="30" />
+        <trim-whitespaces value="true" />
+        <convert-empty-strings-to-null value="true" />
+        <select-content-on-cell-edit value="true" />
+        <large-value-preview-active value="true" />
+      </general>
+      <filters>
+        <prompt-filter-dialog value="true" />
+        <default-filter-type value="BASIC" />
+      </filters>
+      <qualified-text-editor text-length-threshold="300">
+        <content-types>
+          <content-type name="Text" enabled="true" />
+          <content-type name="Properties" enabled="true" />
+          <content-type name="XML" enabled="true" />
+          <content-type name="DTD" enabled="true" />
+          <content-type name="HTML" enabled="true" />
+          <content-type name="XHTML" enabled="true" />
+          <content-type name="CSS" enabled="true" />
+          <content-type name="SQL" enabled="true" />
+          <content-type name="PL/SQL" enabled="true" />
+          <content-type name="JavaScript" enabled="true" />
+          <content-type name="JSON" enabled="true" />
+          <content-type name="JSON5" enabled="true" />
+          <content-type name="YAML" enabled="true" />
+        </content-types>
+      </qualified-text-editor>
+      <record-navigation>
+        <navigation-target value="VIEWER" />
+      </record-navigation>
+    </dataset-editor-settings>
+    <code-editor-settings>
+      <general>
+        <show-object-navigation-gutter value="false" />
+        <show-spec-declaration-navigation-gutter value="true" />
+        <enable-spellchecking value="true" />
+        <enable-reference-spellchecking value="false" />
+      </general>
+      <confirmations>
+        <save-changes value="false" />
+        <revert-changes value="true" />
+      </confirmations>
+    </code-editor-settings>
+    <code-completion-settings>
+      <filters>
+        <basic-filter>
+          <filter-element type="RESERVED_WORD" id="keyword" selected="true" />
+          <filter-element type="RESERVED_WORD" id="function" selected="true" />
+          <filter-element type="RESERVED_WORD" id="parameter" selected="true" />
+          <filter-element type="RESERVED_WORD" id="datatype" selected="true" />
+          <filter-element type="RESERVED_WORD" id="exception" selected="true" />
+          <filter-element type="OBJECT" id="schema" selected="true" />
+          <filter-element type="OBJECT" id="role" selected="true" />
+          <filter-element type="OBJECT" id="user" selected="true" />
+          <filter-element type="OBJECT" id="privilege" selected="true" />
+          <user-schema>
+            <filter-element type="OBJECT" id="table" selected="true" />
+            <filter-element type="OBJECT" id="view" selected="true" />
+            <filter-element type="OBJECT" id="materialized view" selected="true" />
+            <filter-element type="OBJECT" id="index" selected="true" />
+            <filter-element type="OBJECT" id="constraint" selected="true" />
+            <filter-element type="OBJECT" id="trigger" selected="true" />
+            <filter-element type="OBJECT" id="synonym" selected="false" />
+            <filter-element type="OBJECT" id="sequence" selected="true" />
+            <filter-element type="OBJECT" id="procedure" selected="true" />
+            <filter-element type="OBJECT" id="function" selected="true" />
+            <filter-element type="OBJECT" id="package" selected="true" />
+            <filter-element type="OBJECT" id="type" selected="true" />
+            <filter-element type="OBJECT" id="dimension" selected="true" />
+            <filter-element type="OBJECT" id="cluster" selected="true" />
+            <filter-element type="OBJECT" id="dblink" selected="true" />
+          </user-schema>
+          <public-schema>
+            <filter-element type="OBJECT" id="table" selected="false" />
+            <filter-element type="OBJECT" id="view" selected="false" />
+            <filter-element type="OBJECT" id="materialized view" selected="false" />
+            <filter-element type="OBJECT" id="index" selected="false" />
+            <filter-element type="OBJECT" id="constraint" selected="false" />
+            <filter-element type="OBJECT" id="trigger" selected="false" />
+            <filter-element type="OBJECT" id="synonym" selected="false" />
+            <filter-element type="OBJECT" id="sequence" selected="false" />
+            <filter-element type="OBJECT" id="procedure" selected="false" />
+            <filter-element type="OBJECT" id="function" selected="false" />
+            <filter-element type="OBJECT" id="package" selected="false" />
+            <filter-element type="OBJECT" id="type" selected="false" />
+            <filter-element type="OBJECT" id="dimension" selected="false" />
+            <filter-element type="OBJECT" id="cluster" selected="false" />
+            <filter-element type="OBJECT" id="dblink" selected="false" />
+          </public-schema>
+          <any-schema>
+            <filter-element type="OBJECT" id="table" selected="true" />
+            <filter-element type="OBJECT" id="view" selected="true" />
+            <filter-element type="OBJECT" id="materialized view" selected="true" />
+            <filter-element type="OBJECT" id="index" selected="true" />
+            <filter-element type="OBJECT" id="constraint" selected="true" />
+            <filter-element type="OBJECT" id="trigger" selected="true" />
+            <filter-element type="OBJECT" id="synonym" selected="true" />
+            <filter-element type="OBJECT" id="sequence" selected="true" />
+            <filter-element type="OBJECT" id="procedure" selected="true" />
+            <filter-element type="OBJECT" id="function" selected="true" />
+            <filter-element type="OBJECT" id="package" selected="true" />
+            <filter-element type="OBJECT" id="type" selected="true" />
+            <filter-element type="OBJECT" id="dimension" selected="true" />
+            <filter-element type="OBJECT" id="cluster" selected="true" />
+            <filter-element type="OBJECT" id="dblink" selected="true" />
+          </any-schema>
+        </basic-filter>
+        <extended-filter>
+          <filter-element type="RESERVED_WORD" id="keyword" selected="true" />
+          <filter-element type="RESERVED_WORD" id="function" selected="true" />
+          <filter-element type="RESERVED_WORD" id="parameter" selected="true" />
+          <filter-element type="RESERVED_WORD" id="datatype" selected="true" />
+          <filter-element type="RESERVED_WORD" id="exception" selected="true" />
+          <filter-element type="OBJECT" id="schema" selected="true" />
+          <filter-element type="OBJECT" id="user" selected="true" />
+          <filter-element type="OBJECT" id="role" selected="true" />
+          <filter-element type="OBJECT" id="privilege" selected="true" />
+          <user-schema>
+            <filter-element type="OBJECT" id="table" selected="true" />
+            <filter-element type="OBJECT" id="view" selected="true" />
+            <filter-element type="OBJECT" id="materialized view" selected="true" />
+            <filter-element type="OBJECT" id="index" selected="true" />
+            <filter-element type="OBJECT" id="constraint" selected="true" />
+            <filter-element type="OBJECT" id="trigger" selected="true" />
+            <filter-element type="OBJECT" id="synonym" selected="true" />
+            <filter-element type="OBJECT" id="sequence" selected="true" />
+            <filter-element type="OBJECT" id="procedure" selected="true" />
+            <filter-element type="OBJECT" id="function" selected="true" />
+            <filter-element type="OBJECT" id="package" selected="true" />
+            <filter-element type="OBJECT" id="type" selected="true" />
+            <filter-element type="OBJECT" id="dimension" selected="true" />
+            <filter-element type="OBJECT" id="cluster" selected="true" />
+            <filter-element type="OBJECT" id="dblink" selected="true" />
+          </user-schema>
+          <public-schema>
+            <filter-element type="OBJECT" id="table" selected="true" />
+            <filter-element type="OBJECT" id="view" selected="true" />
+            <filter-element type="OBJECT" id="materialized view" selected="true" />
+            <filter-element type="OBJECT" id="index" selected="true" />
+            <filter-element type="OBJECT" id="constraint" selected="true" />
+            <filter-element type="OBJECT" id="trigger" selected="true" />
+            <filter-element type="OBJECT" id="synonym" selected="true" />
+            <filter-element type="OBJECT" id="sequence" selected="true" />
+            <filter-element type="OBJECT" id="procedure" selected="true" />
+            <filter-element type="OBJECT" id="function" selected="true" />
+            <filter-element type="OBJECT" id="package" selected="true" />
+            <filter-element type="OBJECT" id="type" selected="true" />
+            <filter-element type="OBJECT" id="dimension" selected="true" />
+            <filter-element type="OBJECT" id="cluster" selected="true" />
+            <filter-element type="OBJECT" id="dblink" selected="true" />
+          </public-schema>
+          <any-schema>
+            <filter-element type="OBJECT" id="table" selected="true" />
+            <filter-element type="OBJECT" id="view" selected="true" />
+            <filter-element type="OBJECT" id="materialized view" selected="true" />
+            <filter-element type="OBJECT" id="index" selected="true" />
+            <filter-element type="OBJECT" id="constraint" selected="true" />
+            <filter-element type="OBJECT" id="trigger" selected="true" />
+            <filter-element type="OBJECT" id="synonym" selected="true" />
+            <filter-element type="OBJECT" id="sequence" selected="true" />
+            <filter-element type="OBJECT" id="procedure" selected="true" />
+            <filter-element type="OBJECT" id="function" selected="true" />
+            <filter-element type="OBJECT" id="package" selected="true" />
+            <filter-element type="OBJECT" id="type" selected="true" />
+            <filter-element type="OBJECT" id="dimension" selected="true" />
+            <filter-element type="OBJECT" id="cluster" selected="true" />
+            <filter-element type="OBJECT" id="dblink" selected="true" />
+          </any-schema>
+        </extended-filter>
+      </filters>
+      <sorting enabled="true">
+        <sorting-element type="RESERVED_WORD" id="keyword" />
+        <sorting-element type="RESERVED_WORD" id="datatype" />
+        <sorting-element type="OBJECT" id="column" />
+        <sorting-element type="OBJECT" id="table" />
+        <sorting-element type="OBJECT" id="view" />
+        <sorting-element type="OBJECT" id="materialized view" />
+        <sorting-element type="OBJECT" id="index" />
+        <sorting-element type="OBJECT" id="constraint" />
+        <sorting-element type="OBJECT" id="trigger" />
+        <sorting-element type="OBJECT" id="synonym" />
+        <sorting-element type="OBJECT" id="sequence" />
+        <sorting-element type="OBJECT" id="procedure" />
+        <sorting-element type="OBJECT" id="function" />
+        <sorting-element type="OBJECT" id="package" />
+        <sorting-element type="OBJECT" id="type" />
+        <sorting-element type="OBJECT" id="dimension" />
+        <sorting-element type="OBJECT" id="cluster" />
+        <sorting-element type="OBJECT" id="dblink" />
+        <sorting-element type="OBJECT" id="schema" />
+        <sorting-element type="OBJECT" id="role" />
+        <sorting-element type="OBJECT" id="user" />
+        <sorting-element type="RESERVED_WORD" id="function" />
+        <sorting-element type="RESERVED_WORD" id="parameter" />
+      </sorting>
+      <format>
+        <enforce-code-style-case value="true" />
+      </format>
+    </code-completion-settings>
+    <execution-engine-settings>
+      <statement-execution>
+        <fetch-block-size value="100" />
+        <execution-timeout value="20" />
+        <debug-execution-timeout value="600" />
+        <focus-result value="false" />
+        <prompt-execution value="false" />
+      </statement-execution>
+      <script-execution>
+        <command-line-interfaces />
+        <execution-timeout value="300" />
+      </script-execution>
+      <method-execution>
+        <execution-timeout value="30" />
+        <debug-execution-timeout value="600" />
+        <parameter-history-size value="10" />
+      </method-execution>
+    </execution-engine-settings>
+    <operation-settings>
+      <transactions>
+        <uncommitted-changes>
+          <on-project-close value="ASK" />
+          <on-disconnect value="ASK" />
+          <on-autocommit-toggle value="ASK" />
+        </uncommitted-changes>
+        <multiple-uncommitted-changes>
+          <on-commit value="ASK" />
+          <on-rollback value="ASK" />
+        </multiple-uncommitted-changes>
+      </transactions>
+      <session-browser>
+        <disconnect-session value="ASK" />
+        <kill-session value="ASK" />
+        <reload-on-filter-change value="false" />
+      </session-browser>
+      <compiler>
+        <compile-type value="KEEP" />
+        <compile-dependencies value="ASK" />
+        <always-show-controls value="false" />
+      </compiler>
+      <debugger>
+        <debugger-type value="JDBC" />
+        <use-generic-runners value="true" />
+      </debugger>
+    </operation-settings>
+    <ddl-file-settings>
+      <extensions>
+        <mapping file-type-id="VIEW" extensions="vw" />
+        <mapping file-type-id="TRIGGER" extensions="trg" />
+        <mapping file-type-id="PROCEDURE" extensions="prc" />
+        <mapping file-type-id="FUNCTION" extensions="fnc" />
+        <mapping file-type-id="PACKAGE" extensions="pkg" />
+        <mapping file-type-id="PACKAGE_SPEC" extensions="pks" />
+        <mapping file-type-id="PACKAGE_BODY" extensions="pkb" />
+        <mapping file-type-id="TYPE" extensions="tpe" />
+        <mapping file-type-id="TYPE_SPEC" extensions="tps" />
+        <mapping file-type-id="TYPE_BODY" extensions="tpb" />
+      </extensions>
+      <general>
+        <lookup-ddl-files value="true" />
+        <create-ddl-files value="false" />
+        <synchronize-ddl-files value="true" />
+        <use-qualified-names value="false" />
+        <make-scripts-rerunnable value="true" />
+      </general>
+    </ddl-file-settings>
+    <general-settings>
+      <regional-settings>
+        <date-format value="MEDIUM" />
+        <number-format value="UNGROUPED" />
+        <locale value="SYSTEM_DEFAULT" />
+        <use-custom-formats value="false" />
+      </regional-settings>
+      <environment>
+        <environment-types>
+          <environment-type id="development" name="Development" description="Development environment" color="-2430209/-12296320" readonly-code="false" readonly-data="false" />
+          <environment-type id="integration" name="Integration" description="Integration environment" color="-2621494/-12163514" readonly-code="true" readonly-data="false" />
+          <environment-type id="production" name="Production" description="Productive environment" color="-11574/-10271420" readonly-code="true" readonly-data="true" />
+          <environment-type id="other" name="Other" description="" color="-1576/-10724543" readonly-code="false" readonly-data="false" />
+        </environment-types>
+        <visibility-settings>
+          <connection-tabs value="true" />
+          <dialog-headers value="true" />
+          <object-editor-tabs value="true" />
+          <script-editor-tabs value="false" />
+          <execution-result-tabs value="true" />
+        </visibility-settings>
+      </environment>
+    </general-settings>
+  </component>
+  <component name="DBNavigator.Project.StatementExecutionManager">
+    <execution-variables />
+  </component>
+</project>

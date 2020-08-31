@@ -10,7 +10,7 @@ class Question(models.Model):
     feedbackA = models.CharField(max_length=500)
     feedbackB = models.CharField(max_length=500)
     feedbackC = models.CharField(max_length=500)
-
+    suggestion = models.CharField(max_length=500)
 
 class Quiz(models.Model):
 
@@ -23,6 +23,8 @@ class Quiz_Question(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     correctOrNot = models.BooleanField()
     userChoice = models.CharField(max_length=10)
+
+
 
 
 

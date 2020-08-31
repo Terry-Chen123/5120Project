@@ -28,7 +28,7 @@ SECRET_KEY = 'f%e#m*6o@s)b*tt7auw@kz-itd!*+60b$0rbqsy#lp+5!fxc0)'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+APPEND_SLASH=False
 
 # Application definition
 
@@ -85,7 +85,7 @@ DATABASES = {
     'default':
     {
         'ENGINE': 'django.db.backends.mysql',    # 数据库引擎
-        'NAME': 'djangomysql', # 数据库名称
+        'NAME': '5120db', # 数据库名称
         'HOST': '127.0.0.1', # 数据库地址，本机 ip 地址 127.0.0.1
         'PORT': '3306', # 端口
         'USER': 'root',  # 数据库用户名
