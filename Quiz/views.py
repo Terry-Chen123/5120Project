@@ -1,17 +1,14 @@
-import random
 import django
 django.setup()
 from Quiz.models import Question
 from Quiz import randomNum
 from django.shortcuts import render
-from django.template import Context
 
 def Questionlist(request):
     question = Question.objects.all()
     return render(request, 'Quiz_test.html', {'Questionlist':question})
 
 def Quiz(request, generate_num):
-    view_name = "Quiz before submitted"
     quiz_question_numbers = len(generate_num)
     question_objects = []
     question_list = []
@@ -51,19 +48,24 @@ def review(request):
 
 def getUserChoice(request):
     request.encoding = 'utf-8'
+
     #question object list
     question_list = Question.objects.all()
+
     #user answer list
     userChoiceList = []
-    num_list = []
     question_num = len(question_list)
+
     #dic for Questions and User Answers
     question_dic = {}
     if request.POST:
         for i in range(question_num):
             userChoice = request.POST.get(str(question_list[i].id))
+            if userChoice == None:
+                userChoice = 'You did not answer this question'
             userChoiceList.append(userChoice)
             question_dic[question_list[i]] = userChoice
+
 
     grade,score = getScore(question_list, userChoiceList)
     return render(request, '../templates/review.html', {'userChoice':userChoiceList,
