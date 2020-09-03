@@ -23,11 +23,15 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
+<<<<<<< Updated upstream
     <loaded-nodes>
       <connection connection-id="d1fec4f6-a920-4c48-8970-f6e034768ea2">
         <schema name="5120db" object-types="column, function, table" />
       </connection>
     </loaded-nodes>
+=======
+    <loaded-nodes />
+>>>>>>> Stashed changes
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="d1fec4f6-a920-4c48-8970-f6e034768ea2">
