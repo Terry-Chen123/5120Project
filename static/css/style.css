@@ -471,8 +471,11 @@ ol {
 .main-menu {
   list-style: none;
   display: inline-block;
-  padding-top: 10px;
+
   float: right;
+  padding: 100px;
+position:absolute;
+	right:500px;
 }
 
 .main-menu li {
@@ -939,8 +942,9 @@ ol {
   color: #fff;
   margin-bottom: 45px;
   font-weight: 400;
-  padding-top: 15px;
+  padding-top: 30px;
 }
+
 
 .footer-widget .fw-about {
   padding-top: 20px;
@@ -953,6 +957,7 @@ ol {
 .footer-widget .fw-about p {
   color: #fff;
   opacity: 0.48;
+  padding-top:-30px;
 }
 
 .footer-widget .fw-links {

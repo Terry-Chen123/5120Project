@@ -11,6 +11,7 @@ class Question(models.Model):
     feedbackB = models.CharField(max_length=500)
     feedbackC = models.CharField(max_length=500)
     suggestion = models.CharField(max_length=500)
+    #image = models.ImageField()
 
 class Quiz(models.Model):
 

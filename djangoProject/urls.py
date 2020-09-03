@@ -21,15 +21,15 @@ from Quiz import views
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name = 'Home'),
     path('service/',views.service, name = 'Service'),
     path('readmore/',views.readMore, name = 'Read More'),
-    path('evaluation/',views.evaluation, name = 'Evaluation'),
-    path('evaluation/review/',views.review, name = 'Review'),
-    path('evaluation/getuserchoice', views.getUserChoice, name = 'Review1')
+    path('service/quiz/',views.evaluation, name = 'Evaluation'),
+    #path('service/quiz/review/',views.review, name = 'Review'),
+    path('service/quiz/getuserchoice', views.getUserChoice, name = 'Review1'),
+    path('service/quiz/quizintro', views.quizIntro, name='Quiz Intro')
 
 ]
 urlpatterns += staticfiles_urlpatterns()

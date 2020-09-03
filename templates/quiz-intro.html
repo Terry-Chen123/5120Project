@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="{% static 'css/style.css'%}"/>
 	<link rel="stylesheet" href="{% static 'css/animate.css'%}"/>
 	<link rel="stylesheet" href="{% static 'css/pop-up.css'%}"/>
+	<link rel="stylesheet" href="{% static 'css/quiz-intro.css'%}"/>
 
 
 	<!--[if lt IE 9]>
@@ -55,53 +56,65 @@
 			</ul>
 		</div>
 	</header>
+    <!-- Header section -->
 
-    <!-- Page info section  -->
+	<!-- Page info section -->
+
+	<!-- Page info section -->
 	<section class="page-info-section set-bg" data-setbg="img/page-info-bg/5.jpg">
 		<div class="container">
-			<h4>Home&nbsp;&gt;&nbsp;Services&nbsp;&gt;&nbsp;Quiz</h4>
+			<h4>Home&nbsp;&gt;&nbsp;Services&nbsp;&gt;&nbsp;Start Quiz</h4>
 			<br>
-			<h2><font color="990000">Quiz</font></h2>
+			<h2><font color="990000">Start Quiz</font></h2>
 		</div>
 	</section>
 	<!-- Page info section end -->
 
 
-	<!-- Service Featured section -->
-		<section class="services-section spad">
+
+	<!-- Quiz start section -->
+	<section class="services-section spad">
 		<div class="container">
-			<div class="service-title ">
-				<h2>Quiz</h2><br><br>
-			</div>
-			<div class="row">
-				<div class="col-lg-12 col-md-8 service">
-                    <form action="getuserchoice" method='POST'>
-                      {% csrf_token %}
-                       {% for eachquestion in Questionlist %}
-                            <h5>{{ eachquestion.id }}. {{ eachquestion.question }}</h5>
-                            <br>
-
-                            <p><input type="radio" id="ChoiceA" class="qa" name="{{ eachquestion.id }}" value = "A">{{ eachquestion.choiceA }} </p>
-                            <p><input type="radio" id="ChoiceB" class="qa" name="{{ eachquestion.id }}" value = "B">{{ eachquestion.choiceB }} </p>
-                            <p><input type="radio" id="ChoiceC" class="qa" name="{{ eachquestion.id }}" value = "C">{{ eachquestion.choiceC }} </p>
-                        {% endfor %}
-                         <input type="submit" class="site-btn mt-4" name = 'submittest' value="Check Result Here!">
-                    </form>
+			<div class="section-title text-center">
+				<h2><font color="#483D8B">Pneumonia Info Quiz</font> </h2>
+				<br>
+				<br>
+				<div class="quiz-box" >
+					<br>
+					<h4>Test Your Knowledge of Penumonia</h4>
+					<br>
+					<p><font color="#000000">With the growthing number of pneumonia patiens, especcially for young childre.
+                        <br> It is improtat for you to have basic understanding of pneumonia, time to start!</font></p>
+					<img src="{% static 'img/quiz-intro/4.jpg' %}" alt=""  height="500" width="10000">
+					<br>
+					<br>
+					<center><a href="javascript:void(0)" class="btn_click" ><button style="background: #FAF0E6" >Let's do it</button></a></center>
+					<br>
 				</div>
-
 			</div>
+
+					<div class="service-content">
+						<div class="popup_back" style="display:none;"></div>
+						<div class="popup_window_first" style="display:none;">
+							<br>
+							<p class="popup_cont">Are you sure to start a quiz?</p><br>
+							<a href="{% url 'Evaluation' %}"><button style="background: #13B51E" >YES</button></a> &nbsp;&nbsp;&nbsp;&nbsp;
+							<a href="{% url 'Service' %}" ><button style="background: #DA791B;">NO</button></a>
+						</div>
+
+		            </div>
 		</div>
 	</section>
-	<!-- Intro section end -->
+	<!-- Quiz start section -->
 
 	<!-- Footer top section -->
-	<section class="footer-top-section set-bg" data-setbg="{% static 'img/footer.jpg' %}">
+	<section class="footer-top-section set-bg" data-setbg="{% static 'img/footer.jpg'%}">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4">
 					<div class="footer-widget">
 						<div class="fw-about">
-							<img src="{% static 'img/logo.003.png' %}" alt="">
+							<img src="{% static 'img/logo.003.png'%}" alt="">
 							<p>The website is aim to provide a chance to let yourself test your knowledge and to make yourself informed about pneumonias. We provide you with the best solution and actions to every safety concern your lung health.</p>
 							<div class="fw-social">
 								<a href=""><i class="fa fa-facebook"></i></a>
@@ -120,6 +133,7 @@
                                 <li><a href="{% url 'Read More' %}">Information Guide</a></li>
 				                <li><a href="{% url 'Service' %}">Services</a></li>
 							</ul>
+
 						</div>
 					</div>
 				</div>
@@ -134,7 +148,6 @@
 									</tr>
 									<tr>
 										<td>Australia Governamnet Departement of Health</td>
-
 								</table>
 							</div>
 						</div>
@@ -154,20 +167,43 @@
                 <li><a href="{% url 'Read More' %}">Information Guide</a></li>
                 <li><a href="{% url 'Service' %}">Services</a></li>
 			</ul>
-			<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">TA2</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+			<div class="copyright">
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">TA2</a>
+            </div>
 		</div>
 	</footer>
 	<!-- Footer top section end -->
 
 
 	<!--====== Javascripts & Jquery ======-->
-	<script src="{% static 'js/jquery-3.2.1.min.js'%}"></script>
-	<script src="{% static 'js/bootstrap.min.js'%}"></script>
-	<script src="{% static 'js/owl.carousel.min.js'%}"></script>
-	<script src="{% static 'js/circle-progress.min.js'%}"></script>
-	<script src="{% static 'js/main.js'%}"></script>
+	<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/circle-progress.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+	<script src="{% static 'js/pop-up.js' %}"></script>
+    <script src="{% static 'js/jquery-3.3.1.js'%}"></script>
+	<script>
+		/*点击弹出按钮*/
+		function popBox() {
+			var popBox = document.getElementById("popBox");
+			var popLayer = document.getElementById("popLayer");
+			popBox.style.display = "block";
+			popLayer.style.display = "block";
+		};
 
+		/*点击关闭按钮*/
+		function closeBox() {
+			var popBox = document.getElementById("popBox");
+			var popLayer = document.getElementById("popLayer");
+			popBox.style.display = "none";
+			popLayer.style.display = "none";
+		}
+	</script>
+
+
+
+	</header>
     </body>
+
 </html>

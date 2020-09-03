@@ -46,6 +46,9 @@ def evaluation(request):
 def review(request):
     return render(request,"../templates/review.html")
 
+def quizIntro(request):
+    return render(request,"../templates/quiz-intro.html")
+
 def getUserChoice(request):
     request.encoding = 'utf-8'
 
@@ -67,26 +70,36 @@ def getUserChoice(request):
             question_dic[question_list[i]] = userChoice
 
 
-    grade,score = getScore(question_list, userChoiceList)
+    grade,score,suggestion = getScore(question_list, userChoiceList)
     return render(request, '../templates/review.html', {'userChoice':userChoiceList,
                                                         'question_dic':question_dic,
                                                         'grade':grade,
-                                                        'score':score})
+                                                        'score':score,
+                                                        'suggestion':suggestion})
 
 def getScore(Q_list, Ans_list):
     score = 0
-    total_score = 10 *len(Q_list)
+    total_score = len(Q_list)
     for i in range(len(Q_list)):
         if Q_list[i].answer == Ans_list[i]:
-            score += 10
+            score += 1
     result = ""
-    if score / total_score < 0.3:
-        result = "D"
-    elif 0.3 <= score / total_score < 0.5:
-        result = "C"
-    elif 0.5 <= score / total_score < 0.8:
-        result = "B"
-    elif 0.8 <= score / total_score:
-        result = "A"
+    suggestion = ""
+    if score  <= 2:
+        result = "Woooooo!"
+        suggestion = "Not so good, but no need to be panic and so long as you read through our website " \
+                     "content about children's pneumonia, you will become a master on how to deal with " \
+                     "the pneumonia emergency that happened to your child. Please click on this link " \
+                     "to learn more about child pneumonia."
+    elif 3 <= score  <+ 4:
+        result = "Keep Learing!"
+        suggestion = "You are doing good and almost master the knowledge of children's pneumonia, " \
+                     "but still misunderstanding a little bit. If you want to get a full mark, " \
+                     "feel free to go back and read the information, and do the quiz again. "
+    elif  score == 5:
+        result = "Excellent!"
+        suggestion = "You got all of the right answers, but don’t be so proud and you may also need to learn " \
+                     "some of the knowledge gap of children’s pneumonia."
+
     final_score = str(score) + "/" + str(total_score)
-    return result, final_score
+    return result, final_score, suggestion

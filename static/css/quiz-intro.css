@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* CSS Document */
+.quiz-box {
+    background-color: lightgrey;
+    width: auto;
+    border: 1px solid green;
+    padding: 1px;
+    margin: 1px;
+	text-align: left;
+	background: #9370DB;
+	border-image: url()
+}

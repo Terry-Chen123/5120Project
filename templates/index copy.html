@@ -1,4 +1,3 @@
-{% load static  %}
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -8,19 +7,19 @@
 	<meta name="keywords" content="LungHealth, TA2, creative, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Favicon -->   
-	<link href="{% static 'img/favicon.ico'%}" rel="shortcut icon"/>
+	<link href="img/favicon.ico" rel="shortcut icon"/>
 
 	<!-- Google Font -->   
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
-	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}"/>
-	<link rel="stylesheet" href="{% static 'static/css/flaticon.css' %}"/>
-	<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}"/>
-	<link rel="stylesheet" href="{% static 'css/style.css'%}"/>
-	<link rel="stylesheet" href="{% static 'css/animate.css'%}"/>
-	<link rel="stylesheet" href="{% static 'css/pop-up.css'%}"/>
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/flaticon.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/animate.css"/>
+	<link rel="stylesheet" href="css/pop-up.css"/>
 
 
 	<!--[if lt IE 9]>
@@ -36,11 +35,12 @@
 	</div>
 	
 	<!-- Header section -->
-	<header class="header-section" >
+	<header class="header-section" style="background: Cornsilk">
+
 		<div class="container">
 			<!-- Site Logo -->
-			<a href="{% url 'Home' %}" class="site-logo">
-				<img src="{% static 'img/logo-title.001.png'%}" alt="">
+			<a href="index.html" class="site-logo">
+				<img src="img/logo-title.001.png" alt="">
 			</a>
 			<!-- responsive -->
 			<div class="nav-switch">
@@ -48,39 +48,42 @@
 			</div>
 			<!-- Main Menu -->
 			<ul class="main-menu">
-				<li class="active"><a href="{% url 'Home' %}">Home</a></li>
-                <li><a href="{% url 'Read More' %}">More Information</a></li>
-                <li><a href="{% url 'Service' %}">Service</a></li>
-
+				<li class="active"><a href="index.html">Home</a></li>
+				<li><a href="service.html">Service</a></li>
 			</ul>
 		</div>
+
+
 	</header>
 	<!-- Header section end -->
 
+                                                
 	<!-- Hero section -->
 	<section class="hero-section">
 		<div class="hero-slider owl-carousel">
 			<!-- item -->
-			<div class="hs-item set-bg text-white" data-setbg="{% static 'img/homepage/bg.png'%}">
+			<div class="hs-item set-bg text-white" data-setbg="img/new/bg.png">
 				<div class="container">
 					<div class="row">
 						<div class="col-xl-7">
 							<h2><font color="2E8B57">Children's Lung Health</font></h2>
 							<h5><font color="FFF5EE">Focus on pneumonia in children</font></h5>
-							<p> <a href="{% url 'Read More' %}" class="site-btn">Read More</a> </p>
+							<br>
+						  <p>&nbsp;</p>
+							<p> <a href="read-more.html" class="site-btn">Read More</a> </p>
                         </div>
 					</div>
 				</div>
 			</div>
 			<!-- item -->
-			<div class="hs-item set-bg text-white" data-setbg="{% static '/img/homepage/bg2.png'%}">
+			<div class="hs-item set-bg text-white" data-setbg="img/new/bg2.png">
 				<div class="container">
 					<div class="row">
 						<div class="col-xl-7">
 							<h2><font color="2E8B57">Pneumonia Vaccine</font></h2>
 							<h5><font color="FFF5EE	">Do you know how important<br>
 								to get pneumonia vaccine?</font></h5><br>
-							<a href="{% url 'Read More' %}" class="site-btn">Read More</a>
+							<a href="read-more.html" class="site-btn">Read More</a>
 						</div>
 					</div>
 				</div>
@@ -90,13 +93,32 @@
 	<!-- Hero section end -->
 
 
+	<!-- Banner section -->
+	<section class="banner-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7 banner-text text-white">
+					<h4><font color="696969">Schedule your Pneumonia Vaccine</font></h4>
+					<br>
+					<h5><font color="696969">2 types of pneumococcal vaccines:</font></h5><br>
+					<h6><font color="696969">Pneumococcal conjugate vaccine (PCV)&nbsp;&nbsp;& Pneumococcal polysaccharide vaccine (PPV) .</font></h6>
+				</div>
+				<div class="col-lg-5 text-lg-right">
+				<a href="read-more.html" alt="" class="site-btn sb-light">Read More</a>
+			</div>
+		</div>
+	</section>
+	<!-- Banner section end -->
+
+
+
 	<!-- About section -->
 	<section class="about-section spad">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-5">
 
-					<img src="{% static 'img/homepage/c1.JPG' %}" style="height:300px ;width:500px">
+					<img src="img/new/c1.JPG" alt="">
 					<br>
 					<h2><font color="2E8B57">Babies & Young children</font></h2><br>
 					<h5><font color="2E8B57">In babies and children younger than five years:<br></font></h5>
@@ -109,18 +131,16 @@
 				</div>
 				<div class="col-lg-7 about-text">
 					<h2><font color="2E8B57">About children pneumonia</font></h2>
-
+					
 					<h5><font color="696969">Pneumonia is a lung infection. </font></h5> <br>
 						<h6><font color="696969">When someone has pneumonia, the small airways in their lungs<br>get clogged with mucus.</font></h6><br>
 					    <h6><font color="696969">This reduces the amount of oxygen that can get into their body. </font></h6><br>
-					<img src="{% static 'img/homepage/c3.JPG' %}" style="height:300px ;width:500px">
+					<img src="img/new/c3.JPG" style=height:300px width:500px calt="">
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- About section end -->
-
-
 
 	<!-- Services section -->
 	<section class="services-section spad">
@@ -134,26 +154,25 @@
                         <a href ='{% url 'Quiz Intro' %}'><img src="{% static 'img/quiz.png'%}" alt=""></a>
 					</div>
 					<div class="service-content">
-
 						<h4><a href="{% url 'Quiz Intro' %}" class="btn_click" >Evaluation</a></h4>
 						<p>self-examination the knowledge of pneumonia.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 service">
 					<div class="service-icon">
-						<a href='{% url 'Read More' %}'><img src="{% static 'img/lungs.png' %}" alt=""></a>
+						<img src="{% static 'img/lungs.png' %}" alt="">
 					</div>
 					<div class="service-content">
-						<a href="{% url 'Read More' %}" ><h4>Pneumonia in Children</h4></a>
+						<a href="https://www.health.gov.au/health-topics/immunisation/immunisation-services/pneumococcal-immunisation-service-0" target="_blank"><h4>Pneumonia in Children</h4></a>
 						<p>Check the symptoms of pneumonia in children.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 service">
 					<div class="service-icon">
-                        <a href='{% url 'Read More' %}'><img src="{% static 'img/doctor.png' %}" alt=""></a>
+						<img src="{% static 'img/doctor.png' %}" alt="">
 					</div>
 					<div class="service-content">
-						<a href="{% url 'Read More' %}" ><h4>Call a Doctor</h4></a>
+						<a href="https://www.health.gov.au/health-topics/immunisation/immunisation-services/pneumococcal-immunisation-service-0" target="_blank"><h4>Call a Doctor</h4></a>
 						<p>Call your doctor right away if your child has any of the signs of pneumonia.</p>
 					</div>
 				</div>
@@ -163,21 +182,22 @@
 	<!-- Services section end -->
 
 
+
 	<!-- Gallery section -->
 	<div class="gallery-section">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-3 col-sm-6 p-0">
-					<img src="{% static 'img/homepage/1.jpg' %}" alt="">
+					<img src="img/new/1.jpg" alt="">
 				</div>
 				<div class="col-lg-3 col-sm-6 p-0">
-					<img src="{% static 'img/homepage/2.jpg'%}" style="height: 224px">
+					<img src="img/new/2.jpg" alt="" style="height: 224px">
 				</div>
 				<div class="col-lg-3 col-sm-6 p-0">
-					<img src="{% static 'img/homepage/c6.jpg'%}" alt="">
+					<img src="img/new/c6.jpg" alt="">
 				</div>
 				<div class="col-lg-3 col-sm-6 p-0">
-					<img src="{% static 'img/homepage/c7.png'%}" style="height: 224px">
+					<img src="img/new/c7.png" alt="" style="height: 224px">
 				</div>
 			</div>
 		</div>
@@ -186,7 +206,7 @@
 
 
 	<!-- Testimonials section -->
-    <section class="testimonials-section spad">
+  <section class="testimonials-section spad">
     <div class="container">
       <div class="section-title text-center">
         <h2>Children Pneumonia symptoms&nbsp;</h2>
@@ -201,9 +221,10 @@
             <p>have a moist cough </p>
             <p>have a fever  </p>
 
+
             <h9><span>Children</span></h9>
           </div>
-          <div class="author-pic set-bg" data-setbg="{% static 'img/review/1.jpg'%}"></div>
+          <div class="author-pic set-bg" data-setbg="{% static 'img/ review/1.jpg'%}"></div>
         </div>
         <div class="testimonial-item">
           <div class="ts-content">
@@ -213,7 +234,7 @@
 
             <span>Children</span>
           </div>
-          <div class="author-pic set-bg" data-setbg="{% static 'img/homepage/c4.JPG' %}"></div>
+          <div class="author-pic set-bg" data-setbg="{% staric 'img/homepage/c4.JPG' %}"></div>
         </div>
         <div class="testimonial-item">
           <div class="ts-content">
@@ -222,7 +243,7 @@
 <p>coughing:can be dry or may produce thick mucus </p>
             <span>Non-vaccines</span>
           </div>
-          <div class="author-pic set-bg" data-setbg="{% static 'img/homepage/c5.JPG' %}"></div>
+          <div class="author-pic set-bg" data-setbg="{% staric 'img/homepage/c5.JPG' %}"></div>
         </div>
         <div class="testimonial-item">
           <div class="ts-content">
@@ -232,21 +253,24 @@
                 <p>lose their appetite and not want to drink</p>
             <span>Children</span>
           </div>
-          <div class="author-pic set-bg" data-setbg="{% static 'img/homepage/c6.JPG' %}"></div>
+          <div class="author-pic set-bg" data-setbg="{% staric 'img/homepage/c6.JPG' %}"></div>
         </div>
       </div>
     </div>
   </section>
-    <!-- Testimonials section end -->
+  <!-- Testimonials section end -->
+
+
+
 
 	<!-- Footer top section -->
-	<section class="footer-top-section set-bg" data-setbg="{% static 'img/footer.jpg' %}">
+	<section class="footer-top-section set-bg" data-setbg="img/footer.jpg">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4">
 					<div class="footer-widget">
 						<div class="fw-about">
-							<img src="{% static 'img/logo.003.png' %}" alt="">
+							<img src="img/logo.003.png" alt="">
 							<p>The website is aim to provide a chance to let yourself test your knowledge and to make yourself informed about pneumonias. We provide you with the best solution and actions to every safety concern your lung health.</p>
 							<div class="fw-social">
 								<a href=""><i class="fa fa-facebook"></i></a>
@@ -261,9 +285,9 @@
 						<div class="fw-links">
 							<h5 class="fw-title">Our Services</h5>
 							<ul>
-								<li><a href="{% url 'Home' %}">Home</a></li>
-                                <li><a href="{% url 'Read More' %}">Information Guide</a></li>
-				                <li><a href="{% url 'Service' %}">Services</a></li>
+								<li><a href="service.html">Evaluation</a></li>
+								<li><a href="read-more.html">Information guid</a></li>
+
 							</ul>
 						</div>
 					</div>
@@ -279,7 +303,7 @@
 									</tr>
 									<tr>
 										<td>Australia Governamnet Departement of Health</td>
-
+								
 								</table>
 							</div>
 						</div>
@@ -295,9 +319,11 @@
 	<footer class="footer-section">
 		<div class="container">
 			<ul class="footer-menu">
-				<li><a href="{% url 'Home' %}">Home</a></li>
-                <li><a href="{% url 'Read More' %}">Information Guide</a></li>
-                <li><a href="{% url 'Service' %}">Services</a></li>
+				<li><a href="index.html">Home</a></li>
+				<!--<li><a href="">About us</a></li>-->
+				<li><a href="service.html">Services</a></li>
+				<!--<li><a href="">Blog</a></li>
+				<li><a href="">Contact</a></li>-->
 			</ul>
 			<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">TA2</a>
@@ -305,14 +331,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		</div>
 	</footer>
 	<!-- Footer top section end -->
-
+                                                
 
 	<!--====== Javascripts & Jquery ======-->
-	<script src="{% static 'js/jquery-3.2.1.min.js'%}"></script>
-	<script src="{% static 'js/bootstrap.min.js'%}"></script>
-	<script src="{% static 'js/owl.carousel.min.js'%}"></script>
-	<script src="{% static 'js/circle-progress.min.js'%}"></script>
-	<script src="{% static 'js/main.js'%}"></script>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/circle-progress.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/pop-up.js"></script>
 
     </body>
 </html>
