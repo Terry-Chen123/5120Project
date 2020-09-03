@@ -25,13 +25,132 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="d1fec4f6-a920-4c48-8970-f6e034768ea2">
-        <schema name="5120db" object-types="table, column" />
+        <schema name="5120db" object-types="column, function, table" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="d1fec4f6-a920-4c48-8970-f6e034768ea2">
-      <console name="Connection" type="STANDARD" schema="" session="Main" />
+      <console name="Connection" type="STANDARD" schema="" session="Main"><![CDATA[INSERT INTO Quiz_question (id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES 
+(1, 'What is pneumonia?', 'A. A lung infection.', 'B. A severe chest cold.', 'C. Advanced bronchitis.', 'A', 
+'Pneumonia is a type of lung infection caused by bacteria, viruses, or fungi.', 
+'Pneumonia is a type of lung infection caused by bacteria, viruses, or fungi.', 
+'Pneumonia is a type of lung infection caused by bacteria, viruses, or fungi.',
+'Pneumonia is a type of lung infection caused by bacteria, viruses, or fungi.'); 
+
+INSERT INTO Quiz_question (id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES 
+(2, 'Pneumonia is infection of the lungs caused by:', 'A. Bacteria', 'B. Viruses', 'C. Either of the above', 'C', 
+'Pneumonia is an infection of the lungs. It may be caused by bacteria, viruses, fungi, or parasites.', 
+'Pneumonia is an infection of the lungs. It may be caused by bacteria, viruses, fungi, or parasites.', 
+'Pneumonia is an infection of the lungs. It may be caused by bacteria, viruses, fungi, or parasites.', 
+'Pneumonia is an infection of the lungs. It may be caused by bacteria, viruses, fungi, or parasites.'); 
+
+INSERT INTO Quiz_question (id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES 
+(3, 'What are symptoms of pneumonia?', 'A. Cough, fever, and chills are symptoms of pneumonia.', 'B. Rash, painful joints, and itching skin.', 'C. Jaundice and peeling skin.', 'A', 
+'Symptoms of pneumonia may be mild to severe, and can vary depending on your age and health, and what type of pneumonia you have.', 
+'Symptoms of pneumonia may be mild to severe, and can vary depending on your age and health, and what type of pneumonia you have.', 
+'Symptoms of pneumonia may be mild to severe, and can vary depending on your age and health, and what type of pneumonia you have.', 
+'Symptoms of pneumonia may be mild to severe, and can vary depending on your age and health, and what type of pneumonia you have.'); 
+
+INSERT INTO Quiz_question (id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES 
+(4, 'Pneumonia can be a life-threatening infection.', 'A. True', 'B. False', 'C. Not sure', 'A', 
+'While many cases of pneumonia can be mild such as with walking pneumonia, left untreated some cases of pneumonia can be serious and even life-threatening.', 
+'While many cases of pneumonia can be mild such as with walking pneumonia, left untreated some cases of pneumonia can be serious and even life-threatening.', 
+'While many cases of pneumonia can be mild such as with walking pneumonia, left untreated some cases of pneumonia can be serious and even life-threatening.', 
+'While many cases of pneumonia can be mild such as with walking pneumonia, left untreated some cases of pneumonia can be serious and even life-threatening.'); 
+
+INSERT INTO Quiz_question (id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES  
+(5, 'Is pneumonia contagious?', 'A. Yes', 'B. No', 'C. Not sure', 'A', 
+'Causes of pneumonia such as bacteria or viruses can be contagious. The period in which a person is contagious can range from one or two days to up to two weeks.', 
+'Causes of pneumonia such as bacteria or viruses can be contagious. The period in which a person is contagious can range from one or two days to up to two weeks.', 
+'Causes of pneumonia such as bacteria or viruses can be contagious. The period in which a person is contagious can range from one or two days to up to two weeks.', 
+'Causes of pneumonia such as bacteria or viruses can be contagious. The period in which a person is contagious can range from one or two days to up to two weeks.');
+
+INSERT INTO Quiz_question (id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES 
+(6, 'Is there a vaccine against pneumonia?', 'A. True', 'B. No', 'C. Not sure', 'A', 
+ 'There are currently vaccines to prevent two types of pneumonia.', 
+ 'There are currently vaccines to prevent two types of pneumonia.', 
+ 'There are currently vaccines to prevent two types of pneumonia.', 
+ 'There are currently vaccines to prevent two types of pneumonia.'); 
+
+INSERT INTO Quiz_question (id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES  
+(7, 'The flu vaccine has to be administered to prevent pneumonia:', 'A. Every year', 'B. Every 5 years', 'C. Every 10 years', 'A', 
+'The flu vaccine has to be administered every year to prevent pneumonia caused by influenza virus.', 
+'The flu vaccine has to be administered every year to prevent pneumonia caused by influenza virus.', 
+'The flu vaccine has to be administered every year to prevent pneumonia caused by influenza virus.', 
+'The flu vaccine has to be administered every year to prevent pneumonia caused by influenza virus.'); 
+
+INSERT INTO Quiz_question (id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES 
+(8, 'Except for getting vaccine, which of the following statement can be seen as a tip for preventing pneumonia?', 
+'A. Smoking', 'B. Eat an unbalanced diet.', 'C. Wash hands often in warm and soapy water.', 'C', 
+'Avoid smoking for preventing pneumonia.', 
+'Eat a healthy diet that includes lots of fruits, vegetables, fibre, and lean protein.', 
+'Keeping your hands clean to prevent pneumonia.', 
+'Keeping your hands clean to prevent pneumonia.'); 
+
+INSERT INTO Quiz_question (id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES 
+(9, 'How many doses of pneumococcal vaccine should children under 12 months receive?', 'A.	0 to 1 dos', 'B. 3 to 4 doses', 'C. 6 doses', 'B', 
+'Detailed information can go to: https://www.health.gov.au/health-topics/immunisation/immunisation-services/pneumococcal-immunisation-service-0', 
+'Detailed information can go to: https://www.health.gov.au/health-topics/immunisation/immunisation-services/pneumococcal-immunisation-service-0', 
+'Detailed information can go to: https://www.health.gov.au/health-topics/immunisation/immunisation-services/pneumococcal-immunisation-service-0', 
+'Detailed information can go to: https://www.health.gov.au/health-topics/immunisation/immunisation-services/pneumococcal-immunisation-service-0'); 
+
+INSERT INTO Quiz_question (id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES 
+(10, 'Which of the following statement is wrong regarding to strength the immune system to prevent pneumonia?', 
+'A. Get enough rest', 'B. Do exercise', 'C.	Smoking', 'C', 
+'Smokers are at higher risk of getting pneumonia.', 
+'Smokers are at higher risk of getting pneumonia.', 
+'Smokers are at higher risk of getting pneumonia.', 
+'Smokers are at higher risk of getting pneumonia.'); 
+
+INSERT INTO Quiz_question (id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES  
+(11, 'What should you do if you are diagnosed with pneumonia?', 'A.	Cover the mouth when sneezing or coughing.', 'B. Drinking alcohol and smoking.', 'C. Stay up late.', 'A', 
+'Once you are diagnosed with pneumonia, avoid close contact with anyone.', 
+'Once you are diagnosed with pneumonia, avoid close contact with anyone.', 
+'Once you are diagnosed with pneumonia, avoid close contact with anyone.', 
+'Once you are diagnosed with pneumonia, avoid close contact with anyone.'); 
+
+INSERT INTO Quiz_question (id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES  
+(12, 'What can be the treatment for pneumonia?', 'A. Hospital admission', 'B. Medications', 'C.	All of the above', 'C', 
+'Treatment depends on the age of the individual and the type of infection, but can include hospital admission, plenty of fluids, medications and etc.', 
+'Treatment depends on the age of the individual and the type of infection, but can include hospital admission, plenty of fluids, medications and etc.', 
+'Treatment depends on the age of the individual and the type of infection, but can include hospital admission, plenty of fluids, medications and etc.', 
+'Treatment depends on the age of the individual and the type of infection, but can include hospital admission, plenty of fluids, medications and etc.'); 
+
+INSERT INTO Quiz_question (id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES 
+(13, 'If children have the symptoms of pneumonia, should they see the doctors immediately?', 'A. Yes', 'B. No', 'C. Not sure', 'A', 
+'See the doctor immediately, since pneumonia can be life threatening to babies and young children.', 
+'See the doctor immediately, since pneumonia can be life threatening to babies and young children.', 
+'See the doctor immediately, since pneumonia can be life threatening to babies and young children.', 
+'See the doctor immediately, since pneumonia can be life threatening to babies and young children.'); 
+
+INSERT INTO Quiz_question (id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES 
+(14, 'Which age group can be more likely to get pneumonia or develop a more severe illness?', 'A. Babies and young children under 2 years old.', 'B. People over 65 years old.', 'C. All of the above.', 'C', 
+'Babies and young children 2 and people over 65 are more likely to get pneumonia.', 
+'Babies and young children 2 and people over 65 are more likely to get pneumonia.', 
+'Babies and young children 2 and people over 65 are more likely to get pneumonia.', 
+'Babies and young children 2 and people over 65 are more likely to get pneumonia.'); 
+INSERT INTO Quiz_question (id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
+VALUES  
+(15, 'Can children get the pneumonia vaccine and the flu vaccine at the same time?', 'A. Yes', 'B. No', 'C. Not sure', 'B', 
+'Children should not get the pneumonia vaccine and the flu vaccine at the same time, this may increase the risk of having fever-related seizures.', 
+'Children should not get the pneumonia vaccine and the flu vaccine at the same time, this may increase the risk of having fever-related seizures.', 
+'Children should not get the pneumonia vaccine and the flu vaccine at the same time, this may increase the risk of having fever-related seizures.', 
+'Children should not get the pneumonia vaccine and the flu vaccine at the same time, this may increase the risk of having fever-related seizures.');]]></console>
       <console name="Connection 1" type="STANDARD" schema="5120db" session="Main"><![CDATA[INSERT INTO Quiz_question(id, question, choiceA, choiceB, choiceC, answer, feedbackA, feedbackB, feedbackC, suggestion) 
 VALUES 
 (1, 'Pneumonia is infection of the lungs caused by', 'A. Bacteria or Viruses', 'B. Fungi', 'C. Either of the above', 'C.', 
