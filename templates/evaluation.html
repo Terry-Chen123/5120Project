@@ -31,7 +31,7 @@
 
                       {% csrf_token %}
                        {% for eachquestion in Question %}
-                            <h5>{{ eachquestion.id }}. {{ eachquestion.question }}</h5>
+                            <h5>{{ eachquestion.questionId }}. {{ eachquestion.question }}</h5>
                             <br>
 
                             <p><input type="radio" id="ChoiceA" class="qa" name="{{ eachquestion.id }}" value = "A">{{ eachquestion.choiceA }} </p>

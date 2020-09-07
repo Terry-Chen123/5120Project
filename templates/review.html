@@ -89,7 +89,7 @@
 				<div class="col-lg-12 col-md-8 service">
                     {% for ques, ans in question_dic.items %}
                         <div class="quiz-content">
-                                <h5>{{ ques.id }}. {{ ques.question }}</h5><br>
+                                <h5>{{ ques.questionId }}. {{ ques.question }}</h5><br>
                                 <label>{{ ques.choiceA }} </label><br>
                                 <label>{{ ques.choiceB }} </label><br>
                                 <label>{{ ques.choiceC }} </label><br>
@@ -103,22 +103,37 @@
                                                  margin-top: 1px;
                                                  float: top;
                                                  background-color: #D1D0CE;">
-                            <h5> Your Answer is:&nbsp; {{ ans }}</h5>
-                            <br>
-                            <h5> The Correct Answer is:  {{ ques.answer }}</h5>
-                            <br>
+                            <p>
+                              <vi style="color:black;font-size:18px;">
+                                Your Answer is:
+                              </vi>
+                              <vi style="color:red;font-size:22px;font-weight:bold;">{{ ans }}</vi>
+                            </p>
+                            <p>
+                              <vi style="color:black;font-size:18px;">
+                                The Correct Answer is:
+                              </vi>
+                              <vi style="color:red;font-size:22px;font-weight:bold;">{{ ques.answer }}</vi>
+                            </p>
                             <h5>Feedback:&nbsp;{{ ques.feedbackA }}</h5>
                         </div>
                         <br>
                         <br>
                     {% endfor %}
 				</div>
-				<br>
                 <div>
-                    <h3 style="color: red"> Your Grade is: {{ score }}--{{ grade }} !!</h3>
+                    <p>
+                      <vi style="color:black;font-size:24px;">
+                        Your Grade is:
+                      </vi>
+                      <vi style="color:red;font-size:30px;font-weight:bold;">{{ score }}--{{ grade }} !</vi>
+                    </p>
+                    <br>
+                    <h4> {{ suggestion }} </h4>
                 <br>
                 <br>
-					<a href="{% url 'Home' %}" class="site-btn mt-4">Finish Review</a>
+					<a href="{% url 'Home' %}" class="site-btn mt-4">Back to Home</a>
+                    <a href="{% url 'Read More' %}" class="site-btn mt-4">Go to Learn</a>
                 </div>
 			</div>
 			</div>

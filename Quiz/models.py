@@ -10,7 +10,7 @@ class Question(models.Model):
     feedbackA = models.CharField(max_length=500)
     feedbackB = models.CharField(max_length=500)
     feedbackC = models.CharField(max_length=500)
-    suggestion = models.CharField(max_length=500)
+    questionId = models.IntegerField()
     category = models.CharField(max_length=10)
     #image = models.ImageField()
 
