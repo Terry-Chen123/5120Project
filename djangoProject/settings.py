@@ -13,10 +13,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -86,10 +84,10 @@ DATABASES = {
     {
         'ENGINE': 'django.db.backends.mysql',    # 数据库引擎
         'NAME': '5120db', # 数据库名称
-        'HOST': 'lunghealth.mysql.database.azure.com', # 数据库地址，本机 ip 地址 127.0.0.1
+        'HOST': 'localhost', # 数据库地址，本机 ip 地址 127.0.0.1
         'PORT': '3306', # 端口
-        'USER': 'pinnacle@lunghealth',  # 数据库用户名
-        'PASSWORD': 'Qwer123567', # 数据库密码
+        'USER': 'root',  # 数据库用户名
+        'PASSWORD': 'qwer123567', # 数据库密码
 
     }
 }
@@ -126,7 +124,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/

@@ -11,6 +11,7 @@ class Question(models.Model):
     feedbackB = models.CharField(max_length=500)
     feedbackC = models.CharField(max_length=500)
     suggestion = models.CharField(max_length=500)
+    category = models.CharField(max_length=10)
     #image = models.ImageField()
 
 class Quiz(models.Model):
@@ -25,6 +26,10 @@ class Quiz_Question(models.Model):
     correctOrNot = models.BooleanField()
     userChoice = models.CharField(max_length=10)
 
+class Category(models.Model):
+    title = models.CharField(max_length=500)
+    description = models.CharField(max_length=500)
+    category = models.CharField(max_length=10)
 
 
 

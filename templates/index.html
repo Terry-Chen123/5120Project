@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}"/>
 	<link rel="stylesheet" href="{% static 'static/css/flaticon.css' %}"/>
 	<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}"/>
-	<link rel="stylesheet" href="{% static 'css/style.css'%}"/>
+	<link rel="stylesheet" href="{% static 'css/style2.css'%}"/>
 	<link rel="stylesheet" href="{% static 'css/animate.css'%}"/>
 	<link rel="stylesheet" href="{% static 'css/pop-up.css'%}"/>
 
@@ -47,12 +47,12 @@
 				<i class="fa fa-bars"></i>
 			</div>
 			<!-- Main Menu -->
-			<ul class="main-menu">
-				<li class="active"><a href="{% url 'Home' %}">Home</a></li>
-                <li><a href="{% url 'Read More' %}">More Information</a></li>
-                <li><a href="{% url 'Service' %}">Service</a></li>
+             <ul class="main-menu">
+                    <li class="active"><a href="{% url 'Home' %}">Home</a></li>
+                    <li><a href="{% url 'Read More' %}">More Information</a></li>
+                    <li><a href="{% url 'Service' %}">Service</a></li>
+			 </ul>
 
-			</ul>
 		</div>
 	</header>
 	<!-- Header section end -->
@@ -91,7 +91,7 @@
 
 
 	<!-- About section -->
-	<section class="about-section spad">
+	<section class="about-section spad" style="padding-left: 150px">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-5">
@@ -111,9 +111,9 @@
 					<h2><font color="2E8B57">About children pneumonia</font></h2>
 
 					<h5><font color="696969">Pneumonia is a lung infection. </font></h5> <br>
-						<h6><font color="696969">When someone has pneumonia, the small airways in their lungs<br>get clogged with mucus.</font></h6><br>
-					    <h6><font color="696969">This reduces the amount of oxygen that can get into their body. </font></h6><br>
-					<img src="{% static 'img/homepage/c3.JPG' %}" style="height:300px ;width:500px">
+						<h6><font color="696969">When someone has pneumonia, the small airways in their lungs<br> get clogged with mucus.<br><br>This reduces the amount of oxygen that can get into their body.</font></h6><br>
+
+					<img src="{% static 'img/homepage/11.jpg' %}" style="height:300px ;width:500px">
 				</div>
 			</div>
 		</div>
@@ -135,7 +135,7 @@
 					</div>
 					<div class="service-content">
 
-						<h4><a href="{% url 'Quiz Intro' %}" class="btn_click" >Evaluation</a></h4>
+						<h4><a href="{% url 'Quiz List' %}" class="btn_click" >Evaluation</a></h4>
 						<p>self-examination the knowledge of pneumonia.</p>
 					</div>
 				</div>
@@ -227,7 +227,7 @@
         <div class="testimonial-item">
           <div class="ts-content">
             <div class="quta">“</div>
-                <p>fever – sweating and shivering </p>
+                <p>fever：&nbsp;sweating and shivering </p>
                 <p>be irritable or tired</p>
                 <p>lose their appetite and not want to drink</p>
             <span>Children</span>

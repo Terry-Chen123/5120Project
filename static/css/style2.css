@@ -1,4 +1,5 @@
 
+
 html,
 body {
   height: 100%;
@@ -460,11 +461,10 @@ ol {
 .main-menu {
   list-style: none;
   display: inline-block;
-
   float: right;
   padding: 100px;
-position:absolute;
-	right:500px;
+
+
 }
 
 .main-menu li {
@@ -1090,11 +1090,9 @@ position:absolute;
   height: 100%;
   left: 0;
   top: 0;
-  background-color: #E5E4E2;
   background-repeat: repeat;
   opacity: 0.81;
 }
-
 .more-info:after {
   position: absolute;
   content: "";
@@ -1102,7 +1100,7 @@ position:absolute;
   height: 100%;
   left: 0;
   top: 0;
-  background-color: #E5E4E2;
+
   background-repeat: repeat;
   opacity: 0.81;
 }
@@ -1528,15 +1526,8 @@ position:absolute;
   }
   .main-menu li a {
     font-size: 14px;
-    padding: 0px;
-    float: left;
-    margin-left: 0px;
-  }
-    .menu li a {
-    font-size: 14px;
-    padding: 0px;
-    float: left;
-    margin-left: 0px;
+    padding: 5px 10px;
+    margin-left: 5px;
   }
   .testimonials-warp {
     max-width: 720px;
@@ -1633,7 +1624,6 @@ position:absolute;
     -webkit-box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.2);
   }
-
   .main-menu li {
     display: block;
     border-top: 1px solid #e8e8e8;
@@ -1785,3 +1775,4 @@ position:absolute;
     margin-left: 15px;
   }
 }
+

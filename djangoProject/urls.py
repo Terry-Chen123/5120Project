@@ -26,10 +26,10 @@ urlpatterns = [
     path('', views.home, name = 'Home'),
     path('service/',views.service, name = 'Service'),
     path('readmore/',views.readMore, name = 'Read More'),
-    path('service/quiz/',views.evaluation, name = 'Evaluation'),
-    #path('service/quiz/review/',views.review, name = 'Review'),
-    path('service/quiz/getuserchoice', views.getUserChoice, name = 'Review1'),
-    path('service/quiz/quizintro', views.quizIntro, name='Quiz Intro')
+    path('service/quizlist/quizstart',views.evaluation, name = 'Evaluation'),
+    path('service/quizlist/getuserchoice', views.getUserChoice, name = 'Review1'),
+    path('service/quizlist/quizintro', views.quizIntro, name='Quiz Intro'),
+    path('service/quizlist/quizcategory', views.quizCategory, name='Quiz List')
 
 ]
 urlpatterns += staticfiles_urlpatterns()

@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}"/>
 	<link rel="stylesheet" href="{% static 'static/css/flaticon.css' %}"/>
 	<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}"/>
-	<link rel="stylesheet" href="{% static 'css/style.css'%}"/>
+	<link rel="stylesheet" href="{% static 'css/style2.css'%}"/>
 	<link rel="stylesheet" href="{% static 'css/animate.css'%}"/>
 	<link rel="stylesheet" href="{% static 'css/pop-up.css'%}"/>
 
@@ -59,11 +59,21 @@
 
 
 	<!-- Page info section -->
-	<section class="page-info-section set-bg" data-setbg="img/page-info-bg/5.jpg">
+	<section class="more-info set-bg" style="background: #E5E4E2">
 		<div class="container">
-			<h4>Home&nbsp;&gt;&nbsp;Services&nbsp;&gt;&nbsp;Quiz&nbsp;&gt;&nbsp;Quiz Review</h4>
 			<br>
-			<h2><font color="990000">Quiz Review</font></h2>
+            <br>
+            <h5>
+                <a href="{% url 'Home' %}">Home</a>&nbsp;&gt;&nbsp;
+                <a href="{% url 'Service' %}">Services</a>&nbsp;&gt;&nbsp;
+                <a href="{% url 'Quiz List' %}">Quiz Category</a>&nbsp;&gt;&nbsp;
+                <a href="{% url 'Quiz Intro' %}">Start Quiz</a>&nbsp;&gt;&nbsp;
+                <a href="{% url 'Evaluation' %}">Quiz</a>&nbsp;&gt;&nbsp;Quiz Review
+
+            </h5>
+			<h2><font color="2E8B57">Quiz Review</font></h2>
+            <br>
+            <br>
 		</div>
 	</section>
 	<!-- Page info section end -->
@@ -85,7 +95,14 @@
                                 <label>{{ ques.choiceC }} </label><br>
                         </div>
                         <br>
-                        <div class="review" >
+                        <div class="review" style="width: 800px;
+				                                 height:auto;
+                                                 border: 1px solid #E5E4E2;
+                                                 padding: 1px;
+                                                 margin:1px;
+                                                 margin-top: 1px;
+                                                 float: top;
+                                                 background-color: #D1D0CE;">
                             <h5> Your Answer is:&nbsp; {{ ans }}</h5>
                             <br>
                             <h5> The Correct Answer is:  {{ ques.answer }}</h5>
