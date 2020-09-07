@@ -84,7 +84,7 @@ DATABASES = {
     {
         'ENGINE': 'django.db.backends.mysql',    # 数据库引擎
         'NAME': '5120db', # 数据库名称
-        'HOST': 'lunghealth.mysql.database.azure.com' 
+        'HOST': 'lunghealth.mysql.database.azure.com',
         'PORT': '3306', # 端口
         'USER': 'pinnacle@lunghealth',  # 数据库用户名
         'PASSWORD': 'Qwer123567', # 数据库密码
