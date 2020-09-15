@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block navigation %}
     <li ><a href="{% url 'Home' %}">Home</a></li>
+    <li><a href="{% url 'About' %}">About</a></li>
     <li ><a href="{% url 'Read More' %}">More Information</a></li>
     <li class="active"><a href="{% url 'Service' %}">Service</a></li>
 {% endblock %}
@@ -18,29 +19,33 @@
 	</section>
 	<!-- Page info section end -->
 
-	<!-- Service Featured section -->
+    <!-- Service Featured section -->
 	<section class="services-section spad">
 		<div class="container">
-			<div class="section-title text-center">
-				<h2>Our Services</h2>
-			</div>
+
 			<div class="row">
 				<div class="col-lg-4 col-md-8 service">
 					<div class="service-icon">
 						<a href="{% url 'Quiz Intro' %}"><img src="{% static 'img/quiz.png' %}" alt=""></a>
 					</div>
 					<div class="service-content">
-						<h4><a href="{% url 'Quiz List' %}" class="btn_click" >Evaluation</a></h4>
-						<p>self-examination the knowledge of pneumonia.</p>
+                        <h4><a href="{% url 'Quiz List' %}"class="btn_click" style="text-align: left">Quiz</a></h4>
+                        <br>
+                        <h7>Test Your Knowledge of Children's Pneumonia</h7><br><br>
+					    <p>With the growing number of children's pneumonia.
+                        <br> It is important for you to have basic understanding of pneumonia, time to start!</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 service">
 					<div class="service-icon">
-						<img src="{% static 'img/lungs.png'%}" alt="">
+						<img src="{% static 'img/hospital.png'%}" alt="">
 					</div>
 					<div class="service-content">
-						<h4>Pneumonia in Children</h4>
-						<p>Check the symptoms of pneumonia in children.</p>
+						<h4><a href="" class="btn_click" style="text-align: left" >Clinic Searching</a></h4>
+                        <br>
+						<h7>Search clinics within a given location.</h7><br><br>
+					    <p>Wanna know how many clinics available within your location?
+                            <br>Better know it before the real emergency occurs.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 service">
@@ -48,7 +53,8 @@
 						<img src="{% static 'img/doctor.png'%}" alt="">
 					</div>
 					<div class="service-content">
-						<h4>Call a Doctor</h4>
+                        <h4><a href="" class="btn_click" style="text-align: left" >Pneumonia</a></h4>
+						<br>
 						<p>Call your doctor right away if your child has any of the signs of pneumonia.</p>
 					</div>
 				</div>
@@ -58,64 +64,5 @@
 		</div>
 	</section>
 	<!-- Intro section end -->
-
-	<!-- Faq section -->
-	<section class="faq-section spad">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="section-title">
-						<h2><font color="#837E7C">What do you know about Pneumonia?</font></h2>
-					</div>
-					<ul class="faq-list">
-						<li>Pneumonia is a type of lung infection, caused by a virus or bacteria. The lungs are filled with thousands of tubes, called bronchi, which end in smaller sacs called alveoli. Each one has a fine mesh of capillaries. This is where oxygen is added to the blood and carbon dioxide is removed. </li></li>
-
-						<h2><font color="837E7C">What Causes Kids Pneumonia?</font></h2><br>
-						<li>Kids with pneumonia caused by bacteria usually become sick fairly quickly, starting with a sudden high fever and unusually fast breathing.</li>
-					</ul>
-					<a href="{% url 'Read More' %}" class="site-btn mt-4">Read More</a>
-				</div>
-				<div class="col-lg-6">
-					<!-- Accordions -->
-					<div id="accordion" class="accordion-area faq-accordion">
-						<div class="panel">
-							<div class="panel-header" id="headingOne">
-								<button class="panel-link active" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Pneumonia&nbsp;VS&nbsp;Health&nbsp;Lung </button>
-							</div>
-							<div id="collapse1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-								<div class="panel-body">
-									<img src="{% static 'img/faq.jpg'%}" alt="">
-									<p></p>
-								</div>
-							</div>
-						</div>
-						<div class="panel">
-							<div class="panel-header" id="headingTwo">
-								<button class="panel-link" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Get to know Pneumonia </button>
-							</div>
-							<div id="collapse2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-								<div class="panel-body">
-									<img src="{% static 'img/2.jpg'%}" alt="">
-									<p>Pneumonia can range in seriousness from mild to life-threatening. It is most serious for infants and young children, people older than age 65, and people with health problems or weakened immune systems.</p>
-								</div>
-							</div>
-						</div>
-						<div class="panel">
-							<div class="panel-header active" id="headingThree">
-								<button class="panel-link" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">Find suitable pneumonia vaccnies </button>
-							</div>
-							<div id="collapse3" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-								<div class="panel-body">
-									<img src="{% static 'img/page-info-bg/6.jpg'%}" alt="">
-									<p>There are currently vaccines to prevent two types of pneumonia. These vaccines won't prevent all cases of pneumonia, but they can reduce the risk of severe and life-threatening complications.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Faq section end -->
 {% endblock %}
 

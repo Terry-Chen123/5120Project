@@ -1,127 +1,175 @@
 {% extends 'base.html' %}
 {% block navigation %}
     <li ><a href="{% url 'Home' %}">Home</a></li>
+    <li><a href="{% url 'About' %}">About</a></li>
     <li class="active"><a href="{% url 'Read More' %}">More Information</a></li>
     <li ><a href="{% url 'Service' %}">Service</a></li>
 {% endblock %}
 
 {% block mainbody %}
     {% load static %}
-        <!-- Page info section -->
+    <!-- Page info section -->
 	<section class="more-info set-bg" style="background: #E5E4E2">
 		<div class="container">
             <br>
-			<h5><a href="{% url 'Home' %}">Home</a>&nbsp;&gt;&nbsp;More information</h5>
+			<h5><a href="{% url 'Home' %}">Home</a>&nbsp;&gt;&nbsp;
+                More Information
+            </h5>
 			<br>
             <br>
 			<h1><font color="2E8B57">More Information</font></h1>
             <br>
-
 		</div>
 	</section>
-	<!-- Page info section end -->
 
-	<!-- Info section -->
-	<section class="faq-section spad">
+    <section class="services-section spad" style="background: white">
+        <!-- info1 -->
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="section-title">
-						<h2><font color="2E8B57">Pneumonia Symptoms on Children</font></h2>
+			<div class="blog-item">
+				<div class="row">
+					<div class="col-lg-6 blog-thumb">
+                        <br><br>
+						<img src="{% static 'img/read more page/info1.jpg' %}" style="height:380px ;width:500px">
 					</div>
-					<ul class="faq-list">
-						<li><h7><font color="696969"> has a cough and fever </font></h7></li>
-						<li><h7><font color="696969">be short of breath or have difficulty breathing</font></h7></li>
-						<li><h7><font color="696969"></font>sharp chest pains when breathing deeply or coughing</h7></li>
-						<li><h7><font color="696969"> stomach ache and/or vomit</font></h7></li>
-                        <li><h7><font color="696969"> be irritable or tired</font></h7></li>
-                        <li><h7><font color="696969"> lose appetite</font></h7></li>
-						<h6><font color="#808080">A younger baby with pneumonia might just look very ill, have a fever, and breathe rapidly, without coughing or showing the other symptoms above.
-</font></h6>
-
-						<br>
-						<br>
-						<h2><font color="2E8B57">Is Pneumonia Contagious?</font> </h2>
-						<br>
-
-						<h16><font color="696969">In general, pneumonia is not contagious, but the upper respiratory viruses and bacteria that lead to it are.
-                            <br><br>When these germs are in fluid from the mouth or nose of someone who's infected,
-                            that person can spread the illness through coughs and sneezes. While many cases of pneumonia
-                            can be mild, left untreated some cases of pneumonia can be serious and even life-threatening.
-                        Sharing cups and utensils, touching the used tissues or handkerchiefs of an infected person also
-                            can spread pneumonia. So, it's best to keep kids away from anyone with symptoms of a respiratory infection.
-                        </font></h16>
-                    </ul>
-					<a href="{% url 'Home' %}" class="site-btn mt-4">Back To Home</a>
-				</div>
-				<div class="col-lg-6">
-					<!-- Accordions -->
-					<div id="accordion" class="accordion-area faq-accordion">
-                        <br><h2><font color="2E8B57">Prevention &hearts;&nbsp;Treatment</font> </h2>
-						<br>
-                        <div class="panel">
-							<div class="panel-header" id="headingOne">
-								<button class="panel-link active" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1" >Simple precautions</button>
-							</div>
-							<div id="collapse1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-								<div class="panel-body">
-									<img src="{% static 'img/read more page/wash.JPG' %}" alt="">
-                                    <h15><font color="#696969"><li>Make sure you regularly wash hands with warm, soapy water;</li>
-                                        <li>Keep your hands away from your face as much as possible;</li>
-                                       <li>Get enough rest and do exercise</li>
-                                        <li>Cough or sneeze into a tissue or your elbows;</li>
-                                        <li>Wash hands often in warm and soapy water</li></font></h15>
-</h12><br>
-								</div>
-							</div>
+					<div class="col-lg-6 blog-content">
+						<div class="date">Introduction of pneumonia :</div>
+                        <h3><font color="2E8B57">Pneumonia Symptoms on Children</font></h3>
+						<div class="blog-metas">
+							<div class="blog-meta">By LungHealth</div>
+							<div class="blog-meta">Tags:<a href="">pneumonia</a>,<a href="">contagious,</a><a href="">introduction</a></div>
 						</div>
-					    <div class="panel">
-							<div class="panel-header" id="headingTwo">
-								<button class="panel-link" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Immunisation
-</button>
-							</div>
-							<div id="collapse2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-								<div class="panel-body">
-									<img src="{% static 'img/read more page/needle.png' %}" alt="">
-                                    <br><br>
-                                    <h20><font color="2E8B57">Prevenar 13 - covers 13 strains of pneumococcal disease;<br>
-                                        Pneumovax 23 - covers 23 strains of pneumococcal disease.</font>
-                                    </h20><br><br>
-                                    <p><font color="#696969"> All children at 2, 4 and 12 months of age have to get the vaccine.</font></p>
-</p>
-								</div>
-							</div>
-						</div>
-
-                        <div class="panel">
-                            <div class="panel-header active" id="headingThree">
-                                <button class="panel-link" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">Treatment for Pneumonia</button>
-                            </div>
-							<div id="collapse3" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-								<div class="panel-body">
-									<img src="{% static 'img/read more page/info2.jpg' %}" alt="">
-                                    <br><br>
-                                    <p><font color="696969"><li>Hospital admission. Take your child to the GP as soon as possible.</li>
-                                        <li>Make that your child gets as much rest as possible.</li>
-                                       <li>Cover the mouth with tissue or elbows when sneezing or coughing.</li>
-                                        <li>Keep your home smoke free. Infants and young children 2 are more likely to get pneumonia. Smoke can make pneumonia worse.</li>
-                                        <li>Don’t worry if your child has a fever and isn’t hungry. Your child’s appetite will improve as your child starts to feel better.
-</li>
-                                        <li>Don’t get  the pneumonia vaccine and the flu vaccine at the same time, this may increase the risk of children having fever-related seizures.
-</li>
-                                    </font></p>
-								</div>
-							</div>
-							<br>
-							<br>
-						</div>
-
+                        <p><font color="696969"> -- has a cough and fever </font></p>
+						<p><font color="696969">-- be short of breath or have difficulty breathing</font></p>
+						<p><font color="696969"> -- stomach ache and/or vomit</font></p>
+                        <p><font color="696969"> -- be irritable or tired & lose appetite</font></p>
+						<a href="{% url 'Quiz List' %}" class="read-more">Test your knowledge</a>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	<!-- Info section end -->
+        </div>
+        <!-- info1 end-->
+
+        <!-- info2-->
+        <br><br><br>
+		<div class="container">
+			<!-- Blog post -->
+			<div class="blog-item">
+				<div class="row">
+					<div class="col-lg-6 blog-thumb">
+                        <br><br>
+						<img src="{% static 'img/read more page/info2.jpg' %}" style="height:360px ;width:500px">
+					</div>
+					<div class="col-lg-6 blog-content">
+						<div class="date">Introduction of pneumonia :</div>
+                        <h3><font color="2E8B57">Is Pneumonia Contagious?</font></h3>
+						<div class="blog-metas">
+							<div class="blog-meta">By LungHealth</div>
+							<div class="blog-meta">Tags:<a href="">pneumonia</a>,<a href="">children,</a><a href="">introduction</a></div>
+						</div>
+                        <p><font color="696969">In general, pneumonia is not contagious, but the upper respiratory viruses and bacteria that lead to it are.
+                            <br>When these germs are in fluid from the mouth or nose of someone who's infected,
+                            that person can spread the illness through coughs and sneezes. While many cases of pneumonia
+                            can be mild, left untreated some cases of pneumonia can be serious and even life-threatening.
+                        Sharing cups and utensils, touching the used tissues or handkerchiefs of an infected person also
+                            can spread pneumonia. So, it's best to keep kids away from anyone with symptoms of a respiratory infection.</font></p>
+						<a href="{% url 'Quiz List' %}" class="read-more">Test your knowledge</a>
+					</div>
+				</div>
+			</div>
+        </div>
+        <!-- info2 end-->
+
+        <!-- info3 -->
+        <br><br><br>
+		<div class="container">
+			<div class="blog-item">
+				<div class="row">
+					<div class="col-lg-6 blog-thumb">
+                        <br><br>
+						<img src="{% static 'img/read more page/wash.JPG' %}" alt="" style="height:350px ;width:500px">
+					</div>
+					<div class="col-lg-6 blog-content">
+						<div class="date">Pneumonia Prevention :</div>
+                        <h3><font color="2E8B57"> Preventing Pneumonia in Children</font></h3>
+						<div class="blog-metas">
+							<div class="blog-meta">By LungHealth</div>
+							<div class="blog-meta">Tags:<a href="">pneumonia</a>,<a href="">children,</a><a href="">prevent</a></div>
+						</div>
+                        <p><font color="#696969">
+                        <p>-- Make sure you regularly wash hands with warm, soapy water;</p>
+                        <p>-- Keep your hands away from your face as much as possible;</p>
+                        <p>-- Get enough rest and do exercise</p>
+                        <p>-- Cough or sneeze into a tissue or your elbows;</p>
+                        <p>-- Wash hands often in warm and soapy water</p>
+						<a href="{% url 'Quiz List' %}" class="read-more">Test your knowledge</a>
+					</div>
+				</div>
+			</div>
+        </div>
+        <!--info3 end-->
+
+        <!-- info4  -->
+        <br><br><br><br>
+		<div class="container">
+			<div class="blog-item">
+				<div class="row">
+					<div class="col-lg-6 blog-thumb">
+                        <br><br>
+						<img src="{% static 'img/read more page/needle.png' %}" alt="" style="height:350px ;width:500px;">
+					</div>
+					<div class="col-lg-6 blog-content">
+						<div class="date">Pneumonia Vaccines :</div>
+                        <h3><font color="2E8B57">Pneumonia Vaccines of Children</font></h3>
+						<div class="blog-metas">
+							<div class="blog-meta">By LungHealth</div>
+							<div class="blog-meta">Tags:<a href="">pneumonia</a>,<a href="">children,</a><a href="">vaccines</a></div>
+						</div>
+                        <h20><font color="2E8B57">Prevenar 13 - covers 13 strains of pneumococcal disease;<br>
+                            Pneumovax 23 - covers 23 strains of pneumococcal disease.</font>
+                        </h20><br><br>
+                        <p><font color="#696969">Pneumococcal vaccines are provided free under the National Immunisation Program (NIP) for children who are eligible:
+                        •  All children at 2, 4 and 12 months of age.
+                        •  An extra dose at 6 months for Aboriginal and Torres Strait Islander children who live in Queensland, Northern Territory, Western Australia or South Australia.
+                        •  Children of all ages who have certain medical conditions that put them at higher risk of getting serious pneumococcal disease</font></p>
+                        </p>
+						<a href="{% url 'Quiz List' %}" class="read-more">Test your knowledge</a>
+					</div>
+				</div>
+			</div>
+        </div>
+        <!--info 4 end-->
+
+        <!-- info 5 -->
+        <br><br><br><br>
+		<div class="container">
+			<div class="blog-item">
+				<div class="row">
+					<div class="col-lg-6 blog-thumb">
+                        <br><br>
+						<img src="{% static 'img/read more page/info3.jpg' %}" alt="" style="height:580px ;width:500px" >
+					</div>
+					<div class="col-lg-6 blog-content">
+						<div class="date">Pneumonia treatment :</div>
+                        <h3><font color="2E8B57"> Treatment of Pneumonia in Children</font></h3>
+						<div class="blog-metas">
+							<div class="blog-meta">By LungHealth</div>
+							<div class="blog-meta">Tags:<a href="">pneumonia</a>,<a href="">children,</a><a href="">treatment</a></div>
+						</div>
+                       <font color="696969"><p>Hospital admission. Take your child to the GP as soon as possible.</p>
+                        <p>-- Make that your child gets as much rest as possible.</p>
+                        <p>-- Cover the mouth with tissue or elbows when sneezing or coughing.</p>
+                        <p>-- Keep your home smoke free. Infants and young children 2 are more likely to get pneumonia. Smoke can make pneumonia worse.</p>
+                        <p>-- Don’t worry if your child has a fever and isn’t hungry. Your child’s appetite will improve as your child starts to feel better.</p>
+                        <p>-- Don’t get  the pneumonia vaccine and the flu vaccine at the same time, this may increase the risk of children having fever-related seizures.</p>
+                       </font><a href="{% url 'Quiz List' %}" class="read-more">Test your knowledge</a>
+					</div>
+				</div>
+			</div>
+        </div>
+        <br><br><br><br>
+        <!--info 5 end-->
+    </section>
+    <!-- Page info section end-->
 {% endblock %}
 
 

@@ -1,7 +1,7 @@
 import django
 django.setup()
 from Quiz.models import Question,Category
-from Quiz import randomNum
+from Quiz import otherFunction
 from django.shortcuts import render
 
 
@@ -9,11 +9,17 @@ from django.shortcuts import render
 def home(request):
     return render(request, "../templates/index.html")
 
+def about(request):
+    return render(request, "../templates/about.html")
+
 def readMore(request):
     return render(request,"../templates/read_more.html")
 
 def service(request):
     return render(request, "../templates/service.html")
+
+def searchResult(request):
+    return render(request, "../templates/search_result.html")
 
 def quizCategory(request):
     categoryA = Category.objects.all()[0]
@@ -96,14 +102,13 @@ def getScore(Q_list, Ans_list):
     result = ""
     suggestion = ""
     if score  <= 2:
-        result = "Woooooo!"
-        suggestion = "Not so good, but no need to be panic and so long as you read through our website " \
-                     "content about children's pneumonia, you will become a master on how to deal with " \
-                     "the pneumonia emergency that happened to your child. Please click on this link " \
-                     "to learn more about child pneumonia."
+        result = "Oh No!"
+        suggestion = "Not so good, but no need to be panic. " \
+                     "Read content about children's pneumonia, you will become a master on how to deal with " \
+                     "the pneumonia emergency that happened to your child."
     elif 3 <= score  <+ 4:
         result = "Keep Learing!"
-        suggestion = "You are doing good and almost master the knowledge of children's pneumonia, " \
+        suggestion = "You are doing good and almost master the knowledge, " \
                      "but still misunderstanding a little bit. If you want to get a full mark, " \
                      "feel free to go back and read the information, and do the quiz again. "
     elif  score == 5:

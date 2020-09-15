@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block navigation %}
     <li ><a href="{% url 'Home' %}">Home</a></li>
+    <li><a href="{% url 'About' %}">About</a></li>
     <li ><a href="{% url 'Read More' %}">More Information</a></li>
     <li class="active"><a href="{% url 'Service' %}">Service</a></li>
 {% endblock %}
@@ -14,48 +15,51 @@
             <h5><a href="{% url 'Home' %}">Home</a>&nbsp;&gt;&nbsp;
                 <a href="{% url 'Service' %}">Services</a>&nbsp;&gt;&nbsp;
                 <a href="{% url 'Quiz List' %}">Quiz Category</a>&nbsp;&gt;&nbsp;
-                <a href="{% url 'Quiz Intro' %}">Start Quiz</a>&nbsp;&gt;&nbsp;Quiz</h5>
+                Quiz</h5>
 			<br>
 			<h1><font color="2E8B570">Quiz</font></h1><br>
 		</div>
 	</section>
 	<!-- Page info section end -->
 
-
-	<!-- Question section -->
-		<section class="services-section spad">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 col-md-8 service" >
-                    <form action="getuserchoice" method='POST' style="background:#E5E4E2">
-
-                      {% csrf_token %}
-                       {% for eachquestion in Question %}
-                            <h5>{{ eachquestion.questionId }}. {{ eachquestion.question }}</h5>
-                            <br>
-
-                            <p><input type="radio" id="ChoiceA" class="qa" name="{{ eachquestion.id }}" value = "A">{{ eachquestion.choiceA }} </p>
+    <!-- Quiz card -->
+    <form action="getuserchoice" method='POST' style="background:#E5E4E2">
+        {% csrf_token %}
+        <section class="services-section spad">
+            <div class="container">
+                <div class="blog-item">
+                  <div class="row">
+                    {% for eachquestion in Question %}
+                    <div class="col-lg-6 blog-content">
+                           <div class="date">Question {{ eachquestion.questionId }}</div>
+						    <h3>{{ eachquestion.question }}</h3>
+						    <div class="blog-metas">
+							    <div class="blog-meta">By LungHealth</div>
+                                <div class="blog-meta">Keywords:<a href="">Prevent</a>,<a href="">Children,</a><a href="">Vaccine</a></div>
+                            </div>
+						    <p><input type="radio" id="ChoiceA" class="qa" name="{{ eachquestion.id }}" value = "A">{{ eachquestion.choiceA }}  </p>
                             <p><input type="radio" id="ChoiceB" class="qa" name="{{ eachquestion.id }}" value = "B">{{ eachquestion.choiceB }} </p>
                             <p><input type="radio" id="ChoiceC" class="qa" name="{{ eachquestion.id }}" value = "C">{{ eachquestion.choiceC }} </p>
-                           <br>
-                           <br>
-                        {% endfor %}
-                            {% if Question.0.category == 'A'%}
-                                <p><input type="submit" class="site-btn mt-4" name = 'A' value="Check Result Here!"></p>
-                            {% elif Question.0.category == 'B'%}
-                                 <p><input type="submit" class="site-btn mt-4" name = 'B' value="Check Result Here!"></p>
-                            {% else  %}
-                                 <p><input type="submit" class="site-btn mt-4" name = 'C' value="Check Result Here!"></p>
-                            {% endif %}
+					</div>
+                    <div class="col-lg-6 blog-thumb">
+                    <br><br>
+					    <img src="{% static 'img/quiz1.jpg' %}" style="height:300px ;width:500px">
+					</div>
 
-                    <br><br><br>
-                    <br>
-                    </form>
-				</div>
+                    {% endfor %}
+                     <br><br><br>
 
-			</div>
-		</div>
-	</section>
-	<!-- Question section end -->
-
+                    {% if Question.0.category == 'A'%}
+                        <p><input type="submit" class="site-btn mt-4" name = 'A' value="Check Result Here!"></p>
+                    {% elif Question.0.category == 'B'%}
+                         <p><input type="submit" class="site-btn mt-4" name = 'B' value="Check Result Here!"></p>
+                    {% else  %}
+                         <p><input type="submit" class="site-btn mt-4" name = 'C' value="Check Result Here!"></p>
+                    {% endif %}
+                  </div>
+                </div>
+            </div>
+        </section>
+    </form>
+	<!-- Quiz card -->
 {% endblock %}

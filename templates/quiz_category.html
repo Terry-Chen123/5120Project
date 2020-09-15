@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block navigation %}
     <li ><a href="{% url 'Home' %}">Home</a></li>
+    <li ><a href="{% url 'About' %}">About</a></li>
     <li ><a href="{% url 'Read More' %}">More Information</a></li>
     <li class="active"><a href="{% url 'Service' %}">Service</a></li>
 {% endblock %}
@@ -22,100 +23,88 @@
 	<!-- Page info section end -->
 
 	<!-- Quiz Category section -->
-    	<section class="ftco-section ftco-no-pt bg-light">
+
+    <section>
+    <br><br><br><br>
 		<div class="container">
-			<div class="row justify-content-center mb-5 pb-5">
-                    <br>
-                    <br>
-				<div class="col-md-10 heading-section text-center">
-                    <br>
-                    <br>
-                    <br>
-                    <h2 class="mb-4"><font color="#848482">List of Pneumonia Quiz</font></h2>
+			<div class="blog-item">
+				<div class="row">
+					<div class="col-lg-6 blog-thumb">
+						<img src="{% static 'img/quiz_category/8.jpg' %}" alt="" style="height:300px ;width:500px">
+					</div>
+					<div class="col-lg-6 blog-content">
+						<div class="date">Question 1</div>
+                        <h3><font color="2E8B57">Introduction of Prevention:</font></h3>
+						<div class="blog-metas">
+							<div class="blog-meta">By LungHealth</div>
+							<div class="blog-meta">Tags:<a href="">pneumonia</a>,<a href="">children,</a><a href="">introduction</a></div>
+						</div>
+                        <p><font color="696969">
+                            In this quiz, you will be tested to see if you are familiar with the basic knowledge of pneumonia and you will get the feedback on it.
+                         </font></p>
+						<form action="quizintro" method='POST' >
+                                        {% csrf_token %}
+									    <p><input type="submit" class="site-btn" name = 'A' value="Start Quiz 1"></p>
+                        </form>
+
+					</div>
 				</div>
 			</div>
-            <div class="row">
-				<div class="col-lg-4 ">
-					<div class="quiz-list" style="background:#E5E4E2;width: 380px; height: 650px">
-                        <img src="{% static 'img/quiz_category/8.jpg'%}" alt=""><br>
-						<div class="quiz-intro">
-							<div class="d-flex">
-								<div class="meta pt-1 text-right pr-4">
-                                    <br>
-                                <p>Quiz No.1</p>
-								</div>
-                                <br>
-								<div class="text">
-                                    <br>
-                                    <h3><font color="#848482"><a href="{% url 'Quiz Intro' %}">{{ categoryA.title }}</a></font></h3>
-                                    <br>
-									<p>{{ categoryA.description }} </p><br>
-                                    <form action="quizintro" method='POST' >
+        </div>
+    <br><br><
+		<div class="container">
+			<div class="blog-item">
+				<div class="row">
+					<div class="col-lg-6 blog-thumb">
+						<img src="{% static 'img/quiz_category/10.jpg' %}" alt="" style="height:300px ;width:500px">
+					</div>
+					<div class="col-lg-6 blog-content">
+						<div class="date">Question 2</div>
+                        <h3><font color="2E8B57"> How to prevent pneumonia :</font></h3>
+						<div class="blog-metas">
+							<div class="blog-meta">By LungHealth</div>
+							<div class="blog-meta">Tags:<a href="">pneumonia</a>,<a href="">children,</a><a href="">vaccines</a></div>
+						</div>
+                        <p><font color="696969">
+                            In this quiz, you will be tested to see if you are familiar with the basic knowledge of pneumonia and you will get the feedback on it.
+                         </font></p>
+						<form action="quizintro" method='POST' >
                                         {% csrf_token %}
-									    <p><input type="submit" class="site-btn" name = 'A' value="Start Quiz A"></p>
-                                    </form>
-                                    <br>
-                                    <br>
-                                </div>
-                            </div>
-                        </div>
-                    </div><br><br><br>
-                </div>
-                <div class="col-lg-4 ">
-					<div class="quiz-list" style="background:#E5E4E2;width: 380px;height: 650px">
-                        <img src="{% static 'img/quiz_category/10.jpg'%}" alt=""><br>
-						<div class="quiz-intro">
-							<div class="d-flex">
-								<div class="meta pt-1 text-right pr-4">
-                                    <br>
-                                <p>Quiz No.2</p>
-								</div>
-                                <br>
-								<div class="text">
-                                    <br>
-                                    <h3><font color="#848482"><a href="{% url 'Quiz Intro' %}">{{ categoryB.title }}</a></font></h3>
-                                    <br>
-									<p>{{ categoryA.description }}</p><br>
-									 <form action="quizintro" method='POST' >
+									    <p><input type="submit" class="site-btn" name = 'B' value="Start Quiz 2"></p>
+                        </form>
+
+					</div>
+				</div>
+			</div>
+        </div>
+        <br><br>
+		<div class="container">
+			<div class="blog-item">
+				<div class="row">
+					<div class="col-lg-6 blog-thumb">
+						<img src="{% static 'img/quiz_category/9.jpg' %}" alt="" style="height:300px ;width:500px">
+					</div>
+					<div class="col-lg-6 blog-content">
+						<div class="date">Question 3</div>
+                        <h3><font color="2E8B57"> How to recover Prevention:</font></h3>
+						<div class="blog-metas">
+							<div class="blog-meta">By LungHealth</div>
+							<div class="blog-meta">Tags:<a href="">pneumonia</a>,<a href="">children,</a><a href="">recover</a></div>
+						</div>
+                        <p><font color="696969">
+                            In this quiz, you will be tested to see if you are familiar with the basic knowledge of pneumonia and you will get the feedback on it.
+                         </font></p>
+						<form action="quizintro" method='POST' >
                                         {% csrf_token %}
-									    <p><input type="submit" class="site-btn" name = 'B' value="Start Quiz B"></p>
-                                    </form>
-                                    <br>
-                                    <br>
-                                </div>
-                            </div>
-                        </div>
-                    </div><br><br><br>
-                </div>
-                <div class="col-lg-4 ">
-					<div class="quiz-list" style="background:#E5E4E2;width: 380px;height: 650px">
-                        <img src="{% static 'img/quiz_category/9.jpg'%}" alt=""><br>
-						<div class="quiz-intro">
-							<div class="d-flex">
-								<div class="meta pt-1 text-right pr-4">
-                                    <br>
-                                <p>Quiz No.3</p>
-								</div>
-                                <br>
-								<div class="text">
-                                    <br>
-                                    <h3><font color="#848482"><a href="{% url 'Quiz Intro' %}">{{ categoryC.title }}</a></font></h3>
-                                    <br>
-									<p>{{ categoryA.description }}</p><br>
-									 <form action="quizintro" method='POST' >
-                                        {% csrf_token %}
-									    <p><input type="submit" class="site-btn" name = 'C' value="Start Quiz C"></p>
-                                    </form>
-                                    <br>
-                                    <br>
-                                </div>
-                            </div>
-                        </div>
-                    </div><br><br><br>
-                </div>
-            </div>
-		</div>
-	</section>
+									    <p><input type="submit" class="site-btn" name = 'C' value="Start Quiz 3"></p>
+                        </form>
+					</div>
+				</div>
+			</div>
+        </div>
+
+
+    </section>
     <!-- Service Featured section end-->
 
 {% endblock %}
