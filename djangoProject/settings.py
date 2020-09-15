@@ -84,10 +84,10 @@ DATABASES = {
     {
         'ENGINE': 'django.db.backends.mysql',    # 数据库引擎
         'NAME': '5120db', # 数据库名称
-        'HOST': '127.0.0.1', # 数据库地址，本机 ip 地址 127.0.0.1
+        'HOST': 'greenlungserver.mysql.database.azure.com', # 数据库地址，本机 ip 地址 127.0.0.1
         'PORT': '3306', # 端口
-        'USER': 'root',  # 数据库用户名
-        'PASSWORD': 'qwer123567', # 数据库密码
+        'USER': 'Greenlung@greenlungserver',  # 数据库用户名
+        'PASSWORD': 'Qwer123567', # 数据库密码
 
     }
 }
