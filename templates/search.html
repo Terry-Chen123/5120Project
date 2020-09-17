@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% block navigation %}
+    <li ><a href="{% url 'Home' %}">Home</a></li>
+    <li><a href="{% url 'About' %}">About</a></li>
+    <li ><a href="{% url 'Read More' %}">More Information</a></li>
+    <li class="active"><a href="{% url 'Service' %}">Service</a></li>
+{% endblock %}
+
+{% block mainbody %}
+    {% load static %}
+    <!-- search section -->
+    <div class="ftco-blocks-cover-1">
+        <div class="ftco-cover-1 overlay" style="background-image:url('../static/img/search/5.png');
+                                                 background-repeat:no-repeat;
+                                                 background-position: center;background-size:100% 100%;
+                                                ">
+          <div class="container">
+            <div class="row align-items-center">
+
+
+              <div class="col-lg-6" style="height: 500px" >
+                  <br><br><br>
+                <h1><font color="#32cd32">Find a Clinic </font></h1>
+                <p class="mb-5"><font color="black">
+                    Getting vaccinated is one of the most effective ways to prevent pneumonia.<br>
+                    It is kind that parents can search for a clinic for consultation.<br>
+                    There are more than 300 available clinics and hospitals in Victoria, and we are pleased to deliver the basic info for each clinic or hospital.
+                </font></p>
+                <form action="search" method="POST"class="contact-form" >
+                    {% csrf_token %}
+                    <div class="inputDiv">
+                        <input type="text" name="searchclinic" value="Enter Keyword">
+                        <input type="submit" class="btn  text-white px-4 " style="background-color: #34ce57; height: 58px;" value="Search Now">&nbsp;
+                    </div>
+				</form>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+<!-- search section end -->
+	<!-- clinic section -->
+	<section class="contact-section spad">
+		<div class="container">
+        <form action="search/searchresult" method='POST' >
+            {% csrf_token %}
+            {% if search_result_num >= 0 %}
+                <h2 style="color: red">{{ result_remind }}</h2>
+            {% endif %}
+                <br>
+            {% if search_result_num == -1 %}
+                <h2 style="color:  black">Search what you what or choose one of recommendations</h2>
+            {% elif search_result_num == 0 %}
+                <h2 style="color: black">There are some recommended hospitals as follows</h2>
+            {% else %}
+                <h2 style="color:  black">You can choose one of them to get details</h2>
+            {% endif %}
+                <br><br>
+            {% if search_result_num >= 1%}
+            {% else %}
+			<div class="row">
+                    <div class="col-lg-4">
+                        <div class="contact-text">
+                            {% for hos in recommendhospital1 %}
+                            <div class="contact-info">
+                                <div class="ci-image set-bg"  data-setbg="{% static 'img/search/6.png'%}"></div>
+                                <div class="ci-content">
+                                    <h4><font color="2E8B57">{{ hos.hospital_name }}</font> </h4><br>
+                                    <h5>State: {{ hos.state }} {{ hos.postcode }}</h5><br>
+                                    <h5>Road: {{ hos.roadName }} {{ hos.streetNum }}</h5><br>
+                                    <h5>Phone: {{ hos.phone}}</h5>
+                                    <br>
+                                    <div><input type="submit" class="btn  text-white px-4 "style="background-color: #34ce57;"name={{ hos.id }} value="LearnMore"></div>
+                                </div>
+
+                            </div>
+                            <br>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="contact-text">
+                            {% for hos in recommendhospital2 %}
+                            <div class="contact-info">
+                                <div class="ci-image set-bg" data-setbg="{% static 'img/search/6.png'%}"></div>
+                                <div class="ci-content">
+                                    <h4><font color="2E8B57">{{ hos.hospital_name }}</font> </h4><br>
+                                    <h5>State: {{ hos.state }} {{ hos.postcode }}</h5><br>
+                                    <h5>Road: {{ hos.roadName }} {{ hos.streetNum }}</h5><br>
+                                    <h5>Phone: {{ hos.phone}}</h5>
+                                    <br>
+                                    <div><input type="submit" class="btn  text-white px-4 "style="background-color: #34ce57;"name={{ hos.id }} value="LearnMore"></div>
+                                </div>
+                            </div>
+                                <br>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="contact-text">
+                            {% for hos in recommendhospital3 %}
+                            <div class="contact-info">
+                                <div class="ci-image set-bg" data-setbg="{% static 'img/search/6.png'%}"></div>
+                                <div class="ci-content">
+                                    <h4><font color="2E8B57">{{ hos.hospital_name }}</font> </h4><br>
+                                    <h5>State: {{ hos.state }} {{ hos.postcode }}</h5><br>
+                                    <h5>Road: {{ hos.roadName }} {{ hos.streetNum }}</h5><br>
+                                    <h5>Phone: {{ hos.phone}}</h5>
+                                    <br>
+                                    <div><input type="submit" class="btn  text-white px-4 "style="background-color: #34ce57;"name={{ hos.id }} value="LearnMore"></div>
+                                </div>
+                            </div>
+                                <br>
+                            {% endfor %}
+
+                        </div>
+
+                    </div>
+
+			</div>
+            {% endif %}
+        </form>
+		</div>
+	</section>
+	<!-- clinic section end -->
+
+
+{% endblock %}
+
