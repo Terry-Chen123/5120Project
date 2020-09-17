@@ -17,8 +17,9 @@ def searchArea(input):
     search_result = []
     result_remind = ''
     for hospital in hospitals:
-        hospital_str = hospital.hospital_name + ' ' + hospital.roadName + ' ' + \
-        hospital.area + ' ' + str(hospital.postcode) + ' ' + hospital.state
+        #hospital_str = hospital.hospital_name + ' ' + hospital.roadName + ' ' + \
+        #hospital.area + ' ' + str(hospital.postcode) + ' ' + hospital.state
+        hospital_str = hospital.hospital_name
         m = pattern.search(hospital_str.lower())
         if m == None:
             result_remind += 'No Hospital found, try to search again'
@@ -28,4 +29,20 @@ def searchArea(input):
     result_remind = 'There are ' + str(num) + ' related results found'
     return search_result, result_remind, num
 
-searchArea('ROY')
+
+
+temp=[]
+i=0
+result_divide = []
+search_result=[1]
+while i < len(search_result):
+    if i % 2 !=0:
+        temp.append(search_result[i])
+        i+=1
+    else:
+        temp = []
+        temp.append(search_result[i])
+        i+=1
+    if (i+1)%2 == 0:
+        result_divide.append(temp)
+print(result_divide)

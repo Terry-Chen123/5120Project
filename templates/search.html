@@ -57,66 +57,68 @@
             {% endif %}
                 <br><br>
             {% if search_result_num >= 1%}
+                <div class="row">
+                    {% for l2 in result_divide %}
+                        <div class="col-lg-6">
+                            <div class="contact-text">
+                                {% for hos in l2 %}
+                                <div class="contact-info">
+                                    <div class="ci-image set-bg" data-setbg="{% static 'img/search/6.png'%}"></div>
+                                    <div class="ci-content">
+                                        <h4><font color="2E8B57">{{ hos.hospital_name }}</font> </h4><br>
+                                        <h5>State: {{ hos.state }} {{ hos.postcode }}</h5><br>
+                                        <h5>Road: {{ hos.roadName }} {{ hos.streetNum }}</h5><br>
+                                        <h5>Phone: {{ hos.phone}}</h5>
+                                        <br>
+                                        <div><input type="submit" class="btn  text-white px-4 "style="background-color: #34ce57;"name={{ hos.id }} value="LearnMore"></div>
+                                    </div>
+                                </div>
+                                    <br>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
             {% else %}
 			<div class="row">
-                    <div class="col-lg-4">
-                        <div class="contact-text">
-                            {% for hos in recommendhospital1 %}
-                            <div class="contact-info">
-                                <div class="ci-image set-bg"  data-setbg="{% static 'img/search/6.png'%}"></div>
-                                <div class="ci-content">
-                                    <h4><font color="2E8B57">{{ hos.hospital_name }}</font> </h4><br>
-                                    <h5>State: {{ hos.state }} {{ hos.postcode }}</h5><br>
-                                    <h5>Road: {{ hos.roadName }} {{ hos.streetNum }}</h5><br>
-                                    <h5>Phone: {{ hos.phone}}</h5>
-                                    <br>
-                                    <div><input type="submit" class="btn  text-white px-4 "style="background-color: #34ce57;"name={{ hos.id }} value="LearnMore"></div>
-                                </div>
-
+                <div class="col-lg-6">
+                    <div class="contact-text">
+                        {% for hos in recommendhospital2 %}
+                        <div class="contact-info">
+                            <div class="ci-image set-bg" data-setbg="{% static 'img/search/6.png'%}"></div>
+                            <div class="ci-content">
+                                <h4><font color="2E8B57">{{ hos.hospital_name }}</font> </h4><br>
+                                <h5>State: {{ hos.state }} {{ hos.postcode }}</h5><br>
+                                <h5>Road: {{ hos.roadName }} {{ hos.streetNum }}</h5><br>
+                                <h5>Phone: {{ hos.phone}}</h5>
+                                <br>
+                                <div><input type="submit" class="btn  text-white px-4 "style="background-color: #34ce57;"name={{ hos.id }} value="LearnMore"></div>
                             </div>
+                        </div>
                             <br>
-                            {% endfor %}
-                        </div>
+                        {% endfor %}
                     </div>
-                    <div class="col-lg-4">
-                        <div class="contact-text">
-                            {% for hos in recommendhospital2 %}
-                            <div class="contact-info">
-                                <div class="ci-image set-bg" data-setbg="{% static 'img/search/6.png'%}"></div>
-                                <div class="ci-content">
-                                    <h4><font color="2E8B57">{{ hos.hospital_name }}</font> </h4><br>
-                                    <h5>State: {{ hos.state }} {{ hos.postcode }}</h5><br>
-                                    <h5>Road: {{ hos.roadName }} {{ hos.streetNum }}</h5><br>
-                                    <h5>Phone: {{ hos.phone}}</h5>
-                                    <br>
-                                    <div><input type="submit" class="btn  text-white px-4 "style="background-color: #34ce57;"name={{ hos.id }} value="LearnMore"></div>
-                                </div>
-                            </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-text">
+                        {% for hos in recommendhospital3 %}
+                        <div class="contact-info">
+                            <div class="ci-image set-bg" data-setbg="{% static 'img/search/6.png'%}"></div>
+                            <div class="ci-content">
+                                <h4><font color="2E8B57">{{ hos.hospital_name }}</font> </h4><br>
+                                <h5>State: {{ hos.state }} {{ hos.postcode }}</h5><br>
+                                <h5>Road: {{ hos.roadName }} {{ hos.streetNum }}</h5><br>
+                                <h5>Phone: {{ hos.phone}}</h5>
                                 <br>
-                            {% endfor %}
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="contact-text">
-                            {% for hos in recommendhospital3 %}
-                            <div class="contact-info">
-                                <div class="ci-image set-bg" data-setbg="{% static 'img/search/6.png'%}"></div>
-                                <div class="ci-content">
-                                    <h4><font color="2E8B57">{{ hos.hospital_name }}</font> </h4><br>
-                                    <h5>State: {{ hos.state }} {{ hos.postcode }}</h5><br>
-                                    <h5>Road: {{ hos.roadName }} {{ hos.streetNum }}</h5><br>
-                                    <h5>Phone: {{ hos.phone}}</h5>
-                                    <br>
-                                    <div><input type="submit" class="btn  text-white px-4 "style="background-color: #34ce57;"name={{ hos.id }} value="LearnMore"></div>
-                                </div>
+                                <div><input type="submit" class="btn  text-white px-4 "style="background-color: #34ce57;"name={{ hos.id }} value="LearnMore"></div>
                             </div>
-                                <br>
-                            {% endfor %}
-
                         </div>
+                            <br>
+                        {% endfor %}
 
                     </div>
 
+                </div>
 			</div>
             {% endif %}
         </form>

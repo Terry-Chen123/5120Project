@@ -48,13 +48,13 @@
                          <form action="quizstart" method='POST' >
                              {% csrf_token %}
                             {% if category.category == 'A'%}
-                                <input type="submit" class="site-btn" name = 'A' value="Start Quiz A">
+                                <input type="submit" class="site-btn" name = 'A' value="Start Quiz 1">
                                 <a href = '{% url 'Quiz List' %}'><input class="site-btn" name = 'back' value="Choose Again"></a>
                             {% elif  category.category == 'B'%}
-                                <input type="submit" class="site-btn" name = 'B' value="Start Quiz B">
+                                <input type="submit" class="site-btn" name = 'B' value="Start Quiz 2">
                                 <a href = '{% url 'Quiz List' %}'><input  class="site-btn" name = 'back' value="Choose Again"></a>
                             {% else  %}
-                                <input type="submit" class="site-btn" name = 'C' value="Start Quiz C">
+                                <input type="submit" class="site-btn" name = 'C' value="Start Quiz 3">
                                 <a href = '{% url 'Quiz List' %}'><input class="site-btn" name = 'back' value="Choose Again"></a>
                             {% endif %}
                          </form>

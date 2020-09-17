@@ -26,9 +26,22 @@ def searchClinic(request):
     search_result_num = -1
     search_result = ''
     result_remind = ''
+    result_divide = []
     if request.POST :
         keyword = request.POST.get('searchclinic')
         search_result, result_remind, search_result_num= searchArea(keyword)
+        i = 0
+        temp=[]
+        while i < len(search_result):
+            if i % 2 !=0:
+                temp.append(search_result[i])
+                i+=1
+            else:
+                temp = []
+                temp.append(search_result[i])
+                i+=1
+            if (i+1)%2 == 0:
+                result_divide.append(temp)
     else:
         result = 'Search Error'
 
@@ -37,7 +50,8 @@ def searchClinic(request):
                                                        'recommendhospital3': hospital3,
                                                        'search_result_num':search_result_num,
                                                        'search_result':search_result,
-                                                       'result_remind':result_remind})
+                                                       'result_remind':result_remind,
+                                                       'result_divide':result_divide})
 
 def searchResult(request):
     hospital_all = Hospital1.objects.all()

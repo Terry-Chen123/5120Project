@@ -6,7 +6,7 @@
         position: absolute;
         top: 100px;
         bottom: 0;
-        left:650px;
+        left:660px;
         width: 750px;
         height:620px;
     }
@@ -80,11 +80,13 @@
         <div id="map"></div>
 
         <script>
+            var new_lat = {{ hospital.latitude }}
+            var new_long = {{ hospital.longitude }}
             mapboxgl.accessToken = 'pk.eyJ1IjoidGVycnljYXJyeXUiLCJhIjoiY2syNXFvYmd4MDg2bjNidGw1YnlsbndhayJ9.TGdaiRtA3NWwce3jDYrR1g';
             var map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/streets-v11',
-            center: [144.946457,-37.840935],
+            center: [new_long,new_lat ],
             zoom: 10
             });
 
@@ -121,8 +123,7 @@
             }),
             'top-left'
             );
-            var new_lat = {{ hospital.latitude }}
-            var new_long = {{ hospital.longitude }}
+
             //var hospitalName = {{ hospital.hospital_name }}
 
             //offset: the distance between marker and text
