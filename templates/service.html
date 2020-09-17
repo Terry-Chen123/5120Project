@@ -31,21 +31,21 @@
 					<div class="service-content">
                         <h4><a href="{% url 'Quiz List' %}"class="btn_click" style="text-align: left">Quiz</a></h4>
                         <br>
-                        <h7>Test Your Knowledge of Children's Pneumonia</h7><br><br>
-					    <p>With the growing number of children's pneumonia.
-                        <br> It is important for you to have basic understanding of pneumonia, time to start!</p>
+                        <h7>Test Your Knowledge of Children's Pneumonia</h7><br>
+					    <p>
+                         It is important for you to have basic understanding of pneumonia, time to start!</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 service">
 					<div class="service-icon">
-						<img src="{% static 'img/hospital.png'%}" alt="">
+						<a href = '{% url 'Search' %}'><img src="{% static 'img/hospital.png'%}" alt="">
 					</div>
 					<div class="service-content">
-						<h4><a href="" class="btn_click" style="text-align: left" >Clinic Searching</a></h4>
+						<h4><a href="{% url 'Search' %}" class="btn_click" style="text-align: left" >Clinic Searching</a></h4>
                         <br>
-						<h7>Search clinics within a given location.</h7><br><br>
+						<h7>Search clinics within a given location.</h7><br>
 					    <p>Wanna know how many clinics available within your location?
-                            <br>Better know it before the real emergency occurs.</p>
+                            </p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 service">

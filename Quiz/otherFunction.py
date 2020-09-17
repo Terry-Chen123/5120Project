@@ -1,7 +1,7 @@
 import random
 import django
 django.setup()
-from Quiz.models import Question,Category, Hospital
+from Quiz.models import Question,Category, Hospital1
 import re
 
 def generateRandomNum():
@@ -13,12 +13,12 @@ def generateRandomNum():
 
 def searchArea(input):
     pattern = re.compile(input.lower())
-    hospitals = Hospital.objects.all()
+    hospitals = Hospital1.objects.all()
     search_result = []
     result_remind = ''
     for hospital in hospitals:
-        hospital_str = hospital.labelName + ' ' + hospital.roadName + ' ' + \
-        hospital.area + ' ' + str(hospital.postcode) + ' ' + hospital.state_name
+        hospital_str = hospital.hospital_name + ' ' + hospital.roadName + ' ' + \
+        hospital.area + ' ' + str(hospital.postcode) + ' ' + hospital.state
         m = pattern.search(hospital_str.lower())
         if m == None:
             result_remind += 'No Hospital found, try to search again'
@@ -26,6 +26,6 @@ def searchArea(input):
             search_result.append(hospital)
     num = len(search_result)
     result_remind = 'There are ' + str(num) + ' related results found'
-    return search_result, result_remind
+    return search_result, result_remind, num
 
 searchArea('ROY')

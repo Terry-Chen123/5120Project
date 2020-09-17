@@ -35,7 +35,7 @@
 						    <h3>{{ eachquestion.question }}</h3>
 						    <div class="blog-metas">
 							    <div class="blog-meta">By LungHealth</div>
-                                <div class="blog-meta">Keywords:<a href="">Prevent</a>,<a href="">Children,</a><a href="">Vaccine</a></div>
+                                <div class="blog-meta">Keywords:<a href="">{{ eachquestion.keyword }}</a></div>
                             </div>
 						    <p><input type="radio" id="ChoiceA" class="qa" name="{{ eachquestion.id }}" value = "A">{{ eachquestion.choiceA }}  </p>
                             <p><input type="radio" id="ChoiceB" class="qa" name="{{ eachquestion.id }}" value = "B">{{ eachquestion.choiceB }} </p>
@@ -43,12 +43,10 @@
 					</div>
                     <div class="col-lg-6 blog-thumb">
                     <br><br>
-					    <img src="{% static 'img/quiz1.jpg' %}" style="height:300px ;width:500px">
+					    <img src="{% static eachquestion.imageurl %}" style="height:300px ;width:500px">
 					</div>
-
                     {% endfor %}
                      <br><br><br>
-
                     {% if Question.0.category == 'A'%}
                         <p><input type="submit" class="site-btn mt-4" name = 'A' value="Check Result Here!"></p>
                     {% elif Question.0.category == 'B'%}

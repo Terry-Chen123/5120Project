@@ -1,8 +1,9 @@
 import django
 django.setup()
-from Quiz.models import Question,Category
+from Quiz.models import Question,Category, Hospital1
 from Quiz import otherFunction
 from django.shortcuts import render
+from .otherFunction import searchArea
 
 
 
@@ -18,8 +19,40 @@ def readMore(request):
 def service(request):
     return render(request, "../templates/service.html")
 
+def searchClinic(request):
+    hospital1 = Hospital1.objects.all()[:2]
+    hospital2 = Hospital1.objects.all()[2:4]
+    hospital3 = Hospital1.objects.all()[4:6]
+    search_result_num = -1
+    search_result = ''
+    result_remind = ''
+    if request.POST :
+        keyword = request.POST.get('searchclinic')
+        search_result, result_remind, search_result_num= searchArea(keyword)
+    else:
+        result = 'Search Error'
+
+    return render(request, "../templates/search.html",{'recommendhospital1':hospital1,
+                                                       'recommendhospital2': hospital2,
+                                                       'recommendhospital3': hospital3,
+                                                       'search_result_num':search_result_num,
+                                                       'search_result':search_result,
+                                                       'result_remind':result_remind})
+
 def searchResult(request):
-    return render(request, "../templates/search_result.html")
+    hospital_all = Hospital1.objects.all()
+    if request.POST :
+        for i in range(len(hospital_all)):
+            if str(i) in request.POST:
+                #id = request.POST.get('getdetails')
+                hospital = Hospital1.objects.get(id=i)
+        #hospital = request.POST.get('getdetails')
+        #search_result, result_remind, search_result_num= searchArea(keyword)
+
+    else:
+        result = 'Search Error'
+    return render(request, "../templates/search_result.html", {'hospital':hospital,
+                                                               })
 
 def quizCategory(request):
     categoryA = Category.objects.all()[0]
@@ -106,12 +139,12 @@ def getScore(Q_list, Ans_list):
         suggestion = "Not so good, but no need to be panic. " \
                      "Read content about children's pneumonia, you will become a master on how to deal with " \
                      "the pneumonia emergency that happened to your child."
-    elif 3 <= score  <+ 4:
+    elif 3 <= score  <= 4:
         result = "Keep Learing!"
         suggestion = "You are doing good and almost master the knowledge, " \
                      "but still misunderstanding a little bit. If you want to get a full mark, " \
                      "feel free to go back and read the information, and do the quiz again. "
-    elif  score == 5:
+    elif score == 5:
         result = "Excellent!"
         suggestion = "You got all of the right answers, but don’t be so proud and you may also need to learn " \
                      "some of the knowledge gap of children’s pneumonia."
@@ -119,5 +152,7 @@ def getScore(Q_list, Ans_list):
     final_score = str(score) + "/" + str(total_score)
     return result, final_score, suggestion
 
+def test(request):
+    return render(request,'../templates/test.html')
 
 

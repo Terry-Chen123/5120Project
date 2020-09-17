@@ -12,6 +12,8 @@ class Question(models.Model):
     feedbackC = models.CharField(max_length=500)
     questionId = models.IntegerField()
     category = models.CharField(max_length=10)
+    keyword = models.CharField(max_length=100)
+    imageurl = models.CharField(max_length=100)
     #image = models.ImageField()
 
 class Quiz(models.Model):
@@ -32,17 +34,20 @@ class Category(models.Model):
     description = models.CharField(max_length=500)
     category = models.CharField(max_length=10)
 
-class Hospital(models.Model):
+class Hospital1(models.Model):
 
     longitude = models.DecimalField(max_digits=13, decimal_places=10)
     latitude = models.DecimalField(max_digits=13, decimal_places=10)
-    labelName = models.CharField(max_length=100)
-    type_st = models.CharField(max_length=100)
+    hospital_name = models.CharField(max_length=500)
+    hospital_type = models.CharField(max_length=500)
     streetNum = models.IntegerField()
-    roadName = models.CharField(max_length=100)
-    area = models.CharField(max_length=100)
+    roadName = models.CharField(max_length=500)
+    roadType = models.CharField(max_length=500)
+    area = models.CharField(max_length=500)
     postcode = models.IntegerField()
-    state_name = models.CharField(max_length=100)
+    state = models.CharField(max_length=500)
+    phone = models.CharField(max_length=100)
+    website = models.CharField(max_length=500)
 
 
 

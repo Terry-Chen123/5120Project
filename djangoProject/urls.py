@@ -31,7 +31,9 @@ urlpatterns = [
     path('service/quizlist/getuserchoice', views.getUserChoice, name = 'Review1'),
     path('service/quizlist/quizintro', views.quizIntro, name='Quiz Intro'),
     path('service/quizlist/quizcategory', views.quizCategory, name='Quiz List'),
-    path('service/search/searchresult', views.searchResult, name='Search Result')
+    path('service/search', views.searchClinic, name='Search'),
+    path('service/search/searchresult', views.searchResult, name='Search Result'),
+    path('test',views.test,name='Test')
 
 ]
 urlpatterns += staticfiles_urlpatterns()
