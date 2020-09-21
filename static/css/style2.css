@@ -452,7 +452,9 @@ ol {
 
 .site-logo {
   display: inline-block;
-  width: 30px;
+  width: 98px;
+  height: 40px;
+  
 }
 
 .nav-switch {
@@ -463,7 +465,8 @@ ol {
   list-style: none;
   display: inline-block;
   float: right;
-  padding: 10px;
+  padding-top: 10px;
+  padding-right: 20px;
 
 
 }
