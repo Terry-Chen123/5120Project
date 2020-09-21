@@ -36,18 +36,19 @@
           </div>
         </div>
     </div>
-<!-- search section end -->
-	<!-- clinic section -->
+    <!-- search section end -->
+
+    <!-- clinic section -->
 	<section class="contact-section spad">
 		<div class="container">
-        <form action="search/searchresult" method='POST' >
+            <form action="search/searchresult" method='POST' >
             {% csrf_token %}
             {% if search_result_num >= 0 %}
                 <h2 style="color: red">{{ result_remind }}</h2>
             {% endif %}
                 <br>
             {% if search_result_num == -1 %}
-                <h2 style="color:  black">Search what you what or choose one of recommendations</h2>
+                <h2 style="color:  black">Some recommendations by rating</h2>
             {% elif search_result_num == 0 %}
                 <h2 style="color: black">There are some recommended hospitals as follows</h2>
             {% else %}
@@ -63,10 +64,10 @@
                                 <div class="contact-info">
                                     <div class="ci-image set-bg" data-setbg="{% static 'img/search/6.png'%}"></div>
                                     <div class="ci-content">
-                                        <h4><font color="2E8B57">{{ hos.hospital_name }}</font> </h4><br>
-                                        <h5>State: {{ hos.state }} {{ hos.postcode }}</h5><br>
-                                        <h5>Road: {{ hos.roadName }} {{ hos.streetNum }}</h5><br>
-                                        <h5>Phone: {{ hos.phone}}</h5>
+                                        <h4><font color="2E8B57">{{ hos.clinic_name  }}</font> </h4><br>
+                                        <h5>Address: {{ hos.address }}</h5><br>
+                                        <h5>Type: {{ hos.clinic_type }}</h5><br>
+                                        <h5>Rating: {{ hos.rating}}</h5>
                                         <br>
                                         <div><input type="submit" class="btn  text-white px-4 "style="background-color: #34ce57;"name={{ hos.id }} value="LearnMore"></div>
                                     </div>
@@ -85,10 +86,10 @@
                         <div class="contact-info">
                             <div class="ci-image set-bg" data-setbg="{% static 'img/search/6.png'%}"></div>
                             <div class="ci-content">
-                                <h4><font color="2E8B57">{{ hos.hospital_name }}</font> </h4><br>
-                                <h5>State: {{ hos.state }} {{ hos.postcode }}</h5><br>
-                                <h5>Road: {{ hos.roadName }} {{ hos.streetNum }}</h5><br>
-                                <h5>Phone: {{ hos.phone}}</h5>
+                                <h4><font color="2E8B57">{{ hos.clinic_name  }}</font> </h4><br>
+                                <h5>Address: {{ hos.address }}</h5><br>
+                                <h5>Type: {{ hos.clinic_type }}</h5><br>
+                                <h5>Rating: {{ hos.rating}}</h5>
                                 <br>
                                 <div><input type="submit" class="btn  text-white px-4 "style="background-color: #34ce57;"name={{ hos.id }} value="LearnMore"></div>
                             </div>
@@ -103,10 +104,10 @@
                         <div class="contact-info">
                             <div class="ci-image set-bg" data-setbg="{% static 'img/search/6.png'%}"></div>
                             <div class="ci-content">
-                                <h4><font color="2E8B57">{{ hos.hospital_name }}</font> </h4><br>
-                                <h5>State: {{ hos.state }} {{ hos.postcode }}</h5><br>
-                                <h5>Road: {{ hos.roadName }} {{ hos.streetNum }}</h5><br>
-                                <h5>Phone: {{ hos.phone}}</h5>
+                                <h4><font color="2E8B57">{{ hos.clinic_name }}</font> </h4><br>
+                                <h5>Address: {{ hos.address }}</h5><br>
+                                <h5>Type: {{ hos.clinic_type }}</h5><br>
+                                <h5>Rating: {{ hos.rating}}</h5>
                                 <br>
                                 <div><input type="submit" class="btn  text-white px-4 "style="background-color: #34ce57;"name={{ hos.id }} value="LearnMore"></div>
                             </div>
@@ -123,7 +124,6 @@
 		</div>
 	</section>
 	<!-- clinic section end -->
-
 
 {% endblock %}
 

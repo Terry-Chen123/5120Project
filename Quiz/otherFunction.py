@@ -1,7 +1,7 @@
 import random
 import django
 django.setup()
-from Quiz.models import Question,Category, Hospital1
+from Quiz.models import Question,Category, Hospital1, Clinic
 import re
 
 def generateRandomNum():
@@ -13,13 +13,19 @@ def generateRandomNum():
 
 def searchArea(input):
     pattern = re.compile(input.lower())
-    hospitals = Hospital1.objects.all()
+    hospitals = Clinic.objects.all()
     search_result = []
     result_remind = ''
+    choice ='hospitalName'
     for hospital in hospitals:
         #hospital_str = hospital.hospital_name + ' ' + hospital.roadName + ' ' + \
         #hospital.area + ' ' + str(hospital.postcode) + ' ' + hospital.state
-        hospital_str = hospital.hospital_name
+        if choice == 'hospitalName':
+            hospital_str = hospital.clinic_name
+        elif choice == 'suburb':
+            hospital_str = hospital.surburb
+        elif choice == 'address':
+            hospital_str = hospital.address
         m = pattern.search(hospital_str.lower())
         if m == None:
             result_remind += 'No Hospital found, try to search again'
@@ -29,20 +35,8 @@ def searchArea(input):
     result_remind = 'There are ' + str(num) + ' related results found'
     return search_result, result_remind, num
 
-
-
-temp=[]
-i=0
-result_divide = []
-search_result=[1]
-while i < len(search_result):
-    if i % 2 !=0:
-        temp.append(search_result[i])
-        i+=1
-    else:
-        temp = []
-        temp.append(search_result[i])
-        i+=1
-    if (i+1)%2 == 0:
-        result_divide.append(temp)
-print(result_divide)
+#sort the clinic by rating
+def sortRating(clinic_list):
+    sort_list = list(clinic_list)
+    sort_list.sort(key=lambda x:x.rating,reverse=True)
+    return sort_list

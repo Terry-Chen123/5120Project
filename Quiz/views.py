@@ -1,9 +1,9 @@
 import django
 django.setup()
-from Quiz.models import Question,Category, Hospital1
+from Quiz.models import Question,Category, Hospital1, Clinic
 from Quiz import otherFunction
 from django.shortcuts import render
-from .otherFunction import searchArea
+from .otherFunction import searchArea, sortRating
 
 
 
@@ -20,9 +20,11 @@ def service(request):
     return render(request, "../templates/service.html")
 
 def searchClinic(request):
-    hospital1 = Hospital1.objects.all()[:2]
-    hospital2 = Hospital1.objects.all()[2:4]
-    hospital3 = Hospital1.objects.all()[4:6]
+    hospital_all = Clinic.objects.all()
+    sort_hospital = sortRating(hospital_all)
+    hospital1 = sort_hospital[:2]
+    hospital2 = sort_hospital[2:4]
+    hospital3 = sort_hospital[4:6]
     search_result_num = -1
     search_result = ''
     result_remind = ''
@@ -32,13 +34,14 @@ def searchClinic(request):
         search_result, result_remind, search_result_num= searchArea(keyword)
         i = 0
         temp=[]
-        while i < len(search_result):
+        sort_search_result = sortRating(search_result)
+        while i < len(sort_search_result):
             if i % 2 !=0:
-                temp.append(search_result[i])
+                temp.append(sort_search_result[i])
                 i+=1
             else:
                 temp = []
-                temp.append(search_result[i])
+                temp.append(sort_search_result[i])
                 i+=1
             if (i+1)%2 == 0:
                 result_divide.append(temp)
@@ -54,15 +57,14 @@ def searchClinic(request):
                                                        'result_divide':result_divide})
 
 def searchResult(request):
-    hospital_all = Hospital1.objects.all()
+    hospital_all = Clinic.objects.all()
     if request.POST :
         for i in range(len(hospital_all)):
             if str(i) in request.POST:
                 #id = request.POST.get('getdetails')
-                hospital = Hospital1.objects.get(id=i)
+                hospital = Clinic.objects.get(id=i)
         #hospital = request.POST.get('getdetails')
         #search_result, result_remind, search_result_num= searchArea(keyword)
-
     else:
         result = 'Search Error'
     return render(request, "../templates/search_result.html", {'hospital':hospital,

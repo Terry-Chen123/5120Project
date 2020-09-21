@@ -43,23 +43,21 @@
 	</div>
 
 	<!-- Header section -->
-	<header class="header-section" >
+	<header class="header-section">
 		<div class="container">
 			<!-- Site Logo -->
 			<a href="{% url 'Home' %}" class="site-logo">
-				<img src="{% static 'img/logo-title.001.png'%}" alt="">
+				<img src="{% static 'img/logo_2.png'%}" alt="">
 			</a>
-			<!-- responsive -->
+             <!-- responsive -->
 			<div class="nav-switch">
 				<i class="fa fa-bars"></i>
 			</div>
 			<!-- Main Menu -->
              <ul class="main-menu">
                  {% block navigation %}
-
                  {% endblock %}
 			 </ul>
-
 		</div>
 	</header>
 	<!-- Header section end -->
