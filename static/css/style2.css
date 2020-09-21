@@ -466,7 +466,7 @@ ol {
   display: inline-block;
   float: right;
   padding-top: 10px;
-  padding-right: 20px;
+  padding-right: 0px;
   margin-right:-100px;
 
 }
