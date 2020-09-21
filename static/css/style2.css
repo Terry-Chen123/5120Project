@@ -452,6 +452,7 @@ ol {
 
 .site-logo {
   display: inline-block;
+  width: 30px;
 }
 
 .nav-switch {
