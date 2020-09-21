@@ -452,7 +452,7 @@ ol {
 
 .site-logo {
   display: inline-block;
-  width: 98px;
+  width: 120px;
   height: 40px;
   
 }
@@ -467,7 +467,7 @@ ol {
   float: right;
   padding-top: 10px;
   padding-right: 20px;
-
+  margin-right:-100px;
 
 }
 
