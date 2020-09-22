@@ -31,7 +31,7 @@ def searchClinic(request):
     result_divide = []
     if request.POST :
         keyword = request.POST.get('searchclinic')
-        search_result, result_remind, search_result_num= searchArea(keyword)
+        search_result, result_remind, search_result_num = searchArea(keyword)
         i = 0
         temp=[]
         sort_search_result = sortRating(search_result)

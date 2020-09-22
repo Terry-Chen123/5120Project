@@ -13,6 +13,7 @@ def generateRandomNum():
 
 def searchArea(input):
     pattern = re.compile(input.lower())
+    #get all clinic
     hospitals = Clinic.objects.all()
     search_result = []
     result_remind = ''
@@ -34,6 +35,7 @@ def searchArea(input):
     num = len(search_result)
     result_remind = 'There are ' + str(num) + ' related results found'
     return search_result, result_remind, num
+
 
 #sort the clinic by rating
 def sortRating(clinic_list):

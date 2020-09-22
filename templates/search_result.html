@@ -97,11 +97,12 @@
                                 var new_lat = {{ hospital.latitude }}
                                 var new_long = {{ hospital.longitude }}
                                 mapboxgl.accessToken = 'pk.eyJ1IjoidGVycnljYXJyeXUiLCJhIjoiY2syNXFvYmd4MDg2bjNidGw1YnlsbndhayJ9.TGdaiRtA3NWwce3jDYrR1g';
+
                                 var map = new mapboxgl.Map({
-                                container: 'map',
-                                style: 'mapbox://styles/mapbox/streets-v11',
-                                center: [new_long,new_lat ],
-                                zoom: 10
+                                    container: 'map',
+                                    style: 'mapbox://styles/mapbox/streets-v11',
+                                    center: [new_long,new_lat],
+                                    zoom: 10
                                 });
 
                                  var geocoder = new MapboxGeocoder({ // Initialize the geocoder

@@ -24,7 +24,7 @@
                     It is kind that parents can search for a clinic for consultation.<br>
                     There are more than 300 available clinics and hospitals in Victoria, and we are pleased to deliver the basic info for each clinic or hospital.
                 </font></p>
-                <form action="search" method="POST"class="contact-form" >
+                <form action="" method="POST"class="contact-form" >
                     {% csrf_token %}
                     <div class="inputDiv">
                         <input type="text" name="searchclinic" value="Enter Keyword">
@@ -62,7 +62,7 @@
                             <div class="contact-text">
                                 {% for hos in l2 %}
                                 <div class="contact-info">
-                                    <div class="ci-image set-bg" data-setbg="{% static 'img/search/6.png'%}"></div>
+                                    <div class="ci-image set-bg" data-setbg="{% static 'img/search/11.png'%}"style="height: 270px;width:500px;margin-bottom: 50px"></div>
                                     <div class="ci-content">
                                         <h4><font color="2E8B57">{{ hos.clinic_name  }}</font> </h4><br>
                                         <h5>Address: {{ hos.address }}</h5><br>
@@ -84,7 +84,7 @@
                     <div class="contact-text">
                         {% for hos in recommendhospital2 %}
                         <div class="contact-info">
-                            <div class="ci-image set-bg" data-setbg="{% static 'img/search/6.png'%}"></div>
+                            <div class="ci-image set-bg" data-setbg="{% static 'img/search/11.png' %}" alt="" style="height: 270px;width:500px;margin-bottom: 50px">  </div><br><br><br>
                             <div class="ci-content">
                                 <h4><font color="2E8B57">{{ hos.clinic_name  }}</font> </h4><br>
                                 <h5>Address: {{ hos.address }}</h5><br>
@@ -102,7 +102,7 @@
                     <div class="contact-text">
                         {% for hos in recommendhospital3 %}
                         <div class="contact-info">
-                            <div class="ci-image set-bg" data-setbg="{% static 'img/search/6.png'%}"></div>
+                            <div class="ci-image set-bg" data-setbg="{% static 'img/search/9.png' %}" alt="" style="height:270px;width:500px;margin-bottom: 50px">  </div><br><br><br>
                             <div class="ci-content">
                                 <h4><font color="2E8B57">{{ hos.clinic_name }}</font> </h4><br>
                                 <h5>Address: {{ hos.address }}</h5><br>
