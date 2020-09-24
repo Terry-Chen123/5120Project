@@ -3,38 +3,101 @@
     <li ><a href="{% url 'Home' %}">Home</a></li>
     <li><a href="{% url 'About' %}">About</a></li>
     <li ><a href="{% url 'Read More' %}">More Information</a></li>
-    <li class="active"><a href="{% url 'Service' %}">Service</a></li>
+    <li><a href="{% url 'Quiz List' %}">Pneumonia Quiz</a></li>
+    <li class="active"><a href="{% url 'Search' %}">Clinic Search</a></li>
+{% endblock %}
+{% block js %}
+
 {% endblock %}
 
 {% block mainbody %}
     {% load static %}
+    <style>
+        .clicked { box-shadow: 0px 0px 50px #c82333 inset; color: #fdfdfe; }
+         #type {
+                height: 50px;background: #0c5460;padding: 10px;
+                 color: #ececf6; width:200px; border: none;border-radius: 5px;outline: none;
+         }
+         #btn :active{ box-shadow: 0px 0px 50px #c82333 inset; color:#fdfdfe; }
+         .search-field{
+                        height: 50px; padding: 10px;border: none;
+                        border-radius: 5px;outline: none; width: 610px;
+                        display: inline-block;margin-right:5px;
+
+         }
+         .search-btn{
+                    height: 50px;width: 150px;background: #71cd29;
+                    border: none;color: #ececf6;border-radius: 5px;
+
+         }
+         .search-btn:hover {
+                                background-color: lightseagreen; /* Green */
+                                color: white;
+                            }
+    </style>
+
     <!-- search section -->
-    <div class="ftco-blocks-cover-1">
-        <div class="ftco-cover-1 overlay" style="background-image:url('../static/img/search/5.png');
-                                                 background-repeat:no-repeat;
-                                                 background-position: center;background-size:100% 100%;
-                                                ">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-lg-6" style="height: 500px" >
-                  <br><br><br>
-                <h1><font color="#32cd32">Find a Clinic </font></h1>
-                <p class="mb-5"><font color="black">
-                    Getting vaccinated is one of the most effective ways to prevent pneumonia.<br>
-                    It is kind that parents can search for a clinic for consultation.<br>
-                    There are more than 300 available clinics and hospitals in Victoria, and we are pleased to deliver the basic info for each clinic or hospital.
-                </font></p>
-                <form action="" method="POST"class="contact-form" >
-                    {% csrf_token %}
-                    <div class="inputDiv">
-                        <input type="text" name="searchclinic" value="Enter Keyword">
-                        <input type="submit" class="btn  text-white px-4 " style="background-color: #34ce57; height: 58px;" value="Search Now">&nbsp;
-                    </div>
-				</form>
-              </div>
+    <div class="header123" style="height:100vh;background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../static/img/homepage/info.jpg);
+                                                background-size: cover;
+                                                background-position: center;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                font-family: sans-serif;">
+         <form action="" method="POST"class="contact-form" >
+             {% csrf_token %}
+             <h1 style="color: #fff; margin-bottom: 70px; font-size: 45px; letter-spacing: 2px;">Find Clinics</h1>
+            <div>
+                <br/><br/>
+                 <!--clinic location-->
+                <input type="button" id='chooseName' class="choose-btn" onclick="checkClick1()"
+                        style="height: 50px;width:200px;color: #ececf6;
+                            background: #0c5460;border-radius: 5px;border: none;" name="choose" value="Clinic Location" >
+
+                 <!--clinic Name-->
+                <input type="button" id='chooseLocation' class="choose-btn" onclick="checkClick2()"
+                       style="height: 50px;width:200px;color: #ececf6;
+                            background: #0c5460;border-radius: 5px;border: none;"name="choose" value="Clinic Name" >
+                <div style="display: none"><input id = 'chooseType'  name ='getChoose' value=""></div>
+                <script>
+                    function checkClick1(){
+                        document.getElementById("chooseLocation").className = document.getElementById("chooseLocation").className == 'unclicked' ? '' : 'unclicked';
+                        document.getElementById("chooseName").className = document.getElementById("chooseName").className == 'clicked' ? '' : 'clicked';
+                        getChoice = document.getElementById("chooseName").value;
+                        document.getElementById("chooseType").value = getChoice;
+                    }
+                    function checkClick2(){
+                        document.getElementById("chooseName").className = document.getElementById("chooseName").className == 'unclicked' ? '' : 'unclicked';
+                        document.getElementById("chooseLocation").className = document.getElementById("chooseLocation").className == 'clicked' ? '' : 'clicked';
+                        getChoice = document.getElementById("chooseLocation").value;
+                        document.getElementById("chooseType").value = getChoice;
+                    }
+                </script>
+
+                 <!--clinic type(12 totally)-->
+                <select id="type" type="text" list="typelist" name="choose-type" >
+                    <datalist id="typelist">
+                        <option selected>Choose Clinic Type</option>>
+                        <option >All Type</option>>
+                        <option>Child health care centre</option>>
+                        <option>Children's health service</option>>
+                        <option>Children's hospital</option>>
+                        <option>Doctor</option>>
+                        <option>Family practice physician</option>>
+                        <option>General practitioner</option>>
+                        <option>Hospital</option>>
+                        <option>Immunisation Service</option>>
+                        <option>Local medical services</option>>
+                        <option>Medical Center</option>>
+                        <option>Medical group</option>>
+                        <option>Pediatrician</option>>
+                    </datalist>
+                </select>
             </div>
-          </div>
-        </div>
+            <div class="form-box">
+                <input type="text" class="search-field" name="searchclinic" value="Enter Keyword" placeholder="Location"><input type="submit" class="search-btn"  value="Search">
+            </div>
+        </form>
     </div>
     <!-- search section end -->
 
@@ -44,9 +107,8 @@
             <form action="search/searchresult" method='POST' >
             {% csrf_token %}
             {% if search_result_num >= 0 %}
-                <h2 style="color: red">{{ result_remind }}</h2>
+                <h2 style="color: red;">{{ result_remind }}</h2>
             {% endif %}
-                <br>
             {% if search_result_num == -1 %}
                 <h2 style="color:  black">Some recommendations by rating</h2>
             {% elif search_result_num == 0 %}
@@ -62,9 +124,9 @@
                             <div class="contact-text">
                                 {% for hos in l2 %}
                                 <div class="contact-info">
-                                    <div class="ci-image set-bg" data-setbg="{% static 'img/search/11.png'%}"style="height: 270px;width:500px;margin-bottom: 50px"></div>
+                                    <div class="ci-image set-bg" data-setbg="{% static 'img/search/11.png'%}"style="height: 270px;width:500px;margin-bottom:50px"></div>
                                     <div class="ci-content">
-                                        <h4><font color="2E8B57">{{ hos.clinic_name  }}</font> </h4><br>
+                                        <h4><font color="2E8B57">{{ hos.clinic_name }}</font> </h4><br>
                                         <h5>Address: {{ hos.address }}</h5><br>
                                         <h5>Type: {{ hos.clinic_type }}</h5><br>
                                         <h5>Rating: {{ hos.rating}}</h5>
@@ -79,10 +141,10 @@
                     {% endfor %}
                 </div>
             {% else %}
-			<div class="row">
+			    <div class="row">
                 <div class="col-lg-6">
                     <div class="contact-text">
-                        {% for hos in recommendhospital2 %}
+                        {% for hos in recommendhospital1 %}
                         <div class="contact-info">
                             <div class="ci-image set-bg" data-setbg="{% static 'img/search/11.png' %}" alt="" style="height: 270px;width:500px;margin-bottom: 50px">  </div><br><br><br>
                             <div class="ci-content">
@@ -93,14 +155,13 @@
                                 <br>
                                 <div><input type="submit" class="btn  text-white px-4 "style="background-color: #34ce57;"name={{ hos.id }} value="LearnMore"></div>
                             </div>
-                        </div>
-                            <br>
+                        </div><br>
                         {% endfor %}
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="contact-text">
-                        {% for hos in recommendhospital3 %}
+                        {% for hos in recommendhospital2 %}
                         <div class="contact-info">
                             <div class="ci-image set-bg" data-setbg="{% static 'img/search/9.png' %}" alt="" style="height:270px;width:500px;margin-bottom: 50px">  </div><br><br><br>
                             <div class="ci-content">
@@ -111,12 +172,9 @@
                                 <br>
                                 <div><input type="submit" class="btn  text-white px-4 "style="background-color: #34ce57;"name={{ hos.id }} value="LearnMore"></div>
                             </div>
-                        </div>
-                            <br>
+                        </div><br>
                         {% endfor %}
-
                     </div>
-
                 </div>
 			</div>
             {% endif %}

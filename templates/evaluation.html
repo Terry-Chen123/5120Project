@@ -3,7 +3,9 @@
     <li ><a href="{% url 'Home' %}">Home</a></li>
     <li><a href="{% url 'About' %}">About</a></li>
     <li ><a href="{% url 'Read More' %}">More Information</a></li>
-    <li class="active"><a href="{% url 'Service' %}">Service</a></li>
+    <li class="active"><a href="{% url 'Quiz List' %}">Pneumonia Quiz</a></li>
+    <li><a href="{% url 'Search' %}">Clinic Search</a></li>
+
 {% endblock %}
 
 {% block mainbody %}
@@ -13,7 +15,6 @@
 		<div class="container">
             <br>
             <h5><a href="{% url 'Home' %}">Home</a>&nbsp;&gt;&nbsp;
-                <a href="{% url 'Service' %}">Services</a>&nbsp;&gt;&nbsp;
                 <a href="{% url 'Quiz List' %}">Quiz Category</a>&nbsp;&gt;&nbsp;
                 Quiz</h5>
 			<br>

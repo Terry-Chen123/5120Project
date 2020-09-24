@@ -78,6 +78,9 @@ ol {
 .section-title {
   margin-bottom: 100px;
 }
+.section-teamtitle{
+  margin-bottom: 40px;
+}
 
 .set-bg {
   background-repeat: no-repeat;

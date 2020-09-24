@@ -19,13 +19,12 @@
     <li ><a href="{% url 'Home' %}">Home</a></li>
     <li><a href="{% url 'About' %}">About</a></li>
     <li ><a href="{% url 'Read More' %}">More Information</a></li>
-    <li class="active"><a href="{% url 'Service' %}">Service</a></li>
+    <li><a href="{% url 'Quiz List' %}">Pneumonia Quiz</a></li>
+    <li class="active"><a href="{% url 'Search' %}">Clinic Search</a></li>
 {% endblock %}
-
 
 {% block mainbody %}
     {% load static %}
-
     <!-- search section -->
     <div class="ftco-blocks-cover-1">
         <div class="ftco-cover-1 overlay" style="background-image:url('{% static 'img/search/5.png' %}');
@@ -36,8 +35,8 @@
             <div class="row align-items-center">
               <div class="col-lg-6" style="height: 500px" >
                   <br><br><br>
-                <h1><font color="2E8B57">Find a Clinic </font></h1>
-                <p class="mb-5"><font color="#696969">
+                <h1 style="color:forestgreen; margin-bottom: 50px; font-size: 45px; letter-spacing: 2px;">View Clinic Detail</h1>
+                <p class="mb-5"><font color="black">
                     Getting vaccinated is one of the most effective ways to prevent pneumonia.<br>
                     It is kind that parents can search for a clinic for consultation.<br>
                     There are more than 300 available clinics and hospitals in Victoria, and we are pleased to deliver the basic info for each clinic or hospital.
@@ -157,10 +156,5 @@
 			</div>
          </div>
     </section>
-
-
-
-
-
 
 {% endblock %}

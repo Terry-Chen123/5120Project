@@ -25,14 +25,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name = 'Home'),
     path('about/', views.about, name = 'About'),
-    path('service/',views.service, name = 'Service'),
     path('readmore/',views.readMore, name = 'Read More'),
-    path('service/quizlist/quizstart',views.evaluation, name = 'Evaluation'),
-    path('service/quizlist/getuserchoice', views.getUserChoice, name = 'Review1'),
-    path('service/quizlist/quizintro', views.quizIntro, name='Quiz Intro'),
-    path('service/quizlist/quizcategory', views.quizCategory, name='Quiz List'),
-    path('service/search', views.searchClinic, name='Search'),
-    path('service/search/searchresult', views.searchResult, name='Search Result'),
+    path('quizlist/quizstart',views.evaluation, name = 'Evaluation'),
+    path('quizlist/getuserchoice', views.getUserChoice, name = 'Review1'),
+    path('quizlist/quizintro', views.quizIntro, name='Quiz Intro'),
+    path('quizlist/quizcategory', views.quizCategory, name='Quiz List'),
+    path('search', views.searchClinic, name='Search'),
+    path('search/searchresult', views.searchResult, name='Search Result'),
     path('test',views.test,name='Test')
 
 ]

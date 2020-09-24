@@ -18,6 +18,8 @@
     {% block mapstyle %}
     {% endblock %}
 
+    {% block js %}
+    {% endblock %}
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
@@ -89,8 +91,9 @@
 							<ul>
 								<li><a href="{% url 'Home' %}">Home</a></li>
                                 <li><a href="{% url 'About' %}">About</a></li>
-                                <li><a href="{% url 'Read More' %}">Information Guide</a></li>
-				                <li><a href="{% url 'Service' %}">Services</a></li>
+                                <li><a href="{% url 'Read More' %}">More Information</a></li>
+                                <li><a href="{% url 'Quiz List' %}">Pneumonia Quiz</a></li>
+                                <li><a href="{% url 'Search' %}">Clinic Search</a></li>
 							</ul>
 						</div>
 					</div>
@@ -106,7 +109,6 @@
 									</tr>
 									<tr>
 										<td>Australia Governamnet Departement of Health</td>
-
 								</table>
 							</div>
 						</div>
@@ -123,9 +125,10 @@
 		<div class="container">
 			<ul class="footer-menu">
 				<li><a href="{% url 'Home' %}">Home</a></li>
-                <li><a href="{% url 'About' %}">About</a></li>
-                <li><a href="{% url 'Read More' %}">Information Guide</a></li>
-                <li><a href="{% url 'Service' %}">Services</a></li>
+                <li ><a href="{% url 'About' %}">About</a></li>
+                <li><a href="{% url 'Read More' %}">More Information</a></li>
+                <li><a href="{% url 'Quiz List' %}">Pneumonia Quiz</a></li>
+                <li><a href="{% url 'Search' %}">Clinic Search</a></li>
 			</ul>
 			<div class="copyright">
             Copyright &copy;<script>document.write(new Date().getFullYear());</script>

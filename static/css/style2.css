@@ -109,6 +109,10 @@ ol {
 -----------------------*/
 
 /* buttons */
+.search-btn:hover {
+                    background-color: #4CAF50; /* Green */
+                    color: white;
+}
 
 .site-btn {
   display: inline-block;

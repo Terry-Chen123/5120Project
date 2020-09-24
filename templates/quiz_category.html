@@ -3,7 +3,9 @@
     <li ><a href="{% url 'Home' %}">Home</a></li>
     <li ><a href="{% url 'About' %}">About</a></li>
     <li ><a href="{% url 'Read More' %}">More Information</a></li>
-    <li class="active"><a href="{% url 'Service' %}">Service</a></li>
+    <li class="active"><a href="{% url 'Quiz List' %}">Pneumonia Quiz</a></li>
+    <li><a href="{% url 'Search' %}">Clinic Search</a></li>
+
 {% endblock %}
 
 {% block mainbody %}
@@ -12,9 +14,8 @@
 	<section class="more-info set-bg" style="background: #E5E4E2">
 		<div class="container">
             <br>
-            <h5><a href="{% url 'Home' %}">Home</a>&nbsp;&gt;&nbsp;</h5>
-                <a href="{% url 'Service' %}">Services</a>
-                &nbsp;&gt;&nbsp;Quiz Category
+            <h5><a href="{% url 'Home' %}">Home</a>&nbsp;&gt;&nbsp;
+                Quiz Category
             </h5>
 			<br>
 			<h1><font color="2E8B57">Quiz Category</font></h1><br>
@@ -23,9 +24,8 @@
 	<!-- Page info section end -->
 
 	<!-- Quiz Category section -->
-
     <section>
-    <br><br><br><br>
+    <br><br><br>
 		<div class="container">
 			<div class="blog-item">
 				<div class="row">
@@ -46,12 +46,11 @@
                             {% csrf_token %}
                             <p><input type="submit" class="site-btn" name = 'A' value="Start Quiz 1"></p>
                         </form>
-
 					</div>
 				</div>
 			</div>
         </div>
-    <br><br><
+
 		<div class="container">
 			<div class="blog-item">
 				<div class="row">
@@ -72,12 +71,11 @@
                             {% csrf_token %}
                             <p><input type="submit" class="site-btn" name = 'B' value="Start Quiz 2"></p>
                         </form>
-
 					</div>
 				</div>
 			</div>
         </div>
-        <br><br>
+
 		<div class="container">
 			<div class="blog-item">
 				<div class="row">

@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 {% block navigation %}
     <li ><a href="{% url 'Home' %}">Home</a></li>
+    <li><a href="{% url 'About' %}">About</a></li>
     <li ><a href="{% url 'Read More' %}">More Information</a></li>
-    <li class="active"><a href="{% url 'Service' %}">Service</a></li>
+    <li class="active"><a href="{% url 'Quiz List' %}">Pneumonia Quiz</a></li>
+    <li><a href="{% url 'Search' %}">Clinic Search</a></li>
+
 {% endblock %}
 
 {% block mainbody %}
@@ -12,7 +15,7 @@
     <section class="more-info set-bg" style="background: #E5E4E2">
 		<div class="container">
             <br>
-            <h5><a href="{% url 'Home' %}">Home</a>&nbsp;&gt;&nbsp;<a href="{% url 'Service' %}">Services</a>&nbsp;&gt;&nbsp;<a href="{% url 'Quiz List' %}">Quiz Category</a>&nbsp;&gt;&nbsp;Start Quiz</h5>
+            <h5><a href="{% url 'Home' %}">Home</a>&nbsp;&gt;&nbsp;&nbsp;<a href="{% url 'Quiz List' %}">Quiz Category</a>&nbsp;&gt;&nbsp;Start Quiz</h5>
 			<br>
 			<h1><font color="2E8B57">Star a Quiz</font></h1><br>
 		</div>
@@ -24,7 +27,6 @@
 		<div class="container">
 			<div class="section-title text-center">
 				<h2><font color="#2E8B57">{{ category.title}}</font> </h2>
-
 				<br>
 				<br>
 				<div class="quiz-box" style="    width: 800px;
@@ -35,14 +37,12 @@
                                                  margin-top: 1px;
                                                  float: top;
                                                  background-color: #D1D0CE;">
-
                     <div class="info" style="padding-top: 30px" >
                     	<h4>Test Your Knowledge of Children's Pneumonia</h4>
                         <br>
 					    <h6><font color="#6D6968">With the growing number of children's pneumonia.
                         <br> It is important for you to have basic understanding of pneumonia, time to start!</font></h6>
                         <br>
-
                         <img src="{% static 'img/quiz-intro/1.jpg' %}" alt="" height="350px" width="450spx">
                         <br><br><br>
                          <form action="quizstart" method='POST' >
@@ -58,23 +58,19 @@
                                 <a href = '{% url 'Quiz List' %}'><input class="site-btn" name = 'back' value="Choose Again"></a>
                             {% endif %}
                          </form>
-
                         <br>
                         <br>
                     </div>
 				</div>
 			</div>
-
-					<div class="service-content">
-						<div class="popup_back" style="display:none;"></div>
-						<div class="popup_window_first" style="display:none;">
-							<br>
-							<p class="popup_cont">Are you sure to start a quiz?</p><br>
-							<a href="{% url 'Evaluation' %}"><button style="background: #13B51E" >YES</button></a> &nbsp;&nbsp;&nbsp;&nbsp;
-							<a href="{% url 'Service' %}" ><button style="background: #DA791B;">NO</button></a>
-						</div>
-
-		            </div>
+            <div class="service-content">
+                <div class="popup_back" style="display:none;"></div>
+                <div class="popup_window_first" style="display:none;">
+                    <br>
+                    <p class="popup_cont">Are you sure to start a quiz?</p><br>
+                    <a href="{% url 'Evaluation' %}"><button style="background: #13B51E" >YES</button></a> &nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+            </div>
 		</div>
 	</section>
 	<!-- Quiz start section -->

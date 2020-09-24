@@ -3,7 +3,9 @@
     <li ><a href="{% url 'Home' %}">Home</a></li>
     <li class="active" ><a href="{% url 'About' %}">About</a></li>
     <li ><a href="{% url 'Read More' %}">More Information</a></li>
-    <li><a href="{% url 'Service' %}">Service</a></li>
+    <li><a href="{% url 'Quiz List' %}">Pneumonia Quiz</a></li>
+    <li><a href="{% url 'Search' %}">Clinic Search</a></li>
+
 {% endblock %}
 
 
@@ -39,7 +41,8 @@
 		</div>
 	</section>
 	<!-- Intro section end -->
-        <!-- Facts section -->
+
+    <!-- Facts section -->
     <section class="facts-section set-bg" data-setbg="{% static '/img/more-info'%}" style="background:#2E8B57 ">
 		<div class="container">
 			<div class="row">
@@ -71,37 +74,38 @@
 		</div>
 	</section>
 	<!-- Facts section end -->
+
     <!-- about us -->
 	<section class="doctors-section spad">
 		<div class="container">
-			<div class="section-title text-center">
+			<div class="section-teamtitle text-center">
 				<h2>The Team</h2>
 			</div>
 			<div class="row">
 				<div class="col-lg-2 col-md-3  col-sm-6" style="margin-left: 80px">
 					<div class="doctor-item">
-						<div class="di-pic set-bg" data-setbg="img/doctors/2.jpg"></div>
+						<div class="di-pic set-bg" data-setbg={% static "img/about/dongliang.jpeg" %}></div>
 						<h6>Dongling Feng</h6>
 						<p>Business Analysis</p>
 					</div>
 				</div>
 				<div class="col-lg-2 col-md-3  col-sm-6" style="margin-left: 80px">
 					<div class="doctor-item">
-						<div class="di-pic set-bg" data-setbg="img/doctors/3.jpg"></div>
+						<div class="di-pic set-bg" data-setbg={% static "img/about/yanping.jpeg" %}></div>
 						<h6>Yanping Luo</h6>
 						<p>Security maintenance</p>
 					</div>
 				</div>
 				<div class="col-lg-2 col-md-3  col-sm-6"style="margin-left: 80px">
 					<div class="doctor-item">
-						<div class="di-pic set-bg" data-setbg="img/doctors/4.jpg"></div>
+						<div class="di-pic set-bg" data-setbg={% static "img/about/yuting.png" %}></div>
 						<h6>Yuting Ouyang</h6>
 						<p>UI Designer</p>
 					</div>
 				</div>
 				<div class="col-lg-2 col-md-3  col-sm-6"style="margin-left: 80px">
 					<div class="doctor-item">
-						<div class="di-pic set-bg" data-setbg="img/doctors/5.jpg"></div>
+						<div class="di-pic set-bg" data-setbg={% static "img/about/tianrui.jpeg" %}></div>
 						<h6>Tianrui Chen</h6>
 						<p>Web Developer</p>
 					</div>
@@ -110,7 +114,6 @@
 		</div>
 	</section>
 	<!-- about us end -->
-
 
 {% endblock %}
 {% block script %}
