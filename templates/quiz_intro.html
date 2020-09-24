@@ -23,11 +23,10 @@
 	<!-- Page info section end -->
 
 	<!-- Quiz start section -->
-	<section class="services-section spad">
+	<section class="quiz-intro-section spad" style="margin-top:-40px; margin-bottom: -200px;">
 		<div class="container">
 			<div class="section-title text-center">
 				<h2><font color="#2E8B57">{{ category.title}}</font> </h2>
-				<br>
 				<br>
 				<div class="quiz-box" style="    width: 800px;
 				                                 height:auto;
@@ -43,7 +42,7 @@
 					    <h6><font color="#6D6968">With the growing number of children's pneumonia.
                         <br> It is important for you to have basic understanding of pneumonia, time to start!</font></h6>
                         <br>
-                        <img src="{% static 'img/quiz-intro/1.jpg' %}" alt="" height="350px" width="450spx">
+                        <img src="{% static 'img/quiz-intro/1.jpg' %}" alt="" height="400px" width="500spx">
                         <br><br><br>
                          <form action="quizstart" method='POST' >
                              {% csrf_token %}

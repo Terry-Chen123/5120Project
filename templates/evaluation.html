@@ -36,7 +36,7 @@
 						    <h3>{{ eachquestion.question }}</h3>
 						    <div class="blog-metas">
 							    <div class="blog-meta">By LungHealth</div>
-                                <div class="blog-meta">Keywords:<a href="">{{ eachquestion.keyword }}</a></div>
+                                <div class="blog-meta">Keywords:<a href="{% url 'Read More' %}">{{ eachquestion.keyword }}</a></div>
                             </div>
 						    <p><input type="radio" id="ChoiceA" class="qa" name="{{ eachquestion.id }}" value = "A">{{ eachquestion.choiceA }}  </p>
                             <p><input type="radio" id="ChoiceB" class="qa" name="{{ eachquestion.id }}" value = "B">{{ eachquestion.choiceB }} </p>
@@ -48,13 +48,15 @@
 					</div>
                     {% endfor %}
                      <br><br><br>
-                    {% if Question.0.category == 'A'%}
-                        <p><input type="submit" class="site-btn mt-4" name = 'A' value="Check Result Here!"></p>
-                    {% elif Question.0.category == 'B'%}
-                         <p><input type="submit" class="site-btn mt-4" name = 'B' value="Check Result Here!"></p>
-                    {% else  %}
-                         <p><input type="submit" class="site-btn mt-4" name = 'C' value="Check Result Here!"></p>
-                    {% endif %}
+                    <div>
+                        {% if Question.0.category == 'A'%}
+                            <p><input type="submit" class="site-btn mt-4" name = 'A' value="Check Result Here!"></p>
+                        {% elif Question.0.category == 'B'%}
+                             <p><input type="submit" class="site-btn mt-4" name = 'B' value="Check Result Here!"></p>
+                        {% else  %}
+                             <p><input type="submit" class="site-btn mt-4" name = 'C' value="Check Result Here!"></p>
+                        {% endif %}
+                    </div>
                   </div>
                 </div>
             </div>

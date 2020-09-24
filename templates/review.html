@@ -38,7 +38,7 @@
                         <h3>{{ ques.question }}</h3>
                         <div class="blog-metas">
                             <div class="blog-meta">By LungHealth</div>
-                            <div class="blog-meta">Keywords:<a href="">{{ ques.keyword }}</a></div>
+                            <div class="blog-meta">Keywords:<a href="{% url 'Read More' %}">{{ ques.keyword }}</a></div>
                         </div>
                         <label>{{ ques.choiceA }} </label><br>
                         <label>{{ ques.choiceB }} </label><br>

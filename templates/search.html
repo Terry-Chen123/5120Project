@@ -21,13 +21,13 @@
          #btn :active{ box-shadow: 0px 0px 50px #c82333 inset; color:#fdfdfe; }
          .search-field{
                         height: 50px; padding: 10px;border: none;
-                        border-radius: 5px;outline: none; width: 610px;
-                        display: inline-block;margin-right:5px;
+                        border-radius: 5px; width: 300px;
+                        float:left;margin-top:5px;margin-right:5px;display:inline;
 
          }
          .search-btn{
                     height: 50px;width: 150px;background: #71cd29;
-                    border: none;color: #ececf6;border-radius: 5px;
+                    border: none;color: #ececf6;border-radius: 5px;display:inline;
 
          }
          .search-btn:hover {
@@ -46,7 +46,9 @@
                                                 font-family: sans-serif;">
          <form action="" method="POST"class="contact-form" >
              {% csrf_token %}
-             <h1 style="color: #fff; margin-bottom: 70px; font-size: 45px; letter-spacing: 2px;">Find Clinics</h1>
+             <div>
+                <h1 style="color: #fff; margin-bottom: 50px; font-size: 70px; text-align:center; letter-spacing: 2px;">Find Clinics</h1>
+             </div>
             <div>
                 <br/><br/>
                  <!--clinic location-->
@@ -77,8 +79,7 @@
                  <!--clinic type(12 totally)-->
                 <select id="type" type="text" list="typelist" name="choose-type" >
                     <datalist id="typelist">
-                        <option selected>Choose Clinic Type</option>>
-                        <option >All Type</option>>
+                        <option selected>All Clinic Type</option>>
                         <option>Child health care centre</option>>
                         <option>Children's health service</option>>
                         <option>Children's hospital</option>>
@@ -94,9 +95,15 @@
                     </datalist>
                 </select>
             </div>
-            <div class="form-box">
-                <input type="text" class="search-field" name="searchclinic" value="Enter Keyword" placeholder="Location"><input type="submit" class="search-btn"  value="Search">
+            <div class="form-inline">
+
+                <input type="text" class="search-field"  name="searchclinic" value="Enter Keyword"
+                                                    style="height: 50px; padding: 10px;border: none;
+                                                    border-radius: 5px; width: 610px;
+                                                    float:left;margin-top:5px;margin-right:5px;display:inline;">
+                 <input type="submit" class="search-btn" style="display:inline">
             </div>
+
         </form>
     </div>
     <!-- search section end -->
