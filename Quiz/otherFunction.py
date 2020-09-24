@@ -30,7 +30,7 @@ def searchArea(input, choose, type):
         else :
             search_result.append(hospital)
 
-    if type != 'All Type':
+    if type != 'All Clinic Type':
         temp = []
         for result in search_result:
             if result.clinic_type == type:
