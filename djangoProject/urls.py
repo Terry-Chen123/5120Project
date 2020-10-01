@@ -17,6 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path
 from Quiz import views
+from Search import views as search_views
 
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
@@ -30,9 +31,9 @@ urlpatterns = [
     path('quizlist/getuserchoice', views.getUserChoice, name = 'Review1'),
     path('quizlist/quizintro', views.quizIntro, name='Quiz Intro'),
     path('quizlist/quizcategory', views.quizCategory, name='Quiz List'),
-    path('search', views.searchClinic, name='Search'),
-    path('search/searchresult', views.searchResult, name='Search Result'),
-    path('test',views.test,name='Test')
+    path('search', search_views.searchClinic, name='Search'),
+    path('search/searchresult', search_views.searchResult, name='Search Result'),
+    path('test',search_views.test,name='Test')
 
 ]
 urlpatterns += staticfiles_urlpatterns()

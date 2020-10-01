@@ -39,11 +39,7 @@ def solution(max_weight, weight, value, num):
     print(dp[n][-1])
 
 
-solution(target, weight, value, num)
-
-
-
-
+#solution(target, weight, value, num)
 
 
 
