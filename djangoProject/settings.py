@@ -95,7 +95,7 @@ DATABASES = {
 """
 DATABASES = {
     'default': {
-        # 这里可以指定使用的数据库类型，例如mysql
+
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }

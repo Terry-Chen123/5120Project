@@ -94,19 +94,19 @@ def getScore(Q_list, Ans_list):
     result = ""
     suggestion = ""
     if score  <= 2:
-        result = "Oh No!"
-        suggestion = "Not so good, but no need to be panic. " \
+        result = "Not so good"
+        suggestion = "No need to be panic. " \
                      "Read content about children's pneumonia, you will become a master on how to deal with " \
                      "the pneumonia emergency that happened to your child."
     elif 3 <= score  <= 4:
         result = "Keep Learing!"
         suggestion = "You are doing good and almost master the knowledge, " \
-                     "but still misunderstanding a little bit. If you want to get a full mark, " \
-                     "feel free to go back and read the information, and do the quiz again. "
+                     "but still misunderstanding a little bit. " \
+                     "feel free to go back and read the information, and get a full mark."
     elif score == 5:
         result = "Excellent!"
-        suggestion = "You got all of the right answers, but don’t be so proud and you may also need to learn " \
-                     "some of the knowledge gap of children’s pneumonia."
+        suggestion = "You got all of the right answers, well done! Feel free to go back, you may want to find other " \
+                     "functions of the website."
 
     final_score = str(score) + "/" + str(total_score)
     return result, final_score, suggestion

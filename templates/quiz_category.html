@@ -7,10 +7,16 @@
     <li><a href="{% url 'Search' %}">Clinic Search</a></li>
 
 {% endblock %}
-
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
 {% block mainbody %}
     {% load static %}
-    	<!-- Page info section -->
+    <!-- Page info section -->
 	<section class="more-info set-bg" style="background: #E5E4E2">
 		<div class="container">
             <br>
@@ -42,9 +48,27 @@
                         <p><font color="696969">
                             In this quiz, you will be tested to see if you are familiar with the basic knowledge of pneumonia and you will get the feedback on it.
                          </font></p>
-						<form action="quizintro" method='POST' >
+						<form action="/quizlist/quizstart" method='POST' >
                             {% csrf_token %}
-                            <p><input type="submit" class="site-btn" name = 'A' value="Start Quiz 1"></p>
+                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal"style="background-color: #71cd29" data-target="#myModal">Start quiz 1</button>
+                            <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 style=" margin-right: 50px;">Are you sure of doing quiz 1?</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p style="color:green; font-weight: bold">Do you want to start the quiz 1 or read more knowledge about children pneumonia?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" onclick="window.location.href='{% url 'Read More' %}'" data-dismiss="modal">Read More</button>
+                                            <input type="submit" class="btn btn-default"  value="Start Quiz" name='A'>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
                         </form>
 					</div>
 				</div>
@@ -67,9 +91,27 @@
                         <p><font color="696969">
                             In this quiz, you will be tested to see if you are familiar with the basic knowledge of pneumonia and you will get the feedback on it.
                          </font></p>
-						<form action="quizintro" method='POST' >
+						<form action="/quizlist/quizstart" method='POST' >
                             {% csrf_token %}
-                            <p><input type="submit" class="site-btn" name = 'B' value="Start Quiz 2"></p>
+                            <button type="button" class="btn btn-info btn-lg"style="background-color: #71cd29" data-toggle="modal" data-target="#myModal2">Start quiz 2</button>
+                            <div class="modal fade" id="myModal2" role="dialog">
+                                <div class="modal-dialog">
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 style=" margin-right: 50px;">Are you sure of doing quiz 2?</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p style="color:green; font-weight: bold">Do you want to start the quiz 2 or read more knowledge about children pneumonia?</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" onclick="window.location.href='{% url 'Read More' %}'" data-dismiss="modal">Read More</button>
+                                            <input type="submit" class="btn btn-default"  value="Start Quiz" name='B'>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </form>
 					</div>
 				</div>
@@ -92,9 +134,27 @@
                         <p><font color="696969">
                             In this quiz, you will be tested to see if you are familiar with the basic knowledge of pneumonia and you will get the feedback on it.
                          </font></p>
-						<form action="quizintro" method='POST' >
-                                        {% csrf_token %}
-									    <p><input type="submit" class="site-btn" name = 'C' value="Start Quiz 3"></p>
+						<form action="/quizlist/quizstart" method='POST' >
+                            {% csrf_token %}
+                            <button type="button" class="btn btn-info btn-lg"style="background-color: #71cd29" data-toggle="modal" data-target="#myModal3">Start quiz 3</button>
+                            <div class="modal fade" id="myModal3" role="dialog">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 style=" margin-right: 50px;">Are you sure of doing quiz 3?</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p style="color:green; font-weight: bold">Do you want to start the quiz 3 or read more knowledge about children pneumonia?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" onclick="window.location.href='{% url 'Read More' %}'" data-dismiss="modal">Read More</button>
+                                            <input type="submit" class="btn btn-default"  value="Start Quiz" name='C'>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
                         </form>
 					</div>
 				</div>

@@ -23,101 +23,80 @@
 	</section>
 	<!-- Page info section end -->
 
-
-
     <!-- Intro section -->
 	<section class="intro-section spad">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-					<img src="{% static 'img/about/about-page.jpg' %}" alt="">
-				</div>
-				<div class="col-lg-6 intro-text">
-					<h2>We Care About Your Lung Health</h2>
-					<p>As the number of pneumonia patients increased in these years, especially for young children.
-                        It is essential for you to get to know children's pneumonia in every aspect.
-                        The website aims to provide a chance to let you test your knowledge and find out further
-                        information about children’s pneumonia. We provide you with the best solution and actions
-                        to even safety concern your lung health, including the knowledge of pneumonia prevention,
-                        vaccination, and help you find the clinics near your house.</p>
-					<h2>Why?</h2>
-				</div>
-			</div>
-		</div>
-	</section>
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-6">
+               <img src="{% static 'img/about/about-page.jpg' %}" alt="">
+            </div>
+                <div class="col-lg-6 intro-text">
+                    <h2 style="color: green">We Care About Your Children's Lung Health</h2>
+                    <p1>The website aims to provide:</p1>
+                    <br><br>
+                    <p>• A chance to let you test your knowledge and find out further information about children’s pneumonia.</p>
+                    <p>• The knowledge of pneumonia prevention, vaccination.</p>
+                    <p>• Help you find the clinics near your location.</p>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-lg-6 intro-text">
+                    <h2 style="color: green">Why Us?</h2>
+                    <p1>We provide you with the best solution and actions to even
+                        safety concern your children’s lung health:</p1>
+                    <br><br>
+                    <p>• Targeted quiz help you have a comprehensive understanding of children’s pneumonia knowledge;</p>
+                    <p>• A quick search of a nearby clinic to help you find the optimum clinic;</p>
+                    <p>• Helps you plan your children’s vaccine schedule.</p>
+                </div>
+                <div class="col-lg-6">
+               <img src="{% static 'img/about/picture1.jpg' %}" alt=""style="height: 380px">
+            </div>
+         </div>
+      </div>
+   </section>
 	<!-- Intro section end -->
 
     <!-- Facts section -->
-    <section class="facts-section set-bg" data-setbg="{% static '/img/more-info'%}" style="background:#2E8B57 ">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3 col-sm-6 fact">
-					<img src="{% static 'img/about/baby.png' %}" alt="" style="width:50px;height: 50px">
-                    <br><br>
-					<h2>0.008% </h2>
-					<p>Children's Pneumonia</p>
-				</div>
-				<div class="col-md-3 col-sm-6 fact">
-					<img src="{% static 'img/about/death.png' %}" alt="" style="width:50px;height: 50px">
-                    <br><br>
-					<h2>12</h2>
-					<p>Death Toll</p>
-				</div>
-				<div class="col-md-3 col-sm-6 fact">
-					<img src="{% static 'img/about/vaccine.png' %}" alt="" style="width:50px;height: 50px">
-                    <br><br>
-					<h2>95% </h2>
-					<p>Immunisation coverage</p>
-				</div>
-				<div class="col-md-3 col-sm-6 fact">
-					<img src="{% static 'img/about/hospital.png' %}" alt="" style="width:50px;height: 50px">
-                    <br><br>
-					<h2>1350</h2>
-					<p>Hospitals</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Facts section end -->
+    <section class="doctors-section spad"style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(../static/img/about/picture3.jpg)">
+      <div class="container">
+         <div class="section-teamtitle text-center">
+            <h2 style="color: #fdfdfe; font-weight: bold">The Team</h2>
+         </div>
+         <div class="row">
+            <div class="col-lg-2 col-md-3  col-sm-6" style="margin-left: 80px">
+               <div class="doctor-item">
+                  <div class="di-pic set-bg" data-setbg={% static "img/about/dongliang.jpeg" %}></div>
+                  <h6s style="color: #fdfdfe; font-weight: bolder">Dongling Feng</h6s>
+                  <p style="color: #28a745; font-weight: bolder">Business Analysis</p>
+               </div>
+            </div>
+            <div class="col-lg-2 col-md-3  col-sm-6" style="margin-left: 80px">
+               <div class="doctor-item">
+                  <div class="di-pic set-bg" data-setbg={% static "img/about/yanping.jpeg" %}></div>
+                  <h6 style="color: #fdfdfe; font-weight: bolder">Yanping Luo</h6>
+                  <p style="color: #28a745; font-weight: bolder">Security maintenance</p>
+               </div>
+            </div>
+            <div class="col-lg-2 col-md-3  col-sm-6"style="margin-left: 80px">
+               <div class="doctor-item">
+                  <div class="di-pic set-bg" data-setbg={% static "img/about/yuting.png" %}></div>
+                  <h6 style="color: #fdfdfe; font-weight: bolder">Yuting Ouyang</h6>
+                  <p style="color: #28a745; font-weight: bolder">UI Designer</p>
+               </div>
+            </div>
+            <div class="col-lg-2 col-md-3  col-sm-6"style="margin-left: 80px">
+               <div class="doctor-item">
+                  <div class="di-pic set-bg" data-setbg={% static "img/about/tianrui.jpeg" %}></div>
+                  <h6 style="color: #fdfdfe; font-weight: bolder">Tianrui Chen</h6>
+                  <p style="color: #28a745; font-weight: bolder">Web Developer</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
 
-    <!-- about us -->
-	<section class="doctors-section spad">
-		<div class="container">
-			<div class="section-teamtitle text-center">
-				<h2>The Team</h2>
-			</div>
-			<div class="row">
-				<div class="col-lg-2 col-md-3  col-sm-6" style="margin-left: 80px">
-					<div class="doctor-item">
-						<div class="di-pic set-bg" data-setbg={% static "img/about/dongliang.jpeg" %}></div>
-						<h6>Dongling Feng</h6>
-						<p>Business Analysis</p>
-					</div>
-				</div>
-				<div class="col-lg-2 col-md-3  col-sm-6" style="margin-left: 80px">
-					<div class="doctor-item">
-						<div class="di-pic set-bg" data-setbg={% static "img/about/yanping.jpeg" %}></div>
-						<h6>Yanping Luo</h6>
-						<p>Security maintenance</p>
-					</div>
-				</div>
-				<div class="col-lg-2 col-md-3  col-sm-6"style="margin-left: 80px">
-					<div class="doctor-item">
-						<div class="di-pic set-bg" data-setbg={% static "img/about/yuting.png" %}></div>
-						<h6>Yuting Ouyang</h6>
-						<p>UI Designer</p>
-					</div>
-				</div>
-				<div class="col-lg-2 col-md-3  col-sm-6"style="margin-left: 80px">
-					<div class="doctor-item">
-						<div class="di-pic set-bg" data-setbg={% static "img/about/tianrui.jpeg" %}></div>
-						<h6>Tianrui Chen</h6>
-						<p>Web Developer</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 	<!-- about us end -->
 
 {% endblock %}

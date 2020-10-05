@@ -12,33 +12,36 @@
     {% load static %}
     <!-- brief intro section -->
 	<section class="hero-section">
-		<div class="hero-slider owl-carousel">
-			<div class="hs-item set-bg text-white" data-setbg="{% static 'img/homepage/bg.png'%}">
-				<div class="container">
-					<div class="row">
-						<div class="col-xl-7">
-							<h2><font color="2E8B57">Children Pneumonia</font></h2>
-							<h5><font color="FFF5EE">Ultimate guide for combating with children pneumonia</font></h5>
-							<p> <a href="{% url 'Read More' %}" class="site-btn">Read More</a> </p>
-                        </div>
-					</div>
-				</div>
-			</div>
-			<!-- item -->
-			<div class="hs-item set-bg text-white" data-setbg="{% static '/img/homepage/bg2.png'%}">
-				<div class="container">
-					<div class="row">
-						<div class="col-xl-7">
-							<h2><font color="2E8B57">Pneumonia Vaccine</font></h2>
-							<h5><font color="FFF5EE	">Do you know how important<br>
-								to get pneumonia vaccine?</font></h5><br>
-							<a href="{% url 'Read More' %}" class="site-btn">Read More</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+      <div class="hero-slider owl-carousel">
+         <div class="hs-item set-bg text-white" data-setbg="{% static 'img/homepage/bg.png'%}">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-7">
+                     <h3 style="white-space: nowrap; font-weight: bold;font-size: 60px"><font color="#006400">Keep Your Children Safe</font></h3>
+                      <h3 style="white-space: nowrap; font-weight: bold;font-size: 60px"><font color="#006400">From Pneumonia</font></h3>
+                     <h4 style="white-space: nowrap"><font color="black">Do you know your children can get pneumonia?</font></h4>
+                     <p> <a href="{% url 'Read More' %}" class="site-btn">Read More</a> </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- item -->
+         <div class="hs-item set-bg text-white" data-setbg="{% static '/img/homepage/info.jpg'%}">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-7">
+                     <h3 style="white-space: nowrap; font-weight: bold; font-size: 60px"><font color="#006400">Get Your Children</font></h3>
+                      <h3 style="white-space: nowrap; font-weight: bold; font-size: 60px"><font color="#006400">Pneumonia Vaccinated</font></h3>
+                     <h4 style="white-space: nowrap"><font color="black">Do you know how important
+                        to get the pneumonia vaccine?</font></h4><br>
+                     <a href="{% url 'Read More' %}" class="site-btn">Read More</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
 	<!-- brief intro  end -->
 
     <!-- Services section -->
@@ -53,8 +56,7 @@
                         <a href ='{% url 'Quiz List' %}'><img src="{% static 'img/quiz.png'%}" alt=""></a>
 					</div>
 					<div class="service-content">
-
-						<h4><a href="{% url 'Quiz List' %}" class="btn_click" >Evaluation</a></h4>
+						<h4><a href="{% url 'Quiz List' %}" >Evaluation</a></h4>
 						<p>self-examination the knowledge of pneumonia.</p>
 					</div>
 				</div>
@@ -63,7 +65,7 @@
 						<a href='{% url 'Search' %}'><img src="{% static 'img/hospital.png'%}" alt=""></a>
 					</div>
 					<div class="service-content">
-						<a href="{% url 'Search' %}" ><h4>Clinic Searching</h4></a>
+                        <h4><a href="{% url 'Search' %}" >Clinic Search</a></h4>
 						<p>Search clinics within a given location.</p>
 					</div>
 				</div>
@@ -72,8 +74,8 @@
                         <a href='{% url 'Read More' %}'><img src="{% static 'img/doctor.png' %}" alt=""></a>
 					</div>
 					<div class="service-content">
-						<a href="{% url 'Read More' %}" ><h4>Call a Doctor</h4></a>
-						<p>Call your doctor right away if your child has any of the signs of pneumonia.</p>
+						<h4><a href="{% url 'Read More' %}" >Vaccine Schedule </a></h4>
+						<p>Check the vaccine and make your schedule</p>
 					</div>
 				</div>
 			</div>
@@ -81,105 +83,64 @@
 	</section>
 	<!-- Services section end -->
 
+    <!-- Data section -->
+    <section class="facts-section set-bg" data-setbg="{% static '/img/more-info'%}" style="background:#28a745 ">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-3 col-sm-6 fact">
+               <img src="{% static 'img/about/baby.png' %}" alt="" style="width:50px;height: 50px">
+                    <br><br>
+               <h2>0.008% </h2>
+               <p>Children's Pneumonia</p>
+            </div>
+            <div class="col-md-3 col-sm-6 fact">
+               <img src="{% static 'img/about/death.png' %}" alt="" style="width:50px;height: 50px">
+                    <br><br>
+               <h2>12</h2>
+               <p>Death Toll</p>
+            </div>
+            <div class="col-md-3 col-sm-6 fact">
+               <img src="{% static 'img/about/vaccine.png' %}" alt="" style="width:50px;height: 50px">
+                    <br><br>
+               <h2>95% </h2>
+               <p>Immunisation coverage</p>
+            </div>
+            <div class="col-md-3 col-sm-6 fact">
+               <img src="{% static 'img/about/hospital.png' %}" alt="" style="width:50px;height: 50px">
+                    <br><br>
+               <h2>1350</h2>
+               <p>Hospitals</p>
+            </div>
+         </div>
+      </div>
+   </section>
+    <!-- Data section end-->
+
 	<!-- About section -->
 	<section class="about-section spad" style="padding-left: 150px">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-5">
-					<img src="{% static 'img/homepage/c1.JPG' %}" style="height:300px ;width:500px">
-					<br>
-					<h2><font color="2E8B57">Babies & Young children</font></h2><br>
-					<h5><font color="2E8B57">In babies and children younger than five years:<br></font></h5>
-                    <h6><font color="696969" >pneumonia is more likely to be caused by a virus.</font> </h6>
-                    <br>
-					<h5><font color="2E8B57">In children older than five years:<br></font></h5>
-					<h6><font color="696969" >pneumonia is more likely to be caused by bacteria.</font></h6>
-                    <br>
-				</div>
-				<div class="col-lg-7 about-text">
-					<h2><font color="2E8B57">About children pneumonia</font></h2>
-					<h5><font color="696969">Pneumonia is a lung infection. </font></h5> <br>
-                    <h6><font color="696969">When someone has pneumonia, the small airways in their lungs<br> get clogged with mucus.<br><br>This reduces the amount of oxygen that can get into their body.</font></h6><br>
-					<img src="{% static 'img/homepage/11.jpg' %}" style="height:300px ;width:500px">
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- About section end -->
-
-	<!-- Gallery section -->
-	<div class="gallery-section">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-3 col-sm-6 p-0">
-					<img src="{% static 'img/homepage/1.jpg' %}" alt="">
-				</div>
-				<div class="col-lg-3 col-sm-6 p-0">
-					<img src="{% static 'img/homepage/2.jpg'%}" style="height: 224px">
-				</div>
-				<div class="col-lg-3 col-sm-6 p-0">
-					<img src="{% static 'img/homepage/c6.jpg'%}" alt="">
-				</div>
-				<div class="col-lg-3 col-sm-6 p-0">
-					<img src="{% static 'img/homepage/c7.png'%}" style="height: 224px">
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Gallery section end -->
-
-	<!-- Testimonials section -->
-    <section class="testimonials-section spad">
-    <div class="container">
-      <div class="section-title text-center">
-        <h2>Children Pneumonia symptoms&nbsp;</h2>
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-5">
+               <img src="{% static 'img/homepage/c1.JPG' %}" style="height:300px ;width:500px">
+               <br><br>
+               <h2><font color="2E8B57">Babies & Young children</font></h2><br>
+               <h5><font color="2E8B57">In babies and children younger than five years:<br></font></h5>
+                <h6><font color="696969" >pneumonia is more likely to be caused by a virus.</font> </h6>
+                <br>
+               <h5><font color="2E8B57">In children older than five years:<br></font></h5>
+               <h6><font color="696969" >pneumonia is more likely to be caused by bacteria.</font></h6>
+                <br>
+            </div>
+            <div class="col-lg-7 about-text">
+               <h2><font color="2E8B57">About children pneumonia</font></h2>
+               <h5><font color="696969">Pneumonia is a lung infection. </font></h5> <br>
+                <h6><font color="696969">When someone has pneumonia, the small airways in their lungs<br> get clogged with mucus.<br><br>This reduces the amount of oxygen that can get into their body.</font></h6><br>
+               <img src="{% static 'img/homepage/11.jpg' %}" style="height:300px ;width:500px">
+            </div>
+         </div>
       </div>
-    </div>
-    <div class="testimonials-warp">
-      <div class="testimonials-slider owl-carousel">
-        <div class="testimonial-item">
-          <div class="ts-content">
-            <div class="quta">“</div>
-            <p>be short of breath or have difficulty breathing  </p>
-            <p>have a moist cough </p>
-            <p>have a fever  </p>
-            <h9><span>Children</span></h9>
-          </div>
-          <div class="author-pic set-bg" data-setbg="{% static 'img/review/1.jpg'%}"></div>
-        </div>
-        <div class="testimonial-item">
-          <div class="ts-content">
-            <div class="quta">“</div>
-            <p>complain of sharp chest pains <br><br>
-              when they breathe deeply<br><br> or cough</p>
-
-            <span>Children</span>
-          </div>
-          <div class="author-pic set-bg" data-setbg="{% static 'img/homepage/c4.JPG' %}"></div>
-        </div>
-        <div class="testimonial-item">
-          <div class="ts-content">
-            <div class="quta">“</div>
-            <p>have a stomach ache and/or vomit</p>
-<p>coughing:can be dry or may produce thick mucus </p>
-            <span>Non-vaccines</span>
-          </div>
-          <div class="author-pic set-bg" data-setbg="{% static 'img/homepage/c5.JPG' %}"></div>
-        </div>
-        <div class="testimonial-item">
-          <div class="ts-content">
-            <div class="quta">“</div>
-                <p>fever：&nbsp;sweating and shivering </p>
-                <p>be irritable or tired</p>
-                <p>lose their appetite and not want to drink</p>
-            <span>Children</span>
-          </div>
-          <div class="author-pic set-bg" data-setbg="{% static 'img/homepage/c6.JPG' %}"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-    <!-- Testimonials section end -->
+   </section>
+    <!-- About section end -->
 
 {% endblock %}
 {% block script %}
