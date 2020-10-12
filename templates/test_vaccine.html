@@ -1,0 +1,254 @@
+{% extends 'base.html' %}
+{% block mapstyle %}
+<style>
+	body { margin: 0; padding: 0; }
+	#map {
+        position: absolute;
+        top: 10px;
+        bottom: 0;
+        left:25px;
+        width: 628px;
+        height:625px;
+        z-index: 2;
+    }
+
+</style>
+{% endblock %}
+
+{% block navigation %}
+    <li ><a href="{% url 'Home' %}">Home</a></li>
+    <li><a href="{% url 'About' %}">About</a></li>
+    <li ><a href="{% url 'Read More' %}">More Information</a></li>
+    <li><a href="{% url 'Quiz List' %}">Pneumonia Quiz</a></li>
+    <li><a href="{% url 'Search' %}">Clinic Search</a></li>
+    <li class="active"><a href="{% url 'Vaccine' %}">Vaccine</a></li>
+
+{% endblock %}
+
+{% block mainbody %}
+    {% load static %}
+
+    <section class="more-info set-bg" style="background: #E5E4E2">
+		<div class="container">
+            <br>
+            <h5><a href="{% url 'Home' %}">Home</a>&nbsp;&gt;&nbsp;vaccine check</h5>
+			<br>
+			<h1><font color="2E8B57">Pneumonia vaccine check</font></h1><br>
+		</div>
+	</section>
+
+
+    <div style="border: #28a745;border-style: solid; margin-left: 120px;margin-right: 120px;margin-top: 30px;margin-bottom: 30px; padding-top: 20px;padding-bottom: 20px;">
+        <div style="margin-left: 60px">
+            <h2 style="color: black;text-align: center;font-weight: bolder">Please Choose Your Children Information:</h2>
+            <br>
+        </div>
+        <div style="width: auto;border: 1px solid black;"></div>
+        <br><br>
+        <form style="margin-left: 270px">
+            <div id="question1">
+                <p style="font-size: 30px;font-weight: bolder;color: black">1. Is your child  born prematurely(less than  28  weeks of gestation)?</p>
+                <div style="font-weight: bold;color: #34ce57;font-size: 20px">
+                    <input type="radio" id="que1" name="Q1" value="Yes" onclick="q1()">
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="que1" name="Q1" value="No" onclick="q1()">
+                    <label for="no">No</label>
+                </div>
+            </div>
+                <br>
+            <div id="question2" style="display: none">
+                <p style="font-size: 30px;font-weight: bolder;color: black">2. How old is your child?</p>
+                <div style="font-weight: bold;color: #34ce57;font-size: 20px">
+                    <label for="age">Please Choose Your Child's Age: </label>
+                    <select name="age" id="que2" onchange="q2()">
+                        <option value="default">please select</option>
+                        <option value="0-2 months">0-2 months</option>
+                        <option value="3-4 months">3-4 months</option>
+                        <option value="5-6 months">5-6 months</option>
+                        <option value="7-12 months">7-12 months</option>
+                        <option value="1-5 years">1-5 years</option>
+                    </select>
+                    <br><br>
+                </div>
+            </div>
+            <div id="question3" style="display: none">
+                <p style="font-size: 30px;font-weight: bolder;color: black">3. Has your child received Prevenar 13 so far?</p>
+                <div style="font-weight: bold;color: #34ce57;font-size: 20px">
+                    <input type="radio" id="que3" name="Q3" value="Yes" onclick="q3()">
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="que3" name="Q3" value="No" onclick="q3()">
+                    <label for="no">No</label>
+                </div>
+            </div>
+            <div id="question4" style="display: none">
+                <p style="font-size: 30px;font-weight: bolder;color: black">4. How many doses of Prevenar 13 has your child received so far?</p>
+                <div style="font-weight: bold;color: #34ce57;font-size: 20px">
+                    <label for="dose">Please Choose: </label>
+                    <select  name="dose" id="doses" onchange="q4()">
+                        <option value="default">please select</option>
+                        <option value="1 dose">1 dose</option>
+                        <option value="2 doses">2 doses</option>
+                        <option value="3 doses">3 doses</option>
+                        <option value="4 doses">4 doses</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div id="question5" style="display: none">
+                <p style="font-size: 30px;font-weight: bolder;color: black">5. Has your child received Pneumovax 23 so far? </p>
+                <div style="font-weight: bold;color: #34ce57;font-size: 20px">
+                    <input type="radio" id="yes" name="Q5" value="Yes" onclick="q5()">
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="Q5" value="No" onclick="q5()">
+                    <label for="no">No</label>
+                </div>
+            </div>
+        </form>
+        <div class="row" style="padding-top: 40px">
+            <div class="col-lg-3">
+                <div style="padding-left: 160px;padding-top: 200px;">
+                    <div class="triangle-left zoom"></div>
+                </div>
+                <div style="padding-left: 135px;padding-top: 20px">
+                    <h2>previous</h2>
+                </div>
+            </div>
+            <div class="col-lg-6">
+               <img src="/static/img/vaccine/baby.jpg"style="width:1000px;padding-left: 40px;padding-right: 20px">
+            </div>
+            <div class="col-lg-3">
+                <div style="padding-left: 140px;padding-top: 200px;">
+                    <div class="triangle-right zoom"></div>
+                </div>
+                <div style="padding-left: 135px;padding-top: 20px">
+                    <h2 id="gg">Next</h2>
+                </div>
+            </div>
+        </div>
+        <div style="padding-top: 60px;padding-left: 500px">
+            <button type="submit" id="submit" class="search-btn" style="cursor: pointer;margin-left: 200px;display: none">Submit</button>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+    var q1choice = ''
+    var q2choice = ''
+    var q3choice = ''
+        function q1(){
+            document.getElementById('question1').style.display='None';
+            document.getElementById('question2').style.display='block'
+            q1choice=$('input:radio[name="Q1"]:checked').val()
+        }
+        function q2(){
+            document.getElementById('question2').style.display='None'
+            document.getElementById('question3').style.display='block'
+            q2choice = document.getElementById('que2').value
+        }
+        function q3() {
+           q3choice=$('input:radio[name="Q3"]:checked').val()
+            if (q3choice == 'Yes') {
+                document.getElementById('question3').style.display = 'None'
+                document.getElementById('question4').style.display = 'block'
+            }
+            else{
+               if(q1choice == 'Yes' && q2choice == '1-5 years') {
+                   document.getElementById('question3').style.display = 'None'
+                   document.getElementById('question5').style.display = 'block'
+               }
+                else {
+                    document.getElementById('submit').style.display='block'
+                }
+            }
+
+        }
+        function q4(){
+
+            if(q1choice == 'Yes' && q2choice == '1-5 years'){
+                document.getElementById('question4').style.display = 'None'
+                document.getElementById('question5').style.display = 'block'
+            }
+            else if(q1choice != 'Yes' || q2choice != '1-5 years') {
+                document.getElementById('submit').style.display = 'block'
+            }
+        }
+        function q5(){
+            //document.getElementById('q3').style.display='None'
+            document.getElementById('submit').style.display='block'
+        }
+
+    </script>
+
+
+
+    <style>
+        .search-btn{
+                    height: 50px;width: 150px;background: #71cd29;background-size: auto;
+                    border: none;color: #ececf6;border-radius: 5px;display:inline;
+
+         }
+        .search-btn:hover {
+                                background-color: #c82333; /* Green */
+                                color: white;
+                            }
+        .hide {
+                display: none;
+              }
+
+        .myDIV:hover + .hide {
+                                display: block;
+                                color: red;
+                             }
+
+        .icons:hover {
+                    opacity: .5;
+                    background-color: #c82333;
+                 }
+
+        .arrow {
+          border: solid black;
+          border-width: 0 3px 3px 0;
+          display: inline-block;
+          padding: 36px;
+        }
+
+        .right {
+          transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
+        }
+
+        .left {
+          transform: rotate(135deg);
+          -webkit-transform: rotate(135deg);
+        }
+
+        .up {
+          transform: rotate(-135deg);
+          -webkit-transform: rotate(-135deg);
+        }
+
+        .down {
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+        }
+
+        .triangle-right {
+            width: 0;
+            height: 0;
+            border-top: 50px solid transparent;
+            border-left: 100px solid #34ce57;
+            border-bottom: 50px solid transparent;
+        }
+        .triangle-left {
+            width: 0;
+            height: 0;
+            border-top: 50px solid transparent;
+            border-right: 100px solid #34ce57;
+            border-bottom: 50px solid transparent;
+        }
+
+        .zoom:hover {
+          transform: scale(1.5);
+        }
+    </style>
+{% endblock %}
