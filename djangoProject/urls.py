@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from Quiz import views
 from Search import views as search_views
+from Vaccine import views as vaccine_views
 
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
@@ -33,6 +34,8 @@ urlpatterns = [
     path('quizlist/quizcategory', views.quizCategory, name='Quiz List'),
     path('search', search_views.searchClinic, name='Search'),
     path('search/searchresult', search_views.searchResult, name='Search Result'),
+    path('vaccine', vaccine_views.test, name='Vaccine'),
+    path('vaccine/recommendation', vaccine_views.recommend, name = 'Vaccine Recommendation'),
     path('test',search_views.test,name='Test')
 
 ]

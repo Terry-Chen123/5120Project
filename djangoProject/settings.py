@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Quiz',
     'Search',
+    'Vaccine',
 ]
 
 MIDDLEWARE = [

@@ -5,6 +5,7 @@
     <li ><a href="{% url 'Read More' %}">More Information</a></li>
     <li><a href="{% url 'Quiz List' %}">Pneumonia Quiz</a></li>
     <li class="active"><a href="{% url 'Search' %}">Clinic Search</a></li>
+    <li><a href="{% url 'Vaccine' %}">Vaccine</a></li>
 {% endblock %}
 {% block js %}
 
@@ -130,7 +131,7 @@
 
         </form>
     </div>
-<script>
+    <script>
       var input=document.getElementById('find');
              input.onfocus=function(){
                 if(this.value=="Enter Keyword")
@@ -166,8 +167,8 @@
             </form>
 		</div>
 	</section>
-
 	<!-- clinic section end -->
+    <!-- clinic table -->
     <form action="search/searchresult" method="post">
         {% csrf_token %}
         <table border="1" id="customers" style="border-collapse: collapse; margin-left: 140px; margin-bottom: 60px; margin-top: -40px">
@@ -212,5 +213,6 @@
             {% endif %}
         </table>
     </form>
+    <!-- clinic table end -->
 {% endblock %}
 
