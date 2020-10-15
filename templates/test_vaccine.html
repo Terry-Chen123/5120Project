@@ -33,32 +33,56 @@
             <br>
             <h5><a href="{% url 'Home' %}">Home</a>&nbsp;&gt;&nbsp;vaccine check</h5>
 			<br>
-			<h1><font color="2E8B57">Pneumonia vaccine check</font></h1><br>
+			<h1><font color="2E8B57">Vaccine Schedule</font></h1><br>
 		</div>
 	</section>
 
 
     <div style="border: #28a745;border-style: solid; margin-left: 120px;margin-right: 120px;margin-top: 30px;margin-bottom: 30px; padding-top: 20px;padding-bottom: 20px;">
+        <!-- vaccine question  -->
         <div style="margin-left: 60px">
             <h2 style="color: black;text-align: center;font-weight: bolder">Please Choose Your Children Information:</h2>
             <br>
         </div>
         <div style="width: auto;border: 1px solid black;"></div>
-        <br><br>
-        <form style="margin-left: 270px">
+        <br>
+        <form>
             <div id="question1">
-                <p style="font-size: 30px;font-weight: bolder;color: black">1. Is your child  born prematurely(less than  28  weeks of gestation)?</p>
-                <div style="font-weight: bold;color: #34ce57;font-size: 20px">
+                <p style="font-size: 30px;font-weight: bolder;color: black;text-align: center">Is your child born prematurely(less than 28 weeks of gestation)?</p>
+                <div style="font-weight: bold;color: #34ce57;font-size: 20px;margin-left: 220px">
                     <input type="radio" id="que1" name="Q1" value="Yes" onclick="q1()">
                     <label for="yes">Yes</label>
                     <input type="radio" id="que1" name="Q1" value="No" onclick="q1()">
                     <label for="no">No</label>
                 </div>
             </div>
-                <br>
+            <div id="block1" style="; margin-top: -50px">
+                <div class="row" style="padding-top: 40px;text-align: center;">
+                    <div class="col-lg-3">
+                        <div style="padding-top: 200px;margin-left: 100px;display: none">
+                            <div class="triangle-left zoom"></div>
+                        </div>
+                        <div style="padding-top: 20px;display: none">
+                            <h2>previous</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" id="pictu1">
+                        <img src="/static/img/vaccine/baby.jpg"style="width:1000px;padding-right: 20px;padding-top: 20px">
+                    </div>
+                    <div class="col-lg-3" id="next1">
+                        <div style="padding-top: 200px;margin-left: 120px">
+                            <div class="triangle-right zoom" onclick="icon1()"></div>
+                        </div>
+                        <div style="padding-top: 20px">
+                            <h2>Next</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div id="question2" style="display: none">
-                <p style="font-size: 30px;font-weight: bolder;color: black">2. How old is your child?</p>
-                <div style="font-weight: bold;color: #34ce57;font-size: 20px">
+                <p style="font-size: 30px;font-weight: bolder;color: black;margin-left: 220px">How old is your child?</p>
+                <div style="font-weight: bold;color: #34ce57;font-size: 20px;margin-left: 240px">
                     <label for="age">Please Choose Your Child's Age: </label>
                     <select name="age" id="que2" onchange="q2()">
                         <option value="default">please select</option>
@@ -68,23 +92,72 @@
                         <option value="7-12 months">7-12 months</option>
                         <option value="1-5 years">1-5 years</option>
                     </select>
-                    <br><br>
                 </div>
             </div>
+
+            <div id="block2" style="display: none ; margin-top: -50px">
+                <div class="row" style="padding-top: 40px;text-align: center;">
+                    <div class="col-lg-3">
+                        <div style="padding-top: 200px;margin-left: 100px">
+                            <div class="triangle-left zoom" onclick="icon2()"></div>
+                        </div>
+                        <div style="padding-top: 20px">
+                            <h2>previous</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="/static/img/vaccine/baby.jpg"style="width:1000px;padding-right: 20px;padding-top: 20px">
+                    </div>
+                    <div class="col-lg-3">
+                        <div style="padding-top: 200px;margin-left: 120px">
+                            <div class="triangle-right zoom" onclick="icon3()"></div>
+                        </div>
+                        <div style="padding-top: 20px">
+                            <h2>Next</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div id="question3" style="display: none">
-                <p style="font-size: 30px;font-weight: bolder;color: black">3. Has your child received Prevenar 13 so far?</p>
-                <div style="font-weight: bold;color: #34ce57;font-size: 20px">
+                <p style="font-size: 30px;font-weight: bolder;color: black;text-align: center">Has your child received Prevenar 13 so far?</p>
+                <div style="font-weight: bold;color: #34ce57;font-size: 20px;margin-left: 390px">
                     <input type="radio" id="que3" name="Q3" value="Yes" onclick="q3()">
                     <label for="yes">Yes</label>
                     <input type="radio" id="que3" name="Q3" value="No" onclick="q3()">
                     <label for="no">No</label>
                 </div>
             </div>
+
+             <div id="block3" style="display: none; margin-top: -50px">
+                <div class="row" style="padding-top: 40px;text-align: center;">
+                    <div class="col-lg-3">
+                        <div style="padding-top: 200px;margin-left: 100px" id="previousi3">
+                            <div class="triangle-left zoom" onclick="icon4()"></div>
+                        </div>
+                        <div style="padding-top: 20px" id="previous3">
+                            <h2>previous</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="/static/img/vaccine/baby.jpg"style="width:1000px;padding-right: 20px;padding-top: 20px">
+                    </div>
+                    <div class="col-lg-3">
+                        <div style="padding-top: 200px;margin-left: 120px" id="nexti3">
+                            <div class="triangle-right zoom" onclick="icon5()"></div>
+                        </div>
+                        <div style="padding-top: 20px" id="next3">
+                            <h2>Next</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div id="question4" style="display: none">
-                <p style="font-size: 30px;font-weight: bolder;color: black">4. How many doses of Prevenar 13 has your child received so far?</p>
-                <div style="font-weight: bold;color: #34ce57;font-size: 20px">
+                <p style="font-size: 30px;font-weight: bolder;color: black;text-align: center">How many doses of Prevenar 13 has your child received so far?</p>
+                <div style="font-weight: bold;color: #34ce57;font-size: 20px;margin-left: 230px">
                     <label for="dose">Please Choose: </label>
-                    <select  name="dose" id="doses" onchange="q4()">
+                    <select  name="Q4" id="que4" onchange="q4()">
                         <option value="default">please select</option>
                         <option value="1 dose">1 dose</option>
                         <option value="2 doses">2 doses</option>
@@ -93,93 +166,273 @@
                     </select>
                 </div>
             </div>
-            <br>
+
+
+            <div id="block4" style="display: none; margin-top: -50px">
+                <div class="row" style="padding-top: 40px;text-align: center;">
+                    <div class="col-lg-3">
+                        <div style="padding-top: 200px;margin-left: 100px" id="previousi4">
+                            <div class="triangle-left zoom" onclick="icon6()"></div>
+                        </div>
+                        <div style="padding-top: 20px" id="previous4">
+                            <h2>previous</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="/static/img/vaccine/baby.jpg"style="width:1000px;padding-right: 20px;padding-top: 20px">
+                    </div>
+                    <div class="col-lg-3">
+                        <div style="padding-top: 200px;margin-left: 120px" id="nexti4">
+                            <div class="triangle-right zoom" onclick="icon7()"></div>
+                        </div>
+                        <div style="padding-top: 20px" id="next4">
+                            <h2>Next</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div id="question5" style="display: none">
-                <p style="font-size: 30px;font-weight: bolder;color: black">5. Has your child received Pneumovax 23 so far? </p>
-                <div style="font-weight: bold;color: #34ce57;font-size: 20px">
-                    <input type="radio" id="yes" name="Q5" value="Yes" onclick="q5()">
+                <p style="font-size: 30px;font-weight: bolder;color: black;text-align: center">Has your child received Pneumovax 23 so far? </p>
+                <div style="font-weight: bold;color: #34ce57;font-size: 20px;margin-left: 360px">
+                    <input type="radio" id="que5" name="Q5" value="Yes" onclick="q5()">
                     <label for="yes">Yes</label>
-                    <input type="radio" id="no" name="Q5" value="No" onclick="q5()">
+                    <input type="radio" id="que" name="Q5" value="No" onclick="q5()">
                     <label for="no">No</label>
                 </div>
             </div>
+
+            <div id="block5" style="display: none; margin-top: -50px">
+                <div class="row" style="padding-top: 40px;text-align: center;">
+                    <div class="col-lg-3">
+                        <div style="padding-top: 150px;margin-left: 100px" id="previousi5">
+                            <div class="triangle-left zoom" onclick="icon8()"></div>
+                        </div>
+                        <div style="padding-top: 20px" id="previous5">
+                            <h2>previous</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="/static/img/vaccine/baby.jpg"style="width:1000px;padding-right: 20px;padding-top: 20px">
+                    </div>
+                    <div class="col-lg-3">
+                        <div style="padding-top: 150px;margin-left: 120px">
+                            <div class="triangle-right zoom" style="display: none"></div>
+                        </div>
+                        <div style="padding-top: 20px;display: none">
+                            <h2>Next</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </form>
-        <div class="row" style="padding-top: 40px">
-            <div class="col-lg-3">
-                <div style="padding-left: 160px;padding-top: 200px;">
-                    <div class="triangle-left zoom"></div>
-                </div>
-                <div style="padding-left: 135px;padding-top: 20px">
-                    <h2>previous</h2>
-                </div>
-            </div>
-            <div class="col-lg-6">
-               <img src="/static/img/vaccine/baby.jpg"style="width:1000px;padding-left: 40px;padding-right: 20px">
-            </div>
-            <div class="col-lg-3">
-                <div style="padding-left: 140px;padding-top: 200px;">
-                    <div class="triangle-right zoom"></div>
-                </div>
-                <div style="padding-left: 135px;padding-top: 20px">
-                    <h2 id="gg">Next</h2>
-                </div>
-            </div>
+
+        <div style="padding-top: 30px;padding-left: 300px">
+            <button type="submit" id="submit" class="search-btn" style="cursor: pointer;margin-left: 200px;display: none" onclick="submit(),dispear()">Submit</button>
         </div>
-        <div style="padding-top: 60px;padding-left: 500px">
-            <button type="submit" id="submit" class="search-btn" style="cursor: pointer;margin-left: 200px;display: none">Submit</button>
+        <!-- vaccine question end -->
+
+        <!-- recommendation -->
+        <div id="recom" style="display: none">
+            <hr style="border-width: 4px;border-color: #13B51E">
+            <h3 style="color: #13B51E; text-align: center">Your Vaccine Plan</h3>
         </div>
+            <h4 id="submit recommendation" style="padding: 20px"></h4>
+
+        <!-- recommendation end-->
     </div>
 
-
     <script type="text/javascript">
-    var q1choice = ''
-    var q2choice = ''
-    var q3choice = ''
+        var q1choice = ''
+        var q2choice = ''
+        var q3choice = ''
+        var q4choice = 'Null'
+        var q5choice = 'Null'
         function q1(){
             document.getElementById('question1').style.display='None';
             document.getElementById('question2').style.display='block'
+            document.getElementById('block1').style.display = 'None';
+            document.getElementById('block2').style.display = 'block';
             q1choice=$('input:radio[name="Q1"]:checked').val()
         }
         function q2(){
             document.getElementById('question2').style.display='None'
             document.getElementById('question3').style.display='block'
-            q2choice = document.getElementById('que2').value
+            document.getElementById('block3').style.display='block';
+            document.getElementById('block2').style.display='None';
+            q2choice = document.getElementById('que2').value;
+
+            if (q2choice == '0-2 months'){
+                document.getElementById('nexti3').style.display='None'
+                document.getElementById('next3').style.display='None'
+            }
         }
         function q3() {
-           q3choice=$('input:radio[name="Q3"]:checked').val()
-            if (q3choice == 'Yes') {
+            q3choice=$('input:radio[name="Q3"]:checked').val()
+            if (q2choice == '0-2 months'){
+                document.getElementById('submit').style.display='block'
+            }
+            else if (q3choice == 'Yes') {
                 document.getElementById('question3').style.display = 'None'
                 document.getElementById('question4').style.display = 'block'
+                document.getElementById('block4').style.display='block';
+                document.getElementById('block3').style.display='None';
             }
             else{
                if(q1choice == 'Yes' && q2choice == '1-5 years') {
                    document.getElementById('question3').style.display = 'None'
                    document.getElementById('question5').style.display = 'block'
+                   document.getElementById('block5').style.display='block';
+                   document.getElementById('block3').style.display='None';
                }
                 else {
                     document.getElementById('submit').style.display='block'
+                    document.getElementById('next3').style.display='None';
+                    document.getElementById('nexti3').style.display='None';
                 }
             }
 
         }
         function q4(){
-
+            q4choice = document.getElementById('que4').value
             if(q1choice == 'Yes' && q2choice == '1-5 years'){
                 document.getElementById('question4').style.display = 'None'
                 document.getElementById('question5').style.display = 'block'
+                document.getElementById('block5').style.display='block';
+                document.getElementById('block4').style.display='None';
             }
             else if(q1choice != 'Yes' || q2choice != '1-5 years') {
                 document.getElementById('submit').style.display = 'block'
+                document.getElementById('next4').style.display='None';
+                document.getElementById('nexti4').style.display='None';
             }
         }
         function q5(){
-            //document.getElementById('q3').style.display='None'
+            q5choice = $('input:radio[name="Q5"]:checked').val()
             document.getElementById('submit').style.display='block'
         }
 
+        var compare_str = ''
+        var recommendation_list = '{{ recommendation|safe }}';
+        var obj =JSON.parse(recommendation_list);
+
+        function submit(){
+            compare_str = q1choice + ', ' + q2choice + ', ' + q3choice
+                            + ', ' + q4choice + ', ' + q5choice
+
+            for (i = 0; i <obj.list.length; i++){
+                if (obj.list[i].choice == compare_str){
+                    document.getElementById('submit recommendation').innerText = obj.list[i].recommendation
+                }
+            }
+        document.getElementById('recom').style.display = 'block';
+        }
     </script>
 
+    <script>
+       function icon1() {
+           document.getElementById('question1').style.display = 'None';
+           document.getElementById('question2').style.display = 'block';
+           document.getElementById('block1').style.display = 'None';
+           document.getElementById('block2').style.display = 'block';
+       }
 
+       function icon2(){
+           document.getElementById('question1').style.display='block';
+           document.getElementById('question2').style.display='None';
+           document.getElementById('block1').style.display='block';
+           document.getElementById('block2').style.display='None';
+        }
+
+        function  icon3(){
+           document.getElementById('question3').style.display='block';
+           document.getElementById('question2').style.display='None';
+           document.getElementById('block3').style.display='block';
+           document.getElementById('block2').style.display='None';
+        }
+
+        function icon4(){
+           document.getElementById('question2').style.display='block';
+           document.getElementById('question3').style.display='None';
+           document.getElementById('block2').style.display='block';
+           document.getElementById('block3').style.display='None';
+           document.getElementById('submit').style.display='None'
+        }
+
+       function icon5(){
+           q3choice=$('input:radio[name="Q3"]:checked').val()
+            if (q3choice == 'Yes') {
+                document.getElementById('question3').style.display = 'None'
+                document.getElementById('question4').style.display = 'block'
+                document.getElementById('block4').style.display='block';
+                document.getElementById('block3').style.display='None';
+            }
+            else{
+               if(q1choice == 'Yes' && q2choice == '1-5 years') {
+                   document.getElementById('question3').style.display = 'None'
+                   document.getElementById('question5').style.display = 'block'
+                   document.getElementById('block5').style.display='block';
+                   document.getElementById('block3').style.display='None';
+               }
+                else {
+                    document.getElementById('submit').style.display='block'
+                }
+            }
+        }
+
+        function icon6() {
+            document.getElementById('question4').style.display = 'None'
+            document.getElementById('question3').style.display = 'block'
+            document.getElementById('block4').style.display = 'None'
+            document.getElementById('block3').style.display = 'block'
+            document.getElementById('submit').style.display = 'None'
+        }
+
+        function icon7() {
+            q4choice = document.getElementById('que4').value
+            if (q1choice == 'Yes' && q2choice == '1-5 years') {
+                document.getElementById('question4').style.display = 'None'
+                document.getElementById('question5').style.display = 'block'
+                document.getElementById('block5').style.display = 'block'
+                document.getElementById('block4').style.display = 'None'
+                document.getElementById('submit').style.display = 'block'
+
+            } else if (q1choice != 'Yes' || q2choice != '1-5 years') {
+                document.getElementById('submit').style.display = 'block'
+            }
+        }
+
+       function icon8() {
+
+           if (q2choice != '0-2 months' && q3choice == 'Yes') {
+               document.getElementById('question5').style.display = 'None'
+               document.getElementById('question4').style.display = 'block'
+               document.getElementById('block5').style.display = 'None'
+               document.getElementById('block4').style.display = 'block'
+               document.getElementById('submit').style.display = 'None'
+           }
+           else{
+               document.getElementById('question5').style.display = 'None'
+               document.getElementById('question3').style.display = 'block'
+               document.getElementById('block5').style.display = 'None'
+               document.getElementById('block3').style.display = 'block'
+               document.getElementById('submit').style.display = 'None'
+           }
+       }
+
+       function dispear(){
+           document.getElementById('previous3').style.display='None';
+           document.getElementById('previousi3').style.display='None';
+           document.getElementById('previous4').style.display='None';
+           document.getElementById('previousi4').style.display='None';
+           document.getElementById('previous5').style.display='None';
+           document.getElementById('previousi5').style.display='None';
+           document.getElementById('next3').style.display='None';
+           document.getElementById('nexti3').style.display='None';
+           document.getElementById('next4').style.display='None';
+           document.getElementById('nexti4').style.display='None';
+       }
+    </script>
 
     <style>
         .search-btn{
