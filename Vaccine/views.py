@@ -15,10 +15,6 @@ def vaccine(request):
     context = {"recommendation_new": json.dumps(dic_new)}
     return render(request,'../templates/test_vaccine.html', context)
 
-def recommend(request):
-    ans = request.session['Q1'] + request.session['Q2'] + request.session['Q3']
-    context = {'service_cache':ans}
-    return render(request, '../templates/vaccine_recommendation.html', context)
 
 def prevention(request):
     return render(request, '../templates/prevention.html')

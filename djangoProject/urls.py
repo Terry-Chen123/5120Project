@@ -35,7 +35,6 @@ urlpatterns = [
     path('search', search_views.searchClinic, name='Search'),
     path('search/searchresult', search_views.searchResult, name='Search Result'),
     path('vaccine', vaccine_views.vaccine, name='Vaccine'),
-    path('vaccine/recommendation', vaccine_views.recommend, name = 'Vaccine Recommendation'),
     path('prevention', vaccine_views.prevention, name = 'Prevention'),
     path('prevention/airquality', vaccine_views.airquality, name = 'Air Quality'),
     path('prevention/healthhabit', vaccine_views.health_habit, name = 'Health Habit'),
