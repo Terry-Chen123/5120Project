@@ -10,109 +10,163 @@
 
 {% block mainbody %}
     {% load static %}
-    <!-- Page info section -->
-	<section class="more-info set-bg" style="background: #E5E4E2">
-		<div class="container">
-            <br>
-			<h5><a href="{% url 'Home' %}">Home</a>&nbsp;&gt;&nbsp;
-                More Information
-            </h5>
-			<br>
-            <br>
-			<h1><font color="2E8B57">More Information</font></h1>
-            <br>
-		</div>
-	</section>
-
-    <section class="services-section spad" style="background: white">
-
+<section class="more-info set-bg" style="background: #E5E4E2">
+    <div class="container">
+        <br>
+        <h5><a href="{% url 'Home' %}">Home</a>&nbsp;&gt;&nbsp
+            More Information
+        </h5>
+        <br>
+        <br>
+        <h1><font color="2E8B57">More Information</font></h1>
+        <br>
+    </div>
+</section>
+<div class="w3-bar w3-black" style="text-align: center;margin-top: 50px">
+  <button class="w3-bar-item w3-button search-btn" style="width: 380px" onclick="openinformation('introduction')">Introduction Of Pneumonia</button>
+  <button class="w3-bar-item w3-button search-btn"style="margin-left: 30px;width: 380px" onclick="openinformation('prevention')">Prevention Of Pneumonia</button>
+  <button class="w3-bar-item w3-button search-btn"style="margin-left: 30px;width: 380px;" onclick="openinformation('recover')">Treatment Of Pneumonia</button>
+</div>
+<div id="introduction" class="w3-container information" style="margin-top: 40px">
+  <section class="services-section spad" style="background: white">
         <!-- info1 -->
-        <div class="container">
-            <div class="blog-item">
-                <div class="row">
-                   <div class="col-lg-6 blog-thumb"><br><br>
-                      <img src="{% static 'img/read more page/info1.jpg' %}" style="height:450px ;width:800px;padding-right:50px ">
+        <form action="/quizlist/quizstart" method='POST' >
+            {% csrf_token %}
+            <div class="container">
+                <div class="blog-item">
+                    <div class="row">
+                       <div class="col-lg-6 blog-thumb"><br><br>
+                          <img src="{% static 'img/read more page/info1.jpg' %}" style="height:450px ;width:800px;padding-right:50px ">
+                       </div>
+                       <div class="col-lg-6 blog-content">
+                            <h3><font color="2E8B57" style="font-weight: bold">Introduction of pneumonia :</font></h3>
+                            <h20><font color="2E8B57" style="font-weight: bold">Pneumonia Symptoms on Children.</font></h20>
+                            <br>
+                           <div style="line-height: 1px">
+                                <p style="color: black">
+                                    • Has a cough and fever<br/>
+                                    • Be short of breath or have difficulty breathing<br/>
+                                    • Stomach ache and/or vomit<br/>
+                                    • Be irritable or tired & lose appetite
+                               </p>
+                           </div>
+                            <h20><font color="2E8B57" style="font-weight: bold">Is Pneumonia Contagious?</font></h20><br>
+                            <p style="color: black">In general, pneumonia is not contagious, but the upper respiratory viruses and bacteria that lead to it are.
+                                <br>When these germs are in fluid from the mouth or nose of someone who's infected,
+                                that person can spread the illness through coughs and sneezes. While many cases of pneumonia
+                                can be mild, left untreated some cases of pneumonia can be serious and even life-threatening.
+                            Sharing cups and utensils, touching the used tissues or handkerchiefs of an infected person also
+                                can spread pneumonia. So, it's best to keep kids away from anyone with symptoms of a respiratory infection.</p>
+                           <input type="submit" class="btn btn-default" value="Click Here To Start Quiz 1" name='A' style="color: green">
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+</div>
+
+
+<div id="prevention" class="w3-container information" style="margin-top: 40px;display: none">
+  <section class="services-section spad" style="background: white">
+        <form action="/quizlist/quizstart" method='POST' >
+            {% csrf_token %}
+            <div class="container">
+                <div class="blog-item">
+                    <div class="row">
+                   <div class="col-lg-6 blog-thumb">
+                       <br><br>
+                      <img src="{% static 'img/read more page/needle.png' %}" alt="" style="height:450px;width:800px;padding-right: 50px; padding-top: 0px">
                    </div>
                    <div class="col-lg-6 blog-content">
-                        <h3><font color="2E8B57" style="font-weight: bold">• Introduction of pneumonia :</font></h3>
-                        <h20><font color="2E8B57" style="font-weight: bold">Pneumonia Symptoms on Children.</font></h20>
-                        <br>
-                        <p><font color="696969"> -- has a cough and fever </font></p>
-                        <p><font color="696969">-- be short of breath or have difficulty breathing</font></p>
-                        <p><font color="696969"> -- stomach ache and/or vomit</font></p>
-                        <p><font color="696969"> -- be irritable or tired & lose appetite</font></p>
-                        <h20><font color="2E8B57" style="font-weight: bold">Is Pneumonia Contagious?</font></h20><br>
-                        <p><font color="696969">In general, pneumonia is not contagious, but the upper respiratory viruses and bacteria that lead to it are.
-                            <br>When these germs are in fluid from the mouth or nose of someone who's infected,
-                            that person can spread the illness through coughs and sneezes. While many cases of pneumonia
-                            can be mild, left untreated some cases of pneumonia can be serious and even life-threatening.
-                        Sharing cups and utensils, touching the used tissues or handkerchiefs of an infected person also
-                            can spread pneumonia. So, it's best to keep kids away from anyone with symptoms of a respiratory infection.</font></p>
-                        <a href="{% url 'Quiz List' %}" class="read-more" style="color: #1c7430;font-size: 20px">Test Your Knowledge</a>
-                   </div>
-                </div>
-            </div>
-        </div>
-        <!-- info1 end-->
-
-        <br><br><br><br><br><br>
-        <!-- info2  -->
-        <div class="container">
-            <div class="blog-item">
-                <div class="row">
-               <div class="col-lg-6 blog-thumb">
-                        <br><br>
-                  <img src="{% static 'img/read more page/needle.png' %}" alt="" style="height:450px;width:800px;padding-right: 50px; padding-top: 0px">
-               </div>
-               <div class="col-lg-6 blog-content">
-                    <h3><font color="2E8B57" style="font-weight: bold">• Prevention of Pneumonia :</font></h3>
-                    <h20><font color="2E8B57" style="font-weight: bold">Prevenar 13 - covers 13 strains of pneumococcal disease;<br>
-                        Pneumovax 23 - covers 23 strains of pneumococcal disease.</font>
-                    </h20><br><br>
-                    <p><font color="#696969">Pneumococcal vaccines are provided free under the National Immunisation Program (NIP) for children who are eligible:
-                      All children at 2, 4 and 12 months of age.
-                      An extra dose at 6 months for Aboriginal and Torres Strait Islander children who live in Queensland, Northern Territory, Western Australia or South Australia.
-                      Children of all ages who have certain medical conditions that put them at higher risk of getting serious pneumococcal disease</font></p>
-                    </p>
-                    <h20><font color="2E8B57" style="font-weight: bold">Simple precautions that children and family can do to prevent the spread of the
-                        viruses and bacteria to reduce the chances of getting pneumonia: </font></h20><br>
-                    <p>•   Make sure you regularly wash hands with warm, soapy water.</p>
-                    <p>•   Keep your hands away from your face as much as possible. </p>
-                    <p>•   Get enough rest and do moderate exercise. </p>
-                    <p>•   Cough or sneeze into a tissue or your elbows. </p>
-                  <a href="{% url 'Quiz List' %}" class="read-more"style="color: #1c7430;font-size: 20px">Test Your Knowledge</a>
-                </div>
-            </div>
-            </div>
-        </div>
-        <br><br><br><br><br><br>
-        <!-- info2 end -->
-
-        <!-- info 5 -->
-        <div class="container">
-            <div class="blog-item">
-                <div class="row">
-                    <div class="col-lg-6 blog-thumb"><br><br>
-                        <img src="{% static 'img/read more page/info3.jpg' %}" alt="" style="height:550px;width:800px;padding-right: 50px" >
+                        <h3><font color="2E8B57" style="font-weight: bold">Prevention of Pneumonia :</font></h3>
+                        <h20><font color="2E8B57" style="font-weight: bold">Prevenar 13 - covers 13 strains of pneumococcal disease;<br>
+                            Pneumovax 23 - covers 23 strains of pneumococcal disease.</font>
+                        </h20><br><br>
+                        <p style="color: black">Pneumococcal vaccines are provided free under the National Immunisation Program (NIP) for children who are eligible:
+                          All children at 2, 4 and 12 months of age.
+                          An extra dose at 6 months for Aboriginal and Torres Strait Islander children who live in Queensland, Northern Territory, Western Australia or South Australia.
+                          Children of all ages who have certain medical conditions that put them at higher risk of getting serious pneumococcal disease</p>
+                        </p>
+                        <h20><font color="2E8B57" style="font-weight: bold">Simple precautions that children and family can do to prevent the spread of the
+                            viruses and bacteria to reduce the chances of getting pneumonia: </font></h20><br>
+                       <div style="line-height: 1px">
+                            <p style="color: black">
+                                • Make sure you regularly wash hands with warm, soapy water<br/>
+                                • Keep your hands away from your face as much as possible<br/>
+                                • Get enough rest and do moderate exercise<br/>
+                                • Cough or sneeze into a tissue or your elbows.
+                            </p>
+                       </div>
+                      <input type="submit" class="btn btn-default" value="Click Here To Start Quiz 2" name='B' style="color: green">
                     </div>
-                    <div class="col-lg-6 blog-content">
-                       <h3><font color="2E8B57" style="font-weight: bold">• Treatment of Pneumonia in Children</font></h3>
-                       <font color="696969"><p>-- Hospital admission. Take your child to the GP as soon as possible.</p>
-                        <p>-- Make that your child gets as much rest as possible.</p>
-                        <p>-- Cover the mouth with tissue or elbows when sneezing or coughing.</p>
-                        <p>-- Keep your home smoke free. Infants and young children 2 are more likely to get pneumonia. Smoke can make pneumonia worse.</p>
-                        <p>-- Don’t worry if your child has a fever and isn’t hungry. Your child’s appetite will improve as your child starts to feel better.</p>
-                        <p>-- Don’t get  the pneumonia vaccine and the flu vaccine at the same time, this may increase the risk of children having fever-related seizures.</p>
-                        <p>-- It is important to give your child fluids frequently to prevent dehydration. Offer small sips of water, and offer babies breastmilk or formula more often.</p>
-                       </font><a href="{% url 'Quiz List' %}" class="read-more"style="color: #1c7430;font-size: 20px">Test Your Knowledge</a>
-                   </div>
+                </div>
                 </div>
             </div>
-        </div>
-        <br><br><br><br>
-        <!--info 5 end-->
+        </form>
+  </section>
+</div>
+
+
+<div id="recover" class="w3-container information" style="margin-top: 40px;display: none">
+  <section class="services-section spad" style="background: white">
+        <form action="/quizlist/quizstart" method='POST' >
+            {% csrf_token %}
+            <div class="container">
+                <div class="blog-item">
+                    <div class="row">
+                        <div class="col-lg-6 blog-thumb"><br><br>
+                            <img src="{% static 'img/read more page/vaccine.jpg' %}" style="height:450px ;width:800px;padding-right:50px ">
+                        </div>
+                        <div class="col-lg-6 blog-content">
+                           <h3><font color="2E8B57" style="font-weight: bold">Treatment of Pneumonia in Children</font></h3>
+                            <br>
+                                <div style="line-height: 1px">
+                                   <p style="color: black">
+                                        • Hospital admission. Take your child to the GP as soon as possible<br/>
+                                        • Make that your child gets as much rest as possible<br/>
+                                        • Cover the mouth with tissue or elbows when sneezing or coughing<br/>
+                                        • Keep your home smoke free. Infants and young children 2 are more likely to get pneumonia. Smoke can make pneumonia worse
+                                   </p>
+                                    <p style="color: black">
+                                        • Don't worry if your child has a fever and isn't hungry. Your children appetite will improve as your child starts to feel better<br/>
+                                        • Don't get  the pneumonia vaccine and the flu vaccine at the same time, this may increase the risk of children having fever-related seizures<br/>
+                                        • It is important to give your child fluids frequently to prevent dehydration. Offer small sips of water, and offer babies breastmilk or formula more often
+                                   </p>
+                               </div>
+                            <br>
+                           <input type="submit" class="btn btn-default" value="Click Here To Start Quiz 3" name='C' style="color: green">
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </form>
     </section>
-    <!-- Page info section end-->
+</div>
+
+
+<script>
+    function openinformation(informationName) {
+      var i;
+      var x = document.getElementsByClassName("information");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      document.getElementById(informationName).style.display = "block";
+    }
+</script>
+<style>
+    .search-btn{
+                    height: 50px;width: 150px;background: #71cd29;
+                    border: none;color: black;border-radius: 5px;display:inline;
+
+         }
+     .search-btn:hover {
+                            background-color: lightseagreen; /* Green */
+                            color: white;
+                        }
+</style>
 {% endblock %}
+
 
 

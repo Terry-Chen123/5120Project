@@ -13,7 +13,7 @@ def vaccine(request):
     dic_new['list'] = l_new
 
     context = {"recommendation_new": json.dumps(dic_new)}
-    return render(request,'../templates/test_vaccine.html', context)
+    return render(request, '../templates/vaccine.html', context)
 
 
 def prevention(request):

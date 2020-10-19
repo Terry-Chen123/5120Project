@@ -1,0 +1,555 @@
+{% extends 'base.html' %}
+{% block other_css %}
+    <link href='./static/css/vaccine.css' rel='stylesheet' />
+{% endblock %}
+{% block other_js %}
+    <script src='../static/js/vaccine.js'></script>
+{% endblock %}
+
+{% block navigation %}
+    <li ><a href="{% url 'Home' %}">Home</a></li>
+    <li><a href="{% url 'About' %}">About</a></li>
+    <li ><a href="{% url 'Read More' %}">More Information</a></li>
+    <li><a href="{% url 'Quiz List' %}">Pneumonia Quiz</a></li>
+    <li class="active"><a href="{% url 'Prevention' %}">Prevention</a></li>
+    <li><a href="{% url 'Search' %}">Clinic Search</a></li>
+
+{% endblock %}
+
+{% block mainbody %}
+    {% load static %}
+
+    <section class="more-info set-bg" style="background: #E5E4E2">
+		<div class="container">
+            <br>
+            <h5><a href="{% url 'Home' %}">Home</a>&nbsp;&gt;&nbsp;vaccine check</h5>
+			<br>
+			<h1><font color="2E8B57">Vaccine Schedule</font></h1><br>
+		</div>
+	</section>
+
+    <div style="border: #28a745;border-style: solid; margin-left: 120px;margin-right: 120px;margin-top: 30px;margin-bottom: 30px; padding-top: 20px;padding-bottom: 20px;">
+        <!-- vaccine question  -->
+        <div style="margin-left: 60px">
+            <h2 style="color: black;text-align: center;font-weight: bolder">Select the optimal option for your children:</h2>
+            <br>
+        </div>
+        <div style="width: auto;border: 1px solid black;"></div>
+        <br>
+        <form>
+            <div id="question1">
+                <p style="font-size: 30px;font-weight: bolder;color: black;text-align: center">Is your child born prematurely(less than 28 weeks of gestation)?</p>
+                <p style="text-align: center;font-size: 20px">
+                    (Hint: All preterm infants born at < 28 weeks gestation are recommended to receive 4 doses of 13vPCV (13-valent pneumococcal conjugate vaccine) and 2 doses of 23vPPV (23-valent pneumococcal polysaccharide vaccine).
+                </p>
+                <div style="font-weight: bold;color: #34ce57;font-size: 20px;text-align: center">
+                    <input type="radio" id="que1" name="Q1" value="Yes" onclick="q1()">
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="que1" name="Q1" value="No" onclick="q1()">
+                    <label for="no">No</label>
+                </div>
+            </div>
+            <div id="block1" style="; margin-top: -50px">
+                <div class="row" style="padding-top: 40px;text-align: center;">
+                    <div class="col-lg-3">
+                        <div style="padding-top: 200px;margin-left: 100px;display: none">
+                            <div class="triangle-left zoom"></div>
+                        </div>
+                        <div style="padding-top: 20px;display: none">
+                            <h2>previous</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" id="pictu1">
+                        <img src="/static/img/vaccine/baby.jpg"style="width:1000px;padding-right: 20px;padding-top: 20px">
+                    </div>
+                    <div class="col-lg-3" id="next1">
+                        <div style="padding-top: 200px;margin-left: 120px">
+                            <div class="triangle-right zoom" onclick="q1_left()"></div>
+                        </div>
+                        <div style="padding-top: 20px">
+                            <h2>Next</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="question2" style="display: none">
+                <p style="font-size: 30px;font-weight: bolder;color: black;text-align: center">How old is your child?</p>
+                <div style="font-weight: bold;color: #34ce57;font-size: 20px;text-align: center">
+                    <label for="age">Please Choose Your Child's Age: </label>
+                    <select name="age" id="que2" onchange="q2()">
+                        <option value="default">please select</option>
+                        <option value="0-2 months">0-2 months</option>
+                        <option value="3-4 months">3-4 months</option>
+                        <option value="5-6 months">5-6 months</option>
+                        <option value="7-12 months">7-12 months</option>
+                        <option value="1-5 years">1-5 years</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="block2" style="display: none ; margin-top: -50px">
+                <div class="row" style="padding-top: 40px;text-align: center;">
+                    <div class="col-lg-3">
+                        <div style="padding-top: 200px;margin-left: 100px">
+                            <div class="triangle-left zoom" onclick="q2_left()"></div>
+                        </div>
+                        <div style="padding-top: 20px">
+                            <h2>previous</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="/static/img/vaccine/baby.jpg"style="width:1000px;padding-right: 20px;padding-top: 20px">
+                    </div>
+                    <div class="col-lg-3">
+                        <div style="padding-top: 200px;margin-left: 120px">
+                            <div class="triangle-right zoom" onclick="q2_right()"></div>
+                        </div>
+                        <div style="padding-top: 20px">
+                            <h2>Next</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="question3" style="display: none">
+                <p style="font-size: 30px;font-weight: bolder;color: black;text-align: center">Has your child received Prevenar 13 so far?</p>
+                <p style="text-align: center;font-size: 20px">
+                    (Hint: Prevenar 13 is 13-valent pneumococcal conjugate vaccine. Registered for use in children aged ≥6 weeks. The doses of 13vPCV should be given at 2, 4, 6 and 12 months of age, according to your child’s age to confirm the dose.)
+                </p>
+                <div style="font-weight: bold;color: #34ce57;font-size: 20px;text-align: center">
+                    <input type="radio" id="que3" name="Q3" value="Yes" onclick="q3()">
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="que3" name="Q3" value="No" onclick="q3()">
+                    <label for="no">No</label>
+                </div>
+            </div>
+
+             <div id="block3" style="display: none; margin-top: -50px">
+                <div class="row" style="padding-top: 40px;text-align: center;">
+                    <div class="col-lg-3">
+                        <div style="padding-top: 200px;margin-left: 100px" id="previous_icon3">
+                            <div class="triangle-left zoom" onclick="q3_left()"></div>
+                        </div>
+                        <div style="padding-top: 20px" id="previous_text3">
+                            <h2>previous</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="/static/img/vaccine/baby.jpg"style="width:1000px;padding-right: 20px;padding-top: 20px">
+                    </div>
+                    <div class="col-lg-3">
+                        <div style="padding-top: 200px;margin-left: 120px" id="next_icon3">
+                            <div class="triangle-right zoom" onclick="q3_right()"></div>
+                        </div>
+                        <div style="padding-top: 20px" id="next_text3">
+                            <h2>Next</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="question4" style="display: none">
+                <p style="font-size: 30px;font-weight: bolder;color: black;text-align: center">How many doses of Prevenar 13 has your child received so far?</p>
+                <p style="text-align: center;font-size: 20px">
+                    (Hint:Prevenar 13 is 13-valent pneumococcal conjugate vaccine. Registered for use in children aged ≥6 weeks. The doses of 13vPCV should be given at 2, 4, 6 and 12 months of age, according to your child’s age to confirm the dose.)
+                </p>
+                <div style="font-weight: bold;color: #34ce57;font-size: 20px;text-align: center">
+                    <label for="dose">Please Choose: </label>
+                    <select  name="Q4" id="que4" onchange="q4()">
+                        <option value="default">please select</option>
+                        <option value="1 dose">1 dose</option>
+                        <option value="2 doses">2 doses</option>
+                        <option id="dose3" value="3 doses">3 doses</option>
+                        <option id="dose4" value="4 doses">4 doses</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="block4" style="display: none; margin-top: -50px">
+                <div class="row" style="padding-top: 40px;text-align: center;">
+                    <div class="col-lg-3">
+                        <div style="padding-top: 200px;margin-left: 100px" id="previous_icon4">
+                            <div class="triangle-left zoom" onclick="q4_left()"></div>
+                        </div>
+                        <div style="padding-top: 20px" id="previous_text4">
+                            <h2>previous</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="/static/img/vaccine/baby.jpg"style="width:1000px;padding-right: 20px;padding-top: 20px">
+                    </div>
+                    <div class="col-lg-3">
+                        <div style="padding-top: 200px;margin-left: 120px" id="next_icon4">
+                            <div class="triangle-right zoom" onclick="q4_right()"></div>
+                        </div>
+                        <div style="padding-top: 20px" id="next_text4">
+                            <h2>Next</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="question5" style="display: none">
+                <p style="font-size: 30px;font-weight: bolder;color: black;text-align: center">Has your child received Pneumovax 23 so far? </p>
+                 <p style="text-align: center;font-size: 20px">
+                    (Hint: Prevenar 23 is valent pneumococcal polysaccharide vaccine) Registered for use in children aged ≥24 weeks.)
+                </p>
+                <div style="font-weight: bold;color: #34ce57;font-size: 20px;text-align: center">
+                    <input type="radio" id="que5" name="Q5" value="Yes" onclick="q5()">
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="que" name="Q5" value="No" onclick="q5()">
+                    <label for="no">No</label>
+                </div>
+            </div>
+
+            <div id="block5" style="display: none; margin-top: -50px">
+                <div class="row" style="padding-top: 40px;text-align: center;">
+                    <div class="col-lg-3">
+                        <div style="padding-top: 150px;margin-left: 100px" id="previous_icon5">
+                            <div class="triangle-left zoom" onclick="q5_left()"></div>
+                        </div>
+                        <div style="padding-top: 20px" id="previous_text5">
+                            <h2>previous</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="/static/img/vaccine/baby.jpg"style="width:1000px;padding-right: 20px;padding-top: 20px">
+                    </div>
+                    <div class="col-lg-3">
+                        <div style="padding-top: 150px;margin-left: 120px">
+                            <div class="triangle-right zoom" style="display: none"></div>
+                        </div>
+                        <div style="padding-top: 20px;display: none">
+                            <h2>Next</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div style="padding-top: 30px;padding-left: 300px">
+            <a href="#schedule_part"><button type="submit" id="submit" class="search-btn" style="cursor: pointer;margin-left: 200px;display: none" onclick="submit(),dispear()">Get Plan</button></a>
+        </div>
+        <!-- vaccine question end -->
+
+    </div>
+    <div id='schedule_part' style="display: none">
+        <div  class="grid-container" style="margin-left: 80px;margin-right: 80px;
+                                                                margin-top: 30px;margin-bottom: 30px;
+                                                                border-style: solid; " >
+            <div class="schedule_head" style="background-color: #0056b3;color: white;font-weight: bold">Pneumonia Vaccine Schedule</div>
+            <!-- 1st row -->
+            <div class="vaccine_type">Vaccine Type</div>
+            <div class="dose_class">Dose1</div>
+            <div class="dose_class">Dose2</div>
+            <div class="dose_class">Dose3</div>
+            <div class="dose_class">Dose4</div>
+            <!-- 2nd row -->
+            <div class="vaccine_13" style="padding-top: 30px;padding-bottom: 30px">Pneumonia Vaccine PCV 13</div>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+              <div style="padding-left: 80px">
+                  <span id = '13_dose1' class="yellow_icon"></span>
+              </div>
+            </div>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+              <div style="padding-left: 80px">
+                  <span id = '13_dose2'class="yellow_icon"></span>
+              </div>
+            </div>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+                <div style="padding-left: 80px">
+                  <span id = '13_dose3'class="yellow_icon"></span>
+                </div>
+            </div>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+                <div style="padding-left: 80px">
+                  <span id = '13_dose4' class="yellow_icon"></span>
+                </div>
+            </div>
+            <!-- 3rd row-->
+            <div class="vaccine_23" style="padding-top: 30px;padding-bottom: 30px">Pneumonia Vaccine P23</div>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+                <div style="padding-left: 80px">
+                  <span id = '23_dose1' class="yellow_icon"></span>
+                </div>
+            </div>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+                <div  class="icon_content" style="padding-left: 80px;">
+                  <span id = '23_dose2' class="yellow_icon"></span>
+                </div>
+            </div>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+              <div class="icon_content" style="padding-left: 80px;">
+                  <span id = '' class="red_icon"></span>
+              </div>
+            </div>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+                <div class="icon_content" style="padding-left: 80px;">
+                  <span id = ''class="red_icon"></span>
+                </div>
+            </div>
+            <div class='recommendation_content' style="font-weight: bold;padding-top: 40px;padding-bottom: 40px">
+                Recommendation1:<h5 id="recommendation_13"></h5><br>
+                Recommendation2:<h5 id="recommendation_23"></h5>
+            </div>
+            <!-- 4th row -->
+            <div class="hint"style="background-color: #0056b3;color: white;font-weight: bold">Hint</div>
+            <div class="hint_content"style="background-color: #0056b3;color: white">
+                <div style="padding-left: 180px">
+                <span class="green_icon" style="float: left;"></span>
+                <div style="float: left"><p2>Has been Vaccinated</p2></div>
+                <div  style="padding-left: 300px">
+                    <span class="yellow_icon" style="float: left"></span>
+                    <div style="float: left"><p2>Need to be Vaccinated</p2></div>
+                    <div  style="padding-left: 300px">
+                        <span class="red_icon" style="float: left"></span>
+                        <div style="float: left"><p2>No need for Vaccination</p2></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+    <div id="submit recommendation1"></div>
+    <div id="submit recommendation2"></div>
+    <div id="submit recommendation3"></div>-->
+
+    <script type="text/javascript">
+        var q1choice = ''
+        var q2choice = ''
+        var q3choice = ''
+        var q4choice = 'NULL'
+        var q5choice = 'NULL'
+
+        function q1(){
+            document.getElementById('question1').style.display='None';
+            document.getElementById('question2').style.display='block'
+            document.getElementById('block1').style.display = 'None';
+            document.getElementById('block2').style.display = 'block';
+            q1choice=$('input:radio[name="Q1"]:checked').val()
+        }
+        function q2(){
+            document.getElementById('question2').style.display='None'
+            document.getElementById('question3').style.display='block'
+            document.getElementById('block3').style.display='block';
+            document.getElementById('block2').style.display='None';
+            q2choice = document.getElementById('que2').value;
+            if (q2choice == '0-2 months'){
+                //document.getElementById('next_icon3').style.display='None'
+                //document.getElementById('next_text3').style.display='None'
+            }
+            //if (q2choice='3-4 months'){
+                //document.getElementById('dose3').style.display='None'
+                //document.getElementById('dose4').style.display='None'
+            //}
+        }
+        function q3() {
+            q3choice=$('input:radio[name="Q3"]:checked').val()
+            //finish, no q4 q5
+            if ((q2choice=='0-2 months' || q3choice == 'No') && (q1choice!='Yes' || q2choice!='1-5 years')){
+                document.getElementById('submit').style.display='block'
+                document.getElementById("next_icon3").style.display = 'None'
+                document.getElementById("next_text3").style.display = 'None'
+
+                //has q4 no q5
+            }else if((q2choice!='0-2 months' || q3choice == 'Yes') && (q1choice!='Yes' || q2choice!='1-5 years')){
+                document.getElementById('question3').style.display = 'None'
+                document.getElementById('question4').style.display = 'block'
+                document.getElementById('block4').style.display='block';
+                document.getElementById('block3').style.display='None';
+                document.getElementById("next_icon4").style.display = 'None'
+                document.getElementById("next_text4").style.display = 'None'
+                //has q4 has q5
+            }else if ((q2choice!='0-2 months' && q3choice == 'Yes') && (q1choice=='Yes' && q2choice=='1-5 years')){
+                document.getElementById('question3').style.display = 'None'
+                document.getElementById('question4').style.display = 'block'
+                document.getElementById('block4').style.display='block';
+                document.getElementById('block3').style.display='None';
+                //has q5 no q4
+            }else {
+                document.getElementById('question3').style.display = 'None'
+                document.getElementById('question5').style.display = 'block'
+                document.getElementById('block5').style.display='block';
+                document.getElementById('block3').style.display='None';
+            }
+            if (q2choice == '3-4 months' || (q2choice == '5-6 months' && q1choice == 'No')){
+                document.getElementById('dose3').style.display='None';
+                document.getElementById('dose4').style.display='None';
+            }
+            else if (q1choice == 'No' && q2choice !='3-4 months'){
+                document.getElementById('dose4').style.display='None';
+            }
+
+        }
+        function q4(){
+            q4choice = document.getElementById('que4').value
+            if(q1choice == 'Yes' && q2choice == '1-5 years'){
+                document.getElementById('question4').style.display = 'None'
+                document.getElementById('question5').style.display = 'block'
+                document.getElementById('block5').style.display='block';
+                document.getElementById('block4').style.display='None';
+            }
+            else if(q1choice != 'Yes' || q2choice != '1-5 years') {
+                document.getElementById('submit').style.display = 'block'
+                document.getElementById('next4').style.display='None';
+                document.getElementById('nexti4').style.display='None';
+            }
+        }
+        function q5(){
+            q5choice = $('input:radio[name="Q5"]:checked').val()
+            document.getElementById('submit').style.display='block'
+        }
+
+        var compare_str = ''
+        var recommendation_list = '{{ recommendation_new|safe }}';
+        var obj =JSON.parse(recommendation_list);
+        function submit(){
+            if (q1choice == ''){
+                alert('you do not finish q1')
+            }
+            if(q2choice == ''){
+                alert('you do not finish q2')
+            }
+            if(q3choice == ''){
+                alert('you do not finish q3')
+            }
+            if (q1choice != '' && q2choice != ''&& q3choice != ''){
+                compare_str = q1choice + ', ' + q2choice + ', ' + q3choice
+                            + ', ' + q4choice + ', ' + q5choice
+                document.getElementById('schedule_part').style.display = 'block'
+                //document.getElementById('submit recommendation3').innerText = compare_str
+                for (i = 0; i <obj.list.length; i++){
+                    if (obj.list[i].choice == compare_str){
+                        document.getElementById('recommendation_13').innerText = obj.list[i].prevenar_13_detail_plan
+                        document.getElementById('recommendation_23').innerText = obj.list[i].pneumovax_23_detail_plan
+                        //document.getElementById('submit recommendation1').innerText = "13 total" + obj.list[i].prevenar_13_total_dose
+                        //document.getElementById('submit recommendation2').innerText = "13 remain" + obj.list[i].prevenar_13_remaining_dose
+                        var id_name = ""
+                       if (obj.list[i].prevenar_13_total_dose == 3){
+                            document.getElementById("13_dose4").className = 'red_icon';
+                            for (var j = 1; j < 4 - obj.list[i].prevenar_13_remaining_dose; j++){
+                                id_name = "13_dose" + j
+                                document.getElementById(id_name).className = 'green_icon';
+                            }
+                        }else{
+                             for (var k=1; k < 5 - obj.list[i].prevenar_13_remaining_dose; k++){
+                                id_name = "13_dose" + k
+                                document.getElementById(id_name).className = 'green_icon';
+                            }
+                        }
+
+                        if (obj.list[i].pneumovax_23_remaining_dose == 0){
+                            document.getElementById("23_dose1").className = 'red_icon';
+                            document.getElementById("23_dose2").className = 'red_icon';
+                        }else{
+                            for (var a=1; a < 3 - obj.list[i].pneumovax_23_remaining_dose; a++){
+                                id_name = "23_dose" + a
+                                document.getElementById(id_name).className = 'green_icon';
+                            }
+                        }
+                    }
+                }
+                document.getElementById('recom').style.display = 'block';
+            }
+            }
+
+        function q1_left() {
+           document.getElementById('question1').style.display = 'None';
+           document.getElementById('question2').style.display = 'block';
+           document.getElementById('block1').style.display = 'None';
+           document.getElementById('block2').style.display = 'block';
+        }
+
+        function q2_left(){
+           document.getElementById('question1').style.display='block';
+           document.getElementById('question2').style.display='None';
+           document.getElementById('block1').style.display='block';
+           document.getElementById('block2').style.display='None';
+        }
+
+        function  q2_right(){
+           document.getElementById('question3').style.display='block';
+           document.getElementById('question2').style.display='None';
+           document.getElementById('block3').style.display='block';
+           document.getElementById('block2').style.display='None';
+        }
+
+        function q3_left(){
+           document.getElementById('question2').style.display='block';
+           document.getElementById('question3').style.display='None';
+           document.getElementById('block2').style.display='block';
+           document.getElementById('block3').style.display='None';
+           document.getElementById('submit').style.display='None'
+        }
+
+        function q3_right(){
+            if (q3choice == 'Yes') {
+                document.getElementById('question3').style.display = 'None'
+                document.getElementById('question4').style.display = 'block'
+                document.getElementById('block4').style.display='block';
+                document.getElementById('block3').style.display='None';
+            }
+            else{
+               if(q1choice == 'Yes' && q2choice == '1-5 years') {
+                   document.getElementById('question3').style.display = 'None'
+                   document.getElementById('question5').style.display = 'block'
+                   document.getElementById('block5').style.display='block';
+                   document.getElementById('block3').style.display='None';
+               }
+                else {
+                    document.getElementById('submit').style.display='block'
+                }
+            }
+        }
+
+        function q4_left() {
+            document.getElementById('question4').style.display = 'None'
+            document.getElementById('question3').style.display = 'block'
+            document.getElementById('block4').style.display = 'None'
+            document.getElementById('block3').style.display = 'block'
+            document.getElementById('submit').style.display = 'None'
+        }
+
+        function q4_right() {
+            if (q1choice == 'Yes' && q2choice == '1-5 years') {
+                document.getElementById('question4').style.display = 'None'
+                document.getElementById('question5').style.display = 'block'
+                document.getElementById('block5').style.display = 'block'
+                document.getElementById('block4').style.display = 'None'
+
+            } else if (q1choice != 'Yes' || q2choice != '1-5 years') {
+                document.getElementById('submit').style.display = 'block'
+            }
+        }
+
+        function q5_left() {
+            //back to q4
+           if (q2choice != '0-2 months' && q3choice == 'Yes') {
+               document.getElementById('question5').style.display = 'None'
+               document.getElementById('question4').style.display = 'block'
+               document.getElementById('block5').style.display = 'None'
+               document.getElementById('block4').style.display = 'block'
+               document.getElementById('submit').style.display = 'None'
+           }
+           //back to q3
+           else{
+               document.getElementById('question5').style.display = 'None'
+               document.getElementById('question3').style.display = 'block'
+               document.getElementById('block5').style.display = 'None'
+               document.getElementById('block3').style.display = 'block'
+               document.getElementById('submit').style.display = 'None'
+           }
+        }
+        function dispear(){
+           document.getElementById('next_icon3').style.display='None';
+           document.getElementById('next_text3').style.display='None';
+           document.getElementById('next_icon4').style.display='None';
+           document.getElementById('next_text4').style.display='None';
+        }
+    </script>
+
+
+
+{% endblock %}
