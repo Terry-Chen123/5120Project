@@ -1,0 +1,326 @@
+{% extends 'base.html' %}
+{% block navigation %}
+    <li><a href="{% url 'Home' %}">Home</a></li>
+    <li ><a href="{% url 'About' %}">About</a></li>
+    <li ><a href="{% url 'Read More' %}">More Information</a></li>
+    <li><a href="{% url 'Quiz List' %}">Pneumonia Quiz</a></li>
+    <li class="active"><a href="{% url 'Prevention' %}">Prevention</a></li>
+    <li><a href="{% url 'Search' %}">Clinic Search</a></li>
+
+{% endblock %}
+{% block mainbody %}
+    {% load static %}
+    <div  style="border-style: none;height: 300px;background-color: #1c7430">
+        <h1 style="font-weight: bolder;color: white;text-align: center">Health Habit</h1>
+        <p style="font-size: 30px;color: white;text-align: center;padding-left: 30px;padding-right: 30px">Maintain good health habits is the essential part to protect your child away from pneumonia disease.
+        </p>
+    </div>
+
+    <div class="w3-bar w3-black" style="text-align: center;margin-top: 30px">
+      <button class="w3-bar-item w3-button search-btn" onclick="openMethod('HandWash')">Hand Washing</button>
+      <button class="w3-bar-item w3-button search-btn" onclick="openMethod('Sleep')" style="margin-left: 20px">Enough Sleep</button>
+      <button class="w3-bar-item w3-button search-btn" onclick="openMethod('Physical')" style="margin-left: 20px">Physical Activity</button>
+    </div>
+
+    <div id="HandWash" class="w3-container method">
+        <div style="border-style: solid;border-width: 10px;border-color: #1c7430;margin: 30px">
+        <p style="text-align: center;font-size: 50px;color: #13B51E;font-weight: bold">Hand Washing</p>
+    <div class="row">
+        <div class="col-lg-6">
+            <video width="680" height="430" controls style="margin: 20px">
+                <source src="/static/video/handwash.mp4">
+            </video>
+        </div>
+        <div class="col-lg-6">
+            <div style="margin: 20px;border-style: solid;padding: 10px;border-color: #71cd29;background-color: #71cd29;height: 450px">
+                <h2 style="text-align: center;font-weight: bolder;font-style: italic">Hand Washing</h2>
+                <p style="font-size: 29px;color: black;font-style: italic">
+                    Washing hands prevents illnesses and spread of infections to others.
+                    Frequent hand washing with warm water and soap is very important to prevent viruses
+                    or bacteria from entering the body when hands come in contact with your child’s nose or mouth.
+                </p>
+            </div>
+        </div>
+    </div><br>
+    <div class="personal-mybuluo-head">
+        <div class="personal-mybuluo-wording" style="font-weight: bolder;color: green;font-size: 30px">General data about Hand Washing</div>
+        <div class="personal-border jmu-border-1px border-bottom"></div>
+    </div><br>
+    <div class="row" style="margin: 20px">
+        <div class="col-lg-6" style="padding-left: 100px;padding-top: 50px">
+            <img src="/static/img/prevention/washhand/handwash1.png">
+        </div>
+        <div class="col-lg-6" style="padding-top: 50px">
+            <img src="/static/img/prevention/washhand/handwashfigur.png">
+            <p style="font-size: 15px;color: black;text-align: center;padding-top: 10px;font-weight: bold">Figure - How often, if ever, do you wash your hands with soap?</p>
+        </div>
+    </div>
+    <div style="margin-left: 100px">
+        <p style="font-size: 20px;color: black;font-weight: bold">
+            • About four in 10 Australians don’t always wash their hands with soap after they go to the bathroom at home.<br/>
+            • Two out of 5 people in the world do not have a hand washing facility with soap and water on premises.<br/>
+            • Almost half of the schools in the world do not have hand washing facilities with soap and water available to students.
+        </p>
+    </div><br>
+    <div class="personal-mybuluo-head">
+        <div class="personal-mybuluo-wording" style="font-weight: bolder;color: green;font-size: 30px">Hand Washing Steps</div>
+        <div class="personal-border jmu-border-1px border-bottom"></div>
+    </div><br>
+    <div class="row" style="padding-top: 20px">
+        <div class="col-lg-6">
+            <p style="padding-left: 150px;font-size: 25px;color: black;font-weight: bold">Steps For Hand Washing</p>
+            <p style="color: black;font-size: 20px;padding-top: 10px;padding-left: 50px;line-height: 50px;font-weight: bold">
+                1. Wet your hands with warm water (not too hot and not too cold).<br/>
+                2. Lather. Use enough liquid or bar soap to cover your entire hand.<br/>
+                3. Wash. Rub fronts and backs of hands and in between fingers. Hum or sing "Twinkle, twinkle, Little Star" while you wash to remind you to scrub for 20 seconds.<br/>
+                4. Rinse hands well under running water.<br/>
+                5. Dry with a clean towel or air dryer. If possible, use your paper towel to turn off the sink.
+            </p>
+        </div>
+        <div class="col-lg-6">
+            <img src="/static/img/prevention/washhand/handwashstep.png"style="margin-top: 100px;width: 750px;height: 450px">
+        </div>
+    </div>
+</div>
+    </div>
+
+    <div id="Sleep" class="w3-container method" style="display:none">
+        <div style="border-style: solid;border-width: 10px;border-color: #1c7430;margin: 30px">
+            <p style="text-align: center;font-size: 50px;color: #13B51E;font-weight: bold">Enough Sleep</p>
+            <div class="row">
+                <div class="col-lg-6">
+                    <video width="680" height="430" controls style="margin: 20px">
+                        <source src="/static/video/sleep.mp4">
+                    </video>
+                </div>
+                <div class="col-lg-6">
+                    <div style="margin: 20px;border-style: solid;padding: 10px;border-color: #71cd29;background-color: #71cd29;height: 450px">
+                        <h2 style="text-align: center;font-weight: bolder;font-style: italic;color: black">Sufficient Sleep</h2>
+                        <p style="font-size: 29px;color: black;font-style: italic">
+                            Enough sleep is essential for growth, immunity, learning and memory and is important for helping
+                            a child heal and recover. Healthy sleep means a good quantity and quality of sleep, with regular
+                            sleep routines.
+                        </p>
+                    </div>
+                </div>
+            </div><br>
+            <div class="personal-mybuluo-head">
+                <div class="personal-mybuluo-wording" style="font-weight: bolder;color: green;font-size: 30px">How much sleep does a child need?</div>
+                <div class="personal-border jmu-border-1px border-bottom"></div>
+            </div><br><br>
+            <div style="margin-left: 200px">
+                <img src="/static/img/prevention/sleep/sleepfigure.png"style="width: 800px;height: 500px;">
+            </div><br>
+            <div style="margin-left: 15px">
+                <p style="font-size: 20px;color: black;font-weight: bold">
+                    • Around four in five children thought they were getting enough sleep, when they were in fact not meeting minimum sleep guidelines for their age. <br/>
+                    • Nearly all 6-7 years of age children were getting the required minimum hours of sleep on school days, but only half of them were. <br/>
+                    • Children aged 12-17 years were less likely to get the required minimum hours of sleep on school nights compared to non-school nights.
+                </p>
+            </div><br>
+            <div class="personal-mybuluo-head">
+                <div class="personal-mybuluo-wording" style="font-weight: bolder;color: green;font-size: 30px">Tips To Help Children Sleep Well</div>
+                <div class="personal-border jmu-border-1px border-bottom"></div>
+            </div><br>
+            <div class="row" style="padding-top: 20px">
+                <div class="col-lg-6">
+                    <p style="color: black;font-size: 20px;padding-top: 10px;padding-left: 20px;line-height: 50px;font-weight: bold">
+                        •	Establish a sleep schedule: Make sure your child goes to bed early enough to get the sleep they need. Once you have set an appropriate bed time, stick to it — even at the weekend.<br>
+                        •	Establish a bedtime routine: Follow the same routine every day: bath or shower, change into pyjamas, brush teeth, read or spend quiet time in their bedroom, lights out and go to sleep.<br>
+                        •	Help your child wind down: Busy children need some time to relax. Consider playing soft music or reading to them.<br>
+                        •	Make sure the bedroom is suitable for sleep: Ensure the bedroom is dark and quiet. If your child is anxious or afraid at night, use a night light.<br>
+                        •	Avoid stimulants: Make sure your child avoids tea, coffee, chocolate and sports drinks, especially in the afternoon.<br>
+                        •	Turn off technology: Turning off computers, tablets and television 1 hour before bedtime should help your child sleep better.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="/static/img/prevention/sleep/sleep.jpg"style="margin-left: 10px;width: 630px;height: 800px">
+                </div>
+            </div><br>
+        </div>
+    </div>
+
+    <div id="Physical" class="w3-container method" style="display:none">
+        <div style="border-style: solid;border-width: 10px;border-color: #1c7430;margin: 30px">
+            <p style="text-align: center;font-size: 50px;color: #13B51E;font-weight: bold">Physical Activity</p>
+            <div class="row">
+                <div class="col-lg-6">
+                    <video width="680" height="430" controls style="margin: 20px">
+                        <source src="/static/video/physical.mp4">
+                    </video>
+                </div>
+                <div class="col-lg-6">
+                    <div style="margin: 20px;border-style: solid;padding: 10px;border-color: #71cd29;background-color: #71cd29;height: 450px">
+                        <h2 style="text-align: center;font-weight: bolder;font-style: italic;color: black">Physical Activity</h2>
+                        <p style="font-size: 29px;color: black;font-style: italic">
+                            Physical activity is any activity that involves moving your body. It includes everyday
+                            activities, physically active play, and organised sports and exercise. Regular physical
+                            activity has significant benefits for your child, giving them a strong body to fight diseases.
+                        </p>
+                    </div>
+                </div>
+            </div><br>
+            <div class="personal-mybuluo-head">
+                <div class="personal-mybuluo-wording" style="font-weight: bolder;color: green;font-size: 30px">General data about Physical Activity</div>
+                <div class="personal-border jmu-border-1px border-bottom"></div>
+            </div><br><br>
+            <div style="margin: 20px">
+                <img src="/static/img/prevention/physical/physicalfigure.png"style="width: 1100px;height: 500px;padding-left: 210px">
+            </div><br>
+            <div style="margin-left: 15px">
+                <p style="font-size: 20px;color: black;font-weight: bold;padding-left: 15px">
+                    • Around 35% of Australian children aged 0-14 prefer swimming.  <br/>
+                    • Less than one-quarter (23%) of children aged 5-14 undertook the recommended 60 minutes of physical activity every day. <br/>
+                    • On average, children aged 5-14 spent more than 2 hours each day sitting or lying down for screen-based activities. Children aged 2-4 spent 83 minutes a day on average in front of screens.<br/>
+                    • Two-third (67%) of children aged 0-14 participated in organised physical activities outside of school hours at least once a fortnight.
+                </p>
+            </div><br>
+            <div class="personal-mybuluo-head">
+                <div class="personal-mybuluo-wording" style="font-weight: bolder;color: green;font-size: 30px">Different Levels Of Physical Activity</div>
+                <div class="personal-border jmu-border-1px border-bottom"></div>
+            </div><br>
+            <div class="row" style="padding-top: 40px">
+                <div class="col-lg-6">
+                    <p style="color: black;font-size: 20px;padding-top: 10px;padding-left: 20px;line-height: 50px;font-weight: bold">
+                        •	Light physical activity could be going for a stroll, playing a musical instrument or standing up to paint at an easel.<br/>
+                        •	Moderate physical activity gets children gently huffing and puffing, including walking quickly, riding to Child Care school or a friend’s house, dancing, skipping or jumping in puddles or flying kites as well as swimming.<br/>
+                        •	Vigorous physical activity gets children huffing and puffing a lot, as well as sweating, including playing running games like ‘keepings off’ or ‘chasey’, riding a bike fast, playing organised sports like soccer, basketball, touch football or netball.<br/>
+                        •	Energetic play is a natural way for children to move and be active. For example, babies rock and kick their feet. Older children run, jump, twirl, kick, throw, dance to music, play on playground equipment, enjoy rough-and-tumble play, and much more.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="/static/img/prevention/physical/physical2.jpg"style="margin-left: 10px;width: 630px;height: 750px">
+                </div>
+            </div><br>
+            <div class="personal-mybuluo-head">
+                <div class="personal-mybuluo-wording" style="font-weight: bolder;color: green;font-size: 30px">Optimum Time About Being Active</div>
+                <div class="personal-border jmu-border-1px border-bottom"></div>
+            </div><br><br><br>
+            <div style="padding-bottom: 50px" >
+                <table style="margin-left:75px;width: 1200px; color: black;font-weight: bold;">
+                    <tr>
+                        <th style="text-align: center;font-size: 20px">Age</th>
+                        <th style="text-align: center;font-size: 20px">How much each day?</th>
+                        <th style="text-align: center;font-size: 20px">Ideas for what to do</th>
+                    </tr>
+                    <tr>
+                        <td>Infants (0 – 12 months) </td>
+                        <td>Should be physically active several times daily. At least 30 minutes of tummy time through the day. </td>
+                        <td>Active play starts from birth, especially through floor-based activities including tummy-time, reaching, pushing, pulling and crawling. </td>
+                    </tr>
+                    <tr>
+                        <td>Toddlers (1 – 2 years)</td>
+                        <td>At least 180 minutes (3 hours) of physical activity throughout the day, including playing outdoors. </td>
+                        <td>Recommend to light physical activity, such as standing up, moving around, rolling and playing, as well as more energetic play like skipping, hopping, running and jumping. </td>
+                    </tr>
+                    <tr>
+                        <td>Pre-schoolers (3 – 5 years)</td>
+                        <td>At least 180 minutes (3 hours) of physical activity throughout the day, including at least 60 minutes of moderate – vigorous intensity physical activity. </td>
+                        <td>Recommend to moderate physical activity and vigorous physical activity, such as dancing, bike riding, kite-flying, swimming and playing organised sports like basketball. </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <style type="text/css">
+    .personal-mybuluo-head {
+        height: 14px;
+        position: relative;
+    }
+    .personal-mybuluo-wording {
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        left: 50%;
+        background-color: #fff;
+        color: #777;
+        text-align: center;
+        -webkit-transform: translate(-50%,0);
+        transform: translate(-50%,0);
+        padding: 0 10px;
+    }
+    .personal-border {
+        position: absolute;
+        top: -7px;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        z-index: 1;
+    }
+    .jmu-border-1px {
+        position: relative;
+    }
+    .jmu-border-1px.border-bottom:after {
+        border-bottom: 3px solid green;
+    }
+
+    .jmu-border-1px:after {
+        right: -100%;
+        bottom: -100%;
+        -webkit-transform: scale(0.5);
+    }
+    .jmu-border-1px:after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        -webkit-transform-origin: 0 0;
+        -webkit-transform: scale(1);
+        pointer-events: none;
+    }
+</style>
+    <style>
+        .rain-title:after, .rain-title:before {
+        content: " ";
+        display: block;
+        border-top: 2px solid #325592;
+        border-bottom: 2px solid #325592;
+        height: 3px;
+    }
+    *, ::after, ::before {
+        box-sizing: border-box;
+    }
+</style>
+    <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 3px solid green;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+
+    }
+</style>
+    <script>
+    function openMethod(methodName) {
+      var i;
+      var x = document.getElementsByClassName("method");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      document.getElementById(methodName).style.display = "block";
+    }
+</script>
+    <style>
+    .search-btn{
+                    height: 50px;width: 150px;background: #71cd29;
+                    border: none;color: black;border-radius: 5px;display:inline;
+
+         }
+     .search-btn:hover {
+                            background-color: lightseagreen; /* Green */
+                            color: white;
+                        }
+</style>
+{% endblock %}

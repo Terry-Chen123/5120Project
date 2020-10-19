@@ -18,6 +18,11 @@
     {% block mapstyle %}
     {% endblock %}
 
+    {% block other_css %}
+    {% endblock %}
+    {% block other_js %}
+    {% endblock %}
+
     {% block js %}
     {% endblock %}
 
@@ -28,8 +33,6 @@
 	<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}"/>
 	<link rel="stylesheet" href="{% static 'css/style2.css'%}"/>
 	<link rel="stylesheet" href="{% static 'css/animate.css'%}"/>
-	<link rel="stylesheet" href="{% static 'css/pop-up.css'%}"/>
-
 
 
 	<!--[if lt IE 9]>
@@ -85,22 +88,20 @@
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-5" >
-               <div class="footer-widget" style="padding-left: 500px; padding-top: 50px; font-size: 20px;white-space: nowrap;">
-                  <div class="fw-links">
-
-                     <ul>
-                        <li><a href="{% url 'Home' %}">Home</a></li>
+                    <div class="footer-widget" style="padding-left: 500px; padding-top: 50px; font-size: 20px;white-space: nowrap;">
+                        <div class="fw-links">
+                             <ul>
+                                <li><a href="{% url 'Home' %}">Home</a></li>
                                 <li><a href="{% url 'About' %}">About</a></li>
                                 <li><a href="{% url 'Read More' %}">More Information</a></li>
                                 <li><a href="{% url 'Quiz List' %}">Pneumonia Quiz</a></li>
+                                <li><a href="{% url 'Prevention' %}">Prevention</a></li>
                                 <li><a href="{% url 'Search' %}">Clinic Search</a></li>
-                                <li><a href="{% url 'Vaccine' %}">Vaccine</a></li>
-                     </ul>
-                  </div>
-               </div>
+                             </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-         </div>
       </div>
    </section>
 
@@ -115,8 +116,8 @@
                 <li ><a href="{% url 'About' %}">About</a></li>
                 <li><a href="{% url 'Read More' %}">More Information</a></li>
                 <li><a href="{% url 'Quiz List' %}">Pneumonia Quiz</a></li>
+                <li><a href="{% url 'Prevention' %}">Prevention</a></li>
                 <li><a href="{% url 'Search' %}">Clinic Search</a></li>
-                <li><a href="{% url 'Vaccine' %}">Vaccine</a></li>
 			</ul>
 			<div class="copyright">
             Copyright &copy;<script>document.write(new Date().getFullYear());</script>

@@ -3,16 +3,15 @@ django.setup()
 from Search.models import Clinic
 from django.shortcuts import render
 from .otherFunction import searchArea, sortRating
-import sqlite3
-# Create your views here.
+
 def test(request):
     return render(request,'../templates/test.html')
 
 def searchClinic(request):
+
     hospital_all = Clinic.objects.all()
     sort_hospital = sortRating(hospital_all)
-    hospital1 = sort_hospital[:2]
-    hospital2 = sort_hospital[2:4]
+
     search_result_num = -1
     search_result = ''
     result_remind = ''
@@ -45,13 +44,13 @@ def searchClinic(request):
                 result_divide.append(temp)
     else:
         result = 'Search Error'
-    return render(request, "../templates/search.html",{'recommendhospital1':hospital1,
-                                                       'recommendhospital2': hospital2,
-                                                       'search_result_num':search_result_num,
-                                                       'search_result':search_result,
-                                                       'result_remind':result_remind,
-                                                       'result_divide':result_divide,
-                                                       'choose':choose})
+    context = {'recommendhospital':sort_hospital[:5],
+                'search_result_num':search_result_num,
+                'search_result':search_result,
+                'result_remind':result_remind,
+                'result_divide':result_divide,
+                'choose':choose}
+    return render(request, "../templates/search.html",context)
 
 def searchResult(request):
     hospital_all = Clinic.objects.all()
@@ -61,4 +60,5 @@ def searchResult(request):
                 hospital = Clinic.objects.get(id=i)
     else:
         result = 'Search Error'
-    return render(request, "../templates/search_result.html", {'hospital':hospital,})
+    context = {'hospital':hospital}
+    return render(request, "../templates/search_result.html", context )

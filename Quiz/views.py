@@ -13,14 +13,15 @@ def about(request):
 def readMore(request):
     return render(request,"../templates/read_more.html")
 
-
 def quizCategory(request):
     categoryA = Category.objects.all()[0]
     categoryB = Category.objects.all()[1]
     categoryC = Category.objects.all()[2]
-    return render(request,'../templates/quiz_category.html',{'categoryA':categoryA,
-                                                             'categoryB':categoryB,
-                                                             'categoryC':categoryC})
+    context = {'categoryA':categoryA,
+                'categoryB':categoryB,
+                'categoryC':categoryC}
+    return render(request,'../templates/quiz_category.html',context)
+
 def quizIntro(request):
     categoryA = Category.objects.all()[0]
     categoryB = Category.objects.all()[1]
@@ -79,11 +80,12 @@ def getUserChoice(request):
             question_dic[question[i]] = userChoice
 
     grade,score,suggestion = getScore(question, userChoiceList)
-    return render(request, '../templates/review.html', {'userChoice':userChoiceList,
-                                                        'question_dic':question_dic,
-                                                        'grade':grade,
-                                                        'score':score,
-                                                        'suggestion':suggestion})
+    context = {'userChoice':userChoiceList,
+                'question_dic':question_dic,
+                'grade':grade,
+                'score':score,
+                'suggestion':suggestion}
+    return render(request, '../templates/review.html', context)
 
 def getScore(Q_list, Ans_list):
     score = 0

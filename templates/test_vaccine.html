@@ -1,18 +1,9 @@
 {% extends 'base.html' %}
-{% block mapstyle %}
-<style>
-	body { margin: 0; padding: 0; }
-	#map {
-        position: absolute;
-        top: 10px;
-        bottom: 0;
-        left:25px;
-        width: 628px;
-        height:625px;
-        z-index: 2;
-    }
-
-</style>
+{% block other_css %}
+    <link href='./static/css/vaccine.css' rel='stylesheet' />
+{% endblock %}
+{% block other_js %}
+    <script src='../static/js/vaccine.js'></script>
 {% endblock %}
 
 {% block navigation %}
@@ -20,8 +11,8 @@
     <li><a href="{% url 'About' %}">About</a></li>
     <li ><a href="{% url 'Read More' %}">More Information</a></li>
     <li><a href="{% url 'Quiz List' %}">Pneumonia Quiz</a></li>
+    <li class="active"><a href="{% url 'Prevention' %}">Prevention</a></li>
     <li><a href="{% url 'Search' %}">Clinic Search</a></li>
-    <li class="active"><a href="{% url 'Vaccine' %}">Vaccine</a></li>
 
 {% endblock %}
 
@@ -71,7 +62,7 @@
                     </div>
                     <div class="col-lg-3" id="next1">
                         <div style="padding-top: 200px;margin-left: 120px">
-                            <div class="triangle-right zoom" onclick="icon1()"></div>
+                            <div class="triangle-right zoom" onclick="q1_left()"></div>
                         </div>
                         <div style="padding-top: 20px">
                             <h2>Next</h2>
@@ -99,7 +90,7 @@
                 <div class="row" style="padding-top: 40px;text-align: center;">
                     <div class="col-lg-3">
                         <div style="padding-top: 200px;margin-left: 100px">
-                            <div class="triangle-left zoom" onclick="icon2()"></div>
+                            <div class="triangle-left zoom" onclick="q2_left()"></div>
                         </div>
                         <div style="padding-top: 20px">
                             <h2>previous</h2>
@@ -110,7 +101,7 @@
                     </div>
                     <div class="col-lg-3">
                         <div style="padding-top: 200px;margin-left: 120px">
-                            <div class="triangle-right zoom" onclick="icon3()"></div>
+                            <div class="triangle-right zoom" onclick="q2_right()"></div>
                         </div>
                         <div style="padding-top: 20px">
                             <h2>Next</h2>
@@ -132,10 +123,10 @@
              <div id="block3" style="display: none; margin-top: -50px">
                 <div class="row" style="padding-top: 40px;text-align: center;">
                     <div class="col-lg-3">
-                        <div style="padding-top: 200px;margin-left: 100px" id="previousi3">
-                            <div class="triangle-left zoom" onclick="icon4()"></div>
+                        <div style="padding-top: 200px;margin-left: 100px" id="previous_icon3">
+                            <div class="triangle-left zoom" onclick="q3_left()"></div>
                         </div>
-                        <div style="padding-top: 20px" id="previous3">
+                        <div style="padding-top: 20px" id="previous_text3">
                             <h2>previous</h2>
                         </div>
                     </div>
@@ -143,10 +134,10 @@
                         <img src="/static/img/vaccine/baby.jpg"style="width:1000px;padding-right: 20px;padding-top: 20px">
                     </div>
                     <div class="col-lg-3">
-                        <div style="padding-top: 200px;margin-left: 120px" id="nexti3">
-                            <div class="triangle-right zoom" onclick="icon5()"></div>
+                        <div style="padding-top: 200px;margin-left: 120px" id="next_icon3">
+                            <div class="triangle-right zoom" onclick="q3_right()"></div>
                         </div>
-                        <div style="padding-top: 20px" id="next3">
+                        <div style="padding-top: 20px" id="next_text3">
                             <h2>Next</h2>
                         </div>
                     </div>
@@ -161,8 +152,8 @@
                         <option value="default">please select</option>
                         <option value="1 dose">1 dose</option>
                         <option value="2 doses">2 doses</option>
-                        <option value="3 doses">3 doses</option>
-                        <option value="4 doses">4 doses</option>
+                        <option id="dose3" value="3 doses">3 doses</option>
+                        <option id="dose4" value="4 doses">4 doses</option>
                     </select>
                 </div>
             </div>
@@ -171,10 +162,10 @@
             <div id="block4" style="display: none; margin-top: -50px">
                 <div class="row" style="padding-top: 40px;text-align: center;">
                     <div class="col-lg-3">
-                        <div style="padding-top: 200px;margin-left: 100px" id="previousi4">
-                            <div class="triangle-left zoom" onclick="icon6()"></div>
+                        <div style="padding-top: 200px;margin-left: 100px" id="previous_icon4">
+                            <div class="triangle-left zoom" onclick="q4_left()"></div>
                         </div>
-                        <div style="padding-top: 20px" id="previous4">
+                        <div style="padding-top: 20px" id="previous_text4">
                             <h2>previous</h2>
                         </div>
                     </div>
@@ -182,10 +173,10 @@
                         <img src="/static/img/vaccine/baby.jpg"style="width:1000px;padding-right: 20px;padding-top: 20px">
                     </div>
                     <div class="col-lg-3">
-                        <div style="padding-top: 200px;margin-left: 120px" id="nexti4">
-                            <div class="triangle-right zoom" onclick="icon7()"></div>
+                        <div style="padding-top: 200px;margin-left: 120px" id="next_icon4">
+                            <div class="triangle-right zoom" onclick="q4_right()"></div>
                         </div>
-                        <div style="padding-top: 20px" id="next4">
+                        <div style="padding-top: 20px" id="next_text4">
                             <h2>Next</h2>
                         </div>
                     </div>
@@ -205,10 +196,10 @@
             <div id="block5" style="display: none; margin-top: -50px">
                 <div class="row" style="padding-top: 40px;text-align: center;">
                     <div class="col-lg-3">
-                        <div style="padding-top: 150px;margin-left: 100px" id="previousi5">
-                            <div class="triangle-left zoom" onclick="icon8()"></div>
+                        <div style="padding-top: 150px;margin-left: 100px" id="previous_icon5">
+                            <div class="triangle-left zoom" onclick="q5_left()"></div>
                         </div>
-                        <div style="padding-top: 20px" id="previous5">
+                        <div style="padding-top: 20px" id="previous_text5">
                             <h2>previous</h2>
                         </div>
                     </div>
@@ -228,26 +219,100 @@
         </form>
 
         <div style="padding-top: 30px;padding-left: 300px">
-            <button type="submit" id="submit" class="search-btn" style="cursor: pointer;margin-left: 200px;display: none" onclick="submit(),dispear()">Submit</button>
+            <a href="#schedule_part"><button type="submit" id="submit" class="search-btn" style="cursor: pointer;margin-left: 200px;display: none" onclick="submit(),dispear()">Get Plan</button></a>
         </div>
         <!-- vaccine question end -->
 
-        <!-- recommendation -->
-        <div id="recom" style="display: none">
-            <hr style="border-width: 4px;border-color: #13B51E">
-            <h3 style="color: #13B51E; text-align: center">Your Vaccine Plan</h3>
-        </div>
-            <h4 id="submit recommendation" style="padding: 20px"></h4>
-
-        <!-- recommendation end-->
     </div>
+    <div id='schedule_part' style="display: none">
+        <div  class="grid-container" style="margin-left: 80px;margin-right: 80px;
+                                                                margin-top: 30px;margin-bottom: 30px;
+                                                                border-style: solid; " >
+            <div class="schedule_head" style="background-color: #0056b3;color: white;font-weight: bold">Pneumonia Vaccine Schedule</div>
+            <!-- 1st row -->
+            <div class="vaccine_type">Vaccine Type</div>
+            <div class="dose_class">Dose1</div>
+            <div class="dose_class">Dose2</div>
+            <div class="dose_class">Dose3</div>
+            <div class="dose_class">Dose4</div>
+            <!-- 2nd row -->
+            <div class="vaccine_13" style="padding-top: 30px;padding-bottom: 30px">Pneumonia Vaccine PCV 13</div>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+              <div style="padding-left: 80px">
+                  <span id = '13_dose1' class="yellow_icon"></span>
+              </div>
+            </div>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+              <div style="padding-left: 80px">
+                  <span id = '13_dose2'class="yellow_icon"></span>
+              </div>
+            </div>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+                <div style="padding-left: 80px">
+                  <span id = '13_dose3'class="yellow_icon"></span>
+                </div>
+            </div>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+                <div style="padding-left: 80px">
+                  <span id = '13_dose4' class="yellow_icon"></span>
+                </div>
+            </div>
+            <!-- 3rd row-->
+            <div class="vaccine_23" style="padding-top: 30px;padding-bottom: 30px">Pneumonia Vaccine P23</div>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+                <div style="padding-left: 80px">
+                  <span id = '23_dose1' class="yellow_icon"></span>
+                </div>
+            </div>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+                <div  class="icon_content" style="padding-left: 80px;">
+                  <span id = '23_dose2' class="yellow_icon"></span>
+                </div>
+            </div>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+              <div class="icon_content" style="padding-left: 80px;">
+                  <span id = '23_dose3' class="red_icon"></span>
+              </div>
+            </div>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+                <div class="icon_content" style="padding-left: 80px;">
+                  <span id = '23_dose4'class="red_icon"></span>
+                </div>
+            </div>
+            <div class='recommendation_content' style="font-weight: bold;padding-top: 40px;padding-bottom: 40px">
+                Recommendation1:<h5 id="recommendation_13"></h5><br>
+                Recommendation2:<h5 id="recommendation_23"></h5>
+            </div>
+            <!-- 4th row -->
+            <div class="hint"style="background-color: #0056b3;color: white;font-weight: bold">Hint</div>
+            <div class="hint_content"style="background-color: #0056b3;color: white">
+                <div style="padding-left: 180px">
+                <span class="green_icon" style="float: left;"></span>
+                <div style="float: left"><p2>Has been Vaccinated</p2></div>
+                <div  style="padding-left: 300px">
+                    <span class="yellow_icon" style="float: left"></span>
+                    <div style="float: left"><p2>Need to be Vaccinated</p2></div>
+                    <div  style="padding-left: 300px">
+                        <span class="red_icon" style="float: left"></span>
+                        <div style="float: left"><p2>No need for Vaccination</p2></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="submit recommendation1"></div>
+    <div id="submit recommendation2"></div>
+    <div id="submit recommendation3"></div>
 
     <script type="text/javascript">
         var q1choice = ''
         var q2choice = ''
         var q3choice = ''
-        var q4choice = 'Null'
-        var q5choice = 'Null'
+        var q4choice = 'NULL'
+        var q5choice = 'NULL'
+
         function q1(){
             document.getElementById('question1').style.display='None';
             document.getElementById('question2').style.display='block'
@@ -261,24 +326,37 @@
             document.getElementById('block3').style.display='block';
             document.getElementById('block2').style.display='None';
             q2choice = document.getElementById('que2').value;
-
             if (q2choice == '0-2 months'){
-                document.getElementById('nexti3').style.display='None'
-                document.getElementById('next3').style.display='None'
+                document.getElementById('next_icon3').style.display='None'
+                document.getElementById('next_text3').style.display='None'
             }
+            //if (q2choice='3-4 months'){
+                //document.getElementById('dose3').style.display='None'
+                //document.getElementById('dose4').style.display='None'
+            //}
         }
         function q3() {
             q3choice=$('input:radio[name="Q3"]:checked').val()
+            //finish, no q4 q5
             if (q2choice == '0-2 months'){
                 document.getElementById('submit').style.display='block'
+                document.getElementById("next_icon3").style.display = 'None'
+                document.getElementById("next_text3").style.display = 'None'
             }
-            else if (q3choice == 'Yes') {
+            //jump to q4
+            else if (q3choice == 'Yes' ) {
                 document.getElementById('question3').style.display = 'None'
                 document.getElementById('question4').style.display = 'block'
                 document.getElementById('block4').style.display='block';
                 document.getElementById('block3').style.display='None';
+                //no q5, disappear the next4 icon
+                if (q1choice != 'Yes' || q2choice != '1-5 years'){
+                    document.getElementById("next_icon4").style.display = 'None'
+                    document.getElementById("next_text4").style.display = 'None'
+                }
             }
             else{
+                //jump to q5, no q4
                if(q1choice == 'Yes' && q2choice == '1-5 years') {
                    document.getElementById('question3').style.display = 'None'
                    document.getElementById('question5').style.display = 'block'
@@ -287,8 +365,8 @@
                }
                 else {
                     document.getElementById('submit').style.display='block'
-                    document.getElementById('next3').style.display='None';
-                    document.getElementById('nexti3').style.display='None';
+                    document.getElementById('next_icon3').style.display='None';
+                    document.getElementById('next_text3').style.display='None';
                 }
             }
 
@@ -313,45 +391,78 @@
         }
 
         var compare_str = ''
-        var recommendation_list = '{{ recommendation|safe }}';
+        var recommendation_list = '{{ recommendation_new|safe }}';
         var obj =JSON.parse(recommendation_list);
-
         function submit(){
-            compare_str = q1choice + ', ' + q2choice + ', ' + q3choice
+
+            if (q1choice == ''){
+                alert('you do not finish q1')
+            }else if(q2choice == ''){
+                alert('you do not finish q2')
+            }else if(q3choice == ''){
+                alert('you do not finish q3')
+            }else if (q1choice != '' && q2choice != ''&& q3choice != ''){
+                compare_str = q1choice + ', ' + q2choice + ', ' + q3choice
                             + ', ' + q4choice + ', ' + q5choice
+                document.getElementById('schedule_part').style.display = 'block'
+                document.getElementById('submit recommendation3').innerText = compare_str
+                for (i = 0; i <obj.list.length; i++){
+                    if (obj.list[i].choice == compare_str){
+                        document.getElementById('recommendation_13').innerText = obj.list[i].prevenar_13_detail_plan
+                        document.getElementById('recommendation_23').innerText = obj.list[i].pneumovax_23_detail_plan
+                        document.getElementById('submit recommendation1').innerText = "13 total" + obj.list[i].prevenar_13_total_dose
+                        document.getElementById('submit recommendation2').innerText = "13 remain" + obj.list[i].prevenar_13_remaining_dose
+                        var id_name = ""
+                       if (obj.list[i].prevenar_13_total_dose == 3){
+                            document.getElementById("13_dose4").className = 'red_icon';
 
-            for (i = 0; i <obj.list.length; i++){
-                if (obj.list[i].choice == compare_str){
-                    document.getElementById('submit recommendation').innerText = obj.list[i].recommendation
+                            for (var j = 0; j < 4 - obj.list[j].prevenar_13_remaining_dose; j++){
+                                id_name = "13_dose" + j
+                                document.getElementById(id_name).className = 'green_icon';
+                            }
+                        }else{
+                             for (var k=1; k < 5 - obj.list[i].prevenar_13_remaining_dose; k++){
+                                id_name = "13_dose" + k
+                                document.getElementById(id_name).className = 'green_icon';
+                            }
+                        }
+                        if (obj.list[i].pneumovax_23_remaining_dose == 0){
+                            document.getElementById("23_dose1").className = 'red_icon';
+                            document.getElementById("23_dose2").className = 'red_icon';
+                        }else{
+                            for (var a=1; a < 3 - obj.list[i].pneumovax_23_remaining_dose; a++){
+                                id_name = "23_dose" + k
+                                document.getElementById(id_name).className = 'green_icon';
+                            }
+                        }
+                    }
                 }
+                document.getElementById('recom').style.display = 'block';
             }
-        document.getElementById('recom').style.display = 'block';
         }
-    </script>
 
-    <script>
-       function icon1() {
+        function q1_left() {
            document.getElementById('question1').style.display = 'None';
            document.getElementById('question2').style.display = 'block';
            document.getElementById('block1').style.display = 'None';
            document.getElementById('block2').style.display = 'block';
-       }
+        }
 
-       function icon2(){
+        function q2_left(){
            document.getElementById('question1').style.display='block';
            document.getElementById('question2').style.display='None';
            document.getElementById('block1').style.display='block';
            document.getElementById('block2').style.display='None';
         }
 
-        function  icon3(){
+        function  q2_right(){
            document.getElementById('question3').style.display='block';
            document.getElementById('question2').style.display='None';
            document.getElementById('block3').style.display='block';
            document.getElementById('block2').style.display='None';
         }
 
-        function icon4(){
+        function q3_left(){
            document.getElementById('question2').style.display='block';
            document.getElementById('question3').style.display='None';
            document.getElementById('block2').style.display='block';
@@ -359,7 +470,7 @@
            document.getElementById('submit').style.display='None'
         }
 
-       function icon5(){
+        function q3_right(){
            q3choice=$('input:radio[name="Q3"]:checked').val()
             if (q3choice == 'Yes') {
                 document.getElementById('question3').style.display = 'None'
@@ -380,7 +491,7 @@
             }
         }
 
-        function icon6() {
+        function q4_left() {
             document.getElementById('question4').style.display = 'None'
             document.getElementById('question3').style.display = 'block'
             document.getElementById('block4').style.display = 'None'
@@ -388,22 +499,20 @@
             document.getElementById('submit').style.display = 'None'
         }
 
-        function icon7() {
+        function q4_right() {
             q4choice = document.getElementById('que4').value
             if (q1choice == 'Yes' && q2choice == '1-5 years') {
                 document.getElementById('question4').style.display = 'None'
                 document.getElementById('question5').style.display = 'block'
                 document.getElementById('block5').style.display = 'block'
                 document.getElementById('block4').style.display = 'None'
-                document.getElementById('submit').style.display = 'block'
 
             } else if (q1choice != 'Yes' || q2choice != '1-5 years') {
                 document.getElementById('submit').style.display = 'block'
             }
         }
 
-       function icon8() {
-
+        function q5_left() {
            if (q2choice != '0-2 months' && q3choice == 'Yes') {
                document.getElementById('question5').style.display = 'None'
                document.getElementById('question4').style.display = 'block'
@@ -418,90 +527,16 @@
                document.getElementById('block3').style.display = 'block'
                document.getElementById('submit').style.display = 'None'
            }
-       }
+        }
 
-       function dispear(){
-           document.getElementById('previous3').style.display='None';
-           document.getElementById('previousi3').style.display='None';
-           document.getElementById('previous4').style.display='None';
-           document.getElementById('previousi4').style.display='None';
-           document.getElementById('previous5').style.display='None';
-           document.getElementById('previousi5').style.display='None';
-           document.getElementById('next3').style.display='None';
-           document.getElementById('nexti3').style.display='None';
-           document.getElementById('next4').style.display='None';
-           document.getElementById('nexti4').style.display='None';
-       }
+        function dispear(){
+           document.getElementById('next_icon3').style.display='None';
+           document.getElementById('next_text3').style.display='None';
+           document.getElementById('next_icon4').style.display='None';
+           document.getElementById('next_text4').style.display='None';
+        }
     </script>
 
-    <style>
-        .search-btn{
-                    height: 50px;width: 150px;background: #71cd29;background-size: auto;
-                    border: none;color: #ececf6;border-radius: 5px;display:inline;
 
-         }
-        .search-btn:hover {
-                                background-color: #c82333; /* Green */
-                                color: white;
-                            }
-        .hide {
-                display: none;
-              }
 
-        .myDIV:hover + .hide {
-                                display: block;
-                                color: red;
-                             }
-
-        .icons:hover {
-                    opacity: .5;
-                    background-color: #c82333;
-                 }
-
-        .arrow {
-          border: solid black;
-          border-width: 0 3px 3px 0;
-          display: inline-block;
-          padding: 36px;
-        }
-
-        .right {
-          transform: rotate(-45deg);
-          -webkit-transform: rotate(-45deg);
-        }
-
-        .left {
-          transform: rotate(135deg);
-          -webkit-transform: rotate(135deg);
-        }
-
-        .up {
-          transform: rotate(-135deg);
-          -webkit-transform: rotate(-135deg);
-        }
-
-        .down {
-          transform: rotate(45deg);
-          -webkit-transform: rotate(45deg);
-        }
-
-        .triangle-right {
-            width: 0;
-            height: 0;
-            border-top: 50px solid transparent;
-            border-left: 100px solid #34ce57;
-            border-bottom: 50px solid transparent;
-        }
-        .triangle-left {
-            width: 0;
-            height: 0;
-            border-top: 50px solid transparent;
-            border-right: 100px solid #34ce57;
-            border-bottom: 50px solid transparent;
-        }
-
-        .zoom:hover {
-          transform: scale(1.5);
-        }
-    </style>
 {% endblock %}

@@ -20,8 +20,8 @@
     <li><a href="{% url 'About' %}">About</a></li>
     <li ><a href="{% url 'Read More' %}">More Information</a></li>
     <li><a href="{% url 'Quiz List' %}">Pneumonia Quiz</a></li>
+    <li><a href="{% url 'Prevention' %}">Prevention</a></li>
     <li class="active"><a href="{% url 'Search' %}">Clinic Search</a></li>
-    <li><a href="{% url 'Vaccine' %}">Vaccine</a></li>
 {% endblock %}
 
 {% block mainbody %}
@@ -72,7 +72,7 @@
                                             <p><font color="2E8B57" style="font-weight: bold">Type : </font>{{ hospital.clinic_type }} </p><br>
                                             <p><font color="2E8B57" style="font-weight: bold">Rate : </font>{{ hospital.rating }}</p><br>
                                             <p><font color="2E8B57" style="font-weight: bold">Phone : </font>{{ hospital.phone }}</p><br>
-                                            <p><font color="2E8B57" style="font-weight: bold">Website : </font>{{ hospital.website }}</p>
+                                            <p><font color="2E8B57" style="font-weight: bold">Website : </font><a href="{{ hospital.website }}">{{ hospital.website }}</a></p>
                                         </div>
                                      </div>
                                    </div>
@@ -89,9 +89,12 @@
                             <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css"/>
 
                             <div id="map"></div>
+
                             <script>
-                                var new_lat = {{ hospital.latitude }}
-                                var new_long = {{ hospital.longitude }}
+                                var hospitalName = '{{ hospital.clinic_name }}';
+                                var new_lat = {{ hospital.latitude }};
+                                var new_long = {{ hospital.longitude }};
+
                                 mapboxgl.accessToken = 'pk.eyJ1IjoidGVycnljYXJyeXUiLCJhIjoiY2syNXFvYmd4MDg2bjNidGw1YnlsbndhayJ9.TGdaiRtA3NWwce3jDYrR1g';
 
                                 var map = new mapboxgl.Map({
@@ -135,12 +138,8 @@
                                 'top-left'
                                 );
 
-                                //var hospitalName = {{ hospital.hospital_name }}
-
                                 //offset: the distance between marker and text
-                                var popup = new mapboxgl.Popup({ offset: 50 }).setText(
-                                'Hosipital Name'
-                                );
+                                var popup = new mapboxgl.Popup({ offset: 50 }).setText(hospitalName);
                                 var marker_hospital = new mapboxgl.Marker()
                                 .setLngLat([new_long,new_lat]).setPopup(popup)
                                 .addTo(map);

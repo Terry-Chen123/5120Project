@@ -4,8 +4,8 @@
     <li><a href="{% url 'About' %}">About</a></li>
     <li ><a href="{% url 'Read More' %}">More Information</a></li>
     <li><a href="{% url 'Quiz List' %}">Pneumonia Quiz</a></li>
+    <li><a href="{% url 'Prevention' %}">Prevention</a></li>
     <li class="active"><a href="{% url 'Search' %}">Clinic Search</a></li>
-    <li><a href="{% url 'Vaccine' %}">Vaccine</a></li>
 {% endblock %}
 {% block js %}
 
@@ -168,6 +168,7 @@
 		</div>
 	</section>
 	<!-- clinic section end -->
+
     <!-- clinic table -->
     <form action="search/searchresult" method="post">
         {% csrf_token %}
@@ -183,33 +184,25 @@
                 {% for l2 in result_divide %}
                     {% for hos in l2 %}
                         <tr>
-                            <td> {{ hos.clinic_name  }} </td>
-                            <td> {{ hos.address }} </td>
-                            <td> {{ hos.clinic_type }} </td>
-                            <td> {{ hos.rating}} </td>
-                            <td><input type="submit" name={{ hos.id }} value="FindLocation" style="outline: none"></td>
+                            <td id="clinic_name"> {{ hos.clinic_name  }} </td>
+                            <td id="clinic_add"> {{ hos.address }} </td>
+                            <td id="clinic_type"> {{ hos.clinic_type }} </td>
+                            <td id="clinic_rate"> {{ hos.rating}} </td>
+                            <td id="find_location"><input type="submit" name={{ hos.id }} value="FindLocation" style="outline: none"></td>
                          </tr>
                     {% endfor %}
                 {% endfor %}
             {% else %}
-                {% for hos in recommendhospital1 %}
+                {% for hos in recommendhospital %}
                      <tr>
-                        <td> {{ hos.clinic_name  }} </td>
-                        <td> {{ hos.address }} </td>
-                        <td> {{ hos.clinic_type }} </td>
-                        <td> {{ hos.rating}} </td>
-                         <td><input type="submit" name={{ hos.id }} value="FindLocation" style="outline: none"></td>
+                        <td id="clinic_name"> {{ hos.clinic_name }} </td>
+                        <td id="clinic_add"> {{ hos.address }} </td>
+                        <td id="clinic_type"> {{ hos.clinic_type }} </td>
+                        <td id="clinic_rate"> {{ hos.rating}} </td>
+                        <td id="find_location"><input type="submit" name={{ hos.id }} value="FindLocation" style="outline: none"></td>
                      </tr>
                 {% endfor %}
-                {% for hos in recommendhospital2 %}
-                     <tr>
-                         <td> {{ hos.clinic_name  }} </td>
-                        <td> {{ hos.address }} </td>
-                        <td> {{ hos.clinic_type }} </td>
-                        <td> {{ hos.rating}} </td>
-                         <td><input type="submit" name={{ hos.id }} value="FindLocation" style="outline: none"></td>
-                     </tr>
-                {% endfor %}
+
             {% endif %}
         </table>
     </form>

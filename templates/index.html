@@ -4,8 +4,8 @@
     <li ><a href="{% url 'About' %}">About</a></li>
     <li ><a href="{% url 'Read More' %}">More Information</a></li>
     <li><a href="{% url 'Quiz List' %}">Pneumonia Quiz</a></li>
+    <li><a href="{% url 'Prevention' %}">Prevention</a></li>
     <li><a href="{% url 'Search' %}">Clinic Search</a></li>
-    <li><a href="{% url 'Vaccine' %}">Vaccine</a></li>
 {% endblock %}
 
 {% block mainbody %}
@@ -17,10 +17,9 @@
             <div class="container">
                <div class="row">
                   <div class="col-xl-7">
-                     <h3 style="white-space: nowrap; font-weight: bold;font-size: 60px"><font color="#006400">Keep Your Children Safe</font></h3>
-                      <h3 style="white-space: nowrap; font-weight: bold;font-size: 60px"><font color="#006400">From Pneumonia</font></h3>
-                     <h4 style="white-space: nowrap"><font color="black">Do you know your children can get pneumonia?</font></h4>
-                     <p> <a href="{% url 'Read More' %}" class="site-btn">Read More</a> </p>
+                      <h3 style="white-space: nowrap; font-weight: bold;font-size: 60px"><font color="#006400">What is Pneumonia?</font></h3><br>
+                      <h4 style="white-space: nowrap"><font color="black">What Are Pneumonia Symptoms？</font></h4><br>
+                      <p><a href="{% url 'Read More' %}" class="site-btn">Learn More</a></p>
                   </div>
                </div>
             </div>
@@ -31,11 +30,10 @@
             <div class="container">
                <div class="row">
                   <div class="col-xl-7">
-                     <h3 style="white-space: nowrap; font-weight: bold; font-size: 60px"><font color="#006400">Get Your Children</font></h3>
-                      <h3 style="white-space: nowrap; font-weight: bold; font-size: 60px"><font color="#006400">Pneumonia Vaccinated</font></h3>
-                     <h4 style="white-space: nowrap"><font color="black">Do you know how important
-                        to get the pneumonia vaccine?</font></h4><br>
-                     <a href="{% url 'Read More' %}" class="site-btn">Read More</a>
+                      <h3 style="white-space: nowrap; font-weight: bold; font-size: 60px"><font color="#006400">Keep Your Children Safe</font></h3><br>
+                      <h4 style="white-space: nowrap"><font color="black">Do you know how
+                        to prevention the pneumonia?</font></h4><br>
+                      <a href="{% url 'Prevention' %}" class="site-btn">Learn More</a>
                   </div>
                </div>
             </div>
@@ -45,60 +43,60 @@
 	<!-- brief intro  end -->
 
     <!-- Services section -->
-	<div style="border-style: none;padding-top: 10px;padding-bottom: 10px;padding-left: 60px">
+	<div style="border-style: none;padding:15px">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-md-4">
                 <div class="flip-box">
-                    <div class="flip-box-inner">
+                    <div class="flip-box-inner" style="width: 450px">
                         <div class="flip-box-front" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../static/img/homepage/newquiz.jpg);background-size: cover">
                             <h3 style="font-weight: bolder;color: white;padding-top: 80px">Evaluation</h3>
-                            <!--<img src="{% static 'img/homepage/newquiz2.jpg'%}" style="height: 200px;width: 500px">-->
                         </div>
-                        <a href="{% url 'Quiz List' %}" >
-                            <div class="flip-box-back">
-                                <img src="{% static 'img/quiz.png'%}" alt="" style="width:60px">
-                                <h3 style="color: white;font-weight: bold">self-examination for the knowledge of pneumonia.</h3>
+                        <a href="{% url 'Quiz List' %}">
+                            <div class="flip-box-back" style="padding-top: 30px">
+                                <img src="{% static 'img/quiz.png'%}" alt="" style="width:40px">
+                                <h3 style="color: white;font-weight: bold">self-examination for the knowledge of pneumonia</h3>
                                 <br>
-                                <h3 style="color: white; font-size: 20px;padding-bottom: 10px">Click here to learn more.</h3>
+                                <h3 style="color: white; font-size: 20px;">Click here to learn more.</h3>
                             </div>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-md-4" >
                 <div class="flip-box">
-                    <div class="flip-box-inner">
+                    <div class="flip-box-inner" style="width: 450px">
+                        <div class="flip-box-front" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../static/img/homepage/vaccinationbab.jpg);background-size: cover">
+                            <h3 style="font-weight: bolder;color: white;padding-top: 80px">Pneumonia Prevention</h3>
+                        </div>
+                        <a href="{% url 'Prevention' %}" >
+                            <div class="flip-box-back" style="padding-top: 30px">
+                                <img src="{% static 'img/doctor.png'%}" alt="" style="width:40px">
+                                <h3 style="color: white;font-weight: bold">Learn about how to prevent Pneumonia</h3>
+                                <br>
+                                <h3 style="color: white; font-size: 20px; ">Click here to learn more.</h3>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            <div class="col-md-4">
+                <div class="flip-box">
+                    <div class="flip-box-inner" style="width: 450px">
                         <div class="flip-box-front" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../static/img/homepage/clinicnew.jpg);background-size: cover">
                             <h3 style="font-weight: bolder;color: white;padding-top: 80px">Clinic Search</h3>
                         </div>
                         <a href="{% url 'Search' %}" >
-                            <div class="flip-box-back">
-                                <img src="{% static 'img/hospital.png'%}" alt="" style="width:60px">
-                                <h3 style="color: white;font-weight: bold">Search clinics within a given location.</h3>
+                            <div class="flip-box-back" style="padding-top: 30px">
+                                <img src="{% static 'img/hospital.png'%}" alt="" style="width:50px">
+                                <h3 style="color: white;font-weight: bold">Search clinics within a given location</h3>
                                 <br>
-                                <h3 style="color: white; font-size: 20px;padding-bottom: 10px">Click here to learn more.</h3>
+                                <h3 style="color: white; font-size: 20px;">Click here to learn more.</h3>
                             </div>
                         </a>
                         </div>
                     </div>
                 </div>
-            <div class="col-lg-4">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../static/img/homepage/vaccinationbab.jpg);background-size: cover">
-                            <h3 style="font-weight: bolder;color: white;padding-top: 80px">Vaccine Schedule</h3>
-                        </div>
-                        <a href="{% url 'Vaccine' %}" >
-                            <div class="flip-box-back">
-                                <img src="{% static 'img/doctor.png'%}" alt="" style="width:60px">
-                                <h3 style="color: white;font-weight: bold">Check the vaccine and make your schedule.</h3>
-                                <br>
-                                <h3 style="color: white; font-size: 20px;padding-bottom: 10px">Click here to learn more.</h3>
-                            </div>
-                        </a>
-                        </div>
-                    </div>
-                </div>
+
         </div>
     </div>
 	<!-- Services section end -->
@@ -108,7 +106,7 @@
       <div class="container">
          <div class="row">
             <div class="col-md-3 col-sm-6 fact">
-               <img src="{% static 'img/about/baby.png' %}" alt="" style="width:50px;height: 50px">
+               <img src="{% static 'img/about/baby.png' %}" alt="" style="width:40px;height: 50px">
                     <br><br>
                <h2>0.008% </h2>
                <p>Children's Pneumonia</p>

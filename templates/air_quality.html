@@ -1,0 +1,288 @@
+{% extends 'base.html' %}
+{% block navigation %}
+    <li><a href="{% url 'Home' %}">Home</a></li>
+    <li ><a href="{% url 'About' %}">About</a></li>
+    <li ><a href="{% url 'Read More' %}">More Information</a></li>
+    <li><a href="{% url 'Quiz List' %}">Pneumonia Quiz</a></li>
+    <li class="active"><a href="{% url 'Prevention' %}">Prevention</a></li>
+    <li><a href="{% url 'Search' %}">Clinic Search</a></li>
+
+{% endblock %}
+{% block mainbody %}
+    {% load static %}
+
+    <div  style="border-style: none;height: 300px;background-color: #1c7430">
+    <h1 style="font-weight: bolder;color: white;text-align: center;font-size: 60px">Air Quality</h1>
+    <p style="font-size: 30px;color: white;text-align: center;padding-left: 30px;padding-right: 30px">Avoid exposing your child to tobacco smoke or other irritants in the air. Check out the air quality of your region.
+    </p>
+</div>
+
+    <div class="ui form" style="padding-top: 30px">
+    <div class="two fields">
+        <div class="field info" style="text-align: center">
+            <div class="ui segment" style="border-style: solid;border-color: #1c7430;border-width: 10px;margin:30px">
+                <h1 style="font-weight: bolder">Search AQI:</h1>
+
+                <input id='input-station' placeholder="Melbourne"style="width: 400px;height: 50px;border-width: 3px;border-style: solid;border-color:black">
+                <br><br>
+                You can search by the location name, for instance enter <code>Melbourne</code>.<b
+                <div id='result-search' style='min-height: 300px'></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="HandWash" class="w3-container method">
+        <div style="border-style: solid;border-width: 10px;border-color: #1c7430;margin: 30px">
+        <p style="text-align: center;font-size: 50px;color: #13B51E;font-weight: bold">Air Quality</p>
+    <div class="row">
+        <div class="col-lg-6">
+            <video width="680" height="400px" controls style="margin-right: 20px">
+                <source src="../static/video/airquality.mp4">
+            </video>
+        </div>
+        <div class="col-lg-6">
+            <div style="border-style: solid;padding: 10px;border-color: #71cd29;background-color: #71cd29;height: 400px">
+                <h2 style="text-align: center;font-weight: bolder;font-style: italic">Air Quality</h2>
+                <p style="font-size: 29px;color: black;font-style: italic">
+                    Pneumonia is spread by infected people who carry the germs in fluid droplets in their throats,
+                    noses or mouths. The infected person coughs the germs into the air.
+
+                </p>
+            </div>
+        </div>
+    </div><br>
+    <div class="personal-mybuluo-head">
+        <div class="personal-mybuluo-wording" style="font-weight: bolder;color: green;font-size: 30px">Air Quality</div>
+        <div class="personal-border jmu-border-1px border-bottom"></div>
+    </div>
+        <br>
+    <div style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../static/img/prevention/airquality/airqualitygreen.jpg);background-size: cover">
+    <div style="margin-left: 50px">
+        <p style="font-size: 20px;color: white;font-weight: bold;padding-top: 30px">
+            Exposure to air pollution has many substantial adverse effects on human health. Globally,
+            seven million deaths were attributable to the joint effects of household and ambient air pollution.
+            Patients with pneumonia disease are especially vulnerable to the detrimental effects of air pollutants.
+            Air pollution can induce the acute exacerbation of pneumonia, increase the respiratory morbidity and
+            mortality. The health effects of air pollution depend on the components and sources of pollutants,
+            which varied with countries, seasons, and times. Combustion of solid fuels is a major source of
+            air pollutants in developing countries. To reduce the detrimental effects of air pollution, people
+            especially those with pneumonia or asthma should be aware of the air quality and take extra measures like below.
+        </p>
+    </div>
+    <div class="row" style="margin-top: 20px;margin-bottom: 20px">
+        <div class="col-lg-6" style="padding-left:50px;padding-top: 50px;color: white;font-weight: bold;line-height: 1px">
+            <p style="font-weight: bold;font-size: 15px;color: white">• Reducing the time outdoor</p><br/>
+            <p style="font-weight: bold;font-size: 15px;color: white">• Wearing masks when necessary</p><br/>
+            <p style="font-weight: bold;font-size: 15px;color: white">• Avoid exposing your child to tobacco smoke or other irritants in the air</p><br/>
+            <p style="font-weight: bold;font-size: 15px;color: white">• Do not use wood or dung to cook or heat in your home, it will cause indoor air pollution</p><br/>
+            <p style="font-weight: bold;font-size: 15px;color: white">• Keeping away from crowded area</p>
+        </div>
+        <div class="col-lg-6" style="padding-top: 50px;padding-left:50px;line-height: 1px">
+            <p style="font-weight: bolder;font-size: 18px;color: white">  For reducing the air pollutants indoor, people should:</p><br/>
+            <p style="font-weight: bold;font-size: 15px;color: white">• Using clean fuels</p><br/>
+            <p style="font-weight: bold;font-size: 15px;color: white">• Improving the stoves so as to burn fuel more efficiently</p><br/>
+            <p style="font-weight: bold;font-size: 15px;color: white">• Venting emissions to the outside</p><br/>
+            <p style="font-weight: bold;font-size: 15px;color: white">• Air cleaners that can improve the air quality efficiently are recommended.</p>
+        </div>
+    </div>
+    </div>
+        <br>
+    <div class="personal-mybuluo-head">
+        <div class="personal-mybuluo-wording" style="font-weight: bolder;color: green;font-size: 30px">Pollutants</div>
+        <div class="personal-border jmu-border-1px border-bottom"></div>
+    </div>
+        <br>
+    <div class="row" style="padding-top: 20px">
+        <div class="col-lg-6">
+            <p style="padding-left: 150px;font-size: 30px;color: black;font-weight: bold">Outdoor Pollutants</p>
+            <p style="color: black;font-size: 20px;padding-top: 10px;padding-left: 100px;line-height: 50px;font-weight: bold">
+            <p style="color: black;padding-left: 10px;font-size: 28px">The major pollutants in outdoor air are:</p><br/>
+            <div style="line-height: 1px">
+                <p style="color: black;padding-left: 10px">• Particulate Matter (PM)</p><br/>
+                <p style="color: black;padding-left: 10px">• Ozone (O3)</p><br/>
+                <p style="color: black;padding-left: 10px">• Sulfur Dioxide (SO2)</p><br/>
+                <p style="color: black;padding-left: 10px">• Nitrogen Dioxide (NO2)</p><br/>
+                <p style="color: black;padding-left: 10px">• Carbon Monoxide (CO)</p><br/>
+                <p style="color: black;padding-left: 10px">• Lead (Pb)</p><br/>
+            </div>
+            <br>
+                <p style="color: black;;padding-left: 10px">
+                    The pollutants in the ambient air can be divided into primary and secondary types (23).
+                    To offer guidance in reducing the impacts of air pollution on human health, WHO air quality groups (AQGs)
+                    released the air quality guidelines in which four pollutants namely PM, O3, NO2, and SO2 were listed as
+                    the indices of air pollution (23).
+                </p>
+                </p>
+        </div>
+        <div class="col-lg-6" >
+            <p style="padding-left: 150px; padding-right: 10px;font-size: 30px;color: black;font-weight: bold">Indoor Pollutants</p>
+            <p style="color: black">
+                The indoor pollutants are different from that in the ambient air although most of them are the same.
+                Nevertheless, indoor air contains all the same pollutants as in the outdoor air, but the concentrations
+                are different, usually lower. Besides the same pollutants in outdoor air, there are some other components
+                in indoor air which come from inside the building. The major sources include combustion of solid fuels
+                indoors, tobacco smoking, emissions from construction materials and furnishings, and poor ventilation (Table 1)
+            </p>
+            <img src="/static/img/prevention/airquality/indoor.png" height="550px" style="padding-bottom: 20px">
+        </div>
+    </div>
+</div>
+    </div>
+
+
+<!--
+<link rel="stylesheet" href="../static/aqi/semantic.min.css" />
+-->
+    <script src='../static/aqi/jquery-1.7.1.min.js'></script>
+    <script src='../static/aqi/waqi-api-demo.js'></script>
+    <script>init("#input-token","#input-station","#result-search")</script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="//unpkg.com/leaflet-gesture-handling/dist/leaflet-gesture-handling.min.css" type="text/css">
+    <script src="//unpkg.com/leaflet-gesture-handling"></script>
+    <script src='../static/aqi/waqi-map-demo.js'></script>
+    <link rel="stylesheet" href="../static/aqi/tomorrow.min.css">
+    <script src="../static/aqi/highlight.min.js"></script>
+    <script src="../static/aqi/highlightjs-line-numbers.min.js"></script>
+
+    <script>
+    function getCookie(cname) {
+      var name = cname + "=";
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var ca = decodedCookie.split(';');
+      for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+
+    document.getElementById("input-token").oninput = ()=>{
+        document.cookie = "token="+'7738c648d0b182560761a45befc6f0a2947006bc';
+    }
+    if (getCookie("token")) {
+        document.getElementById("input-token").value = getCookie("token");
+    }
+</script>
+    <style>
+    /* for block of numbers */
+    .hljs-ln-numbers {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        text-align: center;
+        color: #ccc;
+        border-right: 1px solid #eee;
+        width:32px;
+        vertical-align: top;
+    }
+
+    .hljs-ln-code {
+        margin-left: 10px;
+    }
+</style>
+    <script>
+    try {
+        fetch("../static/aqi/waqi-api-demo.js").then(function(r){return r.text()}).then(function(code){
+            document.getElementById("code-api-listing").innerHTML = code.replace(/</g,"&lt;");
+            hljs.initHighlightingOnLoad();
+            hljs.initLineNumbersOnLoad();
+        })
+    } catch (e) { }
+
+
+    try {
+        fetch("../static/aqi/waqi-map-demo.js").then(function(r){return r.text()}).then(function(code){
+            document.getElementById("code-map-listing").innerHTML = code.replace(/</g,"&lt;");
+            hljs.initHighlightingOnLoad();
+            hljs.initLineNumbersOnLoad();
+        })
+    } catch (e) { }
+</script>
+    <style>
+    html {
+        margin: 10px;
+    }
+    table.result {
+        width: 100%;
+        border: 1px solid black;
+        cursor: pointer;
+    }
+    table.result td:nth-child(n+2) {
+        text-align: center;
+    }
+    table.result tr:hover {
+        background-color: yellow;
+    }
+    h2 {
+        margin-bottom: 0;
+    }
+
+    /* CSS Spinner-  https://github.com/webkul/csspin */
+    .cp-spinner{width:48px;height:48px;display:inline-block;box-sizing:border-box;position:relative}.cp-meter{border-radius:50%;border-top:solid 6px #0fd6ff;border-right:solid 6px #0fd6ff;border-bottom:solid 6px #0fd6ff;border-left:solid 6px #0fd6ff;width:48px;height:48px;display:inline-block;box-sizing:border-box}.cp-meter:before{border-radius:3px;content:" ";width:6px;height:12px;display:inline-block;box-sizing:border-box;background-color:#0fd6ff;position:absolute;top:5px;left:16px;transform-origin:center bottom;animation:cp-meter-animate-before 1s linear infinite}@keyframes cp-meter-animate-before{0%{transform:rotate(-45deg)}100%{transform:rotate(315deg)}}
+</style>
+    <style type="text/css">
+    .personal-mybuluo-head {
+        height: 14px;
+        position: relative;
+    }
+    .personal-mybuluo-wording {
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        left: 50%;
+        background-color: #fff;
+        color: #777;
+        text-align: center;
+        -webkit-transform: translate(-50%,0);
+        transform: translate(-50%,0);
+        padding: 0 10px;
+    }
+    .personal-border {
+        position: absolute;
+        top: -7px;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        z-index: 1;
+    }
+    .jmu-border-1px {
+        position: relative;
+    }
+    .jmu-border-1px.border-bottom:after {
+        border-bottom: 3px solid green;
+    }
+
+    .jmu-border-1px:after {
+        right: -100%;
+        bottom: -100%;
+        -webkit-transform: scale(0.5);
+    }
+    .jmu-border-1px:after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        -webkit-transform-origin: 0 0;
+        -webkit-transform: scale(1);
+        pointer-events: none;
+    }
+</style>
+
+{% endblock %}

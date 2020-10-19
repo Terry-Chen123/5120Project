@@ -1,0 +1,157 @@
+.search-btn{
+            height: 50px;width: 150px;background: #71cd29;background-size: auto;
+            border: none;color: #ececf6;border-radius: 5px;display:inline;
+
+ }
+.search-btn:hover {
+                        background-color: #c82333; /* Green */
+                        color: white;
+                    }
+
+
+.myDIV:hover + .hide {
+                        display: block;
+                        color: red;
+                     }
+
+.triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-left: 100px solid #34ce57;
+    border-bottom: 50px solid transparent;
+}
+.triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-right: 100px solid #34ce57;
+    border-bottom: 50px solid transparent;
+}
+
+.zoom:hover {
+  transform: scale(1.5);
+}
+
+
+div.icon_class{
+    style:"padding-top: 30px;padding-bottom: 30px;"
+}
+.schedule_head { grid-area: header; }
+.hint { grid-area: menu; }
+.hint_content { grid-area: footer; }
+.vaccine_type { grid-area: content1}
+.vaccine_13 { grid-area: content6}
+.vaccine_23 { grid-area: content11}
+.recommendation_content { grid-area: content16}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'content1 content1 content2 content3 content4 content5'
+    'content6 content6 content7 content8 content9 content10'
+    'content11 content11 content12 content13 content14 content15'
+    'content16 content16 content16 content16 content16 content16'
+    'menu footer footer footer footer footer';
+  grid-gap: 1px;
+  background-color: lightgreen;
+  padding: 1px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+
+.green_icon {
+    width:40px;
+    height:40px;
+    border-radius:40px ;
+    background:green;
+    display:block;
+    position: relative;
+}
+.green_icon:before, .green_icon::after {
+    content:"";
+    height:28px;
+    width:6px;
+    border-radius: 10px;
+    display:block;
+    background:white;
+    position: absolute;
+    top:6px;/*40-6=34*/
+    left:20px;/*make the two rects in the middle of the cycle */
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+}
+.green_icon::before {
+    height:15px;
+    transform: rotate(-45deg);
+    -ms-transform:rotate(-45deg);
+    position: absolute;
+    top:18px;/*40-18=12  */
+    left:8px;
+}
+
+.yellow_icon {
+    width:40px;
+    height:40px;
+    border-radius:40px ;
+    background:#c69500;
+    display:block;
+    position: relative;
+}
+.yellow_icon:before, .yellow_icon::after {
+    content:"";
+    height:28px;
+    width:6px;
+    border-radius: 10px;
+    display:block;
+    background:white;
+    position: absolute;
+    top:6px;/*40-6=34*/
+    left:20px;/*make the two rects in the middle of the cycle */
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+}
+.yellow_icon::before {
+    height:15px;
+    transform: rotate(-45deg);
+    -ms-transform:rotate(-45deg);
+    position: absolute;
+    top:18px;/*40-18=12  */
+    left:8px;
+}
+
+.red_icon {
+    width:40px;
+    height:40px;
+    border-radius:40px ;
+    background:lightskyblue;
+    display:block;
+    position: relative;
+}
+.red_icon:before, .red_icon::after {
+    content:"";
+    height:28px;
+    width:6px;
+    border-radius: 10px;
+    display:block;
+    background:white;
+    position: absolute;
+    top:6px;/*40-6=34*/
+    left:17px;/*make the two rects in the middle of the cycle */
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+}
+.red_icon::before {
+    height:28px;
+    transform: rotate(-45deg);
+    -ms-transform:rotate(-45deg);
+    position: absolute;
+    top:6px;/*40-18=12  */
+    left:17px;
+}
