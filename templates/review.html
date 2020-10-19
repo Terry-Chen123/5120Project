@@ -115,7 +115,13 @@
                     </div>
                     <br>
                     <br>
-                    <a href="{% url 'Read More' %}" class="site-btn mt-4">Review the Knowledge</a>
+                    {% if quiz_num == 1 %}
+                         <a href="{% url 'Read More' %}" class="site-btn mt-4">Review the Knowledge</a>
+                    {% elif quiz_num == 2 %}
+                         <a href="{% url 'Read More' %}" class="site-btn mt-4">Review the Knowledge</a>
+                    {% else %}
+                         <a href="{% url 'Read More' %}" class="site-btn mt-4">Review the Knowledge</a>
+                    {% endif %}
                     <a href="{% url 'Quiz List' %}" class="site-btn mt-4" style="margin-left: 20px;margin-right: 20px">Do Quiz Again</a>
                     <a href="{% url 'Home' %}" class="site-btn mt-4">Back to Home</a>
                     <br><br>

@@ -65,13 +65,16 @@ def getUserChoice(request):
 
     #dic for Questions and User Answers
     question_dic = {}
+    quiz_num = 1
     if request.POST:
         if 'A' in request.POST:
             question = question_list[0:5]
         elif 'B' in request.POST:
             question = question_list[5:10]
+            quiz_num = 2
         elif 'C' in request.POST:
             question = question_list[10:15]
+            quiz_num = 3
         for i in range(5):
             userChoice = request.POST.get(str(question[i].id))
             if userChoice == None:
@@ -84,7 +87,9 @@ def getUserChoice(request):
                 'question_dic':question_dic,
                 'grade':grade,
                 'score':score,
-                'suggestion':suggestion}
+                'suggestion':suggestion,
+                 'quiz_num':quiz_num}
+
     return render(request, '../templates/review.html', context)
 
 def getScore(Q_list, Ans_list):
