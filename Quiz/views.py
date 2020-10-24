@@ -3,6 +3,8 @@ django.setup()
 from Quiz.models import Question,Category
 from django.shortcuts import render
 
+def password(request):
+    return render(request, "../templates/password.html")
 
 def home(request):
     return render(request, "../templates/index.html")

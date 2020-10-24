@@ -155,3 +155,11 @@ div.icon_class{
     top:6px;/*40-18=12  */
     left:17px;
 }
+.details{
+    color:green;
+    display: none;
+}
+.details:hover{
+    display: block;
+}
+

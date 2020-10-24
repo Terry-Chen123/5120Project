@@ -25,9 +25,10 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name = 'Home'),
-    path('about/', views.about, name = 'About'),
-    path('readmore/',views.readMore, name = 'Read More'),
+    path('',views.password, name = 'Login'),
+    path('home', views.home, name = 'Home'),
+    path('about', views.about, name = 'About'),
+    path('readmore',views.readMore, name = 'Read More'),
     path('quizlist/quizstart',views.evaluation, name = 'Evaluation'),
     path('quizlist/getuserchoice', views.getUserChoice, name = 'Review1'),
     path('quizlist/quizintro', views.quizIntro, name='Quiz Intro'),
