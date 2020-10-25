@@ -15,7 +15,6 @@ def vaccine(request):
     context = {"recommendation_new": json.dumps(dic_new)}
     return render(request, '../templates/vaccine.html', context)
 
-
 def prevention(request):
     return render(request, '../templates/prevention.html')
 

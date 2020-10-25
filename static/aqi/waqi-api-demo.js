@@ -72,7 +72,10 @@ function showStation(station, output) {
       output.html("<h2>Pollutants & Weather conditions:</h2>");
       if (!result || result.status != "ok") {
         output.append("Sorry, something wrong happend: ");
-        if (result.data) output.append($("<code>").html(result.data));
+        if (result.data)
+            for (var i = 0; i < 10; i ++) {
+                output.append($("<code>").html(result.data));
+            }
         return;
       }
 
@@ -97,17 +100,19 @@ function showStation(station, output) {
         )
       );
 
-
-
       var table = $("<table/>").addClass("result");
       output.append(table);
 
       for (var specie in result.data.iaqi) {
         var aqi = result.data.iaqi[specie].v;
         var tr = $("<tr>");
-        tr.append($("<td>").html(names[specie] || specie));
-        tr.append($("<td>").html(colorize(aqi, specie)));
-        table.append(tr);
+        if (specie == 'pm25' || specie == 'pm10' || specie == 'no2' ||
+            specie == 'o3' || specie == 'so2' || specie == 'co'){
+            tr.append($("<td>").html(names[specie] || specie));
+            tr.append($("<td>").html(colorize(aqi, specie)));
+            table.append(tr);
+        }
+
       }
     }
   );

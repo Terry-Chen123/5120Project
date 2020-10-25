@@ -3,9 +3,7 @@ django.setup()
 from Search.models import Clinic
 from django.shortcuts import render
 from .otherFunction import searchArea, sortRating
-
-def test(request):
-    return render(request,'../templates/test.html')
+import json
 
 def searchClinic(request):
 
@@ -44,12 +42,22 @@ def searchClinic(request):
                 result_divide.append(temp)
     else:
         result = 'Search Error'
-    context = {'recommendhospital':sort_hospital[:5],
-                'search_result_num':search_result_num,
-                'search_result':search_result,
-                'result_remind':result_remind,
-                'result_divide':result_divide,
-                'choose':choose}
+
+    clinic_all = Clinic.objects.all().values()
+    l_new = []
+    dic_new = {}
+    for j in clinic_all:
+        l_new.append(j)
+    dic_new['list'] = l_new
+
+    context = {'recommendhospital': sort_hospital[:5],
+               'search_result_num': search_result_num,
+               'search_result': search_result,
+               'result_remind': result_remind,
+               'result_divide': result_divide,
+               'choose': choose,
+               }
+
     return render(request, "../templates/search.html",context)
 
 def searchResult(request):

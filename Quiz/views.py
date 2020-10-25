@@ -3,14 +3,6 @@ django.setup()
 from Quiz.models import Question,Category
 from django.shortcuts import render
 
-def password(request):
-    return render(request, "../templates/password.html")
-
-def home(request):
-    return render(request, "../templates/index.html")
-
-def about(request):
-    return render(request, "../templates/about.html")
 
 def readMore(request):
     return render(request,"../templates/read_more.html")
@@ -19,9 +11,11 @@ def quizCategory(request):
     categoryA = Category.objects.all()[0]
     categoryB = Category.objects.all()[1]
     categoryC = Category.objects.all()[2]
+
     context = {'categoryA':categoryA,
                 'categoryB':categoryB,
                 'categoryC':categoryC}
+
     return render(request,'../templates/quiz_category.html',context)
 
 def quizIntro(request):

@@ -16,30 +16,29 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path
-from Quiz import views
+from General_page import views as general_views
+from Quiz import views as quiz_views
 from Search import views as search_views
 from Vaccine import views as vaccine_views
-
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.password, name = 'Login'),
-    path('home', views.home, name = 'Home'),
-    path('about', views.about, name = 'About'),
-    path('readmore',views.readMore, name = 'Read More'),
-    path('quizlist/quizstart',views.evaluation, name = 'Evaluation'),
-    path('quizlist/getuserchoice', views.getUserChoice, name = 'Review1'),
-    path('quizlist/quizintro', views.quizIntro, name='Quiz Intro'),
-    path('quizlist/quizcategory', views.quizCategory, name='Quiz List'),
+    path('',general_views.password, name = 'Login'),
+    path('home', general_views.home, name = 'Home'),
+    path('about', general_views.about, name = 'About'),
+    path('readmore',quiz_views.readMore, name = 'Read More'),
+    path('quizlist/quizstart',quiz_views.evaluation, name = 'Evaluation'),
+    path('quizlist/getuserchoice', quiz_views.getUserChoice, name = 'Review1'),
+    path('quizlist/quizintro', quiz_views.quizIntro, name='Quiz Intro'),
+    path('quizlist/quizcategory', quiz_views.quizCategory, name='Quiz List'),
     path('search', search_views.searchClinic, name='Search'),
     path('search/searchresult', search_views.searchResult, name='Search Result'),
     path('vaccine', vaccine_views.vaccine, name='Vaccine'),
     path('prevention', vaccine_views.prevention, name = 'Prevention'),
     path('prevention/airquality', vaccine_views.airquality, name = 'Air Quality'),
     path('prevention/healthhabit', vaccine_views.health_habit, name = 'Health Habit'),
-    path('test',search_views.test,name='Test')
 
 ]
 urlpatterns += staticfiles_urlpatterns()
