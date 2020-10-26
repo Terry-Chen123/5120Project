@@ -39,7 +39,7 @@
             <div id="question1">
                 <p class="question" style="font-size: 30px;font-weight: bolder;color: black;text-align: center" >
                     Is your child born prematurely(less than 28 weeks of
-                    <a style="color:lightskyblue" data-tooltip="Tips: All preterm infants born less than 28 weeks gestation
+                    <a style="color:lightskyblue" data-tooltip="Tips:&nbsp;&nbsp; All preterm infants born less than 28 weeks gestation
                     are recommended to receive 4 doses of 13vPCV (13-valent pneumococcal conjugate vaccine) and 2 doses
                     of 23vPPV (23-valent pneumococcal polysaccharide vaccine).">gestation</a>)?
                 </p>
@@ -116,10 +116,10 @@
 
             <div id="question3" style="display: none">
                 <p style="font-size: 30px;font-weight: bolder;color: black;text-align: center">Has your child received
-                    <a style="color:lightskyblue" data-tooltip='Tips: Prevenar 13 is 13-valent
+                    <a style="color:lightskyblue" data-tooltip='Tips:&nbsp;&nbsp; Prevenar 13 is 13-valent
                     pneumococcal conjugate vaccine. Registered for use in children aged large than
                     6 weeks. The doses of 13vPCV should be given at 2, 4, 6 and 12 months of age,
-                     according to your child’s age to confirm the dose.)'>Prevenar 13</a> so far?</p>
+                     according to your child’s age to confirm the dose.'>Prevenar 13</a> so far?</p>
 
                 <div style="font-weight: bold;color: #34ce57;font-size: 20px;text-align: center">
                     <input type="radio" id="que3" name="Q3" value="Yes" onclick="q3()">
@@ -155,11 +155,11 @@
 
             <div id="question4" style="display: none">
                 <p style="font-size: 30px;font-weight: bolder;color: black;text-align: center">
-                    How many doses of <a style="color:lightskyblue" data-tooltip='Tips: Prevenar 13
+                    How many doses of <a style="color:lightskyblue" data-tooltip='Tips: &nbsp;&nbsp;Prevenar 13
                     is 13-valent pneumococcal conjugate vaccine. Registered
                     for use in children aged large than weeks. The doses of 13vPCV should
                      be given at 2, 4, 6 and 12 months of age, according to your child’s
-                     age to confirm the dose.)'>
+                     age to confirm the dose.'>
                     Prevenar 13</a>has your child received so far?
                 </p>
 
@@ -201,9 +201,9 @@
 
             <div id="question5" style="display: none">
                 <p style="font-size: 30px;font-weight: bolder;color: black;text-align: center">
-                    Has your child received <a style="color:lightskyblue" data-tooltip="Tips:
-                    Prevenar 23 is valent pneumococcal polysaccharide vaccine)
-                    Registered for use in children aged large than 24 weeks.)">Pneumovax 23 </a>
+                    Has your child received <a style="color:lightskyblue" data-tooltip="Tips:&nbsp;&nbsp;
+                    Prevenar 23 is valent pneumococcal polysaccharide vaccine.
+                    Registered for use in children aged large than 24 weeks.">Pneumovax 23 </a>
                     so far?
                 </p>
 
@@ -242,7 +242,9 @@
 
         <div style="padding-top: 30px; margin-left: 530px">
             <div style="text-align: center">
-                <a href="#schedule_part"><button type="submit" id="submit" class="search-btn" style="cursor: pointer;display: none" onclick="submit(),dispear()">Get Plan</button></a>
+                <a href="#schedule_part"><button type="submit" id="submit" class="search-btn" style="cursor: pointer;display: none" onclick="submit(),dispear()">
+                    Get Your Plan
+                </button></a>
             </div>
         </div>
         <!-- vaccine question end -->
@@ -327,12 +329,6 @@
             <a href="{% url "Search" %}"><button class="search-btn" style="margin-left: 30px;width: 200px">Go To Clinic Search</button></a>
         </div>
     </div>
-
-
-    <!--
-    <div id="submit recommendation1"></div>
-    <div id="submit recommendation2"></div>
-    <div id="submit recommendation3"></div>-->
 
     <script type="text/javascript">
         var q1choice = ''
@@ -566,36 +562,36 @@
 
     <style>
         [data-tooltip] {
-    position: relative;
-    z-index: 2;
-    cursor: help;
-    }
+            position: relative;
+            z-index: 2;
+            cursor: help;
+        }
         [data-tooltip]:before,
         [data-tooltip]:after {
-        visibility: hidden;
-        opacity: 0;
-        pointer-events: none;
-        display: inline-table;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            display: inline-table;
 
-    }
+        }
         [data-tooltip]:before {
-        content: attr(data-tooltip);
-        position: absolute;
-        width: 280px;
-        padding: 10px;
-        border-radius: 3px;
-        background-color: grey;
-        color: white;
-        text-align: center;
-        font-size: 12px;
-        top: 40px;
-    }
+            content: attr(data-tooltip);
+            position: absolute;
+            width: 300px;
+            padding: 10px;
+            border-radius: 3px;
+            background-color: grey;
+            color: white;
+            text-align: left;
+            font-size: 12px;
+            top: 40px;
+         }
         [data-tooltip]:hover:before,
         [data-tooltip]:hover:after {
-        visibility: visible;
-        opacity: 5;
-        top: 40px;
-    }
+            visibility: visible;
+            opacity: 5;
+            top: 40px;
+        }
     </style>
 
 {% endblock %}

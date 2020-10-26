@@ -930,14 +930,14 @@ ol {
 ---------------------*/
 
 .footer-top-section {
-  padding-top: 60px;
-  padding-bottom: 80px;
+  padding-top: 0px;
+  padding-bottom: 30px;
 }
 
 .footer-widget .fw-title {
   font-size: 18px;
   color: #fff;
-  margin-bottom: 45px;
+  margin-bottom: 25px;
   font-weight: 400;
   padding-top: 30px;
 }
