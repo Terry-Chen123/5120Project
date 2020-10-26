@@ -51,7 +51,7 @@
 	<header class="header-section">
 		<div class="container">
 			<!-- Site Logo -->
-			<a href="{% url 'Home' %}" class="site-logo">
+			<a id='logo' href="{% url 'Home' %}" class="site-logo">
 				<img src="{% static 'img/logonew.png'%}" style="margin-top: -5px" alt="">
 			</a>
              <!-- responsive -->
@@ -104,12 +104,20 @@
 	<!-- Footer section -->
 	<footer class="footer-section" style="background-color: #fdfdfe; " >
 		<div class="container" >
-			<div class="copyright" style="text-align: center">
-                Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                All rights reserved | This website is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by
-                <a style="color: green">TA02</a>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="copyright" style="font-weight: bold">
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                        All rights reserved | This website is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by
+                        <a style="color: green">TA02</a>
+                    </div>
+                </div>
+                <div class="col-lg-6" style="text-align: right; margin-right: -50px">
+                    <div id="backtotop"><a href="#logo" style="color: black;  ">Back To Top</a></div>
+                </div>
             </div>
         </div>
+
 	</footer>
 	<!-- Footer top section end -->
 
@@ -129,6 +137,10 @@
         .footer-widget .fw-about {
           padding-top: 30px;
         }
+        #backtotop. a:link {color:#000000;}      /* 未访问链接*/
+        #backtotop. a:visited {color:#00FF00;}  /* 已访问链接 */
+        #backtotop. a:hover {color:#FF00FF;}  /* 鼠标移动到链接上 */
+        #backtotop. a:active {color:#0000FF;}  /* 鼠标点击时 */
 
     </style>
 
