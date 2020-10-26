@@ -2,8 +2,8 @@
 {% block navigation %}
     <li><a href="{% url 'Home' %}">Home</a></li>
     <li ><a href="{% url 'About' %}">About</a></li>
-    <li ><a href="{% url 'Read More' %}">More Information</a></li>
-    <li><a href="{% url 'Quiz List' %}">Pneumonia Quiz</a></li>
+    <li ><a href="{% url 'Read More' %}">Learn Pneumonia</a></li>
+    <li><a href="{% url 'Quiz List' %}">Quiz</a></li>
     <li class="active"><a href="{% url 'Prevention' %}">Prevention</a></li>
     <li><a href="{% url 'Search' %}">Clinic Search</a></li>
 
@@ -17,20 +17,21 @@
         </p>
     </div>
 
+    <!--Search AQI -->
     <div class="ui form" style="padding-top: 30px">
         <div class="two fields">
-        <div class="field info" style="text-align: center">
-            <div class="ui segment" style="border-style: solid;border-color: #1c7430;border-width: 10px;margin:30px">
-                <h1 style="font-weight: bolder">Search AQI:</h1>
-
-                <input id='input-station' placeholder="Melbourne"style="width: 400px;height: 50px;border-width: 3px;border-style: solid;border-color:black">
-                <br><br>
-                You can search by the location name, for instance enter <code>Melbourne</code>.<b
-                <div id='result-search' style='min-height: 300px'></div>
+            <div class="field info" style="text-align: center">
+                <div class="ui segment" style="border-style: solid;border-color: #1c7430;border-width: 10px;margin:30px">
+                    <h1 style="font-weight: bolder">Search Air Index:</h1>
+                    <input id='input-station' placeholder="Melbourne"style="width: 400px;height: 50px;border-width: 3px;border-style: solid;border-color:black">
+                    <br><br>
+                    You can search by the location name, for instance enter <code>Melbourne</code>.<b
+                    <div id='result-search' style='min-height: 300px'></div>
+                </div>
             </div>
         </div>
     </div>
-    </div>
+    <!--Search AQI end -->
 
     <div id="HandWash" class="w3-container method">
         <div style="border-style: solid;border-width: 10px;border-color: #1c7430;margin: 30px">
@@ -125,7 +126,6 @@
     </div>
 
 
-
     <script src='../static/aqi/jquery-1.7.1.min.js'></script>
     <script src='../static/aqi/waqi-api-demo.js'></script>
     <script>init("#input-token","#input-station","#result-search")</script>
@@ -135,9 +135,6 @@
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
     crossorigin=""></script>
-    <link rel="stylesheet" href="//unpkg.com/leaflet-gesture-handling/dist/leaflet-gesture-handling.min.css" type="text/css">
-    <script src="//unpkg.com/leaflet-gesture-handling"></script>
-    <script src='../static/aqi/waqi-map-demo.js'></script>
     <link rel="stylesheet" href="../static/aqi/tomorrow.min.css">
     <script src="../static/aqi/highlight.min.js"></script>
     <script src="../static/aqi/highlightjs-line-numbers.min.js"></script>
@@ -177,85 +174,77 @@
         } catch (e) { }
 
 
-        try {
-            fetch("../static/aqi/waqi-map-demo.js").then(function(r){return r.text()}).then(function(code){
-                document.getElementById("code-map-listing").innerHTML = code.replace(/</g,"&lt;");
-                hljs.initHighlightingOnLoad();
-                hljs.initLineNumbersOnLoad();
-            })
-        } catch (e) { }
     </script>
 
     <style>
-    html {
-        margin: 10px;
-    }
-    table.result {
-        width: 100%;
-        border: 1px solid black;
-        cursor: pointer;
-    }
-    table.result td:nth-child(n+2) {
-        text-align: center;
-    }
-    table.result tr:hover {
-        background-color: yellow;
-    }
-    h2 {
-        margin-bottom: 0;
-    }
-
+        html {
+            margin: 10px;
+        }
+        table.result {
+            width: 100%;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        table.result td:nth-child(n+2) {
+            text-align: center;
+        }
+        table.result tr:hover {
+            background-color: yellow;
+        }
+        h2 {
+            margin-bottom: 0;
+        }
     </style>
 
     <style type="text/css">
-    .personal-mybuluo-head {
-        height: 14px;
-        position: relative;
-    }
-    .personal-mybuluo-wording {
-        position: absolute;
-        top: 0;
-        z-index: 2;
-        left: 50%;
-        background-color: #fff;
-        color: #777;
-        text-align: center;
-        -webkit-transform: translate(-50%,0);
-        transform: translate(-50%,0);
-        padding: 0 10px;
-    }
-    .personal-border {
-        position: absolute;
-        top: -7px;
-        left: 0;
-        width: 100%;
-        height: 30px;
-        z-index: 1;
-    }
-    .jmu-border-1px {
-        position: relative;
-    }
-    .jmu-border-1px.border-bottom:after {
-        border-bottom: 3px solid green;
-    }
+        .personal-mybuluo-head {
+            height: 14px;
+            position: relative;
+        }
+        .personal-mybuluo-wording {
+            position: absolute;
+            top: 0;
+            z-index: 2;
+            left: 50%;
+            background-color: #fff;
+            color: #777;
+            text-align: center;
+            -webkit-transform: translate(-50%,0);
+            transform: translate(-50%,0);
+            padding: 0 10px;
+        }
+        .personal-border {
+            position: absolute;
+            top: -7px;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            z-index: 1;
+        }
+        .jmu-border-1px {
+            position: relative;
+        }
+        .jmu-border-1px.border-bottom:after {
+            border-bottom: 3px solid green;
+        }
 
-    .jmu-border-1px:after {
-        right: -100%;
-        bottom: -100%;
-        -webkit-transform: scale(0.5);
-    }
-    .jmu-border-1px:after {
-        display: block;
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        -webkit-transform-origin: 0 0;
-        -webkit-transform: scale(1);
-        pointer-events: none;
-    }
+        .jmu-border-1px:after {
+            right: -100%;
+            bottom: -100%;
+            -webkit-transform: scale(0.5);
+        }
+        .jmu-border-1px:after {
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            -webkit-transform-origin: 0 0;
+            -webkit-transform: scale(1);
+            pointer-events: none;
+        }
     </style>
 
 {% endblock %}

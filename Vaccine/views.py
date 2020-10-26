@@ -5,14 +5,15 @@ from Vaccine.models import Vaccine_recommend
 import json
 
 def vaccine(request):
-    recommendation_new = Vaccine_recommend.objects.all().values()
-    l_new = []
-    dic_new = {}
-    for j in recommendation_new:
-        l_new.append(j)
-    dic_new['list'] = l_new
+    #get all recommendation from database
+    recommendation = Vaccine_recommend.objects.all().values()
+    l = []
+    dic = {}
+    for j in recommendation:
+        l.append(j)
+    dic['list'] = l
 
-    context = {"recommendation_new": json.dumps(dic_new)}
+    context = {"recommendation_new": json.dumps(dic)}
     return render(request, '../templates/vaccine.html', context)
 
 def prevention(request):

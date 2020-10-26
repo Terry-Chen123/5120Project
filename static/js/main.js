@@ -165,6 +165,8 @@ $(window).on('load', function() {
 	});
 
 
+
+
 	/*------------------
 		Circle progress
 	--------------------*/

@@ -9,8 +9,8 @@
 {% block navigation %}
     <li ><a href="{% url 'Home' %}">Home</a></li>
     <li><a href="{% url 'About' %}">About</a></li>
-    <li ><a href="{% url 'Read More' %}">More Information</a></li>
-    <li><a href="{% url 'Quiz List' %}">Pneumonia Quiz</a></li>
+    <li ><a href="{% url 'Read More' %}">Learn Pneumonia</a></li>
+    <li><a href="{% url 'Quiz List' %}">Quiz</a></li>
     <li class="active"><a href="{% url 'Prevention' %}">Prevention</a></li>
     <li><a href="{% url 'Search' %}">Clinic Search</a></li>
 
@@ -34,18 +34,15 @@
             <h2 style="color: black;text-align: center;font-weight: bolder">Select the optimal option for your children:</h2>
             <br>
         </div>
-        <div style="width: auto;border: 1px solid black;"></div>
-        <br>
+        <div style="width: auto;border: 1px solid black;"></div><br>
         <form>
             <div id="question1">
-
                 <p class="question" style="font-size: 30px;font-weight: bolder;color: black;text-align: center" >
                     Is your child born prematurely(less than 28 weeks of
                     <a style="color:lightskyblue" data-tooltip="Tips: All preterm infants born less than 28 weeks gestation
                     are recommended to receive 4 doses of 13vPCV (13-valent pneumococcal conjugate vaccine) and 2 doses
                     of 23vPPV (23-valent pneumococcal polysaccharide vaccine).">gestation</a>)?
                 </p>
-
                 <div style="font-weight: bold;color: #34ce57;font-size: 20px;text-align: center">
                     <input type="radio" id="que1" name="Q1" value="Yes" onclick="q1()">
                     <label for="yes">Yes</label>
@@ -53,6 +50,7 @@
                     <label for="no">No</label>
                 </div>
             </div>
+
             <div id="block1" style="; margin-top: -50px">
                 <div class="row" style="padding-top: 40px;text-align: center;">
                     <div class="col-lg-3">
@@ -131,7 +129,7 @@
                 </div>
             </div>
 
-             <div id="block3" style="display: none; margin-top: -50px">
+            <div id="block3" style="display: none; margin-top: -50px">
                 <div class="row" style="padding-top: 40px;text-align: center;">
                     <div class="col-lg-3">
                         <div style="padding-top: 200px;margin-left: 100px" id="previous_icon3">
@@ -244,92 +242,91 @@
 
         <div style="padding-top: 30px; margin-left: 530px">
             <div style="text-align: center">
-            <a href="#schedule_part"><button type="submit" id="submit" class="search-btn" style="cursor: pointer;display: none" onclick="submit(),dispear()">Get Plan</button></a>
+                <a href="#schedule_part"><button type="submit" id="submit" class="search-btn" style="cursor: pointer;display: none" onclick="submit(),dispear()">Get Plan</button></a>
             </div>
         </div>
         <!-- vaccine question end -->
-
     </div>
 
     <div id='schedule_part' style="display: none">
-    <div  class="grid-container" style="border-style: solid; margin-left: 120px;margin-right: 120px;margin-top: 30px;margin-bottom: 30px">
-        <div class="schedule_head" style="background-color: #0056b3;color: white;font-weight: bold">Pneumonia Vaccine Schedule</div>
-        <!-- 1st row -->
-        <div class="vaccine_type">Vaccine Type</div>
-        <div class="dose_class">Dose1</div>
-        <div class="dose_class">Dose2</div>
-        <div class="dose_class">Dose3</div>
-        <div class="dose_class">Dose4</div>
-        <!-- 2nd row -->
-        <div class="vaccine_13" style="padding-top: 30px;padding-bottom: 30px">Pneumonia Vaccine PCV 13</div>
-        <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
-          <div style="padding-left: 80px">
-              <span id = '13_dose1' class="yellow_icon"></span>
-          </div>
-        </div>
-        <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
-          <div style="padding-left: 80px">
-              <span id = '13_dose2'class="yellow_icon"></span>
-          </div>
-        </div>
-        <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
-            <div style="padding-left: 80px">
-              <span id = '13_dose3'class="yellow_icon"></span>
+        <div  class="grid-container" style="border-style: solid; margin-left: 120px;margin-right: 120px;margin-top: 30px;margin-bottom: 30px">
+            <div class="schedule_head" style="background-color: #0056b3;color: white;font-weight: bold">Pneumonia Vaccine Schedule</div>
+            <!-- 1st row -->
+            <div class="vaccine_type">Vaccine Type</div>
+            <div class="dose_class">Dose1</div>
+            <div class="dose_class">Dose2</div>
+            <div class="dose_class">Dose3</div>
+            <div class="dose_class">Dose4</div>
+            <!-- 2nd row -->
+            <div class="vaccine_13" style="padding-top: 30px;padding-bottom: 30px">Pneumonia Vaccine PCV 13</div>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+              <div style="padding-left: 80px">
+                  <span id = '13_dose1' class="yellow_icon"></span>
+              </div>
             </div>
-        </div>
-        <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
-            <div style="padding-left: 80px">
-              <span id = '13_dose4' class="yellow_icon"></span>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+              <div style="padding-left: 80px">
+                  <span id = '13_dose2'class="yellow_icon"></span>
+              </div>
             </div>
-        </div>
-        <!-- 3rd row-->
-        <div class="vaccine_23" style="padding-top: 30px;padding-bottom: 30px">Pneumonia Vaccine P23</div>
-        <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
-            <div style="padding-left: 80px">
-              <span id = '23_dose1' class="yellow_icon"></span>
-            </div>
-        </div>
-        <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
-            <div  class="icon_content" style="padding-left: 80px;">
-              <span id = '23_dose2' class="yellow_icon"></span>
-            </div>
-        </div>
-        <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
-          <div class="icon_content" style="padding-left: 80px;">
-              <span id = '' class="red_icon"></span>
-          </div>
-        </div>
-        <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
-            <div class="icon_content" style="padding-left: 80px;">
-              <span id = ''class="red_icon"></span>
-            </div>
-        </div>
-        <div class='recommendation_content' style="font-weight: bold;padding-top: 40px;padding-bottom: 40px">
-            Recommendation for P13:<h5 id="recommendation_13"></h5><br>
-            Recommendation for P23:<h5 id="recommendation_23"></h5>
-        </div>
-        <!-- 4th row -->
-        <div class="hint"style="background-color: #0056b3;color: white; font-weight: bold">Tips</div>
-        <div class="hint_content"style="background-color: #0056b3;color: white">
-            <div style="padding-left: 120px">
-            <span class="green_icon" style="float: left;"></span>
-            <div style="float: left"><p2>&nbsp; Has been Vaccinated</p2></div>
-            <div  style="padding-left: 300px">
-                <span class="yellow_icon" style="float: left"></span>
-                <div style="float: left"><p2>&nbsp; Need to be Vaccinated</p2></div>
-                <div  style="padding-left: 300px">
-                    <span class="red_icon" style="float: left"></span>
-                    <div style="float: left"><p2>&nbsp; No need for Vaccination</p2></div>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+                <div style="padding-left: 80px">
+                  <span id = '13_dose3'class="yellow_icon"></span>
                 </div>
             </div>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+                <div style="padding-left: 80px">
+                  <span id = '13_dose4' class="yellow_icon"></span>
+                </div>
+            </div>
+            <!-- 3rd row-->
+            <div class="vaccine_23" style="padding-top: 30px;padding-bottom: 30px">Pneumonia Vaccine P23</div>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+                <div style="padding-left: 80px">
+                  <span id = '23_dose1' class="yellow_icon"></span>
+                </div>
+            </div>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+                <div  class="icon_content" style="padding-left: 80px;">
+                  <span id = '23_dose2' class="yellow_icon"></span>
+                </div>
+            </div>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+              <div class="icon_content" style="padding-left: 80px;">
+                  <span id = '' class="red_icon"></span>
+              </div>
+            </div>
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
+                <div class="icon_content" style="padding-left: 80px;">
+                  <span id = ''class="red_icon"></span>
+                </div>
+            </div>
+            <div class='recommendation_content' style="font-weight: bold;padding-top: 40px;padding-bottom: 40px">
+                Recommendation for P13:<h5 id="recommendation_13"></h5><br>
+                Recommendation for P23:<h5 id="recommendation_23"></h5>
+            </div>
+            <!-- 4th row -->
+            <div class="hint"style="background-color: #0056b3;color: white; font-weight: bold">Tips</div>
+            <div class="hint_content"style="background-color: #0056b3;color: white">
+                <div style="padding-left: 120px">
+                <span class="green_icon" style="float: left;"></span>
+                <div style="float: left"><p2>&nbsp; Has been Vaccinated</p2></div>
+                <div  style="padding-left: 300px">
+                    <span class="yellow_icon" style="float: left"></span>
+                    <div style="float: left"><p2>&nbsp; Need to be Vaccinated</p2></div>
+                    <div  style="padding-left: 300px">
+                        <span class="red_icon" style="float: left"></span>
+                        <div style="float: left"><p2>&nbsp; No need for Vaccination</p2></div>
+                    </div>
+                </div>
+                </div>
             </div>
         </div>
+        <div style="text-align: center; margin-bottom: 30px">
+            <a href="{% url "Vaccine" %}"><button class="search-btn" style="width: 200px">Do The Survey Again</button></a>
+            <a href="{% url "Search" %}"><button class="search-btn" style="margin-left: 30px;width: 200px">Go To Clinic Search</button></a>
+        </div>
     </div>
-    <div style="text-align: center; margin-bottom: 30px">
-        <a href="{% url "Vaccine" %}"><button class="search-btn" style="width: 200px">Do The Survey Again</button></a>
-        <a href="{% url "Search" %}"><button class="search-btn" style="margin-left: 30px;width: 200px">Go To Clinic Search</button></a>
-    </div>
-</div>
 
 
     <!--
@@ -351,21 +348,15 @@
             document.getElementById('block2').style.display = 'block';
             q1choice=$('input:radio[name="Q1"]:checked').val()
         }
+
         function q2(){
             document.getElementById('question2').style.display='None'
             document.getElementById('question3').style.display='block'
             document.getElementById('block3').style.display='block';
             document.getElementById('block2').style.display='None';
             q2choice = document.getElementById('que2').value;
-            if (q2choice == '0-2 months'){
-                //document.getElementById('next_icon3').style.display='None'
-                //document.getElementById('next_text3').style.display='None'
-            }
-            //if (q2choice='3-4 months'){
-                //document.getElementById('dose3').style.display='None'
-                //document.getElementById('dose4').style.display='None'
-            //}
         }
+
         function q3() {
             q3choice=$('input:radio[name="Q3"]:checked').val()
             //finish, no q4 q5
@@ -404,6 +395,7 @@
             }
 
         }
+
         function q4(){
             q4choice = document.getElementById('que4').value
             if(q1choice == 'Yes' && q2choice == '1-5 years'){
@@ -418,6 +410,7 @@
                 document.getElementById('nexti4').style.display='None';
             }
         }
+
         function q5(){
             q5choice = $('input:radio[name="Q5"]:checked').val()
             document.getElementById('submit').style.display='block'
@@ -562,6 +555,7 @@
                document.getElementById('submit').style.display = 'None'
            }
         }
+
         function dispear(){
            document.getElementById('next_icon3').style.display='None';
            document.getElementById('next_text3').style.display='None';
@@ -571,21 +565,20 @@
     </script>
 
     <style>
-
-    [data-tooltip] {
+        [data-tooltip] {
     position: relative;
     z-index: 2;
     cursor: help;
-}
-    [data-tooltip]:before,
-    [data-tooltip]:after {
+    }
+        [data-tooltip]:before,
+        [data-tooltip]:after {
         visibility: hidden;
         opacity: 0;
         pointer-events: none;
         display: inline-table;
 
     }
-    [data-tooltip]:before {
+        [data-tooltip]:before {
         content: attr(data-tooltip);
         position: absolute;
         width: 280px;
@@ -597,15 +590,12 @@
         font-size: 12px;
         top: 40px;
     }
-
-    [data-tooltip]:hover:before,
-    [data-tooltip]:hover:after {
+        [data-tooltip]:hover:before,
+        [data-tooltip]:hover:after {
         visibility: visible;
         opacity: 5;
         top: 40px;
     }
     </style>
-
-
 
 {% endblock %}

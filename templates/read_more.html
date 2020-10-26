@@ -2,161 +2,414 @@
 {% block navigation %}
     <li ><a href="{% url 'Home' %}">Home</a></li>
     <li><a href="{% url 'About' %}">About</a></li>
-    <li class="active"><a href="{% url 'Read More' %}">More Information</a></li>
-    <li><a href="{% url 'Quiz List' %}">Pneumonia Quiz</a></li>
+    <li class="active"><a href="{% url 'Read More' %}">Learn Pneumonia</a></li>
+    <li><a href="{% url 'Quiz List' %}">Quiz</a></li>
     <li><a href="{% url 'Prevention' %}">Prevention</a></li>
     <li><a href="{% url 'Search' %}">Clinic Search</a></li>
 {% endblock %}
 
 {% block mainbody %}
     {% load static %}
-<section class="more-info set-bg" style="background: #E5E4E2">
-    <div class="container">
-        <br>
-        <h5><a href="{% url 'Home' %}">Home</a>&nbsp;&gt;&nbsp
-            More Information
-        </h5>
-        <br>
-        <br>
-        <h1><font color="2E8B57">More Information</font></h1>
-        <br>
-    </div>
-</section>
-<div class="w3-bar w3-black" style="text-align: center;margin-top: 50px">
-  <button class="w3-bar-item w3-button search-btn" style="width: 380px" onclick="openinformation('introduction')">Introduction Of Pneumonia</button>
-  <button class="w3-bar-item w3-button search-btn"style="margin-left: 30px;width: 380px" onclick="openinformation('prevention')">Prevention Of Pneumonia</button>
-  <button class="w3-bar-item w3-button search-btn"style="margin-left: 30px;width: 380px;" onclick="openinformation('recover')">Treatment Of Pneumonia</button>
-</div>
-
-<div id="introduction" class="w3-container information" style="margin-top: 40px">
-  <section class="services-section spad" style="background: white">
-        <!-- info1 -->
-        <form action="/quizlist/quizstart" method='POST' >
-            {% csrf_token %}
-            <div class="container">
-                <div class="blog-item">
-                    <div class="row">
-                       <div class="col-lg-6 blog-thumb"><br><br>
-                          <img src="{% static 'img/read more page/info1.jpg' %}" style="height:450px ;width:800px;padding-right:50px ">
-                       </div>
-                       <div class="col-lg-6 blog-content">
-                            <h3><font color="2E8B57" style="font-weight: bold">Introduction of pneumonia :</font></h3>
-                            <h20><font color="2E8B57" style="font-weight: bold">Pneumonia Symptoms on Children.</font></h20>
-                            <br>
-                           <div style="line-height: 1px">
-                                <p style="color: black">
-                                    • Has a cough and fever<br/>
-                                    • Be short of breath or have difficulty breathing<br/>
-                                    • Stomach ache and/or vomit<br/>
-                                    • Be irritable or tired & lose appetite
-                               </p>
-                           </div>
-                            <h20><font color="2E8B57" style="font-weight: bold">Is Pneumonia Contagious?</font></h20><br>
-                            <p style="color: black">In general, pneumonia is not contagious, but the upper respiratory viruses and bacteria that lead to it are.
-                                <br>When these germs are in fluid from the mouth or nose of someone who's infected,
-                                that person can spread the illness through coughs and sneezes. While many cases of pneumonia
-                                can be mild, left untreated some cases of pneumonia can be serious and even life-threatening.
-                            Sharing cups and utensils, touching the used tissues or handkerchiefs of an infected person also
-                                can spread pneumonia. So, it's best to keep kids away from anyone with symptoms of a respiratory infection.</p>
-                           <input type="submit" class="btn btn-default" value="Click Here To Start Quiz 1" name='A' style="color: green">
-                       </div>
-                    </div>
-                </div>
-            </div>
-        </form>
+    <section class="more-info set-bg" style="background: #E5E4E2">
+        <div class="container">
+            <br>
+            <h5><a href="{% url 'Home' %}">Home</a>&nbsp;&gt;&nbsp
+                More Information
+            </h5>
+            <br>
+            <br>
+            <h1><font color="2E8B57">More Information</font></h1>
+            <br>
+        </div>
     </section>
-</div>
 
+    <div class="w3-bar w3-black" style="text-align: center;margin-top: 50px">
+      <button class="w3-bar-item w3-button search-btn" style="width: 380px" onclick="openinformation('introduction')">Introduction Of Pneumonia</button>
+      <button class="w3-bar-item w3-button search-btn"style="margin-left: 30px;width: 380px" onclick="openinformation('prevention')">Prevention Of Pneumonia</button>
+      <button class="w3-bar-item w3-button search-btn"style="margin-left: 30px;width: 380px;" onclick="openinformation('recover')">Treatment Of Pneumonia</button>
+    </div>
 
-<div id="prevention" class="w3-container information" style="margin-top: 40px;display: none">
-  <section class="services-section spad" style="background: white">
-        <form action="/quizlist/quizstart" method='POST' >
-            {% csrf_token %}
-            <div class="container">
-                <div class="blog-item">
-                    <div class="row">
-                   <div class="col-lg-6 blog-thumb">
-                       <br><br>
-                      <img src="{% static 'img/read more page/needle.png' %}" alt="" style="height:450px;width:800px;padding-right: 50px; padding-top: 0px">
-                   </div>
-                   <div class="col-lg-6 blog-content">
-                        <h3><font color="2E8B57" style="font-weight: bold">Prevention of Pneumonia :</font></h3>
-                        <h20><font color="2E8B57" style="font-weight: bold">Prevenar 13 - covers 13 strains of pneumococcal disease;<br>
-                            Pneumovax 23 - covers 23 strains of pneumococcal disease.</font>
-                        </h20><br><br>
-                        <p style="color: black">Pneumococcal vaccines are provided free under the National Immunisation Program (NIP) for children who are eligible:
-                          All children at 2, 4 and 12 months of age.
-                          An extra dose at 6 months for Aboriginal and Torres Strait Islander children who live in Queensland, Northern Territory, Western Australia or South Australia.
-                          Children of all ages who have certain medical conditions that put them at higher risk of getting serious pneumococcal disease</p>
-                        </p>
-                        <h20><font color="2E8B57" style="font-weight: bold">Simple precautions that children and family can do to prevent the spread of the
-                            viruses and bacteria to reduce the chances of getting pneumonia: </font></h20><br>
-                       <div style="line-height: 1px">
-                            <p style="color: black">
-                                • Make sure you regularly wash hands with warm, soapy water<br/>
-                                • Keep your hands away from your face as much as possible<br/>
-                                • Get enough rest and do moderate exercise<br/>
-                                • Cough or sneeze into a tissue or your elbows.
-                            </p>
-                       </div>
-                      <input type="submit" class="btn btn-default" value="Click Here To Start Quiz 2" name='B' style="color: green">
+    <!-- Introduction Part -->
+    <div id="introduction" class="w3-container information" style="margin-top: 40px">
+        <section class="services-section spad" style="background: white">
+            <form action="/quizlist/quizstart" method='POST' >
+                {% csrf_token %}
+                <div class="container">
+                    <div class="blog-item">
+                        <div class="row">
+                           <div class="col-lg-6 blog-thumb"><br><br>
+                              <img src="{% static 'img/read more page/info1.jpg' %}" style="height:450px ;width:800px;padding-right:50px ">
+                           </div>
+                           <div class="col-lg-6 blog-content">
+                                <h3><font color="2E8B57" style="font-weight: bold;margin-left: 40px">Introduction of pneumonia :</font></h3>
+                                <div id="accordion" class="accordion-area faq-accordion" style="padding-top: 20px;padding-left: 30px">
+                                    <!-- part 1 -->
+                                    <div class="panel">
+                                        <div class="panel-header active" id="headingTwo">
+                                            <button class="panel-link" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                                                Pneumonia Symptoms on Children
+                                            </button>
+                                        </div>
+                                        <div id="collapse2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                          <div class="panel-body" style="padding-top: 1px;padding-left: 30px;color: black;font-weight: bold">
+                                                <img src="img/page-info-bg/2.jpg" alt="">
+                                                <div style="line-height: 1px">
+                                                    <p style="color: black">
+                                                    • Has a cough and fever<br/>
+                                                    • Be short of breath or have difficulty breathing<br/>
+                                                    • Stomach ache and/or vomit<br/>
+                                                    • Be irritable or tired & lose appetite
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- part 2 -->
+                                    <div class="panel" style="margin-top: 40px">
+                                        <div class="panel-header active" id="headingThree">
+                                            <button class="panel-link" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                                Is Pneumonia Contagious?
+                                            </button>
+                                        </div>
+                                        <div id="collapse3" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                            <div class="panel-body" style="padding-top: 1px;padding-left: 30px;color: black;font-weight: bold">
+                                                <img src="img/page-info-bg/6.jpg" alt="">
+                                                <p style="color: black">
+                                                    In general, pneumonia is not contagious, but the upper respiratory
+                                                    viruses and bacteria that lead to it are.<br>When these germs are in fluid from the
+                                                    mouth or nose of someone who's infected,
+                                                    that person can spread the illness through coughs and sneezes. While many cases of pneumonia
+                                                    can be mild, left untreated some cases of pneumonia can be serious and even life-threatening.
+                                                    Sharing cups and utensils, touching the used tissues or handkerchiefs of an infected person also
+                                                    can spread pneumonia. So, it's best to keep kids away from anyone with symptoms of a respiratory infection.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- part 3 -->
+                                    <div class="panel" style="margin-top: 40px">
+                                        <div class="panel-header active" id="headingFour">
+                                          <button class="panel-link" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                              Which children are at risk for pneumonia?
+                                          </button>
+                                        </div>
+                                        <div id="collapse4" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                          <div class="panel-body" style="padding-top: 1px;padding-left: 30px;color: black;font-weight: bold">
+                                            <img src="img/page-info-bg/6.jpg" alt="">
+                                            <p style="color: black">
+                                                <p1 style="font-weight: bold">A child is more likely to get pneumonia if he or she:</p1><br/>
+                                                • Has weak immune system, such as from cancer<br/>
+                                                • Has chronic health problem, such as asthma or cystic fibrosis<br/>
+                                                • Has problems with the lungs or airways<br/>
+                                                • Is around second-hand tobacco smoke
+                                            </p>
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <input type="submit" class="btn btn-default is-hoverable" value="Click Here To Test Knowledge" name='A' style="color: green;margin-top: 60px;margin-left: 180px">
+                           </div>
+                        </div>
                     </div>
                 </div>
-                </div>
-            </div>
-        </form>
-  </section>
-</div>
+            </form>
+        </section>
+    </div>
+    <!-- Introduction Part -->
 
-
-<div id="recover" class="w3-container information" style="margin-top: 40px;display: none">
-  <section class="services-section spad" style="background: white">
-        <form action="/quizlist/quizstart" method='POST' >
-            {% csrf_token %}
-            <div class="container">
-                <div class="blog-item">
-                    <div class="row">
-                        <div class="col-lg-6 blog-thumb"><br><br>
-                            <img src="{% static 'img/read more page/vaccine.jpg' %}" style="height:450px ;width:800px;padding-right:50px ">
+    <!-- Prevention Part -->
+    <div id="prevention" class="w3-container information" style="margin-top: 40px;display: none">
+        <section class="services-section spad" style="background: white">
+                <div class="container">
+                    <div class="blog-item">
+                        <div class="row">
+                        <div class="col-lg-6 blog-thumb" style="margin-bottom: 30px"><br><br>
+                            <img src="{% static 'img/read more page/needle.png' %}" alt="" style="height:450px;width:800px;padding-right: 50px; margin-bottom: 80px">
                         </div>
                         <div class="col-lg-6 blog-content">
-                           <h3><font color="2E8B57" style="font-weight: bold">Treatment of Pneumonia in Children</font></h3>
-                            <br>
-                                <div style="line-height: 1px">
-                                   <p style="color: black">
-                                        • Hospital admission. Take your child to the GP as soon as possible<br/>
-                                        • Make that your child gets as much rest as possible<br/>
-                                        • Cover the mouth with tissue or elbows when sneezing or coughing<br/>
-                                        • Keep your home smoke free. Infants and young children 2 are more likely to get pneumonia. Smoke can make pneumonia worse
-                                   </p>
-                                    <p style="color: black">
-                                        • Don't worry if your child has a fever and isn't hungry. Your children appetite will improve as your child starts to feel better<br/>
-                                        • Don't get  the pneumonia vaccine and the flu vaccine at the same time, this may increase the risk of children having fever-related seizures<br/>
-                                        • It is important to give your child fluids frequently to prevent dehydration. Offer small sips of water, and offer babies breastmilk or formula more often
-                                   </p>
-                               </div>
-                            <br>
-                           <input type="submit" class="btn btn-default" value="Click Here To Start Quiz 3" name='C' style="color: green">
-                       </div>
+                                <h3><font color="2E8B57" style="font-weight: bold;margin-left: 40px">Prevention of Pneumonia :</font></h3>
+                                <div id="accordion" class="accordion-area faq-accordion" style="padding-top: 20px;padding-left: 30px">
+                                    <!-- part 1 -->
+                                    <div class="panel">
+                                        <div class="panel-header active" id="headingTwo">
+                                            <button class="panel-link1" data-toggle="collapse" data-target="#prevention1" aria-expanded="false" aria-controls="prevention1">
+                                                Prevenar 13 - covers 13 strains of pneumococcal disease
+                                            </button>
+                                        </div>
+                                        <div id="prevention1" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                          <div class="panel-body1" style="padding-top: 1px;padding-left: 30px;color: black;font-weight: bold">
+                                                <img src="img/page-info-bg/2.jpg" alt="">
+                                                <div style="line-height: 1px">
+                                                    <p style="color: black">
+                                                       Prevenar 13 is a vaccine, which is a type of medicine that helps to protect
+                                                        people from certain infectious diseases. It is usually recommended for use
+                                                        in babies and children from 6 weeks to 17 years of age, or in adults 50 years
+                                                        and older. Children under 5 years old need 3 or 4 doses of Prevenar 13.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- part 2 -->
+                                    <div class="panel" style="margin-top: 40px">
+                                        <div class="panel-header active" id="headingThree">
+                                            <button class="panel-link1" data-toggle="collapse" data-target="#prevention2" aria-expanded="false" aria-controls="prevention2">
+                                                Pneumovax 23 - covers 23 strains of pneumococcal disease
+                                            </button>
+                                        </div>
+                                        <div id="prevention2" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                            <div class="panel-body1" style="padding-top: 1px;padding-left: 30px;color: black;font-weight: bold">
+                                                <img src="img/page-info-bg/6.jpg" alt="">
+                                                <p style="color: black">
+                                                     Pneumococcal vaccines are provided free under the National Immunisation
+                                                    Program (NIP) for children who are eligible: All children at 2, 4 and 12 months of age.
+                                                    An extra dose at 6 months for Aboriginal and Torres Strait Islander children
+                                                    who live in Queensland, Northern Territory, Western Australia or South Australia.
+                                                    Children of all ages who have certain medical conditions that put them
+                                                    at higher risk of getting serious pneumococcal disease
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- part 3 -->
+                                    <div class="panel" style="margin-top: 40px">
+                                        <div class="panel-header active" id="headingFour">
+                                          <button class="panel-link1" data-toggle="collapse" data-target="#prevention3" aria-expanded="false" aria-controls="prevention3">
+                                              Simple precautions
+                                          </button>
+                                        </div>
+                                        <div id="prevention3" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                           <div class="panel-body" style="padding-top: 1px;padding-left: 30px;color: black;font-weight: bold">
+                                                <img src="img/page-info-bg/6.jpg" alt="">
+                                                <p style="color: black">
+                                                    • Make sure you regularly wash hands with warm, soapy water<br/>
+                                                    • Keep your hands away from your face as much as possible<br/>
+                                                    • Get enough rest and do moderate exercise<br/>
+                                                    • Cough or sneeze into a tissue or your elbows.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form action="/quizlist/quizstart" method='POST' >
+                                {% csrf_token %}
+                                    <input type="submit" class="btn btn-default is-hoverable" value="Click Here To Test Knowledge" name='B'
+                                           style="color: green;margin-top: 40px;margin-left: 180px">
+                                </form>
+                           </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </form>
-    </section>
-</div>
+        </section>
+    </div>
+    <!-- Prevention Part -->
+
+    <!-- Revocer Part -->
+    <div id="recover" class="w3-container information" style="margin-top: 40px;display: none">
+        <section class="services-section spad" style="background: white">
+
+                <div class="container">
+                    <div class="blog-item">
+                    <div class="row">
+                        <div class="col-lg-6 blog-thumb"><br><br>
+                            <img src="{% static 'img/read more page/vaccine.jpg' %}" style="height:450px ;width:800px;padding-right:50px">
+                        </div>
+                        <div class="col-lg-6 blog-content">
+                                <h3><font color="2E8B57" style="font-weight: bold;margin-left: 40px">Treatment of Pneumonia :</font></h3>
+                                <div id="accordion" class="accordion-area faq-accordion" style="padding-top: 20px;padding-left: 30px">
+
+                                    <!-- part 1 -->
+                                    <div class="panel">
+                                        <div class="panel-header" id="headingTwo">
+                                            <button class="panel-link2" data-toggle="collapse" data-target="#revocer1" aria-expanded="true" aria-controls="collapse2">
+                                                Bacterial pneumonia:
+                                            </button>
+                                        </div>
+                                        <div id="revocer1" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                          <div class="panel-body" style="padding-top: 1px;padding-left: 30px;color: black;font-weight: bold">
+                                                <img src="img/page-info-bg/2.jpg" alt="">
+                                                <div style="line-height: 1px">
+                                                    <p style="color: black">
+                                                        If your child's pneumonia is caused by bacteria, they will be prescribed antibiotics.
+                                                        In mild cases of bacterial pneumonia, this medicine can be taken orally at home.
+                                                        Children with bacterial pneumonia usually improve within 48 hours of starting antibiotics.
+                                                        It is very important to complete the whole course of antibiotics, even if your child seems much better.
+                                                        Treatment will continue for 3 to 7 days. Your child may continue to cough for up to three weeks after
+                                                        treatment, but this is nothing to worry about if they are otherwise getting better.
+                                                        Children who are very unwell with bacterial pneumonia may be admitted to hospital for
+                                                        antibiotics given directly into a vein through a drip (intravenous or IV therapy).
+                                                        Some children may also need oxygen or extra fluids.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- part 2 -->
+                                    <div class="panel" style="margin-top: 40px">
+                                        <div class="panel-header" id="headingTwo">
+                                            <button class="panel-link2" data-toggle="collapse" data-target="#revocer2" aria-expanded="false" aria-controls="collapse2">
+                                                Viral pneumonia:
+                                            </button>
+                                        </div>
+                                        <div id="revocer2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                          <div class="panel-body" style="padding-top: 1px;padding-left: 30px;color: black;font-weight: bold">
+                                                <img src="img/page-info-bg/2.jpg" alt="">
+                                                <div style="line-height: 1px">
+                                                    <p style="color: black">
+                                                        Viral pneumonia is usually not as severe as bacterial pneumonia.
+                                                        However, recovery can be slower, taking up to four weeks.
+                                                        Antibiotics do not cure viruses and are not given for viral pneumonia.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- part 3 -->
+                                    <div class="panel" style="margin-top: 40px">
+                                        <div class="panel-header active" id="headingThree">
+                                            <button class="panel-link2" data-toggle="collapse" data-target="#revocer3" aria-expanded="false" aria-controls="collapse3">
+                                                Specific ways of treatment
+                                            </button>
+                                        </div>
+                                        <div id="revocer3" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                            <div class="panel-body" style="padding-top: 1px;padding-left: 30px;color: black;font-weight: bold">
+                                                <img src="img/page-info-bg/6.jpg" alt="">
+                                                <p style="color: black">
+                                                    • Take your child to the GP as soon as possible.<br/>
+                                                    • Make sure your child gets as much rest as possible. <br/>
+                                                    • Tell your child to cover the mouth with tissue or elbows when sneezing or
+                                                    coughing to avoid the spread of the viruses or bacteria. <br/>
+                                                    • Keep your home smoke free. Smoke can make pneumonia worse.<br/>
+                                                    • Don’t get the pneumonia vaccine and the flu vaccine at the same time, this may
+                                                    increase the risk of children having fever-related seizures.<br/>
+                                                    • Don’t worry if your child has a fever and isn’t hungry. Your child’s appetite
+                                                    will improve as your child starts to feel better.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- part 4 -->
+                                    <div class="panel" style="margin-top: 40px">
+                                        <div class="panel-header active" id="headingFour">
+                                          <button class="panel-link2" data-toggle="collapse" data-target="#revocer4" aria-expanded="false" aria-controls="collapse4">
+                                              Home treatment for mild pneumonia
+                                          </button>
+                                        </div>
+                                        <div id="revocer4" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                          <div class="panel-body" style="padding-top: 1px;padding-left: 30px;color: black;font-weight: bold">
+                                            <img src="img/page-info-bg/6.jpg" alt="">
+
+                                                <p1>It’s very important to make sure your child is drinking enough so they don’t get dehydrated:</p1><br/>
+                                                Breastfed babies younger than six months<br/>
+                                                Offer feeds more often.<br/>
+                                                Formula-fed babies younger than six months<br/>
+                                                Offer feeds more often.<br/>
+                                                Breastfed babies older than six months<br/>
+                                                Offer feeds more often. You can also offer water between feeds.<br/>
+                                                Formula-fed babies older than six months<br/>
+                                                Offer the usual amount of formula. Offer smaller but more frequent feeds<br/>
+                                                Children older than one year<br/>
+                                                Offer your child water or an oral rehydration fluid like Gastrolyte® or Hydralyte™. You can
+                                                    buy oral rehydration fluid from pharmacies and many supermarkets. You might need to give your child smaller
+                                                    amounts of water or oral rehydration fluid more frequently, especially if your child is really unwell and has
+                                                    been vomiting. For example, you might need to offer a few mouthfuls every 15 minutes.<br/>
+
+                                            </p>
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <form action="/quizlist/quizstart" method='POST' >
+                                    {% csrf_token %}
+                                    <input type="submit" class="btn btn-default is-hoverable" value="Click Here To Test Knowledge" name='C' style="color: green;margin-top: 40px;margin-left: 180px">
+                                </form>
+                           </div>
+
+                    </div>
+                 </div>
+                </div>
+
+        </section>
+    </div>
+    <!-- Revocer Part -->
 
 
-<script>
-    function openinformation(informationName) {
-      var i;
-      var x = document.getElementsByClassName("information");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      document.getElementById(informationName).style.display = "block";
-    }
-</script>
-<style>
+    <script type="text/javascript">
+        function openinformation(informationName) {
+          var i;
+          var x = document.getElementsByClassName("information");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          document.getElementById(informationName).style.display = "block";
+        }
+
+        $('.panel-link1').on('click', function (e) {
+            $('.panel-link1').removeClass('active');
+            var $this = $(this);
+            if (!$this.hasClass('active')) {
+                $this.addClass('active');
+            }
+		e.preventDefault();
+	});
+    </script>
+
+    <style>
+    .accordion-area .panel-link1:after {
+  content: "+";
+  position: absolute;
+  font-size: 16px;
+  right: 25px;
+  top: 50%;
+  color: #2d2d2d;
+  line-height: 16px;
+  margin-top: -8px;
+  margin-left: -4px;
+}
+
+.accordion-area .panel-header .panel-link1.active {
+  background: #71cd29;
+}
+
+.accordion-area .panel-header .panel-link1.collapsed {
+  background: #eff2f4;
+}
+
+.accordion-area .panel-header .panel-link1.collapsed:after {
+  content: "+";
+}
+
+.accordion-area .panel-link1.active:after {
+  content: "-";
+  margin-top: -10px;
+}
+
+.accordion-area .panel-link1 {
+  text-align: left;
+  position: relative;
+  width: 100%;
+  padding: 23px 40px;
+  padding-left: 27px;
+  font-size: 16px;
+  font-weight: 500;
+  background: #eff2f4;
+  color: #2d2d2d;
+  line-height: 1;
+  cursor: pointer;
+  border: none;
+}
+    </style>
+
+    <style>
     .search-btn{
                     height: 50px;width: 150px;background: #71cd29;
                     border: none;color: black;border-radius: 5px;display:inline;
@@ -167,6 +420,72 @@
                             color: white;
                         }
 </style>
+    <style>
+     .is-hoverable:hover {
+                            background-color: lightseagreen; /* Green */
+                            color: white;
+                        }
+</style>
+    <style>
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+</style>
+
+
 {% endblock %}
 
 
