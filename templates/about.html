@@ -12,93 +12,98 @@
 
 {% block mainbody %}
     {% load static %}
-	<!-- Page info section -->
-	<section class="more-info set-bg" style="background: #E5E4E2">
-		<div class="container">
+   <!-- Page info section -->
+   <section class="more-info set-bg" style="background: #E5E4E2">
+      <div class="container">
             <br>
             <h5><a href="{% url 'Home' %}">Home</a>&nbsp;&gt;&nbsp;About</h5>
-			<br>
-			<h1><font color="2E8B57">About</font></h1><br>
-		</div>
-	</section>
-	<!-- Page info section end -->
+         <br>
+         <h1><font color="2E8B57">About</font></h1><br>
+      </div>
+   </section>
+   <!-- Page info section end -->
 
     <!-- Intro section -->
-	<section class="intro-section spad">
+   <section class="intro-section spad">
       <div class="container">
          <div class="row">
             <div class="col-lg-6">
-               <img src="{% static 'img/about/about-page.jpg' %}" alt="">
+               <img src="{% static 'img/about/about-page.jpg' %}" alt="" style="margin-right: 20px;">
             </div>
                 <div class="col-lg-6 intro-text">
                     <h2 style="color: green">We Care About Your Children's Lung Health</h2>
-                    <p1>The website aims to provide:</p1>
-                    <br><br>
-                    <p>• A chance to let you test your knowledge and find out further information about children’s pneumonia.</p>
-                    <p>• The knowledge of pneumonia prevention, vaccination.</p>
-                    <p>• Help you find the clinics near your location.</p>
+                    <p style="font-weight: bold;color: black;font-size: 20px;line-height: 2px">
+                        Orr website aims to provide:</p>
+                    <p style="font-weight: normal;color: black;font-size: 15px">
+                        • The knowledge of pneumonia, symptom, prevention, treatment.<br/>
+                        • A chance to let you test your knowledge and find out further information &nbsp about children’s pneumonia.<br/>
+                        • The essential knowledge about health habits to prevent pneumonia.<br/>
+                        • The real time data of air quality.<br/>
+                        • Help you find the clinics near your location.
+                    </p>
                 </div>
-            </div>
-            <br><br>
+            </div><br>
             <div class="row">
                 <div class="col-lg-6 intro-text">
-                    <h2 style="color: green">Why Us?</h2>
-                    <p1>We provide you with the best solution and actions to even
-                        safety concern your children’s lung health:</p1>
-                    <br><br>
-                    <p>• Targeted quiz help you have a comprehensive understanding of children’s pneumonia knowledge;</p>
-                    <p>• A quick search of a nearby clinic to help you find the optimum clinic;</p>
-                    <p>• Helps you plan your children’s vaccine schedule.</p>
+                    <h2 style="color: green">Why Choose Us?</h2>
+                    <p style="font-weight: bold;color: black;font-size: 20px;line-height: 30px">We provide you with the best solutions:</p>
+                    <p style="font-weight: normal;color: black;font-size: 15px">
+                        • Targeted quiz help you have a comprehensive understanding of children &nbsp pneumonia knowledge.<br/>
+                        • Helps you to nurture your children with excellent habits to prevent &nbsp;&nbsp;pneumonia.<br/>
+                        • Helps you plan your children’s vaccine schedule.<br/>
+                        • Helps you plan outside activities based on real time data of air quality.<br/>
+                        • A quick search of a nearby clinic to help you find the optimum clinic.<br/>
+                    </p>
                 </div>
                 <div class="col-lg-6">
-               <img src="{% static 'img/about/picture1.jpg' %}" alt=""style="height: 380px">
-            </div>
+                    <img src="{% static 'img/about/picture1.jpg' %}" alt=""style="height: 350px; margin-top: 20px;">
+                </div>
          </div>
       </div>
    </section>
-	<!-- Intro section end -->
+   <!-- Intro section end -->
 
-    <!-- Facts section -->
-    <section class="doctors-section spad"style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(../static/img/about/picture3.jpg)">
+    <!-- Team section -->
+    <section class="doctors-section spad"style="margin-top:-30px; background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(../static/img/about/picture3.jpg)">
       <div class="container">
          <div class="section-teamtitle text-center">
-            <h2 style="color: #fdfdfe; font-weight: bold">The Team</h2>
+            <h2 style="color: #fdfdfe; font-weight: bold">Our Team Members</h2>
          </div>
          <div class="row">
-            <div class="col-lg-2 col-md-3  col-sm-6" style="margin-left: 80px">
+            <div class="col-lg-2 col-md-3  col-sm-6">
                <div class="doctor-item">
-                  <div class="di-pic set-bg" data-setbg={% static "img/about/dongliang.jpeg" %}></div>
-                  <h6s style="color: #fdfdfe; font-weight: bolder">Dongling Feng</h6s>
-                  <p style="color: #28a745; font-weight: bolder">Business Analysis</p>
+                  <div style="width: 180px;height: 180px" class="di-pic set-bg" data-setbg={% static "img/about/dongliang.jpeg" %}></div>
+                  <h6s style="color: #fdfdfe; font-weight: bolder;font-size: 25px;white-space: nowrap">Dongling Feng</h6s>
+                  <p style="color: #20c997; font-weight: bolder;font-size: 20px;white-space: nowrap">Business Analysis</p>
                </div>
             </div>
-            <div class="col-lg-2 col-md-3  col-sm-6" style="margin-left: 80px">
+            <div class="col-lg-2 col-md-3  col-sm-6" style="margin-left: 120px">
                <div class="doctor-item">
-                  <div class="di-pic set-bg" data-setbg={% static "img/about/yanping.jpeg" %}></div>
-                  <h6 style="color: #fdfdfe; font-weight: bolder">Yanping Luo</h6>
-                  <p style="color: #28a745; font-weight: bolder">Security maintenance</p>
+                  <div style="width: 180px;height: 180px" class="di-pic set-bg" data-setbg={% static "img/about/yanping.jpeg" %}></div>
+                  <h6 style="color: #fdfdfe; font-weight: bolder;font-size: 25px;white-space: nowrap">Yanping Luo</h6>
+                  <p style="color: #20c997; font-weight: bolder;font-size: 20px;white-space: nowrap">Security maintenance</p>
                </div>
             </div>
-            <div class="col-lg-2 col-md-3  col-sm-6"style="margin-left: 80px">
+            <div class="col-lg-2 col-md-3  col-sm-6" style="margin-left: 120px">
                <div class="doctor-item">
-                  <div class="di-pic set-bg" data-setbg={% static "img/about/yuting.png" %}></div>
-                  <h6 style="color: #fdfdfe; font-weight: bolder">Yuting Ouyang</h6>
-                  <p style="color: #28a745; font-weight: bolder">UI Designer</p>
+                  <div style="width: 180px;height: 180px" class="di-pic set-bg" data-setbg={% static "img/about/yuting.png" %}></div>
+                  <h6 style="color: #fdfdfe; font-weight: bolder;font-size: 25px;white-space: nowrap">Yuting Ouyang</h6>
+                  <p style="color: #20c997; font-weight: bolder;font-size: 20px;white-space: nowrap">UI Designer</p>
                </div>
             </div>
-            <div class="col-lg-2 col-md-3  col-sm-6"style="margin-left: 80px">
+            <div class="col-lg-2 col-md-3  col-sm-6" style="margin-left: 120px">
                <div class="doctor-item">
-                  <div class="di-pic set-bg" data-setbg={% static "img/about/tianrui.jpeg" %}></div>
-                  <h6 style="color: #fdfdfe; font-weight: bolder">Tianrui Chen</h6>
-                  <p style="color: #28a745; font-weight: bolder">Web Developer</p>
+                  <div style="width: 180px;height: 180px" class="di-pic set-bg" data-setbg={% static "img/about/tianrui.jpeg" %}></div>
+                  <h6 style="color: #fdfdfe; font-weight: bolder;font-size: 25px;white-space: nowrap">Tianrui Chen</h6>
+                  <p style="color: #20c997; font-weight: bolder;font-size: 20px;white-space: nowrap">Web Developer</p>
                </div>
             </div>
          </div>
       </div>
    </section>
-
-	<!-- about us end -->
+   <!-- Team end -->
 
 {% endblock %}
 {% block script %}
 {% endblock %}
+
