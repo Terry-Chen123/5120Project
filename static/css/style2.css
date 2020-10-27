@@ -963,6 +963,7 @@ ol {
 
 .footer-widget ul {
   list-style: none;
+  float: left;
 }
 
 .footer-widget ul li a {
@@ -977,53 +978,8 @@ ol {
   color: #71cd29;
 }
 
-.footer-widget .fw-social {
-  padding-top: 40px;
-}
 
-.footer-widget .fw-social a {
-  color: #fff;
-  display: inline-block;
-  margin-right: 30px;
-  font-size: 14px;
-}
 
-.footer-widget .fw-timetable {
-  border: 1px solid #71cd29;
-  padding: 45px 30px 25px;
-  max-width: 418px;
-  margin-left: auto;
-  position: relative;
-  right: -23px;
-}
-
-.footer-widget .fw-timetable .fw-title {
-  padding-top: 0;
-}
-
-.footer-widget .fw-timetable .timetable-content {
-  padding: 0 20px;
-}
-
-.footer-widget .fw-timetable table {
-  width: 100%;
-  padding-left: 17px;
-}
-
-.footer-widget .fw-timetable table tr:hover td {
-  color: #71cd29;
-}
-
-.footer-widget .fw-timetable table td {
-  color: #fff;
-  opacity: 0.48;
-  font-size: 14px;
-  padding: 11px 0;
-}
-
-.footer-widget .fw-timetable table td:nth-child(2) {
-  text-align: right;
-}
 
 /*--------------------
   Footer section
@@ -1496,7 +1452,6 @@ ol {
   .testimonials-slider .owl-nav button.owl-next {
     position: relative;
     left: 0;
-    display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
     top: 0;

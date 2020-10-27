@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>LungHealth - TA2 Template</title>
+	<title>Green Lung</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="LungHealth - TA2 Template">
 	<meta name="keywords" content="LungHealth, TA2, creative, html">
@@ -29,7 +29,7 @@
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
 	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}"/>
-	<link rel="stylesheet" href="{% static 'static/css/flaticon.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/flaticon.css' %}"/>
 	<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}"/>
 	<link rel="stylesheet" href="{% static 'css/style2.css'%}"/>
 	<link rel="stylesheet" href="{% static 'css/animate.css'%}"/>
@@ -74,18 +74,23 @@
 	<section class="footer-top-section set-bg" data-setbg="{% static 'img/footer.jpg' %}">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4">
+                <div class="col-lg-2 col-md-2" style="margin-top:20px;">
+                    <a href="{% url 'Home' %}"><img src="{% static 'img/logo.003.png' %}" alt="site-logo"></a>
+                </div>
+				<div class="col-lg-4 col-md-4" style="margin-top:20px">
 					<div class="footer-widget">
 						<div class="fw-about">
-							<img src="{% static 'img/logo.003.png' %}" alt="">
-							<p>The website is aim to provide a chance to let yourself test your knowledge and to make yourself informed about pneumonias. We provide you with the best solution and actions to every safety concern your lung health.</p>
+							<p>The website is aim to provide a chance to let you learn about pneumonia.
+                                We provide the best solutions and actions to protect every safety
+                                concern your lung health.
+                            </p>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-5" >
-                    <div class="footer-widget" style="padding-left: 500px; padding-top: 30px; font-size: 20px;white-space: nowrap;">
+				<div class="col-lg-6 col-md-6" >
+                    <div class="footer-widget" style="padding-left:100px; padding-top: 50px; font-size: 20px;white-space: nowrap;">
                         <div class="fw-links">
-                             <ul>
+                             <ul id = 'footer-list'>
                                 <li><a href="{% url 'Home' %}">Home</a></li>
                                 <li><a href="{% url 'About' %}">About</a></li>
                                 <li><a href="{% url 'Read More' %}">Learn Pneumonia</a></li>
@@ -97,8 +102,8 @@
                     </div>
                 </div>
             </div>
-      </div>
-   </section>
+        </div>
+    </section>
 	<!-- Footer top section end -->
 
 	<!-- Footer section -->
@@ -142,6 +147,8 @@
         #backtotop. a:hover {color:#FF00FF;}  /* 鼠标移动到链接上 */
         #backtotop. a:active {color:#0000FF;}  /* 鼠标点击时 */
 
+        #footer-list {list-style-type: none;}
+        #footer-list li {float: left; margin-right: 15px;}
     </style>
 
     {% block script %}

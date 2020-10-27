@@ -40,6 +40,7 @@ div.icon_class{
 .schedule_head { grid-area: header; }
 .hint { grid-area: menu; }
 .hint_content { grid-area: footer; }
+
 .vaccine_type { grid-area: content1}
 .vaccine_13 { grid-area: content6}
 .vaccine_23 { grid-area: content11}
@@ -71,7 +72,7 @@ div.icon_class{
     height:40px;
     border-radius:40px ;
     background:green;
-    display:block;
+    display:inline-block;
     position: relative;
 }
 .green_icon:before, .green_icon::after {
@@ -79,9 +80,9 @@ div.icon_class{
     height:28px;
     width:6px;
     border-radius: 10px;
-    display:block;
+    display:inline-block;
     background:white;
-    position: absolute;
+    position: relative;
     top:6px;/*40-6=34*/
     left:20px;/*make the two rects in the middle of the cycle */
     transform:rotate(45deg);
@@ -91,7 +92,7 @@ div.icon_class{
     height:15px;
     transform: rotate(-45deg);
     -ms-transform:rotate(-45deg);
-    position: absolute;
+    position: relative;
     top:18px;/*40-18=12  */
     left:8px;
 }
@@ -101,7 +102,7 @@ div.icon_class{
     height:40px;
     border-radius:40px ;
     background:#c69500;
-    display:block;
+    display:inline-block;
     position: relative;
 }
 .yellow_icon:before, .yellow_icon::after {
@@ -109,9 +110,9 @@ div.icon_class{
     height:28px;
     width:6px;
     border-radius: 10px;
-    display:block;
+    display:inline-block;
     background:white;
-    position: absolute;
+    position: relative;
     top:6px;/*40-6=34*/
     left:20px;/*make the two rects in the middle of the cycle */
     transform:rotate(45deg);
@@ -121,37 +122,37 @@ div.icon_class{
     height:15px;
     transform: rotate(-45deg);
     -ms-transform:rotate(-45deg);
-    position: absolute;
+    position: relative;
     top:18px;/*40-18=12  */
     left:8px;
 }
 
-.red_icon {
+.blue_icon {
     width:40px;
     height:40px;
     border-radius:40px ;
     background:lightskyblue;
-    display:block;
+    display:inline-block;
     position: relative;
 }
-.red_icon:before, .red_icon::after {
+.blue_icon:before, .blue_icon::after {
     content:"";
     height:28px;
     width:6px;
     border-radius: 10px;
-    display:block;
+    display: inline-block;
     background:white;
-    position: absolute;
+    position: relative;
     top:6px;/*40-6=34*/
     left:17px;/*make the two rects in the middle of the cycle */
     transform:rotate(45deg);
     -ms-transform:rotate(45deg);
 }
-.red_icon::before {
+.blue_icon::before {
     height:28px;
     transform: rotate(-45deg);
     -ms-transform:rotate(-45deg);
-    position: absolute;
+    position: relative;
     top:6px;/*40-18=12  */
     left:17px;
 }
@@ -160,6 +161,6 @@ div.icon_class{
     display: none;
 }
 .details:hover{
-    display: block;
+    display: inline-block;
 }
 

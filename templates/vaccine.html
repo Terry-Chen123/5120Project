@@ -31,7 +31,7 @@
     <div style="border: #28a745;border-style: solid; margin-left: 120px;margin-right: 120px;margin-top: 30px;margin-bottom: 30px; padding-top: 20px;padding-bottom: 20px;">
         <!-- vaccine question  -->
         <div style="margin-left: 60px">
-            <h2 style="color: black;text-align: center;font-weight: bolder">Select the optimal option for your children:</h2>
+            <h2 style="color: black;text-align: center;font-weight: bolder">Select the best option for your children:</h2>
             <br>
         </div>
         <div style="width: auto;border: 1px solid black;"></div><br>
@@ -39,7 +39,7 @@
             <div id="question1">
                 <p class="question" style="font-size: 30px;font-weight: bolder;color: black;text-align: center" >
                     Is your child born prematurely(less than 28 weeks of
-                    <a style="color:lightskyblue" data-tooltip="Tips:&nbsp;&nbsp; All preterm infants born less than 28 weeks gestation
+                    <a style="color:lightskyblue" data-tooltip="Tips:&nbsp;&nbsp;&nbsp;&nbsp; All preterm infants born less than 28 weeks gestation
                     are recommended to receive 4 doses of 13vPCV (13-valent pneumococcal conjugate vaccine) and 2 doses
                     of 23vPPV (23-valent pneumococcal polysaccharide vaccine).">gestation</a>)?
                 </p>
@@ -53,22 +53,15 @@
 
             <div id="block1" style="; margin-top: -50px">
                 <div class="row" style="padding-top: 40px;text-align: center;">
-                    <div class="col-lg-3">
-                        <div style="padding-top: 200px;margin-left: 100px;display: none">
-                            <div class="triangle-left zoom"></div>
-                        </div>
-                        <div style="padding-top: 20px;display: none">
-                            <h2>previous</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-6" id="pictu1">
-                        <img src="/static/img/vaccine/baby.jpg"style="width:1000px;padding-right: 20px;padding-top: 20px">
+                    <div class="col-lg-3" ></div>
+                    <div class="col-lg-6" id="picture1">
+                        <img src="/static/img/vaccine/baby.jpg"style="padding-top:20px">
                     </div>
                     <div class="col-lg-3" id="next1">
-                        <div style="padding-top: 200px;margin-left: 120px">
-                            <div class="triangle-right zoom" onclick="q1_left()"></div>
+                        <div class="triangle-right zoom"
+                             style="margin-top: 200px; margin-left:100px"onclick="q1_right()">
                         </div>
-                        <div style="padding-top: 20px">
+                        <div style="margin-top: 20px">
                             <h2>Next</h2>
                         </div>
                     </div>
@@ -92,22 +85,20 @@
 
             <div id="block2" style="display: none ; margin-top: -50px">
                 <div class="row" style="padding-top: 40px;text-align: center;">
-                    <div class="col-lg-3">
-                        <div style="padding-top: 200px;margin-left: 100px">
-                            <div class="triangle-left zoom" onclick="q2_left()"></div>
-                        </div>
-                        <div style="padding-top: 20px">
+                    <div class="col-lg-3"style="padding-top: 200px;padding-left: 100px;">
+                        <div class="triangle-left zoom" onclick="q2_left()" id="previous_icon2"></div>
+                        <div id="previous_text2" style="padding-top: 20px">
                             <h2>previous</h2>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <img src="/static/img/vaccine/baby.jpg"style="width:1000px;padding-right: 20px;padding-top: 20px">
+                        <img src="/static/img/vaccine/baby.jpg"style="width:1000px;padding-top:20px">
                     </div>
-                    <div class="col-lg-3">
-                        <div style="padding-top: 200px;margin-left: 120px">
-                            <div class="triangle-right zoom" onclick="q2_right()"></div>
+                    <div class="col-lg-3" id="next2">
+                        <div class="triangle-right zoom" id="next_icon2"
+                             style="margin-top: 200px; margin-left:100px"onclick="q2_right()">
                         </div>
-                        <div style="padding-top: 20px">
+                        <div id = 'next_text2' style="margin-top: 20px">
                             <h2>Next</h2>
                         </div>
                     </div>
@@ -131,22 +122,20 @@
 
             <div id="block3" style="display: none; margin-top: -50px">
                 <div class="row" style="padding-top: 40px;text-align: center;">
-                    <div class="col-lg-3">
-                        <div style="padding-top: 200px;margin-left: 100px" id="previous_icon3">
-                            <div class="triangle-left zoom" onclick="q3_left()"></div>
-                        </div>
-                        <div style="padding-top: 20px" id="previous_text3">
+                    <div class="col-lg-3"style="padding-top: 200px;padding-left: 100px;">
+                        <div class="triangle-left zoom" onclick="q3_left()" id="previous_icon3"></div>
+                        <div id="previous_text3" style="padding-top: 20px">
                             <h2>previous</h2>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <img src="/static/img/vaccine/baby.jpg"style="width:1000px;padding-right: 20px;padding-top: 20px">
+                        <img src="/static/img/vaccine/baby.jpg"style="width:1000px;padding-top:20px">
                     </div>
-                    <div class="col-lg-3">
-                        <div style="padding-top: 200px;margin-left: 120px" id="next_icon3">
-                            <div class="triangle-right zoom" onclick="q3_right()"></div>
+                    <div class="col-lg-3" id="next3">
+                        <div class="triangle-right zoom" id="next_icon3"
+                             style="margin-top: 200px; margin-left:100px"onclick="q3_right()">
                         </div>
-                        <div style="padding-top: 20px" id="next_text3">
+                        <div id = 'next_text3' style="margin-top: 20px">
                             <h2>Next</h2>
                         </div>
                     </div>
@@ -177,22 +166,20 @@
 
             <div id="block4" style="display: none; margin-top: -50px">
                 <div class="row" style="padding-top: 40px;text-align: center;">
-                    <div class="col-lg-3">
-                        <div style="padding-top: 200px;margin-left: 100px" id="previous_icon4">
-                            <div class="triangle-left zoom" onclick="q4_left()"></div>
-                        </div>
-                        <div style="padding-top: 20px" id="previous_text4">
+                    <div class="col-lg-3"style="padding-top: 200px;padding-left: 100px;">
+                        <div class="triangle-left zoom" onclick="q4_left()" id="previous_icon4"></div>
+                        <div id="previous_text4" style="padding-top: 20px">
                             <h2>previous</h2>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <img src="/static/img/vaccine/baby.jpg"style="width:1000px;padding-right: 20px;padding-top: 20px">
+                        <img src="/static/img/vaccine/baby.jpg"style="width:1000px;padding-top:20px">
                     </div>
-                    <div class="col-lg-3">
-                        <div style="padding-top: 200px;margin-left: 120px" id="next_icon4">
-                            <div class="triangle-right zoom" onclick="q4_right()"></div>
+                    <div class="col-lg-3" id="next4">
+                        <div class="triangle-right zoom" id="next_icon4"
+                             style="margin-top: 200px; margin-left:100px"onclick="q4_right()">
                         </div>
-                        <div style="padding-top: 20px" id="next_text4">
+                        <div id = 'next_text4' style="margin-top: 20px">
                             <h2>Next</h2>
                         </div>
                     </div>
@@ -214,42 +201,32 @@
                     <label for="no">No</label>
                 </div>
             </div>
-
             <div id="block5" style="display: none; margin-top: -50px">
                 <div class="row" style="padding-top: 40px;text-align: center;">
-                    <div class="col-lg-3">
-                        <div style="padding-top: 150px;margin-left: 100px" id="previous_icon5">
-                            <div class="triangle-left zoom" onclick="q5_left()"></div>
-                        </div>
-                        <div style="padding-top: 20px" id="previous_text5">
+                    <div class="col-lg-3"style="padding-top: 200px;padding-left: 100px;">
+                        <div class="triangle-left zoom" onclick="q4_left()" id="previous_icon5"></div>
+                        <div id="previous_text5" style="padding-top: 20px">
                             <h2>previous</h2>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <img src="/static/img/vaccine/baby.jpg"style="width:1000px;padding-right: 20px;padding-top: 20px">
-                    </div>
-                    <div class="col-lg-3">
-                        <div style="padding-top: 150px;margin-left: 120px">
-                            <div class="triangle-right zoom" style="display: none"></div>
-                        </div>
-                        <div style="padding-top: 20px;display: none">
-                            <h2>Next</h2>
-                        </div>
+                        <img src="/static/img/vaccine/baby.jpg"style="width:1000px; padding-top: 20px">
                     </div>
                 </div>
             </div>
         </form>
-
-        <div style="padding-top: 30px; margin-left: 530px">
-            <div style="text-align: center">
-                <a href="#schedule_part"><button type="submit" id="submit" class="search-btn" style="cursor: pointer;display: none" onclick="submit(),dispear()">
+        <div style="padding-top: 30px; text-align: center">
+            <a href="#schedule_part">
+                <button type="submit" id="submit" class="search-btn"
+                        style="cursor: pointer; display: none; width: 200px" onclick="submit(),dispear()">
                     Get Your Schedule
-                </button></a>
-            </div>
+                </button>
+            </a>
         </div>
         <!-- vaccine question end -->
     </div>
 
+    <!-- vaccine schedule table -->
     <div id='schedule_part' style="display: none">
         <div  class="grid-container" style="border-style: solid; margin-left: 120px;margin-right: 120px;margin-top: 30px;margin-bottom: 30px">
             <div class="schedule_head" style="background-color: #0056b3;color: white;font-weight: bold">Pneumonia Vaccine Schedule</div>
@@ -261,46 +238,46 @@
             <div class="dose_class">Dose4</div>
             <!-- 2nd row -->
             <div class="vaccine_13" style="padding-top: 30px;padding-bottom: 30px">Pneumonia Vaccine PCV 13</div>
-            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
-              <div style="padding-left: 80px">
+            <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px; ">
+              <div style="text-align: center">
                   <span id = '13_dose1' class="yellow_icon"></span>
               </div>
             </div>
             <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
-              <div style="padding-left: 80px">
+              <div style="text-align: center">
                   <span id = '13_dose2'class="yellow_icon"></span>
               </div>
             </div>
             <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
-                <div style="padding-left: 80px">
+                <div style="text-align: center">
                   <span id = '13_dose3'class="yellow_icon"></span>
                 </div>
             </div>
             <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
-                <div style="padding-left: 80px">
+                <div style="text-align: center">
                   <span id = '13_dose4' class="yellow_icon"></span>
                 </div>
             </div>
             <!-- 3rd row-->
             <div class="vaccine_23" style="padding-top: 30px;padding-bottom: 30px">Pneumonia Vaccine P23</div>
             <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
-                <div style="padding-left: 80px">
+                <div style="text-align: center">
                   <span id = '23_dose1' class="yellow_icon"></span>
                 </div>
             </div>
             <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
-                <div  class="icon_content" style="padding-left: 80px;">
+                <div  class="icon_content" style="text-align: center">
                   <span id = '23_dose2' class="yellow_icon"></span>
                 </div>
             </div>
             <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
-              <div class="icon_content" style="padding-left: 80px;">
-                  <span id = '' class="red_icon"></span>
+              <div class="icon_content" style="text-align: center">
+                  <span id = '' class="blue_icon"></span>
               </div>
             </div>
             <div class="icon_class" style="padding-top: 30px;padding-bottom: 30px">
-                <div class="icon_content" style="padding-left: 80px;">
-                  <span id = ''class="red_icon"></span>
+                <div class="icon_content" style="text-align: center">
+                  <span id = ''class="blue_icon"></span>
                 </div>
             </div>
             <div class='recommendation_content' style="font-weight: bold;padding-top: 40px;padding-bottom: 40px">
@@ -310,25 +287,28 @@
             <!-- 4th row -->
             <div class="hint"style="background-color: #0056b3;color: white; font-weight: bold">Tips</div>
             <div class="hint_content"style="background-color: #0056b3;color: white">
-                <div style="padding-left: 120px">
-                <span class="green_icon" style="float: left;"></span>
-                <div style="float: left"><p2>&nbsp; Has been Vaccinated</p2></div>
-                <div  style="padding-left: 300px">
-                    <span class="yellow_icon" style="float: left"></span>
-                    <div style="float: left"><p2>&nbsp; Need to be Vaccinated</p2></div>
-                    <div  style="padding-left: 300px">
-                        <span class="red_icon" style="float: left"></span>
-                        <div style="float: left"><p2>&nbsp; No need for Vaccination</p2></div>
+                <div style="margin-left: 50px; margin-right: 50px;">
+                    <div style="float: left;margin-right: 100px">
+                        <span class="green_icon" style="float: left; "></span>
+                        <p2>&nbsp; Has been Vaccinated</p2>
                     </div>
-                </div>
+                    <div style="float: left;margin-right: 100px">
+                        <span class="yellow_icon" style="float: left; "></span>
+                        <p2>&nbsp; Need to be Vaccinated</p2>
+                    </div>
+                    <div style="float: left;">
+                        <span class="blue_icon" style="float: left; "></span>
+                        <p2>&nbsp; No need for Vaccination</p2>
+                    </div>
                 </div>
             </div>
         </div>
         <div style="text-align: center; margin-bottom: 30px">
             <a href="{% url "Vaccine" %}"><button class="search-btn" style="width: 200px">Do The Survey Again</button></a>
-            <a href="{% url "Search" %}"><button class="search-btn" style="margin-left: 30px;width: 200px">Go To Clinic Search</button></a>
+            <a href="{% url "Search" %}"><button class="search-btn" style="margin-left: 40px;width: 200px">Go To Clinic Search</button></a>
         </div>
     </div>
+    <!-- vaccine schedule table -->
 
     <script type="text/javascript">
         var q1choice = ''
@@ -357,7 +337,7 @@
             q3choice=$('input:radio[name="Q3"]:checked').val()
             //finish, no q4 q5
             if ((q2choice=='0-2 months' || q3choice == 'No') && (q1choice!='Yes' || q2choice!='1-5 years')){
-                document.getElementById('submit').style.display='block'
+                document.getElementById('submit').style.display='inline-block'
                 document.getElementById("next_icon3").style.display = 'None'
                 document.getElementById("next_text3").style.display = 'None'
 
@@ -401,7 +381,7 @@
                 document.getElementById('block4').style.display='None';
             }
             else if(q1choice != 'Yes' || q2choice != '1-5 years') {
-                document.getElementById('submit').style.display = 'block'
+                document.getElementById('submit').style.display = 'inline-block'
                 document.getElementById('next4').style.display='None';
                 document.getElementById('nexti4').style.display='None';
             }
@@ -409,7 +389,7 @@
 
         function q5(){
             q5choice = $('input:radio[name="Q5"]:checked').val()
-            document.getElementById('submit').style.display='block'
+            document.getElementById('submit').style.display='inline-block'
         }
 
         var compare_str = ''
@@ -438,7 +418,7 @@
                         //document.getElementById('submit recommendation2').innerText = "13 remain" + obj.list[i].prevenar_13_remaining_dose
                         var id_name = ""
                        if (obj.list[i].prevenar_13_total_dose == 3){
-                            document.getElementById("13_dose4").className = 'red_icon';
+                            document.getElementById("13_dose4").className = 'blue_icon';
                             for (var j = 1; j < 4 - obj.list[i].prevenar_13_remaining_dose; j++){
                                 id_name = "13_dose" + j
                                 document.getElementById(id_name).className = 'green_icon';
@@ -450,8 +430,8 @@
                             }
                         }
                         if (obj.list[i].pneumovax_23_remaining_dose == 0){
-                            document.getElementById("23_dose1").className = 'red_icon';
-                            document.getElementById("23_dose2").className = 'red_icon';
+                            document.getElementById("23_dose1").className = 'blue_icon';
+                            document.getElementById("23_dose2").className = 'blue_icon';
                         }else{
                             for (var a=1; a < 3 - obj.list[i].pneumovax_23_remaining_dose; a++){
                                 id_name = "23_dose" + a
@@ -464,7 +444,7 @@
             }
             }
 
-        function q1_left() {
+        function q1_right() {
            document.getElementById('question1').style.display = 'None';
            document.getElementById('question2').style.display = 'block';
            document.getElementById('block1').style.display = 'None';
@@ -508,7 +488,7 @@
                    document.getElementById('block3').style.display='None';
                }
                 else {
-                    document.getElementById('submit').style.display='block'
+                    document.getElementById('submit').style.display='inline-block'
                 }
             }
         }
@@ -529,7 +509,7 @@
                 document.getElementById('block4').style.display = 'None'
 
             } else if (q1choice != 'Yes' || q2choice != '1-5 years') {
-                document.getElementById('submit').style.display = 'block'
+                document.getElementById('submit').style.display = 'inline-block'
             }
         }
 
@@ -592,6 +572,35 @@
             opacity: 5;
             top: 40px;
         }
+    </style>
+
+    <style>
+    .green_icon {
+    width:40px;
+    height:40px;
+    border-radius:40px ;
+    background:green;
+    display:inline-block;
+    position: relative;
+    }
+
+    .yellow_icon {
+    width:40px;
+    height:40px;
+    border-radius:40px ;
+    background:#c69500;
+    display:inline-block;
+    position: relative;
+    }
+
+    .blue_icon {
+    width:40px;
+    height:40px;
+    border-radius:40px ;
+    background:lightskyblue;
+    display:inline-block;
+    position: relative;
+    }
     </style>
 
 {% endblock %}

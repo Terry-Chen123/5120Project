@@ -13,7 +13,7 @@
     <!-- brief intro section -->
 	<section class="hero-section">
       <div class="hero-slider owl-carousel">
-         <div class="hs-item set-bg text-white" data-setbg="{% static 'img/homepage/bg.png'%}">
+         <div class="hs-item set-bg text-white" data-setbg="{% static 'img/homepage/bg.png' %}">
             <div class="container">
                <div class="row">
                   <div class="col-xl-7">
@@ -31,11 +31,12 @@
                   <div class="col-xl-7">
                       <h3 style="white-space: nowrap; font-weight: bold; font-size: 60px"><font color="#006400">Keep Your Children Safe</font></h3><br>
                       <h4 style="white-space: nowrap"><font color="black">Do you know how
-                        to prevention the pneumonia?</font></h4><br>
+                        to prevent the pneumonia?</font></h4><br>
                       <a href="{% url 'Prevention' %}" class="site-btn">Learn More</a>
                   </div>
                </div>
             </div>
+
          </div>
       </div>
    </section>
@@ -113,7 +114,7 @@
                <img src="{% static 'img/about/death.png' %}" alt="" style="width:50px;height: 50px">
                     <br><br>
                <h2> 1.6 million </h2>
-               <p>Death Per Year</p>
+               <p>Pneumonia Death Per Year</p>
             </div>
             <div class="col-md-3 col-sm-6 fact">
                <img src="{% static 'img/about/vaccine.png' %}" alt="" style="width:50px;height: 50px">
@@ -133,31 +134,29 @@
     <!-- Data section end-->
 
 	<!-- About section -->
-	<section class="about-section spad" style="padding-left: 150px">
+	<section class="about-section spad" style="padding-left: 100px">
       <div class="container">
          <div class="row">
-            <div class="col-lg-5">
-               <img src="{% static 'img/homepage/c1.JPG' %}" style="height:300px ;width:500px; margin-right:50px">
-               <br><br>
-               <h2><font color="2E8B57">Babies & Young children</font></h2><br>
-               <h5><font color="2E8B57">In babies and children younger than five years:<br></font></h5>
-                <h6><font color="696969" >pneumonia is more likely to be caused by a virus.</font> </h6>
-                <br>
-               <h5><font color="2E8B57">In children older than five years:<br></font></h5>
-               <h6><font color="696969" >pneumonia is more likely to be caused by bacteria.</font></h6>
-                <br>
+            <div class="col-lg-6 about-text">
+                <img src="{% static 'img/homepage/c1.JPG' %}" style="height:300px ;width:500px; margin-right:50px"><br><br>
+                <h2><font color="2E8B57">Babies & Young Children</font></h2>
+                <h5><font color="2E8B57">In babies and children younger than five years:<br></font></h5>
+                <h6><font color="696969" >pneumonia is more likely to be caused by a virus.</font> </h6><br>
+                <h5><font color="2E8B57">In children older than five years:<br></font></h5>
+                <h6><font color="696969" >pneumonia is more likely to be caused by bacteria.</font></h6><br>
             </div>
-            <div class="col-lg-7 about-text" >
-               <h2><font color="2E8B57">About children pneumonia</font></h2>
-               <h5><font color="696969">Pneumonia is a lung infection. </font></h5> <br>
+            <div class="col-lg-6 about-text" >
+                <h2><font color="2E8B57">About Children Pneumonia</font></h2>
+                <h5><font color="696969">Pneumonia is a lung infection. </font></h5> <br>
                 <h6><font color="696969">When someone has pneumonia, the small airways in their lungs<br>
                     get clogged with mucus.<br><br>This reduces the amount of oxygen that can get into their body.</font>
                 </h6><br>
-               <img src="{% static 'img/homepage/11.jpg'%}" style="height:300px ;width:500px;">
+                <img src="{% static 'img/homepage/11.jpg'%}" style="height:300px ;width:500px;">
             </div>
          </div>
       </div>
    </section>
+
     <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -210,5 +209,6 @@
     </script>
 
 {% endblock %}
+
 {% block script %}
 {% endblock %}

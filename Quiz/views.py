@@ -102,7 +102,7 @@ def getScore(Q_list, Ans_list):
                      "Read content about children's pneumonia, you will become a master on how to deal with " \
                      "the pneumonia emergency that happened to your child."
     elif 3 <= score  <= 4:
-        result = "Keep Learing!"
+        result = "Keep Learning!"
         suggestion = "You are doing good and almost master the knowledge, " \
                      "but still misunderstanding a little bit. " \
                      "feel free to go back and read the information, and get a full mark."
