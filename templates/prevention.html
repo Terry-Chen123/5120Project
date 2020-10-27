@@ -10,6 +10,73 @@
 {% endblock %}
 {% block mainbody %}
     {% load static %}
+
+
+    <div style="border-style: none;height: 300px;background-color: #1c7430;">
+        <h1 style="font-weight: bolder;color: white;text-align: center;">Prevention</h1>
+        <p style="font-size: 30px;color: white;text-align: center;padding-left: 30px;padding-right: 30px">Pneumonia prevention is a key and it will ensure that your child staying healthy. Remind your child to wash their hands frequently,
+            keep them away from poor air quality, and make sure they get vaccinated
+        </p>
+    </div>
+
+    <div class="row" style="margin: 15px">
+        <div class="col-lg-4" style="width: 100px">
+            <div class="flip-box" >
+                <div class="flip-box-inner">
+                    <div class="flip-box-front" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../static/img/prevention/washhand/handwashing.jpg);background-size: cover;padding-top: 180px">
+                        <h3 style="color: white;font-weight: bold">Health Habit</h3>
+                    </div>
+                     <a href="{% url 'Health Habit' %}" >
+                        <div class="flip-box-back"style="background-color: #71cd29; padding-top: 30px">
+                            <img src="/static/img/prevention/washhand/washing-hand2.png" style="width: 100px"><br><br><br><br>
+                            <h4 style="color: white;font-weight: bold">
+                                Good health habits will help your children away from pneumonia
+                            </h4><br><br>
+                            <a href="{% url 'Health Habit' %}"><h4 style="color: white;font-weight: bold">Click Here To Learn More!</h4></a>
+                        </div>
+                     </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="flip-box">
+                <div class="flip-box-inner" >
+                    <div class="flip-box-front" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../static/img/prevention/airquality/airquality.jpg);background-size: cover;padding-top: 180px">
+                        <h3 style="color: white;font-weight: bold">Air Quality</h3>
+                    </div>
+                    <a href="{% url 'Air Quality' %}" >
+                        <div class="flip-box-back"style="background-color: #71cd29;padding-top: 30px">
+                            <img src="/static/img/prevention/airquality/air-quality2.png" style="width: 100px"><br><br><br>
+                            <h4 style="color: white;font-weight: bold">View how important of air quality to maintain lung
+                                health and help your child breathe better
+                            </h4><br><br>
+                            <a href="{% url 'Air Quality' %}"><h4 style="color: white;font-weight: bold">Click Here To Learn More!</h4></a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../static/img/prevention/shcedule/schedul.jpg);background-size: cover;padding-top: 180px">
+                        <h3 style="color: white;font-weight: bold">Vaccine Schedule</h3>
+                    </div>
+                    <a href="{% url 'Vaccine' %}">
+                        <div class="flip-box-back" style="background-color: #71cd29;padding-top: 30px">
+                            <img src="/static/img/prevention/shcedule/syringe.png" style="width: 100px"><br><br><br>
+                            <h4 style="color: white;font-weight: bold">
+                                Start plan your children's vaccine schedule, make sure your child is vaccinated
+                            </h4>
+                            <br><br>
+                            <a href="{% url 'Vaccine' %}"><h4 style="color: white;font-weight: bold">Click Here To Learn More!</h4></a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <style>
         body {
           font-family: Arial, Helvetica, sans-serif;
@@ -55,70 +122,5 @@
           transform: rotateY(180deg);
         }
     </style>
-
-    <div style="border-style: none;height: 300px;background-color: #1c7430;">
-        <h1 style="font-weight: bolder;color: white;text-align: center;">Prevention</h1>
-        <p style="font-size: 30px;color: white;text-align: center;padding-left: 30px;padding-right: 30px">Pneumonia prevention is a key and it will ensure that your child staying healthy. Remind your child to wash their hands frequently,
-            keep them away from poor air quality, and make sure they get vaccinated
-        </p>
-    </div>
-    <div class="row" style="margin: 15px">
-    <div class="col-lg-4" style="width: 100px">
-        <div class="flip-box" >
-            <div class="flip-box-inner">
-                <div class="flip-box-front" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../static/img/prevention/washhand/handwashing.jpg);background-size: cover;padding-top: 180px">
-                    <h3 style="color: white;font-weight: bold">Health Habit</h3>
-                </div>
-                 <a href="{% url 'Health Habit' %}" >
-                    <div class="flip-box-back"style="background-color: #71cd29; padding-top: 30px">
-                        <img src="/static/img/prevention/washhand/washing-hand2.png" style="width: 100px"><br><br><br><br>
-                        <h4 style="color: white;font-weight: bold">
-                            Good health habits will help your children away from pneumonia
-                        </h4><br><br>
-                        <a href="{% url 'Health Habit' %}"><h4 style="color: white;font-weight: bold">Click Here To Learn More!</h4></a>
-                    </div>
-                 </a>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4">
-        <div class="flip-box">
-            <div class="flip-box-inner" >
-                <div class="flip-box-front" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../static/img/prevention/airquality/airquality.jpg);background-size: cover;padding-top: 180px">
-                    <h3 style="color: white;font-weight: bold">Air Quality</h3>
-                </div>
-                <a href="{% url 'Air Quality' %}" >
-                    <div class="flip-box-back"style="background-color: #71cd29;padding-top: 30px">
-                        <img src="/static/img/prevention/airquality/air-quality2.png" style="width: 100px"><br><br><br>
-                        <h4 style="color: white;font-weight: bold">View how important of air quality to maintain lung
-                            health and help your child breathe better
-                        </h4><br><br>
-                        <a href="{% url 'Air Quality' %}"><h4 style="color: white;font-weight: bold">Click Here To Learn More!</h4></a>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4">
-        <div class="flip-box">
-            <div class="flip-box-inner">
-                <div class="flip-box-front" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../static/img/prevention/shcedule/schedul.jpg);background-size: cover;padding-top: 180px">
-                    <h3 style="color: white;font-weight: bold">Vaccine Schedule</h3>
-                </div>
-                <a href="{% url 'Vaccine' %}">
-                    <div class="flip-box-back" style="background-color: #71cd29;padding-top: 30px">
-                        <img src="/static/img/prevention/shcedule/syringe.png" style="width: 100px"><br><br><br>
-                        <h4 style="color: white;font-weight: bold">
-                            Start plan your children's vaccine schedule, make sure your child is vaccinated
-                        </h4>
-                        <br><br>
-                        <a href="{% url 'Vaccine' %}"><h4 style="color: white;font-weight: bold">Click Here To Learn More!</h4></a>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 {% endblock %}

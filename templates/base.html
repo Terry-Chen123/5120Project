@@ -74,21 +74,21 @@
 	<section class="footer-top-section set-bg" data-setbg="{% static 'img/footer.jpg' %}">
 		<div class="container">
 			<div class="row">
-                <div class="col-lg-2 col-md-2" style="margin-top:20px;">
+                <div class="col-lg-2 col-md-2" style="margin-right:-50px;">
                     <a href="{% url 'Home' %}"><img src="{% static 'img/logo.003.png' %}" alt="site-logo"></a>
                 </div>
-				<div class="col-lg-4 col-md-4" style="margin-top:20px">
+				<div class="col-lg-4 col-md-4" style="">
 					<div class="footer-widget">
 						<div class="fw-about">
-							<p>The website is aim to provide a chance to let you learn about pneumonia.
-                                We provide the best solutions and actions to protect every safety
+							<p>Our website is aim to help you learn about pneumonia and
+                                provide the best solutions to protect every safety
                                 concern your lung health.
                             </p>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-6 col-md-6" >
-                    <div class="footer-widget" style="padding-left:100px; padding-top: 50px; font-size: 20px;white-space: nowrap;">
+				<div class="col-lg-6 col-md-6"  >
+                    <div class="footer-widget" style="padding-left: 60px; padding-top: 30px; font-size: 20px;white-space: nowrap;">
                         <div class="fw-links">
                              <ul id = 'footer-list'>
                                 <li><a href="{% url 'Home' %}">Home</a></li>
@@ -117,8 +117,8 @@
                         <a style="color: green">TA02</a>
                     </div>
                 </div>
-                <div class="col-lg-6" style="text-align: right; margin-right: -50px">
-                    <div id="backtotop"><a href="#logo" style="color: black;  ">Back To Top</a></div>
+                <div class="col-lg-6" style="text-align: right; margin-right: -100px">
+                    <div id="backtotop"><a href="#logo" style="color: black; ">Back To Top</a></div>
                 </div>
             </div>
         </div>
@@ -137,18 +137,17 @@
     <style>
         .footer-top-section {
           padding-top: 0px;
-          padding-bottom: 30px;
+          padding-bottom: 10px;
         }
-        .footer-widget .fw-about {
-          padding-top: 30px;
-        }
+
         #backtotop. a:link {color:#000000;}      /* 未访问链接*/
         #backtotop. a:visited {color:#00FF00;}  /* 已访问链接 */
         #backtotop. a:hover {color:#FF00FF;}  /* 鼠标移动到链接上 */
         #backtotop. a:active {color:#0000FF;}  /* 鼠标点击时 */
 
         #footer-list {list-style-type: none;}
-        #footer-list li {float: left; margin-right: 15px;}
+        #footer-list li {float: left; margin-right: 14px;}
+
     </style>
 
     {% block script %}
