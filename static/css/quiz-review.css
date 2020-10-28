@@ -334,7 +334,6 @@ ul, ol {
 	height: 98px;
 	background: #fff;
 	font-size: 48px;
-	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
 	-webkit-box-align: center;
@@ -445,7 +444,6 @@ ul, ol {
 	position: relative;
 }
 .hero-slider .owl-dots .owl-dot {
-	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
 	height: 33px;
@@ -578,7 +576,6 @@ ul, ol {
 	height: 98px;
 	background: #fff;
 	font-size: 48px;
-	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
 	-webkit-box-align: center;
@@ -946,7 +943,6 @@ ul, ol {
 	left: 0;
 	top: 0;
 	background-color: #1b9ed2;
-	background-image: url("../img/pattren.png");
 	background-repeat: repeat;
 	opacity: 0.81;
 }
@@ -1083,7 +1079,6 @@ ul, ol {
 	top: 0;
 	border-radius: 50%;
 	background-color: #71cd29;
-	background-image: url("../img/icons/rignt.png");
 	background-repeat: no-repeat;
 	background-position: center center;
 }
@@ -1155,7 +1150,6 @@ ul, ol {
 	display: flex;
 }
 .site-pagination a {
-	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
 	-webkit-box-align: center;
@@ -1255,7 +1249,6 @@ ul, ol {
 	.testimonials-slider .owl-next {
 		position: relative;
 		left: 0;
-		display: -webkit-inline-box;
 		display: -ms-inline-flexbox;
 		display: inline-flex;
 		top: 0;
@@ -1527,7 +1520,5 @@ ul, ol {
 	.doctor-item.di-bg .di-pic {
 		width: 200px;
 		height: 200px;
-	}
-	.footer-menu li a {
-		margin-left: 15px;
-	}
+	}}
+
