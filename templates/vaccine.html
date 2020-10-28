@@ -227,8 +227,8 @@
     </div>
 
     <!-- vaccine schedule table -->
-    <div id='schedule_part' style="display: none">
-        <div  class="grid-container" style="border-style: solid; margin-left: 120px;margin-right: 120px;margin-top: 30px;margin-bottom: 30px">
+    <div id='schedule_part' style="">
+        <div class="grid-container" style="border-style: solid; margin-left: 120px;margin-right: 120px;margin-top: 30px;margin-bottom: 30px">
             <div class="schedule_head" style="background-color: #0056b3;color: white;font-weight: bold">Pneumonia Vaccine Schedule</div>
             <!-- 1st row -->
             <div class="vaccine_type">Vaccine Type</div>
@@ -440,7 +440,7 @@
                         }
                     }
                 }
-                document.getElementById('recom').style.display = 'block';
+                //document.getElementById('schedule_part').style.display = 'block';
             }
             }
 
@@ -592,6 +592,27 @@
     display:inline-block;
     position: relative;
     }
+    .yellow_icon:before, .yellow_icon::after {
+    content:"";
+    height:28px;
+    width:6px;
+    border-radius: 10px;
+    display:inline-block;
+    background:white;
+    position: absolute;
+    top:6px;/*40-6=34*/
+    left:20px;/*make the two rects in the middle of the cycle */
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+}
+.yellow_icon::before {
+    height:15px;
+    transform: rotate(-45deg);
+    -ms-transform:rotate(-45deg);
+    position: absolute;
+    top:18px;/*40-18=12  */
+    left:8px;
+}
 
     .blue_icon {
     width:40px;
