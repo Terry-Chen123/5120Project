@@ -10,5 +10,3 @@ def home(request):
 def about(request):
     return render(request, "../templates/about.html")
 
-def page_not_found(request):
-    return render('../templates/404.html')
