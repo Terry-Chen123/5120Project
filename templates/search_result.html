@@ -133,14 +133,6 @@
                                 var mylatitude
                                 var mylongitude
                                 //get my location value
-                                if ("geolocation" in navigator) {
-                                    navigator.geolocation.getCurrentPosition(position => {
-
-                                        mylatitude=position.coords.latitude
-                                        mylongitude=position.coords.longitude
-                                    });
-
-                                } else { /* geolocation IS NOT available, handle it */ }
 
                                 //direction
                                 var directions = new MapboxDirections({
@@ -150,7 +142,15 @@
 
                                 //set default start place and destination
                                 map.on('load',  function() {
-                                    directions.setOrigin([mylongitude,mylatitude]); // can be address
+                                    if ("geolocation" in navigator) {
+                                    navigator.geolocation.getCurrentPosition(position => {
+                                        mylatitude=position.coords.latitude
+                                        mylongitude=position.coords.longitude
+                                        directions.setOrigin([mylongitude,mylatitude]);
+                                    });
+
+                                } else { /* geolocation IS NOT available, handle it */ }
+                                     // can be address
                                     directions.setDestination([new_long,new_lat]); // can be address
                                 })
 
