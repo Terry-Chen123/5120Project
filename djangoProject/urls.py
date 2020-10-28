@@ -41,4 +41,6 @@ urlpatterns = [
     path('prevention/healthhabit', vaccine_views.health_habit, name = 'Health Habit'),
 
 ]
+
+#handler404 = 'General_page.views.page_not_found'
 urlpatterns += staticfiles_urlpatterns()

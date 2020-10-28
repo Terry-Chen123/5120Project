@@ -48,14 +48,17 @@ function search(keyword, output) {
 
       result.data.forEach(function (station, i) {
         var tr = $("<tr>");
-        tr.append($("<td>").html(station.station.name));
-        tr.append($("<td>").html(colorize(station.aqi)));
-        tr.append($("<td>").html(station.time.stime));
-        tr.on("click", function () {
-          showStation(station, stationInfo);
-        });
-        table.append(tr);
-        if (i == 0) showStation(station, stationInfo);
+        if (station.station.country == 'AU'){
+            tr.append($("<td>").html(station.station.name));
+            tr.append($("<td>").html(colorize(station.aqi)));
+            tr.append($("<td>").html(station.time.stime));
+            tr.on("click", function () {
+              showStation(station, stationInfo);
+            });
+            table.append(tr);
+            if (i == 0) showStation(station, stationInfo);
+        }
+
       });
     }
   );

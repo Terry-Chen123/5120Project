@@ -35,7 +35,6 @@
                            <div class="date">Question {{ eachquestion.questionId }}</div>
 						    <h3>{{ eachquestion.question }}</h3>
 						    <div class="blog-metas">
-							    <div class="blog-meta">By LungHealth</div>
                                 <div class="blog-meta">Keywords:<a href="{% url 'Read More' %}">{{ eachquestion.keyword }}</a></div>
                             </div>
 						    <p><input type="radio" id="ChoiceA" class="qa" name="{{ eachquestion.id }}" value = "A">&nbsp;{{ eachquestion.choiceA }}  </p>
