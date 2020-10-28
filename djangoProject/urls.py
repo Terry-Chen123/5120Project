@@ -20,6 +20,9 @@ from General_page import views as general_views
 from Quiz import views as quiz_views
 from Search import views as search_views
 from Vaccine import views as vaccine_views
+from django.views import static ##新增
+from django.conf import settings ##新增
+
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
@@ -39,6 +42,10 @@ urlpatterns = [
     path('prevention', vaccine_views.prevention, name = 'Prevention'),
     path('prevention/airquality', vaccine_views.airquality, name = 'Air Quality'),
     path('prevention/healthhabit', vaccine_views.health_habit, name = 'Health Habit'),
+
+    url(r'^static/(?P<path>.*)$', static.serve,
+          {'document_root': settings.STATIC_ROOT}, name='static'),
+
 
 ]
 
