@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block navigation %}
     <li ><a href="{% url 'Home' %}">Home</a></li>
-    <li><a href="{% url 'About' %}">About</a></li>
     <li ><a href="{% url 'Read More' %}">Learn Pneumonia</a></li>
     <li class="active"><a href="{% url 'Quiz List' %}">Quiz</a></li>
     <li><a href="{% url 'Prevention' %}">Prevention</a></li>
     <li><a href="{% url 'Search' %}">Clinic Search</a></li>
+    <li><a href="{% url 'About' %}">About</a></li>
 {% endblock %}
 
 {% block mainbody %}
@@ -29,25 +29,24 @@
         <section class="services-section spad">
             <div class="container">
                 <div class="blog-item">
-                  <div class="row">
-                    {% for eachquestion in Question %}
-                    <div class="col-lg-6 blog-content">
-                           <div class="date">Question {{ eachquestion.questionId }}</div>
-						    <h3>{{ eachquestion.question }}</h3>
-						    <div class="blog-metas">
-                                <div class="blog-meta">Keywords:<a href="{% url 'Read More' %}">{{ eachquestion.keyword }}</a></div>
+                    <div class="row">
+                        {% for eachquestion in Question %}
+                            <div class="col-lg-6 col-md-6 col-sm-12 blog-content">
+                                   <div class="date">Question {{ eachquestion.questionId }}</div>
+                                    <h3>{{ eachquestion.question }}</h3>
+                                    <div class="blog-metas">
+                                        <div class="blog-meta">Keywords:<a href="{% url 'Read More' %}">{{ eachquestion.keyword }}</a></div>
+                                    </div>
+                                    <p><input type="radio" id="ChoiceA" class="qa" name="{{ eachquestion.id }}" value = "A">&nbsp;{{ eachquestion.choiceA }}  </p>
+                                    <p><input type="radio" id="ChoiceB" class="qa" name="{{ eachquestion.id }}" value = "B">&nbsp;{{ eachquestion.choiceB }} </p>
+                                    <p><input type="radio" id="ChoiceC" class="qa" name="{{ eachquestion.id }}" value = "C">&nbsp;{{ eachquestion.choiceC }} </p>
                             </div>
-						    <p><input type="radio" id="ChoiceA" class="qa" name="{{ eachquestion.id }}" value = "A">&nbsp;{{ eachquestion.choiceA }}  </p>
-                            <p><input type="radio" id="ChoiceB" class="qa" name="{{ eachquestion.id }}" value = "B">&nbsp;{{ eachquestion.choiceB }} </p>
-                            <p><input type="radio" id="ChoiceC" class="qa" name="{{ eachquestion.id }}" value = "C">&nbsp;{{ eachquestion.choiceC }} </p>
-					</div>
-                    <div class="col-lg-6 blog-thumb">
-                    <br><br>
-					    <img src="{% static eachquestion.imageurl %}" style="height:300px ;width:500px">
-					</div>
-                    {% endfor %}
-                     <br><br><br>
-                    <div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 blog-thumb">
+                            <br><br>
+                                <img src="{% static eachquestion.imageurl %}" style="height:300px ;width:500px">
+                            </div>
+                        {% endfor %}<br><br><br>
+                        <div>
                         {% if Question.0.category == 'A'%}
                             <p><input type="submit" class="site-btn mt-4" name = 'A' value="Check Result Here!"></p>
                         {% elif Question.0.category == 'B'%}
@@ -55,11 +54,12 @@
                         {% else  %}
                              <p><input type="submit" class="site-btn mt-4" name = 'C' value="Check Result Here!"></p>
                         {% endif %}
+                        </div>
                     </div>
-                  </div>
                 </div>
             </div>
         </section>
     </form>
 	<!-- Quiz card -->
+
 {% endblock %}

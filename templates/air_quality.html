@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block navigation %}
     <li><a href="{% url 'Home' %}">Home</a></li>
-    <li ><a href="{% url 'About' %}">About</a></li>
     <li ><a href="{% url 'Read More' %}">Learn Pneumonia</a></li>
     <li><a href="{% url 'Quiz List' %}">Quiz</a></li>
     <li class="active"><a href="{% url 'Prevention' %}">Prevention</a></li>
     <li><a href="{% url 'Search' %}">Clinic Search</a></li>
+    <li ><a href="{% url 'About' %}">About</a></li>
 
 {% endblock %}
 {% block mainbody %}
@@ -37,15 +37,15 @@
         <div style="border-style: solid;border-width: 10px;border-color: #1c7430;margin: 30px">
             <p style="text-align: center;font-size: 50px;color: #13B51E;font-weight: bold">Air Quality</p>
             <div class="row">
-                <div class="col-lg-6">
-                    <video width="100%" height="100%" controls style="margin-left: 15px;margin-right: 5px;">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <video width="100%" height="85%" controls style="margin-left: 15px;margin-right: 5px;">
                         <source src="../static/video/airquality.mp4">
                     </video>
                      <p style="font-size: 15px;color: black;text-align: center;font-weight: bold">
                         Video - How air pollution affect your lung health?
                     </p>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <div style="margin-right: 15px;border-style: solid;padding: 10px;border-color: #71cd29;background-color: #71cd29;">
                         <h2 style="text-align: center;font-weight: bolder;font-style: italic">Air Quality</h2>
                         <p style="font-size: 29px;color: black;font-style: italic">
@@ -73,14 +73,14 @@
                 </p>
             </div>
             <div class="row" style="margin-top: 10px;margin-bottom: 20px">
-                <div class="col-lg-6" style="padding-left:50px;padding-top: 50px;color: white;font-weight: bold;line-height: 1px">
+                <div class="col-lg-6 col-md-6 col-sm-12" style="padding-left:50px;padding-top: 50px;color: white;font-weight: bold;line-height: 1px">
                     <p style="font-weight: bold;font-size: 15px;color: white">• Reducing the time outdoor</p><br/>
                     <p style="font-weight: bold;font-size: 15px;color: white">• Wearing masks when necessary</p><br/>
                     <p style="font-weight: bold;font-size: 15px;color: white">• Avoid exposing your child to tobacco smoke or other irritants in the air</p><br/>
                     <p style="font-weight: bold;font-size: 15px;color: white">• Do not use wood or dung to cook or heat in your home, it will cause indoor air pollution</p><br/>
                     <p style="font-weight: bold;font-size: 15px;color: white">• Keeping away from crowded area</p>
                 </div>
-                <div class="col-lg-6" style="padding-top: 50px;padding-left:50px;line-height: 1px">
+                <div class="col-lg-6 col-md-6 col-sm-12" style="padding-top: 50px;padding-left:50px;line-height: 1px">
                     <p style="font-weight: bolder;font-size: 18px;color: white">  For reducing the air pollutants indoor, people should:</p><br/>
                     <p style="font-weight: bold;font-size: 15px;color: white">• Using clean fuels</p><br/>
                     <p style="font-weight: bold;font-size: 15px;color: white">• Improving the stoves so as to burn fuel more efficiently</p><br/>
@@ -94,7 +94,7 @@
                 <div class="personal-border jmu-border-1px border-bottom"></div>
             </div><br>
             <div class="row" style="padding-top: 20px">
-                <div class="col-lg-6" style="padding-left: 20px;">
+                <div class="col-lg-6 col-md-6 col-sm-12" style="padding-left: 20px;">
                     <p style="text-align:center; font-size: 30px;color: black;font-weight: bold">
                         Outdoor Pollutant
                     </p>
@@ -114,7 +114,7 @@
                         the indices of air pollution.
                     </p>
                 </div>
-                <div class="col-lg-6" style="padding-right: 20px">
+                <div class="col-lg-6 col-md-6 col-sm-12" style="padding-right: 20px">
                     <p style="text-align:center; padding-right: 10px;font-size: 30px;color: black;font-weight: bold">
                         Indoor Pollutants
                     </p>

@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block navigation %}
     <li ><a href="{% url 'Home' %}">Home</a></li>
-    <li><a href="{% url 'About' %}">About</a></li>
     <li ><a href="{% url 'Read More' %}">Learn Pneumonia</a></li>
     <li class="active"><a href="{% url 'Quiz List' %}">Quiz</a></li>
     <li><a href="{% url 'Prevention' %}">Prevention</a></li>
     <li><a href="{% url 'Search' %}">Clinic Search</a></li>
+    <li><a href="{% url 'About' %}">About</a></li>
 {% endblock %}
 
 {% block mainbody %}

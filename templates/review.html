@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block navigation %}
     <li ><a href="{% url 'Home' %}">Home</a></li>
-    <li><a href="{% url 'About' %}">About</a></li>
     <li ><a href="{% url 'Read More' %}">Learn Pneumonia</a></li>
     <li class="active"><a href="{% url 'Quiz List' %}">Quiz</a></li>
     <li><a href="{% url 'Prevention' %}">Prevention</a></li>
     <li><a href="{% url 'Search' %}">Clinic Search</a></li>
+    <li><a href="{% url 'About' %}">About</a></li>
 {% endblock %}
 
 {% block mainbody %}
@@ -91,44 +91,40 @@
 					</div>
                 {% endfor %}
                 <div class="container"  style="border-style: solid;border-color: #28a745; border-width: 3px;margin: 30px">
-                    <div>
-                    <br><br>
-                    <div class="service-icon">
-						<img src="{% static 'img/review/check.png' %}" alt=""></a>
-					</div>
-                    <h4><a href="{% url 'Quiz List' %}"class="btn_click" style="text-align: left">Suggestion</a></h4>
-                    <br><br><br><br>
-                    <div>
-                        <p>
-                          <vi style="color:black;font-size:24px; font-weight: bolder">
-                             Your Final Grade is:&nbsp;
-                          </vi>
-                            {% if grade == "Not so good" %}
-                                <vi style="color:red;font-weight: bold;font-size: 40px"> {{ score }}&nbsp;---&nbsp;{{ grade }} !</vi>
-                            {% else %}
-                                <vi style="font-weight: bold;color: #1c7430;font-size: 40px"> {{ score }}&nbsp;---&nbsp;{{ grade }} !</vi>
-                            {% endif %}
-                        </p>
-                        <br>
-                        <h4> {{ suggestion }} </h4>
+                    <div><br><br>
+                        <div class="service-icon">
+                            <img src="{% static 'img/review/check.png' %}" alt=""></a>
+                        </div>
+                        <h4><a href="{% url 'Quiz List' %}"class="btn_click" style="text-align: left">Suggestion</a></h4>
+                        <br><br><br><br>
+                        <div>
+                            <p>
+                              <vi style="color:black;font-size:24px; font-weight: bolder">
+                                 Your Final Grade is:&nbsp;
+                              </vi>
+                                {% if grade == "Not so good" %}
+                                    <vi style="color:red;font-weight: bold;font-size: 40px"> {{ score }}&nbsp;---&nbsp;{{ grade }} !</vi>
+                                {% else %}
+                                    <vi style="font-weight: bold;color: #1c7430;font-size: 40px"> {{ score }}&nbsp;---&nbsp;{{ grade }} !</vi>
+                                {% endif %}
+                            </p>
+                            <br>
+                            <h4> {{ suggestion }} </h4>
+                        </div><br><br>
+                        {% if quiz_num == 1 %}
+                             <a href="{% url 'Read More' %}" class="site-btn mt-4">Review the Knowledge</a>
+                        {% elif quiz_num == 2 %}
+                             <a href="{% url 'Read More' %}" class="site-btn mt-4">Review the Knowledge</a>
+                        {% else %}
+                             <a href="{% url 'Read More' %}" class="site-btn mt-4">Review the Knowledge</a>
+                        {% endif %}
+                        <a href="{% url 'Quiz List' %}" class="site-btn mt-4" style="margin-left: 20px;margin-right: 20px">Do Quiz Again</a>
+                        <a href="{% url 'Home' %}" class="site-btn mt-4">Back to Home</a><br><br>
                     </div>
-                    <br>
-                    <br>
-                    {% if quiz_num == 1 %}
-                         <a href="{% url 'Read More' %}" class="site-btn mt-4">Review the Knowledge</a>
-                    {% elif quiz_num == 2 %}
-                         <a href="{% url 'Read More' %}" class="site-btn mt-4">Review the Knowledge</a>
-                    {% else %}
-                         <a href="{% url 'Read More' %}" class="site-btn mt-4">Review the Knowledge</a>
-                    {% endif %}
-                    <a href="{% url 'Quiz List' %}" class="site-btn mt-4" style="margin-left: 20px;margin-right: 20px">Do Quiz Again</a>
-                    <a href="{% url 'Home' %}" class="site-btn mt-4">Back to Home</a>
-                    <br><br>
-                </div>
                 </div>
 			</div>
-			</div>
-		</div>
+        </div>
+
 	</section>
 	<!-- review section end -->
 

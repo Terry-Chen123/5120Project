@@ -1,18 +1,17 @@
 {% extends 'base.html' %}
 {% block navigation %}
     <li ><a href="{% url 'Home' %}">Home</a></li>
-    <li><a href="{% url 'About' %}">About</a></li>
     <li class="active"><a href="{% url 'Read More' %}">Learn Pneumonia</a></li>
     <li><a href="{% url 'Quiz List' %}">Quiz</a></li>
     <li><a href="{% url 'Prevention' %}">Prevention</a></li>
     <li><a href="{% url 'Search' %}">Clinic Search</a></li>
+     <li><a href="{% url 'About' %}">About</a></li>
 {% endblock %}
 
 {% block mainbody %}
     {% load static %}
     <section class="more-info set-bg" style="background: #E5E4E2">
-        <div class="container">
-            <br>
+        <div class="container"><br>
             <h5><a href="{% url 'Home' %}">Home</a>&nbsp;&gt;&nbsp
                 More Information
             </h5><br><br>
@@ -32,10 +31,10 @@
                 <div class="container">
                     <div class="blog-item">
                         <div class="row">
-                           <div class="col-lg-6 blog-thumb"><br><br>
+                           <div class="col-lg-6 col-md-6 col-sm-12 blog-thumb"><br><br>
                               <img src="{% static 'img/read more page/info1.jpg' %}" style="padding-right:50px ">
                            </div>
-                           <div class="col-lg-6 blog-content">
+                           <div class="col-lg-6 col-md-6 col-sm-12 blog-content">
                                 <h3><font color="2E8B57" style="font-weight: bold;margin-left: 40px">Introduction of pneumonia :</font></h3>
                                 <div id="accordion" class="accordion-area faq-accordion" style="padding-top: 20px;padding-left: 30px">
                                     <!-- part 1 -->
@@ -74,7 +73,7 @@
                                                     • When these germs are in fluid from the mouth or nose of <br/>
                                                     &nbsp;&nbsp;someone who's infected, that person can spread the illness &nbsp;&nbsp;through coughs and sneezes. <br/>
                                                     • While many cases of pneumonia can be mild, left untreated some &nbsp;&nbsp;cases of pneumonia can be serious and even life-threatening.<br/>
-                                                    &nbsp;&nbsp;Sharing cups and utensils, touching the used tissues or <br/
+                                                    &nbsp;&nbsp;Sharing cups and utensils, touching the used tissues or <br/>
                                                     &nbsp;&nbsp;handkerchiefs of an infected person also can spread pneumonia. <br/>
                                                 <p style="color:cornflowerblue">It's best to keep kids away from anyone with symptoms of a respiratory infection.</p>
                                                 </p>
@@ -108,7 +107,6 @@
                                     <input type="submit" class="btn btn-default is-hoverable" value="Click Here To Test Knowledge" name='A' style="color: green;margin-top: 60px;margin-left: 180px">
                                 </form>
                            </div>
-
                         </div>
                     </div>
                 </div>
@@ -123,21 +121,16 @@
             <div class="container">
                 <div class="blog-item">
                     <div class="row">
-                        <div class="col-lg-6 blog-thumb" style="margin-bottom: 30px"><br><br>
-                            <img src="{% static 'img/read more page/needle.png' %}" alt="" style="padding-right: 50px; x">
+                        <div class="col-lg-6 col-md-6 col-sm-12 blog-thumb" style="margin-bottom: 30px"><br><br>
+                            <img src="{% static 'img/read more page/needle.png' %}" alt="" style="padding-right: 50px; ">
                         </div>
                              <script type="text/javascript">
                                 function click_prevent(e) {
                                     $('.panel1').removeClass('active');
                                     e.addClass('active')
-                                    $('#prevention1').collapse.toggle(false)
-                                    //$('.panel1').removeAttr("data-toggle");
-                                    //e.attr('data-toggle', 'collapse');
                                 }
-                                $(function (){
-                                    $('#prevention1').collapse({toggle:false})})
                             </script>
-                        <div class="col-lg-6 blog-content">
+                        <div class="col-lg-6 col-md-6 col-sm-12 blog-content">
                                 <h3><font color="2E8B57" style="font-weight: bold;margin-left: 40px">Prevention of Pneumonia :</font></h3>
                                 <div id="accordion" class="accordion-area faq-accordion" style="padding-top: 20px;padding-left: 30px">
                                     <!-- part 1 -->
@@ -211,8 +204,8 @@
                                     <input type="submit" class="btn btn-default is-hoverable" value="Click Here To Test Knowledge" name='B'
                                            style="color: green;margin-top: 40px;margin-left: 180px">
                                 </form>
-                           </div>
                         </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -220,16 +213,15 @@
     <!-- Prevention Part -->
 
     <!-- Revocer Part -->
-
     <div id="recover" class="w3-container information" style="margin-top: 40px;display: none">
         <section class="services-section spad" style="background: white">
                 <div class="container">
                     <div class="blog-item">
                         <div class="row">
-                        <div class="col-lg-6 blog-thumb"><br><br>
-                            <img src="{% static 'img/read more page/vaccine.jpg' %}" style="height:400px;padding-right:50px">
-                        </div>
-                        <div class="col-lg-6 blog-content">
+                            <div class="col-lg-6 col-md-6 col-sm-12 blog-thumb"><br><br>
+                                <img src="{% static 'img/read more page/vaccine.jpg' %}" style="height:400px;padding-right:50px">
+                            </div>
+                            <div class="col-lg-6  col-md-6 col-sm-12 blog-content">
                                 <h3><font color="2E8B57" style="font-weight: bold;margin-left: 40px">Treatment of Pneumonia :</font></h3>
                                 <div id="accordion" class="accordion-area faq-accordion" style="padding-top: 20px;padding-left: 30px">
                                     <!-- part 1 -->
@@ -339,18 +331,15 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                                 <form action="/quizlist/quizstart" method='POST' >
-                                    {% csrf_token %}
-                                    <input type="submit" class="btn btn-default is-hoverable" value="Click Here To Test Knowledge" name='C' style="color: green;margin-top: 40px;margin-left: 180px">
-                                </form>
-                           </div>
-
-                    </div>
+                                        {% csrf_token %}
+                                        <input type="submit" class="btn btn-default is-hoverable" value="Click Here To Test Knowledge" name='C' style="color: green;margin-top: 40px;margin-left: 180px">
+                                    </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
         </section>
     </div>
     <!-- Revocer Part -->

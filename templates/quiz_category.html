@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block navigation %}
     <li ><a href="{% url 'Home' %}">Home</a></li>
-    <li ><a href="{% url 'About' %}">About</a></li>
     <li ><a href="{% url 'Read More' %}">Learn Pneumonia</a></li>
     <li class="active"><a href="{% url 'Quiz List' %}">Quiz</a></li>
     <li><a href="{% url 'Prevention' %}">Prevention</a></li>
     <li><a href="{% url 'Search' %}">Clinic Search</a></li>
+     <li ><a href="{% url 'About' %}">About</a></li>
 {% endblock %}
 <head>
   <meta charset="utf-8">
@@ -30,15 +30,14 @@
 	<!-- Page info section end -->
 
 	<!-- Quiz Category section -->
-    <section>
-    <br><br><br>
+    <section><br><br><br>
 		<div class="container">
 			<div class="blog-item">
 				<div class="row">
-					<div class="col-lg-6 blog-thumb">
+					<div class="col-lg-6 col-md-6 col-sm-12 blog-thumb">
 						<img src="{% static 'img/quiz_category/8.jpg' %}" alt="" style="height:300px ;width:500px">
 					</div>
-					<div class="col-lg-6 blog-content">
+					<div class="col-lg-6 col-md-6 col-sm-12 blog-content">
 						<div class="date">Quiz 1</div>
                         <h3><font color="2E8B57">Introduction of Prevention:</font></h3>
 						<div class="blog-metas">
@@ -77,10 +76,10 @@
 		<div class="container">
 			<div class="blog-item">
 				<div class="row">
-					<div class="col-lg-6 blog-thumb">
+					<div class="col-lg-6 col-md-6 col-sm-12 blog-thumb">
 						<img src="{% static 'img/quiz_category/10.jpg' %}" alt="" style="height:300px ;width:500px">
 					</div>
-					<div class="col-lg-6 blog-content">
+					<div class="col-lg-6 col-md-6 col-sm-12 blog-content">
 						<div class="date">Quiz 2</div>
                         <h3><font color="2E8B57"> How to prevent pneumonia :</font></h3>
 						<div class="blog-metas">
@@ -118,10 +117,10 @@
 		<div class="container">
 			<div class="blog-item">
 				<div class="row">
-					<div class="col-lg-6 blog-thumb">
+					<div class="col-lg-6 col-md-6 col-sm-12 blog-thumb">
 						<img src="{% static 'img/quiz_category/9.jpg' %}" alt="" style="height:300px ;width:500px">
 					</div>
-					<div class="col-lg-6 blog-content">
+					<div class="col-lg-6 col-md-6 col-sm-12 blog-content">
 						<div class="date">Quiz 3</div>
                         <h3><font color="2E8B57"> How to recover Prevention:</font></h3>
 						<div class="blog-metas">

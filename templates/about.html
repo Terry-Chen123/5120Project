@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block navigation %}
     <li ><a href="{% url 'Home' %}">Home</a></li>
-    <li class="active" ><a href="{% url 'About' %}">About</a></li>
     <li><a href="{% url 'Read More' %}">Learn Pneumonia</a></li>
     <li><a href="{% url 'Quiz List' %}">Quiz</a></li>
     <li><a href="{% url 'Prevention' %}">Prevention</a></li>
     <li><a href="{% url 'Search' %}">Clinic Search</a></li>
+    <li class="active" ><a href="{% url 'About' %}">About</a></li>
 
 {% endblock %}
 
@@ -26,11 +26,11 @@
     <!-- Intro section -->
    <section class="intro-section spad">
       <div class="container">
-         <div class="row">
-            <div class="col-lg-6">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
                <img src="{% static 'img/about/about-page.jpg' %}" alt="" style="margin-right: 20px;">
             </div>
-                <div class="col-lg-6 intro-text">
+                <div class="col-lg-6 col-md-6 col-sm-12 intro-text">
                     <h2 style="color: green">We Care About Your Children's Lung Health</h2>
                     <p style="font-weight: bold;color: black;font-size: 20px;line-height: 2px">
                         Our website aims to provide:</p>
@@ -43,59 +43,59 @@
                         • Help you find the clinics near your location.
                     </p>
                 </div>
-            </div><br>
-            <div class="row">
-                <div class="col-lg-6 intro-text">
-                    <h2 style="color: green">Why Choose Us?</h2>
-                    <p style="font-weight: bold;color: black;font-size: 20px;line-height: 30px">We provide you with the best solutions:</p>
-                    <p style="font-weight: normal;color: black;font-size: 15px">
-                        • Targeted quiz help you have a comprehensive understanding of children<br/>
-                        &nbsp pneumonia knowledge.<br/>
-                        • Helps you to nurture your children with excellent habits to prevent<br/>
-                        &nbsp;&nbsp;pneumonia.<br/>
-                        • Helps you plan your children’s vaccine schedule.<br/>
-                        • Helps you plan outside activities based on real time-data of air quality.<br/>
-                        • A quick search of a nearby clinic to help you find the optimum clinic.<br/>
-                    </p>
-                </div>
-                <div class="col-lg-6">
-                    <img src="{% static 'img/about/picture1.jpg' %}" alt=""style="height: 350px; margin-top: 20px;">
-                </div>
-         </div>
+          </div><br>
+          <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12 intro-text">
+                <h2 style="color: green">Why Choose Us?</h2>
+                <p style="font-weight: bold;color: black;font-size: 20px;line-height: 30px">We provide you with the best solutions:</p>
+                <p style="font-weight: normal;color: black;font-size: 15px">
+                    • Targeted quiz help you have a comprehensive understanding of children<br/>
+                    &nbsp pneumonia knowledge.<br/>
+                    • Helps you to nurture your children with excellent habits to prevent<br/>
+                    &nbsp;&nbsp;pneumonia.<br/>
+                    • Helps you plan your children’s vaccine schedule.<br/>
+                    • Helps you plan outside activities based on real time-data of air quality.<br/>
+                    • A quick search of a nearby clinic to help you find the optimum clinic.<br/>
+                </p>
+            </div>
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                  <img src="{% static 'img/about/picture1.jpg' %}" alt=""style="height: 350px; margin-top: 20px;">
+              </div>
+          </div>
       </div>
    </section>
    <!-- Intro section end -->
 
     <!-- Team section -->
     <section class="doctors-section spad"style="margin-top:-30px; background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(../static/img/about/picture3.jpg)">
-      <div class="container">
-         <div class="section-teamtitle text-center">
-            <h2 style="color: #fdfdfe; font-weight: bold">Our Team Members</h2>
-         </div>
-         <div class="row">
-            <div class="col-lg-2 col-md-3  col-sm-6">
+        <div class="container">
+          <div class="section-teamtitle text-center">
+              <h2 style="color: #fdfdfe; font-weight: bold">Our Team Members</h2>
+          </div>
+          <div class="row">
+              <div class="col-lg-2 col-md-3  col-sm-6">
                <div class="doctor-item">
                   <div style="width: 180px;height: 180px" class="di-pic set-bg" data-setbg={% static "img/about/dongliang.jpeg" %}></div>
                   <h6s style="color: #fdfdfe; font-weight: bolder;font-size: 25px;white-space: nowrap">Dongling Feng</h6s>
                   <p style="color: #20c997; font-weight: bolder;font-size: 20px;white-space: nowrap">Business Analysis</p>
                </div>
             </div>
-            <div class="col-lg-2 col-md-3  col-sm-6" style="margin-left: 120px">
-               <div class="doctor-item">
+              <div class="col-lg-2 col-md-3  col-sm-6" style="margin-left: 120px">
+                <div class="doctor-item">
                   <div style="width: 180px;height: 180px" class="di-pic set-bg" data-setbg={% static "img/about/yanping.jpeg" %}></div>
                   <h6 style="color: #fdfdfe; font-weight: bolder;font-size: 25px;white-space: nowrap">Yanping Luo</h6>
                   <p style="color: #20c997; font-weight: bolder;font-size: 20px;white-space: nowrap">Security maintenance</p>
                </div>
             </div>
-            <div class="col-lg-2 col-md-3  col-sm-6" style="margin-left: 120px">
-               <div class="doctor-item">
+              <div class="col-lg-2 col-md-3  col-sm-6" style="margin-left: 120px">
+                <div class="doctor-item">
                   <div style="width: 180px;height: 180px" class="di-pic set-bg" data-setbg={% static "img/about/yuting.png" %}></div>
                   <h6 style="color: #fdfdfe; font-weight: bolder;font-size: 25px;white-space: nowrap">Yuting Ouyang</h6>
                   <p style="color: #20c997; font-weight: bolder;font-size: 20px;white-space: nowrap">UI Designer</p>
                </div>
             </div>
-            <div class="col-lg-2 col-md-3  col-sm-6" style="margin-left: 120px">
-               <div class="doctor-item">
+              <div class="col-lg-2 col-md-3  col-sm-6" style="margin-left: 120px">
+                <div class="doctor-item">
                   <div style="width: 180px;height: 180px" class="di-pic set-bg" data-setbg={% static "img/about/tianrui.jpeg" %}></div>
                   <h6 style="color: #fdfdfe; font-weight: bolder;font-size: 25px;white-space: nowrap">Tianrui Chen</h6>
                   <p style="color: #20c997; font-weight: bolder;font-size: 20px;white-space: nowrap">Web Developer</p>
@@ -103,7 +103,7 @@
             </div>
          </div>
       </div>
-   </section>
+    </section>
     <!-- Team end -->
 
 {% endblock %}

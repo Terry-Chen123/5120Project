@@ -8,11 +8,11 @@
 
 {% block navigation %}
     <li ><a href="{% url 'Home' %}">Home</a></li>
-    <li><a href="{% url 'About' %}">About</a></li>
     <li ><a href="{% url 'Read More' %}">Learn Pneumonia</a></li>
     <li><a href="{% url 'Quiz List' %}">Quiz</a></li>
     <li class="active"><a href="{% url 'Prevention' %}">Prevention</a></li>
     <li><a href="{% url 'Search' %}">Clinic Search</a></li>
+    <li><a href="{% url 'About' %}">About</a></li>
 
 {% endblock %}
 
@@ -53,11 +53,11 @@
 
             <div id="block1" style="; margin-top: -50px">
                 <div class="row" style="padding-top: 40px;text-align: center;">
-                    <div class="col-lg-3" ></div>
-                    <div class="col-lg-6" id="picture1">
+                    <div class="col-lg-3 col-md-3 col-sm-6" ></div>
+                    <div class="col-lg-6 col-md-6 col-sm-12" id="picture1">
                         <img src="/static/img/vaccine/baby.jpg"style="padding-top:20px">
                     </div>
-                    <div class="col-lg-3" id="next1">
+                    <div class="col-lg-3 col-md-3 col-sm-6" id="next1">
                         <div class="triangle-right zoom"
                              style="margin-top: 200px; margin-left:100px"onclick="q1_right()">
                         </div>

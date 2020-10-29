@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block navigation %}
     <li><a href="{% url 'Home' %}">Home</a></li>
-    <li ><a href="{% url 'About' %}">About</a></li>
     <li ><a href="{% url 'Read More' %}">Learn Pneumonia</a></li>
     <li><a href="{% url 'Quiz List' %}">Quiz</a></li>
     <li class="active"><a href="{% url 'Prevention' %}">Prevention</a></li>
     <li><a href="{% url 'Search' %}">Clinic Search</a></li>
+    <li ><a href="{% url 'About' %}">About</a></li>
 
 {% endblock %}
 {% block mainbody %}
@@ -20,7 +20,7 @@
     </div>
 
     <div class="row" style="margin: 15px">
-        <div class="col-lg-4" style="width: 100px">
+        <div class="col-lg-4 col-md-4 col-sm-12" style="width: 100px">
             <div class="flip-box" >
                 <div class="flip-box-inner">
                     <div class="flip-box-front" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../static/img/prevention/washhand/handwashing.jpg);background-size: cover;padding-top: 180px">
@@ -38,7 +38,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-4 col-sm-12">
             <div class="flip-box">
                 <div class="flip-box-inner" >
                     <div class="flip-box-front" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../static/img/prevention/airquality/airquality.jpg);background-size: cover;padding-top: 180px">
@@ -56,7 +56,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-4 col-sm-12">
             <div class="flip-box">
                 <div class="flip-box-inner">
                     <div class="flip-box-front" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../static/img/prevention/shcedule/schedul.jpg);background-size: cover;padding-top: 180px">

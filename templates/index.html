@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block navigation %}
     <li class="active" ><a href="{% url 'Home' %}">Home</a></li>
-    <li ><a href="{% url 'About' %}">About</a></li>
     <li ><a href="{% url 'Read More' %}">Learn Pneumonia</a></li>
     <li><a href="{% url 'Quiz List' %}">Quiz</a></li>
     <li><a href="{% url 'Prevention' %}">Prevention</a></li>
     <li><a href="{% url 'Search' %}">Clinic Search</a></li>
+    <li ><a href="{% url 'About' %}">About</a></li>
 {% endblock %}
 
 {% block mainbody %}
@@ -16,7 +16,7 @@
          <div class="hs-item set-bg text-white" data-setbg="{% static 'img/homepage/bg.png' %}">
             <div class="container">
                <div class="row">
-                  <div class="col-xl-7">
+                  <div class="col-xl-7 col-lg-7 col-md-7">
                       <h3 style="white-space: nowrap; font-weight: bold;font-size: 60px"><font color="#006400">What is Pneumonia?</font></h3><br>
                       <h4 style="white-space: nowrap"><font color="black">What Are Pneumonia Symptoms for Children？</font></h4><br>
                       <p><a href="{% url 'Read More' %}" class="site-btn">Learn More</a></p>
@@ -28,7 +28,7 @@
          <div class="hs-item set-bg text-white" data-setbg="{% static '/img/homepage/info.jpg'%}">
             <div class="container">
                <div class="row">
-                  <div class="col-xl-7">
+                  <div class="col-xl-7 col-lg-7 col-md-6">
                       <h3 style="white-space: nowrap; font-weight: bold; font-size: 60px"><font color="#006400">Keep Your Children Safe</font></h3><br>
                       <h4 style="white-space: nowrap"><font color="black">Do you know how
                         to prevent the pneumonia?</font></h4><br>
@@ -45,7 +45,7 @@
     <!-- Services section -->
 	<div style="border-style: none;padding:15px">
         <div class="row">
-            <div class="col-lg-4 col-md-4">
+            <div class="col-lg-4 col-md-4 col-sm-12">
                 <div class="flip-box">
                     <div class="flip-box-inner" >
                         <div class="flip-box-front" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../static/img/homepage/newquiz.jpg);background-size: cover">
@@ -62,7 +62,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4" >
+            <div class="col-lg-4 col-md-4 col-sm-12" >
                 <div class="flip-box">
                     <div class="flip-box-inner" >
                         <div class="flip-box-front" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../static/img/homepage/vaccinationbab.jpg);background-size: cover">
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-            <div class="col-lg-4 col-md-4">
+            <div class="col-lg-4 col-md-4 col-sm-12">
                 <div class="flip-box">
                     <div class="flip-box-inner" >
                         <div class="flip-box-front" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../static/img/homepage/clinicnew.jpg);background-size: cover">
@@ -93,8 +93,8 @@
                                 <h3 style="color: white; font-size: 20px;">Click Here To Learn More!</h3>
                             </div>
                         </a>
-                        </div>
                     </div>
+                </div>
             </div>
         </div>
     </div>
@@ -104,19 +104,19 @@
     <section class="facts-section set-bg"  style="background:#28a745 ">
       <div class="container">
          <div class="row">
-            <div class="col-md-4 col-sm-4 fact">
+            <div class="col-lg-4 col-md-4 col-sm-12 fact">
                <img src="{% static 'img/about/baby.png' %}" alt="" style="width:70px;height: 70px">
                     <br><br>
                <h2>18%</h2>
                <p>Children's Pneumonia</p>
             </div>
-            <div class="col-md-4 col-sm-4 fact">
+            <div class="col-lg-4 col-md-4 col-sm-12 fact">
                <img src="{% static 'img/about/death.png' %}" alt="" style="width:70px;height: 70px">
                     <br><br>
                <h2> 1.6 million </h2>
                <p>Pneumonia Death Per Year</p>
             </div>
-            <div class="col-md-4 col-sm-4 fact">
+            <div class="col-lg-4 col-md-4 col-sm-12 fact">
                <img src="{% static 'img/about/vaccine.png' %}" alt="" style="width:70px;height: 70px">
                     <br><br>
                <h2>95% </h2>
@@ -131,7 +131,7 @@
 	<section class="about-section spad" style="padding-left: 100px">
       <div class="container">
          <div class="row">
-            <div class="col-lg-6 about-text">
+            <div class="col-lg-6 col-md-6 col-sm-12 about-text">
                 <img src="{% static 'img/homepage/c1.JPG' %}" style="height:300px ;width:500px; margin-right:50px"><br><br>
                 <h2><font color="2E8B57">Babies & Young Children</font></h2>
                 <h5><font color="2E8B57">In babies and children younger than five years:<br></font></h5>
@@ -139,7 +139,7 @@
                 <h5><font color="2E8B57">In children older than five years:<br></font></h5>
                 <h6><font color="696969" >pneumonia is more likely to be caused by bacteria.</font></h6><br>
             </div>
-            <div class="col-lg-6 about-text" >
+            <div class="col-lg-6 col-md-6 col-sm-12 about-text" >
                 <h2><font color="2E8B57">About Children Pneumonia</font></h2>
                 <h5><font color="696969">Pneumonia is a lung infection. </font></h5> <br>
                 <h6><font color="696969">When someone has pneumonia, the small airways in their lungs<br>
@@ -193,7 +193,6 @@
       transform: rotateX(180deg);
     }
     </style>
-
 
     <script type="text/javascript">
 
