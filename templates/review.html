@@ -68,7 +68,7 @@
                             <div class="review" style="border-style: solid;
                                                        border-color: #c82333;
                                                        border-width:4px;
-                                                     width:500px;
+                                                     width:auto;
                                                      height:auto;
                                                      padding: 1px;
                                                      background-color: #D1D0CE;">
@@ -91,7 +91,7 @@
 					</div>
                 {% endfor %}
                 <div class="container"  style="border-style: solid;border-color: #28a745; border-width: 3px;margin: 30px">
-                    <div><br><br>
+                    <div><br>
                         <div class="service-icon">
                             <img src="{% static 'img/review/check.png' %}" alt="suggestion"></a>
                         </div>
@@ -110,18 +110,18 @@
                             </p>
                             <br>
                             <h4> {{ suggestion }} </h4>
-                        </div><br><br>
-                        <div class="row" style="padding-left: 40px;padding-right: 40px">
-                            <div class="col-lg-4 col-md-4 col-sm-12">
+                        </div><br>
+                        <div class="row" style="padding-right: 350px">
+                            <div class="col-lg-4 col-md-4">
                                 <a href="{% url 'Read More' %}" class="site-btn mt-4">Review the Knowledge</a>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="col-lg-4 col-md-4">
                                 <a href="{% url 'Quiz List' %}" class="site-btn mt-4" >
                                     Do Quiz Again
                                 </a>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                <a href="{% url 'Home' %}" class="site-btn mt-4">Back to Home</a>
+                            <div class="col-lg-4 col-md-4">
+                                <a href="{% url 'Home' %}" class="site-btn mt-4" style="margin-left: -40px">Back to Home</a>
                             </div>
                         </div>
                     </div><br>
