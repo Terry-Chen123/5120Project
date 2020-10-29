@@ -33,7 +33,57 @@ def find(a):
     if end - start + 1 > max:
         result = a[start:end + 1]
     return result
-print(find('abcdamnolk'))
+#print(find('abcdamnolk'))
+
+
+input_list = []
+while True:
+    try:
+        line = input()
+        input_list.append(line.split())
+    except:
+        break
+x,y,z = int(input_list[0][0]),int(input_list[0][1]),int(input_list[0][2])
+n,m = int(input_list[1][0]),int(input_list[1][1])
+q = int(input_list[2][0])
+rest = input_list[3:3+q]
+def shun(x,y,m):
+    return y, m-x
+def fan(x,y,m):
+    return x, m-y
+def ni(x,y,m):
+    return m-y, x
+result = []
+for pair in rest:
+    i = j = k =0
+    pair_x,pair_y = int(pair[0]),int(pair[1])
+    while i < x:
+        pair_x, pair_y = shun(pair_x, pair_y, m)
+        i +=1
+    while j < y:
+        pair_x, pair_y = fan(pair_x, pair_y, m)
+        j +=1
+    while k < z:
+        pair_x, pair_y = ni(pair_x, pair_y, m)
+        k += 1
+    result.append([pair_x,pair_y])
+for each in result:
+    print (each[0],each[1])
+
+a = [1,2,3]
+b = a
+b.append(1)
+print(a)
+
+
+
+
+
+
+
+
+
+
 
 
 
