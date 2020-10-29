@@ -25,7 +25,7 @@
                     <h1 style="font-weight: bolder">Search Air Index:</h1>
                     <input id='input-station' placeholder="Melbourne"style="width: 400px;height: 50px;border-width: 3px;border-style: solid;border-color:black">
                     <br><br>
-                    You can search by the location name, for instance enter <code>Melbourne</code>.<b
+                    You can search by the location name, for instance enter <code>Melbourne</code>.<c
                     <div id='result-search' style='min-height: 300px'></div>
                 </div>
             </div>
@@ -41,6 +41,9 @@
                     <video width="100%" height="100%" controls style="margin-left: 15px;margin-right: 5px;">
                         <source src="../static/video/airquality.mp4">
                     </video>
+                     <p style="font-size: 15px;color: black;text-align: center;font-weight: bold">
+                        Video - How air pollution affect your lung health?
+                    </p>
                 </div>
                 <div class="col-lg-6">
                     <div style="margin-right: 15px;border-style: solid;padding: 10px;border-color: #71cd29;background-color: #71cd29;">
@@ -132,13 +135,6 @@
     <script src='../static/aqi/jquery-1.7.1.min.js'></script>
     <script src='../static/aqi/waqi-api-demo.js'></script>
     <script>init("#input-token","#input-station","#result-search")</script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-    crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-    crossorigin=""></script>
-    <link rel="stylesheet" href="../static/aqi/tomorrow.min.css">
     <script src="../static/aqi/highlight.min.js"></script>
     <script src="../static/aqi/highlightjs-line-numbers.min.js"></script>
 
@@ -175,8 +171,6 @@
                 hljs.initLineNumbersOnLoad();
             })
         } catch (e) { }
-
-
     </script>
 
     <style>
@@ -254,9 +248,6 @@
           -webkit-font-smoothing: antialiased;
           font-smoothing: antialiased;
         }
-
-
-
     </style>
 
 {% endblock %}
