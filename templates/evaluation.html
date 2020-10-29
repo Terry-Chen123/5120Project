@@ -11,16 +11,20 @@
 {% block mainbody %}
     {% load static %}
     <!-- Page info section  -->
-    <section class="more-info set-bg" style="background: #E5E4E2">
-		<div class="container">
-            <br>
-            <h5><a href="{% url 'Home' %}">Home</a>&nbsp;&gt;&nbsp;
-                <a href="{% url 'Quiz List' %}">Quiz Category</a>&nbsp;&gt;&nbsp;
-                Quiz</h5>
-			<br>
-			<h1><font color="2E8B570">Quiz</font></h1><br>
-		</div>
-	</section>
+     <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <section class="more-info set-bg" style="background: #E5E4E2">
+                <div class="container"><br>
+                    <h5><a href="{% url 'Home' %}">Home</a>&nbsp;&gt;&nbsp;
+                        <a href="{% url 'Quiz List' %}">Quiz Category</a>&nbsp;&gt;&nbsp;
+                        Quiz</h5>
+                    <br>
+                    <h1><font color="2E8B570">Quiz</font></h1><br>
+                </div>
+            </section>
+        </div>
+    </div>
+
 	<!-- Page info section end -->
 
     <!-- Quiz card -->
@@ -46,7 +50,7 @@
                                 <img src="{% static eachquestion.imageurl %}" style="height:300px ;width:500px">
                             </div>
                         {% endfor %}<br><br><br>
-                        <div>
+                        <div style="text-align: center">
                         {% if Question.0.category == 'A'%}
                             <p><input type="submit" class="site-btn mt-4" name = 'A' value="Check Result Here!"></p>
                         {% elif Question.0.category == 'B'%}

@@ -16,10 +16,22 @@
         </p>
     </div>
 
-    <div class="w3-bar w3-black" style="text-align: center;margin-top: 30px">
-      <button class="w3-bar-item w3-button search-btn" onclick="openMethod('HandWash')">Hand Washing</button>
-      <button class="w3-bar-item w3-button search-btn" onclick="openMethod('Sleep')" style="margin-left: 20px">Enough Sleep</button>
-      <button class="w3-bar-item w3-button search-btn" onclick="openMethod('Physical')" style="margin-left: 20px">Physical Activity</button>
+    <div class="w3-bar w3-black row" style="text-align: center;margin-top: 30px; padding-right: 200px; padding-left:200px">
+        <div class="col-lg-4 col-md-4 col-sm-12" >
+            <button class="w3-bar-item w3-button search-btn " onclick="openMethod('HandWash')">
+             Hand Washing
+            </button>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+            <button class="w3-bar-item w3-button search-btn" onclick="openMethod('Sleep')" >
+                Enough Sleep
+            </button>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12" >
+            <button class="w3-bar-item w3-button search-btn" onclick="openMethod('Physical')" >
+                Physical Activity
+            </button>
+        </div>
     </div>
 
     <div id="HandWash" class="w3-container method">

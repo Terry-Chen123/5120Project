@@ -87,66 +87,69 @@
 
     <!-- clinic section -->
     <div class="row">
-	    <section class="contact-section spad col-lg-12 col-md-12 col-sm-12" style="margin-top: -40px">
-		<div class="container">
-            <form action="search/searchresult" method='POST' >
-                {% csrf_token %}
-                {% if search_result_num > 0 %}
-                    <h2 style="color: #28a745;text-align: center;font-weight: bold">{{ result_remind }}</h2>
-                    <br>
-                {% endif %}
-                {% if search_result_num == -1 %}
-                    <h2 style="color:  black;font-weight: bolder; padding-left: 100px;font-size: 50px; word-wrap: break-word;word-break: break-all; color: #28a745">Some recommendations by rating</h2>
-                {% elif search_result_num == 0 %}
-                    <h2 style="color: red;text-align: center;font-weight: bold">{{ result_remind }}</h2><br>
-                    <h2 style="color: #28a745; text-align: center;font-weight: bold">There are some recommended hospitals as follows</h2>
-                {% else %}
-                    <h2 style="color:  #28a745; text-align: center;font-weight: bold">You can choose one of them to get details</h2>
-                {% endif %}
-            </form>
-		</div>
-	</section>
+        <div class='col-lg-12 col-md-12 col-sm-12' >
+	        <section class="contact-section spad" style="margin-top: -40px">
+                <div class="container">
+                    <form action="search/searchresult" method='POST' >
+                        {% csrf_token %}
+                        {% if search_result_num > 0 %}
+                            <h2 style="color: #28a745;text-align: center;font-weight: bold">{{ result_remind }}</h2>
+                            <br>
+                        {% endif %}
+                        {% if search_result_num == -1 %}
+                            <h2 style="color:  black;font-weight: bolder; padding-left: 100px;font-size: 50px; word-wrap: break-word;word-break: break-all; color: #28a745">Some recommendations by rating</h2>
+                        {% elif search_result_num == 0 %}
+                            <h2 style="color: red;text-align: center;font-weight: bold">{{ result_remind }}</h2><br>
+                            <h2 style="color: #28a745; text-align: center;font-weight: bold">There are some recommended hospitals as follows</h2>
+                        {% else %}
+                            <h2 style="color:  #28a745; text-align: center;font-weight: bold">You can choose one of them to get details</h2>
+                        {% endif %}
+                    </form>
+                </div>
+            </section>
+        </div>
     </div>
 	<!-- clinic section end -->
 
     <!-- clinic table -->
     <div class="row">
-        <form class='col-lg-12 col-md-12 col-sm-12' action="search/searchresult" method="post">
-        {% csrf_token %}
-        <table border="1" id="customers" style="border-collapse: collapse; margin-left: 140px; margin-bottom: 60px; margin-top: -40px">
-            <tr>
-                <th>CLINIC NAME</th>
-                <th>ADDRESS</th>
-                <th>TYPE</th>
-                <th>RATING</th>
-                <th>DETAILS</th>
-            </tr>
-            {% if search_result_num >= 1%}
-                {% for l2 in result_divide %}
-                    {% for hos in l2 %}
-                        <tr>
-                            <td id="clinic_name"> {{ hos.clinic_name  }} </td>
-                            <td id="clinic_add"> {{ hos.address }} </td>
-                            <td id="clinic_type"> {{ hos.clinic_type }} </td>
-                            <td id="clinic_rate"> {{ hos.rating}} </td>
-                            <td id="find_location"><input type="submit" name={{ hos.id }} value="FindLocation" style="outline: none"></td>
-                         </tr>
-                    {% endfor %}
-                {% endfor %}
-            {% else %}
-                {% for hos in recommendhospital %}
-                     <tr>
-                        <td id="clinic_name"> {{ hos.clinic_name }} </td>
-                        <td id="clinic_add"> {{ hos.address }} </td>
-                        <td id="clinic_type"> {{ hos.clinic_type }} </td>
-                        <td id="clinic_rate"> {{ hos.rating}} </td>
-                        <td id="find_location"><input type="submit" name={{ hos.id }} value="FindLocation" style="outline: none"></td>
-                     </tr>
-                {% endfor %}
-
-            {% endif %}
-        </table>
-    </form>
+        <div class='col-lg-12 col-md-12 col-sm-12' >
+            <form action="search/searchresult" method="post">
+                {% csrf_token %}
+                <table border="1" id="customers" style="border-collapse: collapse; margin-left: 140px; margin-bottom: 60px; margin-top: -40px">
+                    <tr>
+                        <th>CLINIC NAME</th>
+                        <th>ADDRESS</th>
+                        <th>TYPE</th>
+                        <th>RATING</th>
+                        <th>DETAILS</th>
+                    </tr>
+                    {% if search_result_num >= 1%}
+                        {% for l2 in result_divide %}
+                            {% for hos in l2 %}
+                                <tr>
+                                    <td id="clinic_name"> {{ hos.clinic_name  }} </td>
+                                    <td id="clinic_add"> {{ hos.address }} </td>
+                                    <td id="clinic_type"> {{ hos.clinic_type }} </td>
+                                    <td id="clinic_rate"> {{ hos.rating}} </td>
+                                    <td id="find_location"><input type="submit" name={{ hos.id }} value="FindLocation" style="outline: none"></td>
+                                 </tr>
+                            {% endfor %}
+                        {% endfor %}
+                    {% else %}
+                        {% for hos in recommendhospital %}
+                             <tr>
+                                <td id="clinic_name"> {{ hos.clinic_name }} </td>
+                                <td id="clinic_add"> {{ hos.address }} </td>
+                                <td id="clinic_type"> {{ hos.clinic_type }} </td>
+                                <td id="clinic_rate"> {{ hos.rating}} </td>
+                                <td id="find_location"><input type="submit" name={{ hos.id }} value="FindLocation" style="outline: none"></td>
+                             </tr>
+                        {% endfor %}
+                    {% endif %}
+                </table>
+            </form>
+        </div>
     </div>
     <!-- clinic table end -->
 

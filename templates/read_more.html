@@ -10,19 +10,35 @@
 
 {% block mainbody %}
     {% load static %}
-    <section class="more-info set-bg" style="background: #E5E4E2">
-        <div class="container"><br>
-            <h5><a href="{% url 'Home' %}">Home</a>&nbsp;&gt;&nbsp
-                Learn Pneumonia
-            </h5><br><br>
-            <h1><font color="2E8B57">Learn Pneumonia</font></h1><br>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <section class="more-info set-bg" style="background: #E5E4E2">
+                <div class="container"><br>
+                    <h5><a href="{% url 'Home' %}">Home</a>&nbsp;&gt;&nbsp
+                        Learn Pneumonia
+                    </h5><br><br>
+                    <h1><font color="2E8B57">Learn Pneumonia</font></h1><br>
+                </div>
+            </section>
         </div>
-    </section>
+    </div>
 
-    <div class="w3-bar w3-black" style="text-align: center;margin-top: 50px">
-      <button class="w3-bar-item w3-button search-btn" style="width: 380px" onclick="openinformation('introduction')">Introduction Of Pneumonia</button>
-      <button class="w3-bar-item w3-button search-btn"style="margin-left: 30px;width: 380px" onclick="openinformation('prevention')">Prevention Of Pneumonia</button>
-      <button class="w3-bar-item w3-button search-btn"style="margin-left: 30px;width: 380px;" onclick="openinformation('recover')">Treatment Of Pneumonia</button>
+    <div class="row" style="padding-right: 100px;padding-left: 100px">
+        <div class="w3-bar w3-black col-lg-4 col-md-4 col-sm-12" style="text-align: center;margin-top: 50px">
+          <button class="w3-bar-item w3-button search-btn" style="width: 380px" onclick="openinformation('introduction')">
+              Introduction Of Pneumonia
+          </button>
+        </div>
+        <div class="w3-bar w3-black col-lg-4 col-md-4 col-sm-12" style="text-align: center;margin-top: 50px">
+            <button class="w3-bar-item w3-button search-btn"style="margin-left: 30px;width: 380px" onclick="openinformation('prevention')">
+                Prevention Of Pneumonia
+            </button>
+        </div>
+        <div class="w3-bar w3-black col-lg-4 col-md-4 col-sm-12" style="text-align: center;margin-top: 50px">
+            <button class="w3-bar-item w3-button search-btn"style="margin-left: 30px;width: 380px;" onclick="openinformation('recover')">
+                Treatment Of Pneumonia
+            </button>
+        </div>
     </div>
 
     <!-- Introduction Part -->
