@@ -12,8 +12,11 @@
     {% load static %}
 
     <div  style="border-style: none;height: 300px;background-color: #1c7430">
-        <h1 style="font-weight: bolder;color: white;text-align: center;font-size: 60px">Air Quality</h1>
-        <p style="font-size: 30px;color: white;text-align: center;padding-left: 30px;padding-right: 30px">Avoid exposing your child to tobacco smoke or other irritants in the air. Check out the air quality of your region.
+        <h1 style="font-weight: bolder;color: white;text-align: center;font-size: 60px">
+            Air Quality
+        </h1>
+        <p style="font-size: 30px;color: white;text-align: center;padding-left: 30px;padding-right: 30px">
+            Avoid exposing your child to tobacco smoke or other irritants in the air. Check out the air quality of your region.
         </p>
     </div>
 
@@ -139,31 +142,6 @@
     <script src="../static/aqi/highlightjs-line-numbers.min.js"></script>
 
     <script>
-        function getCookie(cname) {
-          var name = cname + "=";
-          var decodedCookie = decodeURIComponent(document.cookie);
-          var ca = decodedCookie.split(';');
-          for(var i = 0; i <ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') {
-              c = c.substring(1);
-            }
-            if (c.indexOf(name) == 0) {
-              return c.substring(name.length, c.length);
-            }
-          }
-          return "";
-        }
-
-        document.getElementById("input-token").oninput = ()=>{
-            document.cookie = "token="+'7738c648d0b182560761a45befc6f0a2947006bc';
-        }
-        if (getCookie("token")) {
-            document.getElementById("input-token").value = getCookie("token");
-        }
-    </script>
-
-    <script>
         try {
             fetch("../static/aqi/waqi-api-demo.js").then(function(r){return r.text()}).then(function(code){
                 document.getElementById("code-api-listing").innerHTML = code.replace(/</g,"&lt;");
@@ -174,9 +152,7 @@
     </script>
 
     <style>
-        html {
-            margin: 10px;
-        }
+
         table.result {
             width: 100%;
             border: 1px solid black;

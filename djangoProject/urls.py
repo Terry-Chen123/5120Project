@@ -34,7 +34,6 @@ urlpatterns = [
     path('readmore',quiz_views.readMore, name = 'Read More'),
     path('quizlist/quizstart',quiz_views.evaluation, name = 'Evaluation'),
     path('quizlist/getuserchoice', quiz_views.getUserChoice, name = 'Review1'),
-    path('quizlist/quizintro', quiz_views.quizIntro, name='Quiz Intro'),
     path('quizlist/quizcategory', quiz_views.quizCategory, name='Quiz List'),
     path('search', search_views.searchClinic, name='Search'),
     path('search/searchresult', search_views.searchResult, name='Search Result'),

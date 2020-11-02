@@ -3,7 +3,6 @@ django.setup()
 from Quiz.models import Question,Category
 from django.shortcuts import render
 
-
 def readMore(request):
     return render(request,"../templates/read_more.html")
 
@@ -18,20 +17,6 @@ def quizCategory(request):
 
     return render(request,'../templates/quiz_category.html',context)
 
-def quizIntro(request):
-    categoryA = Category.objects.all()[0]
-    categoryB = Category.objects.all()[1]
-    categoryC = Category.objects.all()[2]
-
-    if request.POST:
-        if 'A' in request.POST:
-            category = categoryA
-        elif 'B' in request.POST:
-            category = categoryB
-        elif 'C' in request.POST:
-            category = categoryC
-
-    return render(request,"../templates/quiz_intro.html",{'category':category})
 
 def evaluation(request):
     question = []
@@ -101,7 +86,7 @@ def getScore(Q_list, Ans_list):
         suggestion = "No need to be panic. " \
                      "Read content about children's pneumonia, you will become a master on how to deal with " \
                      "the pneumonia emergency that happened to your child."
-    elif 3 <= score  <= 4:
+    elif 3 <= score <= 4:
         result = "Keep Learning!"
         suggestion = "You are doing good and almost master the knowledge, " \
                      "but still misunderstanding a little bit. " \

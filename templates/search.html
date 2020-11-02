@@ -15,141 +15,136 @@
     {% load static %}
 
     <!-- search section -->
-    <div class="row">
-        <div class="header123 col-lg-12 col-md-12 col-sm-12" style="height:80vh;background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../static/img/homepage/info.jpg);
-                                                    background-size: cover;
-                                                    background-position: center;
-                                                    display: flex;
-                                                    justify-content: center;
-                                                    align-items: center;
-                                                    font-family: sans-serif;">
-             <form action="" method="POST" class="contact-form" >
-                 {% csrf_token %}
-                 <div>
-                    <h1 style="color: #fff; margin-top:-50px;margin-bottom: 30px; font-size: 70px; text-align:center; letter-spacing: 2px;">Find Clinics</h1>
-                 </div>
-                <div><br/><br/>
-                     <!--clinic location-->
-                    <input type="button" id='chooseName' class="choose-btn" onclick="checkClick1()"
-                            style="height: 50px;width:200px;color: #ececf6;
-                                background: #71cd29;border-radius: 5px;border: none;margin-left:50px;" name="choose" value="Clinic Location" >
-                     <!--clinic Name-->
-                    <input type="button" id='chooseLocation' class="choose-btn" onclick="checkClick2()"
-                           style="height: 50px;width:200px;color: #ececf6;
-                                background: #71cd29;border-radius: 5px;border: none;"name="choose" value="Clinic Name" >
-                    <div style="display: none"><input id = 'chooseType'  name ='getChoose' value=""></div>
-                    <script>
-                        function checkClick1(){
-                            document.getElementById("chooseLocation").className = document.getElementById("chooseLocation").className == 'unclicked' ? '' : 'unclicked';
-                            document.getElementById("chooseName").className = document.getElementById("chooseName").className == 'clicked' ? '' : 'clicked';
-                            getChoice = document.getElementById("chooseName").value;
-                            document.getElementById("chooseType").value = getChoice;
-                        }
-                        function checkClick2(){
-                            document.getElementById("chooseName").className = document.getElementById("chooseName").className == 'unclicked' ? '' : 'unclicked';
-                            document.getElementById("chooseLocation").className = document.getElementById("chooseLocation").className == 'clicked' ? '' : 'clicked';
-                            getChoice = document.getElementById("chooseLocation").value;
-                            document.getElementById("chooseType").value = getChoice;
-                        }
-                    </script>
+    <div class="header123 " style="height:80vh;background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../static/img/homepage/info.jpg);
+                                                background-size: cover;
+                                                background-position: center;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                font-family: sans-serif;">
+         <form action="" method="POST" class="contact-form" >
+             {% csrf_token %}
+             <div>
+                <h1 style="color: #fff; margin-top:-50px;margin-bottom: 30px; font-size: 70px; text-align:center; letter-spacing: 2px;">Find Clinics</h1>
+             </div>
+            <div><br/><br/>
+                 <!--clinic location-->
+                <input type="button" id='chooseName' class="choose-btn" onclick="checkClick1()"
+                        style="height: 50px;width:200px;color: #ececf6;
+                            background: #71cd29;border-radius: 5px;border: none;margin-left:50px;" name="choose" value="Clinic Location" >
+                 <!--clinic Name-->
+                <input type="button" id='chooseLocation' class="choose-btn" onclick="checkClick2()"
+                       style="height: 50px;width:200px;color: #ececf6;
+                            background: #71cd29;border-radius: 5px;border: none;"name="choose" value="Clinic Name" >
+                <div style="display: none"><input id = 'chooseType'  name ='getChoose' value=""></div>
+                <script>
+                    function checkClick1(){
+                        document.getElementById("chooseLocation").className = document.getElementById("chooseLocation").className == 'unclicked' ? '' : 'unclicked';
+                        document.getElementById("chooseName").className = document.getElementById("chooseName").className == 'clicked' ? '' : 'clicked';
+                        getChoice = document.getElementById("chooseName").value;
+                        document.getElementById("chooseType").value = getChoice;
+                    }
+                    function checkClick2(){
+                        document.getElementById("chooseName").className = document.getElementById("chooseName").className == 'unclicked' ? '' : 'unclicked';
+                        document.getElementById("chooseLocation").className = document.getElementById("chooseLocation").className == 'clicked' ? '' : 'clicked';
+                        getChoice = document.getElementById("chooseLocation").value;
+                        document.getElementById("chooseType").value = getChoice;
+                    }
+                </script>
 
-                     <!--clinic type(12 totally)-->
-                    <select id="type" type="text" list="typelist" name="choose-type" style="background-color: #71cd29; padding-right:15px" >
-                        <datalist id="typelist">
-                            <option selected>All Clinic Type</option>>
-                            <option>Child health care centre</option>>
-                            <option>Children's health service</option>>
-                            <option>Children's hospital</option>>
-                            <option>Doctor</option>>
-                            <option>Family practice physician</option>>
-                            <option>General practitioner</option>>
-                            <option>Hospital</option>>
-                            <option>Immunisation Service</option>>
-                            <option>Local medical services</option>>
-                            <option>Medical Center</option>>
-                            <option>Medical group</option>>
-                            <option>Pediatrician</option>>
-                        </datalist>
-                    </select>
-                    <div class="form-inline">
-                        <div class="big-find">
-                            <input type="put" name="searchclinic" value="Enter Keyword" style="height: 50px; padding: 10px;border: none;
-                                                                    border-radius: 5px; width: 610px;
-                                                                    float:left;margin-top:5px;margin-right:5px;margin-left:50px;display:inline;" id="find">
-                        </div>
-                        <button type="submit" class="search-btn" style="cursor: pointer;margin-top:5px">Search</button>
+                 <!--clinic type(12 totally)-->
+                <select id="type" type="text" list="typelist" name="choose-type" style="background-color: #71cd29; padding-right:15px" >
+                    <datalist id="typelist">
+                        <option selected>All Clinic Type</option>>
+                        <option>Child health care centre</option>>
+                        <option>Children's health service</option>>
+                        <option>Children's hospital</option>>
+                        <option>Doctor</option>>
+                        <option>Family practice physician</option>>
+                        <option>General practitioner</option>>
+                        <option>Hospital</option>>
+                        <option>Immunisation Service</option>>
+                        <option>Local medical services</option>>
+                        <option>Medical Center</option>>
+                        <option>Medical group</option>>
+                        <option>Pediatrician</option>>
+                    </datalist>
+                </select>
+                <div class="form-inline">
+                    <div class="big-find">
+                        <input type="put" name="searchclinic" value="Enter Keyword" style="height: 50px; padding: 10px;border: none;
+                                                                border-radius: 5px; width: 610px;
+                                                                float:left;margin-top:5px;margin-right:5px;margin-left:50px;display:inline;" id="find">
                     </div>
+                    <button type="submit" class="search-btn" style="cursor: pointer;margin-top:5px">Search</button>
                 </div>
-            </form>
-        </div>
+            </div>
+        </form>
     </div>
     <!-- search section end -->
 
     <!-- clinic section -->
-    <div class="row">
-        <div class='col-lg-12 col-md-12 col-sm-12' >
-	        <section class="contact-section spad" style="margin-top: -40px">
-                <div class="container">
-                    <form action="search/searchresult" method='POST' >
-                        {% csrf_token %}
-                        {% if search_result_num > 0 %}
-                            <h2 style="color: #28a745;text-align: center;font-weight: bold">{{ result_remind }}</h2>
-                            <br>
-                        {% endif %}
-                        {% if search_result_num == -1 %}
-                            <h2 style="color:  black;font-weight: bolder; padding-left: 100px;font-size: 50px; word-wrap: break-word;word-break: break-all; color: #28a745">Some recommendations by rating</h2>
-                        {% elif search_result_num == 0 %}
-                            <h2 style="color: red;text-align: center;font-weight: bold">{{ result_remind }}</h2><br>
-                            <h2 style="color: #28a745; text-align: center;font-weight: bold">There are some recommended hospitals as follows</h2>
-                        {% else %}
-                            <h2 style="color:  #28a745; text-align: center;font-weight: bold">You can choose one of them to get details</h2>
-                        {% endif %}
-                    </form>
-                </div>
-            </section>
-        </div>
+
+    <div class='' >
+        <section class="contact-section spad" style="margin-top: -40px">
+            <div class="container">
+                <form action="search/searchresult" method='POST' >
+                    {% csrf_token %}
+                    {% if search_result_num > 0 %}
+                        <h2 style="color: #28a745;text-align: center;font-weight: bold">{{ result_remind }}</h2>
+                        <br>
+                    {% endif %}
+                    {% if search_result_num == -1 %}
+                        <h2 style="color:  black;font-weight: bolder; padding-left: 100px;font-size: 50px; word-wrap: break-word;word-break: break-all; color: #28a745">Some recommendations by rating</h2>
+                    {% elif search_result_num == 0 %}
+                        <h2 style="color: red;text-align: center;font-weight: bold">{{ result_remind }}</h2><br>
+                        <h2 style="color: #28a745; text-align: center;font-weight: bold">There are some recommended hospitals as follows</h2>
+                    {% else %}
+                        <h2 style="color:  #28a745; text-align: center;font-weight: bold">You can choose one of them to get details</h2>
+                    {% endif %}
+                </form>
+            </div>
+        </section>
     </div>
 	<!-- clinic section end -->
 
     <!-- clinic table -->
-    <div class="row">
-        <div class='col-lg-12 col-md-12 col-sm-12' >
-            <form action="search/searchresult" method="post">
-                {% csrf_token %}
-                <table border="1" id="customers" style="border-collapse: collapse; margin-left: 140px; margin-bottom: 60px; margin-top: -40px">
-                    <tr>
-                        <th>CLINIC NAME</th>
-                        <th>ADDRESS</th>
-                        <th>TYPE</th>
-                        <th>RATING</th>
-                        <th>DETAILS</th>
-                    </tr>
-                    {% if search_result_num >= 1%}
-                        {% for l2 in result_divide %}
-                            {% for hos in l2 %}
-                                <tr>
-                                    <td id="clinic_name"> {{ hos.clinic_name  }} </td>
-                                    <td id="clinic_add"> {{ hos.address }} </td>
-                                    <td id="clinic_type"> {{ hos.clinic_type }} </td>
-                                    <td id="clinic_rate"> {{ hos.rating}} </td>
-                                    <td id="find_location"><input type="submit" name={{ hos.id }} value="FindLocation" style="outline: none"></td>
-                                 </tr>
-                            {% endfor %}
-                        {% endfor %}
-                    {% else %}
-                        {% for hos in recommendhospital %}
-                             <tr>
-                                <td id="clinic_name"> {{ hos.clinic_name }} </td>
+    <div class='' >
+        <form action="search/searchresult" method="post">
+            {% csrf_token %}
+            <table border="1" id="customers" style="border-collapse: collapse; margin-left: 140px; margin-bottom: 60px; margin-top: -40px">
+                <tr>
+                    <th>CLINIC NAME</th>
+                    <th>ADDRESS</th>
+                    <th>TYPE</th>
+                    <th>RATING</th>
+                    <th>DETAILS</th>
+                </tr>
+                {% if search_result_num >= 1%}
+                    {% for l2 in result_divide %}
+                        {% for hos in l2 %}
+                            <tr>
+                                <td id="clinic_name"> {{ hos.clinic_name  }} </td>
                                 <td id="clinic_add"> {{ hos.address }} </td>
                                 <td id="clinic_type"> {{ hos.clinic_type }} </td>
                                 <td id="clinic_rate"> {{ hos.rating}} </td>
                                 <td id="find_location"><input type="submit" name={{ hos.id }} value="FindLocation" style="outline: none"></td>
                              </tr>
                         {% endfor %}
-                    {% endif %}
-                </table>
-            </form>
-        </div>
+                    {% endfor %}
+                {% else %}
+                    {% for hos in recommendhospital %}
+                         <tr>
+                            <td id="clinic_name"> {{ hos.clinic_name }} </td>
+                            <td id="clinic_add"> {{ hos.address }} </td>
+                            <td id="clinic_type"> {{ hos.clinic_type }} </td>
+                            <td id="clinic_rate"> {{ hos.rating}} </td>
+                            <td id="find_location"><input type="submit" name={{ hos.id }} value="FindLocation" style="outline: none"></td>
+                         </tr>
+                    {% endfor %}
+                {% endif %}
+            </table>
+        </form>
     </div>
     <!-- clinic table end -->
 
